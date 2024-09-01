@@ -1,0 +1,137 @@
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1440;
+
+// *Colors*
+$colorsMap: (
+  "black": #1d1d1d,
+  "white": #fafafa,
+  "dark-gray": #797979,
+  "gray": #cfcccc,
+  "light-gray": #eaeaea,
+  "purple": #5b6eb5,
+  "blue": #0e7dac,
+  "light-blue": #abdef4,
+  "red": #cb333d,
+  "light-red": #f46b74,
+);
+
+// borders
+$borderMap: ("10", "15", "20", "25", "30", "100");
+
+// font size
+$fontSizeMap: (10, 12, 14, 16, 18, 20, 22, 24);
+$fontSize: 18px;
+
+$transitionMap: (
+  "2": ".2",
+  "3": ".3",
+);
+
+$transition-2: all ease-out 0.2s;
+$transition-3: all ease-out 0.3s;
+
+// Break-points
+$breakPointsMap: (
+  "xs": 576,
+  "sm": 576,
+  "md": 768,
+  "lg": 992,
+  "xl": 1200,
+  "xxl": 1400,
+);
+
+// Media rules
+$mouse-device: "(hover: hover) and (pointer: fine)";
+$touch-device: "(hover: none)";
+$ui-mobile: "screen and (max-width: 768px)"; //md
+$ui-tablet: "screen and (max-width: 992px)"; //lg
+$ui-laptop: "screen and (max-width: 1200px)"; //xl
+
+// z-indexs
+$layer-back: -1;
+$layer-base: 2;
+$layer-ui: 3; //header, footer, menu
+$layer-modal: 4;
+
+:root {
+  --base-font: 16px;
+
+  @each $name, $color in $colorsMap {
+    .bg-#{$name} {
+      background-color: #{$color};
+    }
+    .color-#{$name} {
+      color: #{$color};
+    }
+    .hover-#{$name} {
+      @include hover("color", #{$color});
+    }
+    .hover-bg-#{$name} {
+      @include hover("background-color", #{$color});
+    }
+    .border-1-5-#{$name} {
+      border: 1.5px solid #{$color};
+    }
+    .border-color-#{$name} {
+      border-color: #{$color} !important;
+    }
+  }
+
+  @each $name in $borderMap {
+    .border-#{$name} {
+      border-radius: #{$name}px;
+    }
+  }
+
+  @each $name, $time in $transitionMap {
+    .transition-#{$name} {
+      transition: all ease-out #{$time}s;
+    }
+  }
+
+  @each $name in $fontSizeMap {
+    $result: calc($name / 16);
+
+    .fs-#{$name} {
+      font-size: #{$result} + rem !important;
+    }
+  }
+}
+
+// bootstrap icon class
+.bootsrtap-icon {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hover-no {
+  pointer-events: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .w-lg-auto {
+    width: auto;
+  }
+}
+
+// custom padding / margins
+.px-12px {
+  padding-inline: 12px;
+}
+
+.py-6px {
+  padding-block: 6px;
+}
