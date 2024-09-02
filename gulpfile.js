@@ -37,7 +37,7 @@ let { src, dest } = require("gulp"),
   del = require("del"),
   scss = require("gulp-sass")(require("sass")),
   autoprefixer = require("gulp-autoprefixer"),
-  group_media = require("gulp-group-css-media-queries"),
+  // group_media = require("gulp-group-css-media-queries"),
   clean_css = require("gulp-clean-css"),
   rename = require("gulp-rename"),
   uglify = require("gulp-uglify-es").default,
@@ -69,7 +69,7 @@ function css() {
         outputStyle: "expanded",
       })
     )
-    .pipe(group_media())
+    // .pipe(group_media())
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 5 versions"],

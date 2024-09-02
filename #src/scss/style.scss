@@ -7,6 +7,10 @@
 @import "fonts";
 @import "mixins";
 @import "variables";
+@import "dropdowns";
+@import "header";
+@import "link";
+
 
 html {
   height: auto;
@@ -17,7 +21,7 @@ html {
 html,
 body {
   min-width: $minWidth;
-  width: 100%;
+
 }
 
 body {
@@ -35,4 +39,44 @@ main {
   min-width: $minWidth;
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  .container, .container-sm {
+      max-width: 710px;
+      margin: 0 auto;
+      padding-inline: 15px;
+  }
+}
+
+@media (min-width: 768px){
+  .container, .container-md, .container-sm {
+    max-width: 990px;
+    margin: 0 auto;
+    padding-inline: 15px;
+  }
+}
+
+@media (min-width: 992px){
+  .container, .container-lg, .container-md, .container-sm {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding-inline: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-inline: 15px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1410px;
+    margin: 0 auto;
+    padding-inline: 15px;
+  }
 }

@@ -1,6 +1,22 @@
 $minWidth: 320px;
 $maxWidth: 1920px;
-$maxWidthContainer: 1440;
+$maxWidthContainer: 1440px;
+
+:root {
+  --base-font: 18px;
+  --black: #1d1d1d;
+  --white: #fafafa;
+  --dark-gray: #797979;
+  --gray: #cfcccc;
+  --light-gray: #eaeaea;
+  --main: #273C8D;
+  --main-hover: #5b6eb5;
+  --blue: #0e7dac;
+  --light-blue: #abdef4;
+  --red: #cb333d;
+  --light-red: #f46b74;
+}
+
 
 // *Colors*
 $colorsMap: (
@@ -9,7 +25,8 @@ $colorsMap: (
   "dark-gray": #797979,
   "gray": #cfcccc,
   "light-gray": #eaeaea,
-  "purple": #5b6eb5,
+  "main": #273C8D,
+  "main-hover": #5b6eb5,
   "blue": #0e7dac,
   "light-blue": #abdef4,
   "red": #cb333d,
@@ -54,48 +71,44 @@ $layer-base: 2;
 $layer-ui: 3; //header, footer, menu
 $layer-modal: 4;
 
-:root {
-  --base-font: 16px;
-
-  @each $name, $color in $colorsMap {
-    .bg-#{$name} {
-      background-color: #{$color};
-    }
-    .color-#{$name} {
-      color: #{$color};
-    }
-    .hover-#{$name} {
-      @include hover("color", #{$color});
-    }
-    .hover-bg-#{$name} {
-      @include hover("background-color", #{$color});
-    }
-    .border-1-5-#{$name} {
-      border: 1.5px solid #{$color};
-    }
-    .border-color-#{$name} {
-      border-color: #{$color} !important;
-    }
+@each $name, $color in $colorsMap {
+  .bg-#{$name} {
+    background-color: #{$color};
   }
-
-  @each $name in $borderMap {
-    .border-#{$name} {
-      border-radius: #{$name}px;
-    }
+  .color-#{$name} {
+    color: #{$color};
   }
-
-  @each $name, $time in $transitionMap {
-    .transition-#{$name} {
-      transition: all ease-out #{$time}s;
-    }
+  .hover-#{$name} {
+    @include hover("color", #{$color});
   }
+  .hover-bg-#{$name} {
+    @include hover("background-color", #{$color});
+  }
+  .border-1-5-#{$name} {
+    border: 1.5px solid #{$color};
+  }
+  .border-color-#{$name} {
+    border-color: #{$color} !important;
+  }
+}
 
-  @each $name in $fontSizeMap {
-    $result: calc($name / 16);
+@each $name in $borderMap {
+  .border-#{$name} {
+    border-radius: #{$name}px;
+  }
+}
 
-    .fs-#{$name} {
-      font-size: #{$result} + rem !important;
-    }
+@each $name, $time in $transitionMap {
+  .transition-#{$name} {
+    transition: all ease-out #{$time}s;
+  }
+}
+
+@each $name in $fontSizeMap {
+  $result: calc($name / 16);
+
+  .fs-#{$name} {
+    font-size: #{$result} + rem !important;
   }
 }
 
@@ -130,6 +143,10 @@ $layer-modal: 4;
 // custom padding / margins
 .px-12px {
   padding-inline: 12px;
+}
+
+.p-12px {
+  padding: 12px;
 }
 
 .py-6px {

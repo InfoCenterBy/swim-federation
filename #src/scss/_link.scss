@@ -1,0 +1,10 @@
+.link {
+  &:hover {
+    color: var(--main);
+  }
+
+}
+
+.link.hidden {
+  visibility: hidden;
+}

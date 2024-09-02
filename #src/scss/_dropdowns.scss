@@ -1,0 +1,114 @@
+.header-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0px; 
+}
+
+
+.header-dropdown .dropdown-toggle::after {
+  content: "";
+  display: inline-block;
+  margin-left: 8px;
+  border: solid var(--black);
+  border-width: 0 1px 1px 0;
+  padding: 3px;
+  transform: rotate(45deg) translate(0, 0); 
+  transition: transform ease 0.2s; 
+}
+
+.header-dropdown:hover .dropdown-toggle::after,
+.header-dropdown[aria-expanded="true"] .dropdown-toggle::after {
+  transform: rotate(225deg) translate(-3px, -2px);
+  border-color: var(--main);
+  color: var(--main);
+}
+
+
+.header-dropdown .dropdown-menu {
+  border-radius: 0;
+  border: 1px solid var(--light-gray);
+  border-top: 2px solid var(--main);
+}
+
+.header-dropdown .dropdown-menu li {
+  padding: 12px;
+}
+
+.header-dropdown .dropdown-menu li:hover {
+  background-color: var(--main-hover);
+  color: var(--white);
+}
+
+.header-dropdown .dropdown-menu li:hover a {
+  color: var(--white);
+}
+
+.header-dropdown .dropdown-menu li:active {
+  background-color: var(--main);
+}
+
+.header-dropdown .dropdown-toggle {
+  padding: 8px;
+}
+
+.header-dropdown:hover .dropdown-toggle {
+  color: var(--main);
+}
+
+
+// top header dropdown
+
+.header-top-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0px; 
+}
+
+.header-top-dropdown .dropdown-toggle::after {
+  content: "";
+  display: inline-block;
+  margin-left: 8px;
+  border: solid var(--white);
+  border-width: 0 1px 1px 0;
+  padding: 3px;
+  transform: rotate(45deg) translate(0, 0); 
+  transition: transform ease 0.2s; 
+}
+
+.header-top-dropdown:hover .dropdown-toggle::after,
+.header-top-dropdown[aria-expanded="true"] .dropdown-toggle::after {
+  transform: rotate(225deg) translate(-3px, -2px);
+  border-color: var(--light-blue);
+  color: var(--white);
+}
+
+
+.header-top-dropdown .dropdown-menu {
+  border-radius: 0;
+  border: 1px solid var(--light-gray);
+  border-top: 2px solid var(--light-blue);
+}
+
+.header-top-dropdown .dropdown-menu li {
+  padding: 12px;
+}
+
+.header-top-dropdown .dropdown-menu li:hover {
+  background-color: var(--light-blue);
+  color: var(--white);
+}
+
+.header-top-dropdown .dropdown-menu li:hover a {
+  color: var(--white);
+}
+
+.header-top-dropdown .dropdown-menu li:active {
+  background-color: var(--blue);
+}
+
+.header-top-dropdown .dropdown-toggle {
+  color: var(--white);
+  padding: 8px;
+}
+
+.header-top-dropdown:hover .dropdown-toggle {
+  color: var(--light-blue);
+}

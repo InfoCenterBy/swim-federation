@@ -404,6 +404,10 @@ button::-moz-focus-inner {
   border: 0;
 }
 
+a {
+  color: var(--black);
+}
+
 a,
 a:visited {
   text-decoration: none;
