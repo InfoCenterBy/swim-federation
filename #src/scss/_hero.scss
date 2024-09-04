@@ -1,0 +1,57 @@
+.hero {
+
+  &__container {
+    background-image: url('../img/hero-bg.png');
+    background-size: cover;
+
+  }
+  &__content {
+    padding: 220px 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    color: var(--white);
+    font-size: 80px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    margin-bottom: 184px;
+    text-align: center;
+  }
+
+  &__menu {
+    padding: 56px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(221, 221, 221, 0.2); 
+    backdrop-filter: blur(30px);
+    max-width: 950px;
+    gap: 24px;
+
+    & li {
+      display: flex;
+    }
+  }
+
+  &__menu-item {
+    display: block;
+    padding: 30px;
+    background-color: var(--main);
+    transition: $transition-2;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 600;
+    width: 408px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color:var(--main-hover);
+    }
+  }
+}

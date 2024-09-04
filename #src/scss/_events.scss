@@ -1,0 +1,12 @@
+.events {
+  padding-top: 100px;
+
+  &__header {
+    margin-bottom: 32px;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 24px;
+  }
+}

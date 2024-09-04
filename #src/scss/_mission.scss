@@ -1,0 +1,58 @@
+.mission {
+  padding-top: 100px;
+  padding-bottom: 45px;
+
+  &__body {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__title {
+    color: var(--main);
+    font-weight: 600;
+    font-size: 32px;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  &__achivments {
+    display: flex;
+    gap: 24px;
+    
+
+    &-item {
+      padding: 24px;
+      border: 2px solid var(--main);
+      flex: 1 1 220px
+    }
+
+    &-item--inverted {
+      background-color: var(--main);
+      color: var(--white);
+
+      & .achivment__title {
+        color: var(--white);
+      }
+
+      & .achivment__text {
+        color: var(--white);
+      }
+    }
+  }
+}
+
+.achivment__title {
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--main);
+}
+
+.achivment__text {
+  font-size: 18px;
+  font-weight: 500;
+}

@@ -1,0 +1,27 @@
+.goals {
+
+  &__body {
+
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  &__item {
+    padding-left: 24px;
+    border-left: 3px solid var(--main)
+  }
+}
+
+@media (max-width: 768px) {
+  .goals__items {
+      grid-template-columns: 1fr; 
+  }
+}
