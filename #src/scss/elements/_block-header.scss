@@ -39,9 +39,34 @@
 }
 
 .block__link-container:hover .block__link-icon {
-  transform: translateX(5px)
+  transform: translateX(5px);
 }
 
+// red variant
+.block__link--red {
+  color: var(--red);
+  margin-right: 8px;
+  transition: $transition-2;
+}
 
+.block__link-icon--red {
+  color: var(--red);
+  transition: $transition-2;
+}
 
+.block__link-container--red {
+  padding-bottom: 4px;
+  transition: $transition-2;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  transform: translateY(6px);
+}
 
+.block__link-container--red:hover {
+  border-bottom: 1px solid var(--blue);
+}
+
+.block__link-container--red:hover .block__link--red,
+.block__link-container--red:hover .block__link-icon--red {
+  color: var(--blue);
+}

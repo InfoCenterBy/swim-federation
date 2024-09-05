@@ -1,0 +1,81 @@
+$colorsMap: (
+  "black": #1d1d1d,
+  "white": #fafafa,
+  "dark-gray": #797979,
+  "gray": #cfcccc,
+  "light-gray": #eaeaea,
+  "main": #273c8d,
+  "main-hover": #5b6eb5,
+  "blue": #0e7dac,
+  "light-blue": #abdef4,
+  "red": #cb333d,
+  "light-red": #f46b74,
+);
+
+$ff-raleway: "Raleway", sans-serif;
+
+// borders
+$borderMap: ("10", "15", "20", "25", "30", "100");
+
+// font size
+$fontSizeMap: (10, 12, 14, 16, 18, 20, 22, 24);
+
+$transitionMap: (
+  "2": ".2",
+  "3": ".3",
+);
+
+@mixin hover($prop, $val) {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      #{$prop}: $val;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      #{$prop}: $val;
+    }
+  }
+}
+
+@each $name, $color in $colorsMap {
+  .bg-#{$name} {
+    background-color: #{$color};
+  }
+  .color-#{$name} {
+    color: #{$color};
+  }
+  .hover-#{$name} {
+    @include hover("color", #{$color});
+  }
+  .hover-bg-#{$name} {
+    @include hover("background-color", #{$color});
+  }
+  .border-1-5-#{$name} {
+    border: 1.5px solid #{$color};
+  }
+  .border-color-#{$name} {
+    border-color: #{$color} !important;
+  }
+}
+
+@each $name in $borderMap {
+  .border-#{$name} {
+    border-radius: #{$name}px;
+  }
+}
+
+@each $name, $time in $transitionMap {
+  .transition-#{$name} {
+    transition: all ease-out #{$time}s;
+  }
+}
+
+@each $name in $fontSizeMap {
+  $result: calc($name / 16);
+
+  .fs-#{$name} {
+    font-size: #{$result} + rem !important;
+  }
+}

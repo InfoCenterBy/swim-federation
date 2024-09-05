@@ -1,5 +1,5 @@
 .events {
-  padding-top: 100px;
+  padding-block: 100px;
 
   &__header {
     margin-bottom: 32px;
@@ -9,4 +9,62 @@
     display: flex;
     gap: 24px;
   }
+}
+
+.event {
+  &__card:hover {
+    cursor: pointer;
+  }
+
+  &__image-container {
+    position: relative;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+
+  &__image {
+    transition: $transition-3;
+    transform: scale(1);
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 160px;
+    height: 100px;
+    background-color: var(--main);
+    color: var(--white);
+    text-align: center;
+    font-family: $ff-raleway;
+  }
+
+  &__date-number {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__date-month {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &__description {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.event__card:hover .event__image {
+  transition: $transition-3;
+  transform: scale(1.1);
+}
+
+.event__card:hover .event__description {
+  color: var(--dark-gray);
 }
