@@ -1,0 +1,16 @@
+.partners {
+  padding-bottom: 100px;
+}
+
+.partner__card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--light-gray);
+  padding-block: 20px;
+
+  & img {
+    margin-bottom: 10px;
+  }
+}
