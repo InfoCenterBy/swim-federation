@@ -19,15 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-
-window.addEventListener('scroll', function() {
-  const header = document.querySelector('.header');
-  if (window.scrollY > 100) { // Примерно после 50px прокрутки
-    header.classList.add('sticky');
-  } else {
-    header.classList.remove('sticky');
-  }
-});
 const swiperMainBanner = new Swiper(".swiper.main-banner", {
   direction: "horizontal",
   // loop: true,
@@ -124,4 +115,13 @@ const swiperMainPartner = new Swiper(".swiper.slider-partner", {
       spaceBetween: 24,
     },
   },
+});
+
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 50) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
 });
