@@ -1,0 +1,24 @@
+.form {
+  color: var(--white);
+  max-width: 586px;
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__button {
+    background-color: var(--red);
+    transition: $transition-2;
+    width: 100%;
+    color: var(--white);
+    padding: 16px 0;
+
+
+    &:hover {
+      background-color: var(--light-red);
+    }
+  }
+}

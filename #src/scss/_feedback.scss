@@ -1,0 +1,15 @@
+.feedback {
+
+  &__content {
+    background-color: var(--main);
+    padding-block: 100px;
+  }
+
+  &__header {
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    color: var(--white);
+  }
+}

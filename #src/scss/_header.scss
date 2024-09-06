@@ -1,6 +1,16 @@
 .header {
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.sticky {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .header-top {
