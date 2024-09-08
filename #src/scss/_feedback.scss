@@ -1,4 +1,7 @@
 .feedback {
+  &__body {
+    max-width: 586px;
+  }
 
   &__content {
     background-color: var(--main);
@@ -11,5 +14,14 @@
 
   &__text {
     color: var(--white);
+    margin-bottom: 32px;
+  }
+
+  &__img {
+    max-width: 708px;
+
+    & img {
+      width: 100%;
+    }
   }
 }

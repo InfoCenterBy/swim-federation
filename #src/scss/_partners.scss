@@ -2,6 +2,10 @@
   padding-bottom: 100px;
 }
 
+.slider-partner {
+  padding-inline: 1px;
+}
+
 .partner__card-body {
   display: flex;
   flex-direction: column;
@@ -9,6 +13,15 @@
   align-items: center;
   border: 1px solid var(--light-gray);
   padding-block: 20px;
+  transition: $transition-3;
+
+  &:hover {
+    border: 1px solid var(--main);
+
+    & p {
+      color: var(--main);
+    }
+  }
 
   & img {
     margin-bottom: 10px;
