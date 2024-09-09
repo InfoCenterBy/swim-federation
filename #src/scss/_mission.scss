@@ -5,13 +5,18 @@
   &__body {
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    flex: 1 1 calc(50% - 24px);
   }
 
   &__title {
     color: var(--main);
     font-weight: 600;
     font-size: 32px;
-    font-family: "Raleway", sans-serif;
+    font-family: $ff-raleway;
     margin-bottom: 32px;
   }
 
@@ -20,9 +25,20 @@
     margin-bottom: 32px;
   }
 
+  &__img {
+    justify-self: center;
+
+    flex: 1 1 calc(50% - 24px);
+
+    & img {
+      width: 100%;
+    }
+  }
+
   &__achivments {
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
     
 
     &-item {
@@ -55,4 +71,13 @@
 .achivment__text {
   font-size: 18px;
   font-weight: 500;
+}
+
+@media screen and (max-width: 576px) {
+ .mission__achivments-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
 }

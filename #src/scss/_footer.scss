@@ -4,6 +4,68 @@
 
   &__content {
     background-color: var(--main);
-    padding-block: 100px;
+    padding-top: 72px;
+    padding-bottom: 64px;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+
+  &__contacts-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__menu {
+    margin-left: 120px;
+
+    & a {
+      color: var(--white);
+    }
+
+    & a:hover {
+      color: var(--light-blue);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__additional-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 580px;
+  }
+
+  &__email-newsletter {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer__menu {
+    margin-left: 20px;
   }
 }

@@ -105,3 +105,13 @@
 .search-input.active {
   visibility: visible;
 }
+
+@media screen and (max-width: 1250px) {
+  .header-top-dropdown {
+    display: none;
+  }
+
+  .header-dropdown {
+    display: none;
+  }
+}

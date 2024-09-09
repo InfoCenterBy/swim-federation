@@ -1,5 +1,5 @@
 .social-media {
-  padding-block: 100px;
+  padding-bottom: 100px;
   flex: 1;
   min-width: 360px;
 
@@ -61,6 +61,12 @@
 .social-media__card:hover .social-media__image {
   transition: $transition-3;
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 992px) {
+  .social-media__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {

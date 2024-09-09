@@ -2,6 +2,7 @@
   &__container {
     background-image: url('../img/hero-bg.png');
     background-size: cover;
+    background-position: 50% 50%;
   }
 
   &__content {
@@ -24,10 +25,10 @@
     padding: 56px;
     display: flex;
     justify-content: center;
-    background-color: rgba(221, 221, 221, 0.2); 
+    background-color: rgba(221, 221, 221, 0.2);
     backdrop-filter: blur(30px);
-    max-width: 950px;
     gap: 24px;
+    flex-wrap: wrap;
 
     & li {
       display: flex;
@@ -52,5 +53,20 @@
     &:hover {
       background-color:var(--main-hover);
     }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .hero__title {
+    font-size: 42px;
+    text-align: left;
+  }
+
+  .hero__menu {
+    padding: 24px;
+  }
+
+  .hero__menu-item {
+    width: 300px;
   }
 }
