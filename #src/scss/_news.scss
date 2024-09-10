@@ -89,6 +89,37 @@
   .news-tab {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .news__content {
+    padding-block: 64px;
+  }
+
+  .news__header {
+    flex-direction: column;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .news__tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    padding-bottom: 12px;
+  }
+
+  .news__tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .news__tabs .nav-item {
+    flex: 0 0 auto;
+  }
 }
 
 @media (max-width: 576px) {

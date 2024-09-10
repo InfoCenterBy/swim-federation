@@ -60,6 +60,10 @@
   @import "variables-component";
 }
 
+.wrapper {
+  position: relative;
+}
+
 @media (min-width: 320px) {
   .container,
   .container-sm {

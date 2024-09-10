@@ -1,6 +1,6 @@
 .hero {
   &__container {
-    background-image: url('../img/hero-bg.png');
+    background-image: url("../img/hero-bg.png");
     background-size: cover;
     background-position: 50% 50%;
   }
@@ -49,9 +49,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 120px;
 
     &:hover {
-      background-color:var(--main-hover);
+      background-color: var(--main-hover);
     }
   }
 }
@@ -67,6 +68,29 @@
   }
 
   .hero__menu-item {
-    width: 300px;
+    width: 320px;
   }
+}
+@media screen and (max-width: 576px) {
+  .hero__container {
+    background-image: url("../img/mobile-hero-bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+  }
+
+  .hero__menu {
+    transform: translateY(-40px);
+    background-color: transparent;
+    backdrop-filter: none;
+    padding: 10px;
+  }
+
+  .hero__menu-item {
+    padding: 16px;
+  }
+
+  // .hero__menu-item {
+  //   width: 300px;
+  // }
 }
