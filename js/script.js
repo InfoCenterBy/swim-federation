@@ -1,24 +1,35 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const searchBtn = document.querySelector('.search-btn');
-  const searchInput = document.querySelector('.search-input');
-  const links = document.querySelectorAll('.header .link') 
+document.addEventListener("DOMContentLoaded", function () {
+  const searchBtn = document.querySelector(".search-btn");
+  const searchInput = document.querySelector(".search-input");
+  const links = document.querySelectorAll(".header .link");
 
-  searchBtn.addEventListener('click', function(event) {
+  searchBtn.addEventListener("click", function (event) {
     event.preventDefault();
 
-    links.forEach(link => {
-      link.classList.toggle('hidden')
-    })
-    
-    searchInput.classList.toggle('active')
+    links.forEach((link) => {
+      link.classList.toggle("hidden");
+    });
 
-    if (searchInput.classList.contains('active')) {
+    searchInput.classList.toggle("active");
+
+    if (searchInput.classList.contains("active")) {
       searchInput.focus();
     } else {
-      searchInput.blur(); 
+      searchInput.blur();
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  menuToggle.addEventListener("click", function () {
+    menuToggle.classList.toggle("open");
+    mobileNav.classList.toggle("open");
+  });
+});
+
 const swiperMainBanner = new Swiper(".swiper.main-banner", {
   direction: "horizontal",
   // loop: true,
@@ -124,4 +135,20 @@ window.addEventListener('scroll', function() {
   } else {
     header.classList.remove('sticky');
   }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".news__tabs");
+  const underline = document.querySelector(".nav-underline");
+
+  function updateUnderlineWidth() {
+    const scrollWidth = container.scrollWidth;
+    const clientWidth = container.clientWidth;
+    const scrollX = container.scrollLeft;
+
+    underline.style.setProperty("--scroll-x", scrollX);
+    underline.style.setProperty("--scroll-max", scrollWidth - clientWidth);
+  }
+
+  container.addEventListener("scroll", updateUnderlineWidth);
+  updateUnderlineWidth();
 });
