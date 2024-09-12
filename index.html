@@ -98,20 +98,20 @@
               </a>
             </li>
           </ul>
-          <button
-            class="d-inline-flex bg-red color-white gap-1 px-12px py-6px hover-bg-light-red transition-2"
+          <a
+            class="d-flex bg-red color-white gap-1 px-12px py-6px hover-bg-light-red transition-2 "
             type="button"
           >
             <img class="" src="./img/icons/person.svg" alt="Person icon" />
             <span>Личный кабинет</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
   </div>
   <div class="container header-bottom">
     <div class="d-flex align-items-center justify-content-between w-100">
-      <img src="./img/icons/logo.svg" alt="Logo" />
+      <img src="./img/icons/logo.png" alt="Logo" />
       <div class="d-flex align-items-center gap-3">
         <div class="dropdown header-dropdown cursor-pointer" aria-expanded="false">
           <p class="dropdown-toggle">О федерации</p>
@@ -1193,9 +1193,10 @@
               <textarea id="question" type="textarea" placeholder="Напишите вопрос" rows="6"></textarea>
             </div>
             <div class="form__checkbox">
-              <label class="form__checkbox-container"
-                ><input type="checkbox" />Согласие на обработку
-                <a class="color-light-blue hover-white" href="#">персональных данных</a>
+              <label class="form__checkbox-container">
+                <input type="checkbox" />
+                <span class="form__checkbox-text">Согласие на обработку</span>
+                <a class="link-light-blue" href="#">персональных данных</a>
                 <span class="form__checkbox-checkmark"></span>
               </label>
             </div>
