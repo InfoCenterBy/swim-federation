@@ -79,8 +79,13 @@
     background-position: 0% 0%;
   }
 
+  .hero__content {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+
   .hero__menu {
-    transform: translateY(-40px);
+    transform: translateY(30px);
     background-color: transparent;
     backdrop-filter: none;
     padding: 10px;
@@ -89,8 +94,4 @@
   .hero__menu-item {
     padding: 16px;
   }
-
-  // .hero__menu-item {
-  //   width: 300px;
-  // }
 }

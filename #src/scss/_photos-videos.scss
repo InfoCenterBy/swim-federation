@@ -1,4 +1,4 @@
-.photos {
+.photos-videos {
   padding-block: 100px;
   flex: 1;
 
@@ -61,6 +61,7 @@
 
     &-text {
       margin-bottom: 16px;
+      line-height: 24px;
     }
 
     &-number {
@@ -79,18 +80,18 @@
 }
 
 .photo__card:hover .photo__description {
-  background-color: var(--blue);
+  background-color: var(--main-hover);
   transform: translateY(0px);
 }
 
 @media screen and (max-width: 1200px) {
-  .photos__cards {
+  .photos-videos__cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 768px) {
-  .photos__cards {
+  .photos-videos__cards {
     grid-template-columns: repeat(2, 1fr);
   }
   .photos__body,
@@ -100,7 +101,15 @@
 }
 
 @media screen and (max-width: 576px) {
-  .photos__cards {
+  .photos-videos__cards {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .photos-videos {
+    padding-block: 80px;
+  }
+
+  .photos-videos__container {
+    gap: 80px;
   }
 }

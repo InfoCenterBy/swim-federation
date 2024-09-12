@@ -1,9 +1,4 @@
 .goals {
-
-  &__body {
-
-  }
-
   &__title {
     margin-bottom: 32px;
   }
@@ -12,6 +7,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    color: var(--black);
   }
 
   &__item {

@@ -92,3 +92,14 @@ $layer-modal: 4;
 .mr-32px {
   margin-right: 32px;
 }
+
+
+.link-light-blue {
+  color: var(--light-blue);
+  transition: $transition-2;
+
+  &:hover {
+    color: var(--white);
+    text-decoration: underline;
+  }
+}

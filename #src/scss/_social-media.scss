@@ -22,7 +22,7 @@
     position: relative;
     overflow: hidden;
     max-width: 343px;
-    height: 343px;
+    max-height: 343px;
   }
 
   &__image {

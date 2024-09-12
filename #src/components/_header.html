@@ -1,12 +1,12 @@
 <header class="header">
   <div class="container-fluid header-top">
     <div class="container">
-      <div class="d-flex justify-content-between">
-        <div class="language-block d-flex flex-row gap-3 mr-4">
-          <button class="language-button active">РУС</button>
-          <button class="language-button">EN</button>
+      <div class="d-flex justify-content-between ">
+        <div class="language-block d-flex flex-row gap-3 align-items-center">
+          <a class="language-button active">РУС</a>
+          <a class="language-button">EN</a>
         </div>
-        <div class="d-flex gap-4">
+        <div class="d-flex gap-4 align-items-center">
           <div class="dropdown header-top-dropdown cursor-pointer" aria-expanded="false">
             <p class="dropdown-toggle">Национальные и сборные команды</p>
             <ul class="dropdown-menu">
@@ -23,7 +23,7 @@
           </div>
           <ul class="socials d-flex gap-2">
             <li class="socials__item">
-              <a class="socials__link" href="">
+              <a class="socials__link" href="#">
                 <svg
                   class="socials__icon"
                   width="16"
@@ -82,21 +82,21 @@
               </a>
             </li>
           </ul>
-          <button
-            class="d-inline-flex bg-red color-white gap-1 px-12px py-6px hover-bg-light-red transition-2"
-            type="button"
+          <a
+            class="header-top__profile-button"
+            href="#"
           >
-            <img class="mr-3" src="../img/icons/person.svg" alt="Person icon" />
+            <img class="" src="./img/icons/person.svg" alt="Person icon" />
             <span>Личный кабинет</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
   </div>
   <div class="container header-bottom">
     <div class="d-flex align-items-center justify-content-between w-100">
-      <img src="./img/icons/logo.svg" alt="Logo" />
-      <div class="d-flex">
+      <img src="./img/icons/logo.png" alt="Logo" />
+      <div class="header-bottom__nav">
         <div class="dropdown header-dropdown cursor-pointer" aria-expanded="false">
           <p class="dropdown-toggle">О федерации</p>
           <ul class="dropdown-menu">
@@ -134,10 +134,10 @@
             <li><a class="dropdown-item" href="#">Нормативы</a></li>
           </ul>
         </div>
-      </div>
-      <div class="d-flex gap-4">
-        <a class="link" href="#">Новости</a>
-        <a class="link" href="#">Контакты</a>
+        <div class="header-bottom__links">
+          <a class="header-link" href="#">Новости</a>
+          <a class="header-link" href="#">Контакты</a>
+        </div>
       </div>
       <div class="search-container">
         <button class="search-btn">
@@ -148,23 +148,29 @@
     </div>
   </div>
   <div class="mobile-header">
-    <div class="container d-flex align-items-center justify-content-between">
-      <img src="./img/icons/logo.svg" alt="Logo" class="mobile-logo" />
-      <div class="language-block d-flex flex-row gap-3">
-        <button class="language-button active">РУС</button>
-        <button class="language-button">EN</button>
+    <div class="container">
+      <div class="mobile-header__container">
+        <div class="mobile-header__logo">
+          <img src="./img/icons/mobile-logo.png" alt="Logo" class="mobile-logo" />
+          <div class="mobile__language-block language-block d-flex flex-row gap-3">
+            <a class="mobile__language-button language-button active">РУС</a>
+            <a class="mobile__language-button language-button">EN</a>
+          </div>
+        </div>
+        <div class="mobile-header__buttons">
+          <button class="search-btn search-btn-mobile">
+            <img class="search-icon" src="./img/icons/search.svg" alt="Search icon" />
+          </button>
+          <a class="profile-btn">
+            <img src="./img/icons/person.svg" alt="Profile icon" />
+          </a>
+          <button class="menu-toggle">
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+          </button>
+        </div>
       </div>
-      <button class="search-btn search-btn-mobile">
-        <img class="search-icon" src="./img/icons/search.svg" alt="Search icon" />
-      </button>
-      <button class="profile-btn">
-        <img src="./img/icons/person.svg" alt="Profile icon" />
-      </button>
-      <button class="menu-toggle">
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
-      </button>
     </div>
     <nav class="mobile-nav">
       <div class="mobile-nav-content">
@@ -312,8 +318,18 @@
               </div>
             </div>
           </div>
+          <div class="d-flex gap-4  flex-column">
+            <a class="link color-white" href="#">Новости</a>
+            <a class="link color-white" href="#">Контакты</a>
+          </div>
         </div>
       </div>
     </nav>
+    <div class="mobile-search">
+        <div class="form__input">
+          <input  type="text" placeholder="Введите запрос">
+        </div>
+        <a class="search-btn-mobile--inner" href="#"><img class="search-icon" src="./img/icons/search-btn-mobile-inner.svg" alt="Search icon" /></a>
+    </div>
   </div>
 </header>

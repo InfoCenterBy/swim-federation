@@ -47,7 +47,8 @@
 }
 
 .header-dropdown .dropdown-toggle {
-  padding: 8px;
+  padding-inline: 8px;
+  padding-block: 30px;
 }
 
 .header-dropdown:hover .dropdown-toggle {
@@ -97,18 +98,31 @@
 }
 
 .header-top-dropdown .dropdown-menu li:hover a {
-  color: var(--white);
+  color: var(--main);
 }
 
 .header-top-dropdown .dropdown-menu li:active {
   background-color: var(--blue);
+  color: var(--white);
+}
+
+.header-top-dropdown .dropdown-menu li:active a {
+  color: var(--white);
 }
 
 .header-top-dropdown .dropdown-toggle {
   color: var(--white);
-  padding: 8px;
+  padding-inline: 8px;
+  padding-block: 15px;
 }
 
 .header-top-dropdown:hover .dropdown-toggle {
   color: var(--light-blue);
+}
+
+.dropdown-menu {
+  min-width: 100%; /* минимальная ширина dropdown равна ширине родителя */
+}
+.dropdown-item {
+  width: 100%;
 }

@@ -11,7 +11,7 @@
   &__body {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 24px;
+    margin-bottom: 48px;
     flex-wrap: wrap;
   }
 
@@ -60,6 +60,10 @@
     display: flex;
     gap: 16px;
     margin-bottom: 32px;
+  }
+
+  &__legal-info {
+    line-height: 18px;
   }
 }
 

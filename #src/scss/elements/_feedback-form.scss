@@ -77,8 +77,8 @@
   border-color: var(--light-blue);
 }
 
-.form__checkbox-container:hover {
-  color: var(--light-blue);
+.form__checkbox-container:hover .form__checkbox-container input + span{
+  color: var(--white);
 }
 
 .form__checkbox-container input:checked ~ .form__checkbox-checkmark {
@@ -98,10 +98,10 @@
 .form__checkbox-container .form__checkbox-checkmark:after {
   left: 9px;
   top: 5px;
-  width: 5px;
+  width: 6px;
   height: 10px;
   border: solid var(--main);
-  border-width: 0 3px 3px 0;
+  border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);

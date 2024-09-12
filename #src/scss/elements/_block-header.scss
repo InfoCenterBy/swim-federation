@@ -17,6 +17,7 @@
   color: var(--main);
   margin-right: 8px;
   transition: $transition-2;
+  font-weight: 500;
 }
 
 .block__link-icon {
@@ -27,12 +28,12 @@
 .block__link-container {
   padding-bottom: 4px;
   transition: $transition-2;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
   cursor: pointer;
 }
 
 .block__link-container:hover {
-  border-bottom: 1px solid var(--main-hover);
+  border-bottom: 2px solid var(--main-hover);
 }
 
 .block__link-container:hover .block__link,
@@ -49,6 +50,7 @@
   color: var(--red);
   margin-right: 8px;
   transition: $transition-2;
+  font-weight: 500;
 }
 
 .block__link-icon--red {
@@ -59,16 +61,24 @@
 .block__link-container--red {
   padding-bottom: 4px;
   transition: $transition-2;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
   cursor: pointer;
   transform: translateY(6px);
 }
 
 .block__link-container--red:hover {
-  border-bottom: 1px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
 }
 
 .block__link-container--red:hover .block__link--red,
 .block__link-container--red:hover .block__link-icon--red {
   color: var(--blue);
+}
+
+@media screen and (max-width: 576px) {
+  .block__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
 }

@@ -8,3 +8,27 @@
 .link.hidden {
   visibility: hidden;
 }
+
+.header-link {
+  position: relative;
+  padding-block: 31px;
+
+  &:hover {
+    color: var(--main);
+  }
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main);
+  }
+
+}
+
+.header-link.hidden {
+  visibility: hidden;
+}
