@@ -89,17 +89,16 @@ $layer-modal: 4;
   padding-block: 6px;
 }
 
+.py-16px {
+  padding-block: 16px;
+}
+
 .mr-32px {
   margin-right: 32px;
 }
 
-
-.link-light-blue {
-  color: var(--light-blue);
-  transition: $transition-2;
-
-  &:hover {
-    color: var(--white);
-    text-decoration: underline;
-  }
+.mr-8px {
+  margin-right: 8px;
 }
+
+

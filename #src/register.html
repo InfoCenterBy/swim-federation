@@ -4,7 +4,44 @@
 <body>
   <div class="wrapper">
     @@include('./components/_register-header.html')
+    <main class="main">
+      <div class="container-fluid register__content">
+        <div class="container register__form-container">
+          <form class="register__form" action="#">
+            <p class="register__form-title">Регистрация</p>
+            <div class="form__input--small">
+              <label class="color-black" for="email">Email<span class="color-red">*</span></label>
+              <input class="border-1-gray" id="email" type="text" placeholder="____@__.__">
+            </div>
+            <div class="form__input--small mb-2">
+              <label for="pass">Пароль<span class="color-red">*</span></label>
+              <input class="password-input border-1-gray" id="pass" type="password" placeholder="Введите пароль">
+              <i id="toggle-password" class="password-icon bi bi-eye-slash"></i>
+            </div>
+            <p class="fs-14 color-dark-gray mb-4">
+              Пароль должен быть не менее 8 символов длиной, содержать латинские символы верхнего регистра (A-Z), содержать латинские символы нижнего регистра (a-z), содержать цифры (0-9).
+            </p>
+            <div class="form__input--small">
+              <label for="confirm-pass">Подтвердите пароль<span class="color-red">*</span></label>
+              <input class="password-input border-1-gray" id="confirm-pass" type="password" placeholder="Подтвердите пароль">
+              <i id="toggle-password" class="password-icon bi bi-eye-slash"></i>
+            </div>
+            <div class="form__checkbox">
+              <label class="form__checkbox-container">
+                <input type="checkbox" />
+                <span class="form__checkbox-text">Согласие на обработку</span>
+                <a class="link-main" href="#">персональных данных</a>
+                <span class="form__checkbox-checkmark--dark"></span>
+              </label>
+            </div>
+            <button class="form__button--blue mb-4" type="submit">Зарегистрироваться</button>
+            <p class="text-center">Уже есть аккаунт? <a class="link-main" href="#">Авторизоваться</a></p>
+          </form>
+        </div>
+      </div>
+    </main>
     @@include('./components/_register-footer.html')
   </div>
+  @@include('./components/_script.html')
 </body>
 </html>

@@ -2,7 +2,6 @@
   &:hover {
     color: var(--main);
   }
-
 }
 
 .link.hidden {
@@ -31,4 +30,24 @@
 
 .header-link.hidden {
   visibility: hidden;
+}
+
+.link-light-blue {
+  color: var(--light-blue);
+  transition: $transition-2;
+
+  &:hover {
+    color: var(--white);
+    text-decoration: underline;
+  }
+}
+
+.link-main {
+  color: var(--main);
+  transition: $transition-2;
+
+  &:hover {
+    color: var(--main-hover);
+    text-decoration: underline;
+  }
 }

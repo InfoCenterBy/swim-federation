@@ -1,0 +1,48 @@
+.register__content {
+  background-image: url("../img/register-bg.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  padding: 48px;
+}
+
+.register__form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.register__form {
+  padding: 32px;
+  max-width: 480px;
+  background-color: var(--white);
+  font-size: 16px;
+
+  &-title {
+    font-size: 32px;
+    font-family: $ff-raleway;
+    font-weight: 600;
+    color: var(--main);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+} 
+
+@media screen and (max-width: 568px) {  
+  .register__form {
+    padding: 32px 16px;
+
+    &-title {
+      font-size: 28px;
+    }
+  }
+
+  .register__content {
+    padding: 48px 8px;
+  }
+  
+}

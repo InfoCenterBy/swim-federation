@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".news__tabs");
   const underline = document.querySelector(".nav-underline");
 
+  if (container) {
   function updateUnderlineWidth() {
     const scrollWidth = container.scrollWidth;
     const clientWidth = container.clientWidth;
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     underline.style.setProperty("--scroll-max", scrollWidth - clientWidth);
   }
 
-  container.addEventListener("scroll", updateUnderlineWidth);
-  updateUnderlineWidth();
+    container.addEventListener("scroll", updateUnderlineWidth);
+    updateUnderlineWidth();
+  }
 });
