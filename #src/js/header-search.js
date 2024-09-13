@@ -20,5 +20,25 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-  
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('forget-pass');
+  const modal = document.getElementById('modal');
+  const closeButton = document.getElementById('modalClose');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    modal.style.display = 'flex';
+  });
+
+  closeButton.addEventListener('click', function() {
+    modal.style.display = 'none'; // Скрыть модальное окно
+  });
+
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none'; // Скрыть модальное окно при клике вне его
+    }
+  });
 });
