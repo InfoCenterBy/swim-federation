@@ -42,6 +42,9 @@
       width: auto;
     }
   }
+  .lh-110 {
+    line-height: 110%;
+  }
   .px-12px {
     padding-inline: 12px;
   }
@@ -2106,7 +2109,7 @@
     background-image: url("../img/register-bg.png");
     background-size: cover;
     background-position: 50% 50%;
-    height: 100%;
+    height: 81.1vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2132,7 +2135,7 @@
   }
   .register__form {
     padding: 32px;
-    max-width: 480px;
+    width: 480px;
     background-color: var(--white);
     font-size: 16px;
   }
@@ -2154,6 +2157,45 @@
     .register__content {
       padding: 48px 8px;
     }
+  }
+  .modal {
+    display: none; /* Скрыть модальное окно по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Затемнение фона */
+    z-index: 1000;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px; /* Ширина модального окна */
+  }
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .modal-body {
+    text-align: center;
+  }
+  .modal-text {
+    margin-bottom: 10px;
+  }
+  .modal-icon {
+    font-size: 30px;
   }
   .block__header {
     display: -webkit-box;
@@ -2870,7 +2912,6 @@
 }
 .wrapper {
   position: relative;
-  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -20,7 +20,27 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-  
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('forget-pass');
+  const modal = document.getElementById('modal');
+  const closeButton = document.getElementById('modalClose');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    modal.style.display = 'flex';
+  });
+
+  closeButton.addEventListener('click', function() {
+    modal.style.display = 'none'; // Скрыть модальное окно
+  });
+
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none'; // Скрыть модальное окно при клике вне его
+    }
+  });
 });
 const swiperMainBanner = new Swiper(".swiper.main-banner", {
   direction: "horizontal",
@@ -122,13 +142,13 @@ const swiperMainPartner = new Swiper(".swiper.slider-partner", {
 
 window.addEventListener('scroll', function() {
   const header = document.querySelector('.header');
-  if (header) {
+  
     if (window.scrollY > 50) {
       header.classList.add('sticky');
     } else {
       header.classList.remove('sticky');
     }
-  }
+  
 });
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".news__tabs");
