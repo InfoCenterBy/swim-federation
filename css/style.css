@@ -45,6 +45,9 @@
   .lh-110 {
     line-height: 110%;
   }
+  .bg-fa {
+    background-color: var(--white);
+  }
   .px-12px {
     padding-inline: 12px;
   }
