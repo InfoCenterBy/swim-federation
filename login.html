@@ -33,11 +33,13 @@
             <div class="form__input--small">
               <label class="color-black" for="email">Email<span class="color-red">*</span></label>
               <input class="border-1-gray bg-fa" id="email" type="text" placeholder="____@__.__" required>
+              <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
             </div>
             <div class="form__input--small mb-1">
               <label for="pass">Пароль<span class="color-red">*</span></label>
               <input class="password-input border-1-gray bg-fa" id="pass" type="password" placeholder="Введите пароль" required>
               <i id="toggle-password" class="password-icon bi bi-eye-slash"></i>
+              <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
             </div>
             <div class="text-end">
               <a class="fs-14 d-inline-block link-main mb-4" href="#">Забыли пароль?</a>
@@ -66,6 +68,7 @@
   crossorigin="anonymous"
 ></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
 <script src="js/script.min.js"></script>
 
 </body>

@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
 const swiperMainBanner = new Swiper(".swiper.main-banner", {
   direction: "horizontal",
   // loop: true,
@@ -272,3 +271,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+IMask(
+  document.getElementById('phone'),
+  {
+    mask: '+{375}(00)000-00-00',
+    lazy:false
+  }
+)
