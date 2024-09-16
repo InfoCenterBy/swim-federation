@@ -1,0 +1,28 @@
+.breadcrumbs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+
+  &__item {
+    font-size: 14px;
+    position: relative;
+
+    & a {
+      color: var(--dark-gray);
+
+      &:hover {
+        color: var(--main);
+      }
+    }
+  }
+
+  &__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    background: url("../../img/icons/chevron-right.svg");
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+  }
+
+}

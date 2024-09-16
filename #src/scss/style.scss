@@ -26,8 +26,11 @@
   @import "footer";
   @import "register";
   @import "modal";
+  @import "history";
   @import "./elements/block-header";
   @import "./elements/feedback-form";
+  @import "./elements/breadcrumbs";
+
 
   html {
     height: auto;
@@ -48,6 +51,7 @@
     flex-direction: column;
     min-height: 100vh;
     background-color: var(--color-white);
+    font-feature-settings: "lnum";
   }
 
   span {

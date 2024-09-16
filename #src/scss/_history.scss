@@ -1,0 +1,52 @@
+.history {
+  height: 450px;
+  background-image: url("../../img/history-bg.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-bottom: 40px;
+
+  &__title {
+    font-size: 48px;
+    font-family: $ff-raleway;
+    color: var(--white);
+    font-weight: 700;
+    text-align: left;
+    max-width: 1100px;
+    padding-top: 150px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 24px;
+
+    &-date {
+      font-size: 24px;
+      display: inline-block;
+      padding: 16px;
+      background-color: var(--main);
+      color: var(--white);
+      min-width: 122px;
+      height: fit-content;
+      text-align: center;
+      position: relative;
+      font-family: $ff-raleway;
+    }
+
+    &-date:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 100%; 
+      left: 50%; 
+      width: 2px; 
+      height: 100%; 
+      background-color: black; 
+      transform: translateX(-50%);
+    } 
+  }
+}
