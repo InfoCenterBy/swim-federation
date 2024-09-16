@@ -5,14 +5,34 @@
   &__input {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     width: 100%;
     margin-bottom: 28px;
+    position: relative;
     
+    & label {
+      margin-bottom: 10px;
+    }
 
     & input {
       padding: 16px 12px;
       border: 1px solid var(--gray);
+    }
+  }
+
+  &__input.invalid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 28px;
+    position: relative;
+
+    & label {
+      margin-bottom: 10px;
+    }
+
+    & input {
+      padding: 12px;
+      border: 1px solid var(--red);
     }
   }
 

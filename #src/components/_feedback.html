@@ -11,14 +11,17 @@
             <div class="form__input">
               <label for="full-name">ФИО<span class="color-red">*</span></label>
               <input id="full-name" type="text" placeholder="ФИО" />
+              <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
             </div>
             <div class="form__input">
               <label for="email">Email<span class="color-red">*</span></label>
-              <input id="email" type="text" placeholder="Email" required />
+              <input id="email" type="text" placeholder="Email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" required />
+              <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
             </div>
             <div class="form__input">
               <label for="phone">Номер телефона</label>
               <input id="phone" type="text" placeholder="+375 (__)-___-__-__" required />
+              <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
             </div>
             <div class="form__textarea">
               <label for="question">Вопрос</label>
