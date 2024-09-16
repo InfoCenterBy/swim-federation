@@ -4,4 +4,5 @@
 @@include('news-tabs-underline.js', {})
 @@include('mobile-menu.js', {})
 @@include('show-password.js', {})
+@@include('pass-validation.js', {})
 @@include('modal.js', {})

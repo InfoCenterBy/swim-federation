@@ -8,24 +8,48 @@
     gap: 10px;
     width: 100%;
     margin-bottom: 28px;
+    
 
     & input {
       padding: 16px 12px;
+      border: 1px solid var(--gray);
     }
   }
 
   &__input--small {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     width: 100%;
     margin-bottom: 28px;
     position: relative;
 
+    & label {
+      margin-bottom: 10px;
+    }
+
     & input {
       padding: 12px;
+      border: 1px solid var(--gray);
     }
   }
+
+  &__input--small.invalid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 28px;
+    position: relative;
+
+    & label {
+      margin-bottom: 10px;
+    }
+
+    & input {
+      padding: 12px;
+      border: 1px solid var(--red);
+    }
+  }
+
 
   &__textarea {
     display: flex;
@@ -70,7 +94,7 @@
 
 .password-icon {
   position: absolute;
-  bottom: 12px;
+  top: 44px;
   right: 14px;
   cursor: pointer;
   font-size: 20px;
@@ -79,6 +103,29 @@
     color: var(--main);
   }
 }
+
+.input-error-message {
+  display: none;
+}
+
+.input-error-message.active {
+  display: block;
+}
+
+
+#register-password.invalid {
+  border: 1px solid var(--red);
+}
+
+#register-password.valid {
+  border: 1px solid var(--green-success);
+}
+
+.password-validation-message {
+  font-size: 12px;
+  display: block;
+}
+
 
 .form__checkbox-container {
   display: block;

@@ -67,12 +67,12 @@
 }
 
 .block__link-container--red:hover {
-  border-bottom: 2px solid var(--blue);
+  border-bottom: 2px solid var(--light-red);
 }
 
 .block__link-container--red:hover .block__link--red,
 .block__link-container--red:hover .block__link-icon--red {
-  color: var(--blue);
+  color: var(--light-red);
 }
 
 @media screen and (max-width: 576px) {
