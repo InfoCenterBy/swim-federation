@@ -6,13 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
   if (searchBtn) {
     searchBtn.addEventListener("click", function (event) {
       event.preventDefault();
-  
+
       links.forEach((link) => {
         link.classList.toggle("hidden");
       });
-  
+
       searchInput.classList.toggle("active");
-  
+
       if (searchInput.classList.contains("active")) {
         searchInput.focus();
       } else {
@@ -22,26 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('forget-pass');
-  const modal = document.getElementById('modal');
-  const closeButton = document.getElementById('modalClose');
-
-  form.addEventListener('submit', function(event) {
-    event.preventDefault(); 
-    modal.style.display = 'flex';
-  });
-
-  closeButton.addEventListener('click', function() {
-    modal.style.display = 'none'; // Скрыть модальное окно
-  });
-
-  window.addEventListener('click', function(event) {
-    if (event.target === modal) {
-      modal.style.display = 'none'; // Скрыть модальное окно при клике вне его
-    }
-  });
-});
 const swiperMainBanner = new Swiper(".swiper.main-banner", {
   direction: "horizontal",
   // loop: true,
@@ -140,16 +120,18 @@ const swiperMainPartner = new Swiper(".swiper.slider-partner", {
   },
 });
 
-window.addEventListener('scroll', function() {
-  const header = document.querySelector('.header');
-  
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".header");
+
+  if (header) {
     if (window.scrollY > 50) {
-      header.classList.add('sticky');
+      header.classList.add("sticky");
     } else {
-      header.classList.remove('sticky');
+      header.classList.remove("sticky");
     }
-  
+  }
 });
+
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".news__tabs");
   const underline = document.querySelector(".nav-underline");
@@ -175,37 +157,42 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileSearch = document.querySelector(".mobile-search");
   const mobileSearchBtn = document.querySelector(".search-btn-mobile");
   const body = document.body;
-  
-    mobileSearchBtn.addEventListener("click", function() {
-      mobileSearch.classList.toggle("open")
-  
-      if (mobileNav.classList.contains('open')) {
-        mobileNav.classList.remove('open')
-        menuToggle.classList.remove('open')
-      }
-  
-      if (mobileSearch.classList.contains('open')) {
-        body.classList.add('no-scroll');
-      } else {
-        body.classList.remove('no-scroll');
-      }
-    })
 
+  if (menuToggle) {
     menuToggle.addEventListener("click", function () {
       menuToggle.classList.toggle("open");
       mobileNav.classList.toggle("open");
-  
-      if (mobileSearch.classList.contains('open')) {
-        mobileSearch.classList.remove('open')
+
+      if (mobileSearch.classList.contains("open")) {
+        mobileSearch.classList.remove("open");
       }
-  
-      if (mobileNav.classList.contains('open')) {
-        body.classList.add('no-scroll');
+
+      if (mobileNav.classList.contains("open")) {
+        body.classList.add("no-scroll");
       } else {
-        body.classList.remove('no-scroll');
+        body.classList.remove("no-scroll");
       }
     });
+  }
+
+  if (mobileSearch) {
+    mobileSearchBtn.addEventListener("click", function () {
+      mobileSearch.classList.toggle("open");
+
+      if (mobileNav.classList.contains("open")) {
+        mobileNav.classList.remove("open");
+        menuToggle.classList.remove("open");
+      }
+
+      if (mobileSearch.classList.contains("open")) {
+        body.classList.add("no-scroll");
+      } else {
+        body.classList.remove("no-scroll");
+      }
+    });
+  }
 });
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const passwordInputs = document.querySelectorAll('.password-input');
@@ -226,4 +213,62 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const passwordInput = document.getElementById('register-password');
+  const validationMessage = document.querySelector('.password-info-message');
+
+  passwordInput.addEventListener('input', function() {
+    const password = passwordInput.value;
+    const isValid = validatePassword(password);
+
+    if (isValid) {
+      passwordInput.classList.add('valid');
+      passwordInput.classList.remove('invalid');
+      validationMessage.innerText = "Пароль соответствует требованиям";
+    } else {
+      passwordInput.classList.add('invalid');
+      passwordInput.classList.remove('valid');
+      validationMessage.innerText = "Пароль должен быть не менее 8 символов длиной, содержать латинские символы верхнего регистра (A-Z), содержать латинские символы нижнего регистра (a-z), содержать цифры (0-9).";
+    }
+  });
+
+  function validatePassword(password) {
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasLowerCase = /[a-z]/.test(password);
+    const hasNumber = /\d/.test(password);
+    const isValidLength = password.length >= 8;
+
+    return hasUpperCase && hasLowerCase && hasNumber && isValidLength;
+  }
+})
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("forget-pass");
+  const modal = document.getElementById("modal-window");
+  const closeButton = document.getElementById("modal-close-btn");
+  const body = document.body;
+
+  if (modal) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      modal.classList.add("open");
+    });
+
+    closeButton.addEventListener("click", function () {
+      modal.classList.remove("open");
+    });
+
+    if (modal.classList.contains("open")) {
+      body.classList.add("no-scroll");
+    } else {
+      body.classList.remove("no-scroll");
+    }
+
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.classList.remove("open");
+      }
+    });
+  }
 });

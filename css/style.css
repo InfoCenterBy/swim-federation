@@ -18,6 +18,7 @@
     --light-blue: #abdef4;
     --red: #cb333d;
     --light-red: #f46b74;
+    --green-success: #038327;
   }
   .bootsrtap-icon {
     display: inline-block;
@@ -2112,7 +2113,7 @@
     background-image: url("../img/register-bg.png");
     background-size: cover;
     background-position: 50% 50%;
-    height: 81.1vh;
+    min-height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2161,14 +2162,14 @@
       padding: 48px 8px;
     }
   }
-  .modal {
-    display: none; /* Скрыть модальное окно по умолчанию */
+  .modal-window {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Затемнение фона */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2176,29 +2177,52 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    transition-behavior: allow-discrete;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    opacity: 0;
   }
-  .modal-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
+  .modal-window.open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+  }
+  @starting-style {
+    .modal-window.open {
+      opacity: 0;
+    }
+  }
+  .modal-container {
+    background-color: var(--white);
+    padding: 40px;
     width: 100%;
-    max-width: 400px; /* Ширина модального окна */
+    max-width: 480px;
+    position: relative;
   }
-  .modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  .modal-title {
     font-size: 24px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--main);
+    text-align: center;
+  }
+  .modal-close-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 30px;
+    line-height: 16px;
     cursor: pointer;
+    color: var(--dark-gray);
   }
   .modal-body {
     text-align: center;
   }
   .modal-text {
-    margin-bottom: 10px;
-  }
-  .modal-icon {
-    font-size: 30px;
+    margin-bottom: 24px;
+    color: var(--dark-gray);
   }
   .block__header {
     display: -webkit-box;
@@ -2309,6 +2333,7 @@
   }
   .form__input input {
     padding: 16px 12px;
+    border: 1px solid var(--gray);
   }
   .form__input--small {
     display: -webkit-box;
@@ -2325,6 +2350,7 @@
   }
   .form__input--small input {
     padding: 12px;
+    border: 1px solid var(--gray);
   }
   .form__textarea {
     display: -webkit-box;
@@ -2375,6 +2401,16 @@
   }
   .password-icon:hover {
     color: var(--main);
+  }
+  #register-password.invalid {
+    border: 1px solid var(--red);
+  }
+  #register-password.valid {
+    border: 1px solid var(--green-success);
+  }
+  .password-validation-message {
+    font-size: 12px;
+    display: block;
   }
   .form__checkbox-container {
     display: block;
@@ -2862,6 +2898,38 @@
   .border-color-light-red {
     border-color: #f46b74 !important;
   }
+  .bg-green-success {
+    background-color: #038327;
+  }
+  .color-green-success {
+    color: #038327;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hover-green-success:hover {
+      color: #038327;
+    }
+  }
+  @media (hover: none) {
+    .hover-green-success:active {
+      color: #038327;
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hover-bg-green-success:hover {
+      background-color: #038327;
+    }
+  }
+  @media (hover: none) {
+    .hover-bg-green-success:active {
+      background-color: #038327;
+    }
+  }
+  .border-1-green-success {
+    border: 1px solid #038327;
+  }
+  .border-color-green-success {
+    border-color: #038327 !important;
+  }
   .border-10 {
     border-radius: 10px;
   }
@@ -2915,6 +2983,7 @@
 }
 .wrapper {
   position: relative;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2922,6 +2991,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: auto;
 }
 
 .main {
