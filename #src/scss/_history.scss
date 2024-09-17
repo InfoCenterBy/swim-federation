@@ -18,12 +18,14 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    overflow: hidden;
   }
 
   &__item {
     display: flex;
     gap: 24px;
+    padding-bottom: 24px;
+    position: relative;
 
     &-date {
       font-size: 24px;
@@ -34,19 +36,35 @@
       min-width: 122px;
       height: fit-content;
       text-align: center;
-      position: relative;
       font-family: $ff-raleway;
+      z-index: 2;
     }
 
-    &-date:not(:last-child)::after {
+    &:not(:nth-last-child(-n + 1))::after {
       content: "";
       position: absolute;
-      top: 100%; 
-      left: 50%; 
-      width: 2px; 
-      height: 100%; 
-      background-color: black; 
-      transform: translateX(-50%);
-    } 
+      top: 0;
+      left: 60px;
+      width: 2px;
+      height: 100%;
+      background-color: var(--red);
+      z-index: 1;
+    }
+
+    &-text {
+      background-color: var(--light-gray);
+      padding: 16px;
+    }
+
+    &-text::before {
+      content: "";
+      left: -4px;
+      top: 10px;
+      background-color: var(--light-gray);
+      width: 8px;
+      height: 8px;
+      transform: translate(45deg);
+      position: absolute;
+    }
   }
 }
