@@ -19,10 +19,9 @@
   &__item:not(:last-child)::after {
     content: "";
     position: absolute;
-    background: url("../../img/icons/chevron-right.svg");
+    background: url("../img/icons/chevron-right.svg");
     width: 12px;
     height: 12px;
     margin-left: 4px;
   }
-
 }
