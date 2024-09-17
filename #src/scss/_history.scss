@@ -19,6 +19,21 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-bottom: 64px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  &__wrapper {
+    flex: 1 1 calc(75% - 24px);
+  }
+
+  &__body {
+    padding-bottom: 90px;
   }
 
   &__item {
@@ -33,11 +48,13 @@
       padding: 16px;
       background-color: var(--main);
       color: var(--white);
-      min-width: 122px;
+      width: 100%;
+      max-width: 122px;
       height: fit-content;
       text-align: center;
       font-family: $ff-raleway;
       z-index: 2;
+      line-height: 120%;
     }
 
     &:not(:nth-last-child(-n + 1))::after {
@@ -47,24 +64,103 @@
       left: 60px;
       width: 2px;
       height: 100%;
-      background-color: var(--red);
+      background-color: var(--main);
       z-index: 1;
     }
 
     &-text {
       background-color: var(--light-gray);
       padding: 16px;
+      width: 100%;
+      position: relative;
     }
 
-    &-text::before {
+    &-text::after {
       content: "";
-      left: -4px;
+      left: -10px;
       top: 10px;
-      background-color: var(--light-gray);
-      width: 8px;
-      height: 8px;
       transform: translate(45deg);
       position: absolute;
+      z-index: 2;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 10px solid var(--light-gray);
     }
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.results-table th,
+.results-table td {
+  padding: 16px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.results-table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.results-table th {
+  background-color: var(--light-gray);
+  font-weight: 600;
+}
+
+.results-table tfoot td {
+  font-weight: 600;
+  background-color: var(--light-gray);
+}
+
+.results-table td {
+  vertical-align: middle;
+}
+
+.results-table tfoot td:first-child {
+  text-align: left;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .history__sidebar {
+    order: 1;
+  }
+
+  .history__wrapper {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .history__title {
+    font-size: 28px;
+  }
+
+  .history__item-date {
+    font-size: 16px;
+    padding: 8px;
+    width: 100%;
+    max-width: 56px;
+  }
+
+  .history__item {
+    width: 100%;
+    &:not(:nth-last-child(-n + 1))::after {
+      left: 28px;
+    }
+  }
+
+  .history__wrapper {
+    width: 100%;
   }
 }

@@ -1,0 +1,41 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main);
+  cursor: pointer;
+  display: none;
+  font-size: 18px;
+  z-index: 100000;
+  border-radius: 50%;
+}
+
+.scroll-to-top:hover {
+  background-color: var(--main-hover);
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.lh-110 {
+  line-height: 110%;
+}
+
+.bg-fa {
+  background-color: var(--white);
+}
+
+.h3-title {
+  font-family: $ff-raleway;
+  font-feature-settings: "lnum";
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--black);
+  margin-bottom: 24px;
+}

@@ -1,0 +1,108 @@
+.sidebar {
+  &__menu {
+    position: sticky;
+    top: 140px;
+    z-index: 0;
+    flex: 1 1 calc(25% - 24px);
+    border: 1px solid var(--main);
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 30px;
+
+    &-item {
+      transition: $transition-2;
+      background-color: var(--white);
+
+      & a {
+        display: block;
+        font-weight: 500;
+        padding: 12px;
+      }
+    }
+
+    &-item.active {
+      background-color: var(--main);
+
+      & a {
+        color: var(--white);
+      }
+    }
+
+    &-item.active:hover {
+      background-color: var(--main);
+
+      & a {
+        color: var(--white);
+      }
+    }
+
+    &-item:hover a {
+      color: var(--main);
+    }
+  }
+
+  &__accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__accordion-button {
+    font-weight: 500;
+    padding: 12px;
+    background-color: var(--white);
+    border-radius: unset;
+
+    &::after {
+      background-image: url("../../img/icons/chevron-down.svg");
+      width: 24px;
+      height: 20px;
+    }
+  }
+
+  &__accordion-button:not(.collapsed) {
+    background-color: var(--main);
+    border-radius: unset;
+    color: var(--white);
+
+    &::after {
+      background-image: url("../../img/icons/chevron-up.svg");
+      width: 24px;
+      height: 20px;
+    }
+  }
+
+  &__accordion-button:not(.collapsed):hover {
+    color: var(--white);
+  }
+
+  &__accordion-button:focus {
+    box-shadow: none;
+  }
+
+  &__accordion-button:hover {
+    color: var(--main);
+  }
+
+  &__accordion-list-item {
+    padding: 12px;
+    padding-left: 32px;
+
+    & a {
+      font-weight: 500;
+    }
+
+    & a:hover {
+      color: var(--main);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar__menu {
+    position: static;
+    z-index: 0;
+    top: 80px;
+    margin: 0;
+  }
+}

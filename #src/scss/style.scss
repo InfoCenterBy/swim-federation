@@ -10,6 +10,7 @@
   @import "variables";
   @import "normalize";
   @import "dropdowns";
+  @import "utility";
   @import "header";
   @import "link";
   @import "hero";
@@ -30,7 +31,7 @@
   @import "./elements/block-header";
   @import "./elements/feedback-form";
   @import "./elements/breadcrumbs";
-
+  @import "./elements/sidebar-menu";
 
   html {
     height: auto;
@@ -73,20 +74,10 @@
 
 .wrapper {
   position: relative;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  flex: 1;
 }
-
-.main {
-  flex: 1 1 auto;
-}
-
-body.no-scroll {
-  overflow: hidden;
-}
-
 
 @media (min-width: 320px) {
   .container,

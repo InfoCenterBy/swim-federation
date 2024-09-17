@@ -20,8 +20,6 @@ $maxWidthContainer: 1440px;
 
 $ff-raleway: "Raleway", sans-serif;
 
-
-
 $fontSize: 18px;
 
 // *Colors*
@@ -79,12 +77,6 @@ $layer-modal: 4;
     width: auto;
   }
 }
-.lh-110 {
-  line-height: 110%;
-}
-.bg-fa {
-  background-color: var(--white);
-}
 
 // custom padding / margins
 .px-12px {
@@ -110,5 +102,3 @@ $layer-modal: 4;
 .mr-8px {
   margin-right: 8px;
 }
-
-

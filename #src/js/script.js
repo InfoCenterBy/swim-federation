@@ -7,3 +7,4 @@
 @@include('pass-validation.js', {})
 @@include('modal.js', {})
 @@include('phone-mask.js', {})
+@@include('scroll-to-top.js', {})
