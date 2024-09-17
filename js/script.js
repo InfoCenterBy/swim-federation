@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
 const swiperMainBanner = new Swiper(".swiper.main-banner", {
   direction: "horizontal",
   // loop: true,
@@ -215,33 +216,37 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const passwordInput = document.getElementById('register-password');
-  const validationMessage = document.querySelector('.password-info-message');
+  const passwordInput = document.getElementById("register-password");
+  const validationMessage = document.querySelector(".password-info-message");
 
-  passwordInput.addEventListener('input', function() {
-    const password = passwordInput.value;
-    const isValid = validatePassword(password);
+  if (passwordInput) {
+    passwordInput.addEventListener("input", function () {
+      const password = passwordInput.value;
+      const isValid = validatePassword(password);
 
-    if (isValid) {
-      passwordInput.classList.add('valid');
-      passwordInput.classList.remove('invalid');
-      validationMessage.innerText = "Пароль соответствует требованиям";
-    } else {
-      passwordInput.classList.add('invalid');
-      passwordInput.classList.remove('valid');
-      validationMessage.innerText = "Пароль должен быть не менее 8 символов длиной, содержать латинские символы верхнего регистра (A-Z), содержать латинские символы нижнего регистра (a-z), содержать цифры (0-9).";
+      if (isValid) {
+        passwordInput.classList.add("valid");
+        passwordInput.classList.remove("invalid");
+        validationMessage.innerText = "Пароль соответствует требованиям";
+      } else {
+        passwordInput.classList.add("invalid");
+        passwordInput.classList.remove("valid");
+        validationMessage.innerText =
+          "Пароль должен быть не менее 8 символов длиной, содержать латинские символы верхнего регистра (A-Z), содержать латинские символы нижнего регистра (a-z), содержать цифры (0-9).";
+      }
+    });
+
+    function validatePassword(password) {
+      const hasUpperCase = /[A-Z]/.test(password);
+      const hasLowerCase = /[a-z]/.test(password);
+      const hasNumber = /\d/.test(password);
+      const isValidLength = password.length >= 8;
+
+      return hasUpperCase && hasLowerCase && hasNumber && isValidLength;
     }
-  });
-
-  function validatePassword(password) {
-    const hasUpperCase = /[A-Z]/.test(password);
-    const hasLowerCase = /[a-z]/.test(password);
-    const hasNumber = /\d/.test(password);
-    const isValidLength = password.length >= 8;
-
-    return hasUpperCase && hasLowerCase && hasNumber && isValidLength;
   }
-})
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("forget-pass");
   const modal = document.getElementById("modal-window");
@@ -272,10 +277,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-IMask(
-  document.getElementById('phone'),
-  {
-    mask: '+{375}(00)000-00-00',
-    lazy:false
+const phoneInput = document.getElementById("phone");
+
+if (phoneInput) {
+  IMask(phoneInput, {
+    mask: "+{375}(00)000-00-00",
+    lazy: false,
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollToTopButton = document.getElementById("scroll-to-top");
+
+  if (scrollToTopButton) {
+    window.onscroll = function () {
+      if (window.scrollY > 300) {
+        scrollToTopButton.style.display = "block";
+      } else {
+        scrollToTopButton.style.display = "none";
+      }
+    };
+
+    scrollToTopButton.addEventListener("click", function () {
+      window.scrollTo(0, 0);
+    });
   }
-)
+});
