@@ -545,8 +545,15 @@
     z-index: 100000;
     border-radius: 50%;
   }
-  .scroll-to-top:hover {
-    background-color: var(--main-hover);
+  @media (hover: hover) and (pointer: fine) {
+    .scroll-to-top:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .scroll-to-top:active {
+      background-color: var(--main-hover);
+    }
   }
   body.no-scroll {
     overflow: hidden;
@@ -753,8 +760,15 @@
     background-color: var(--main);
     position: relative;
   }
-  .search-btn:hover {
-    background-color: var(--main-hover);
+  @media (hover: hover) and (pointer: fine) {
+    .search-btn:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .search-btn:active {
+      background-color: var(--main-hover);
+    }
   }
   .search-btn:disabled {
     background-color: var(--gray);
@@ -1403,7 +1417,8 @@
   .news__image-container {
     margin-bottom: 16px;
     overflow: hidden;
-    max-width: 346px;
+    max-width: 342px;
+    height: 280px;
   }
   .news__image {
     -webkit-transition: all ease-out 0.3s;
@@ -1412,6 +1427,7 @@
         -ms-transform: scale(1);
             transform: scale(1);
     width: 100%;
+    height: 100%;
   }
   .news__label {
     border-radius: 15px;
@@ -1443,9 +1459,14 @@
     margin-bottom: 8px;
     line-height: 24px;
     font-weight: 500;
+    max-width: 342px;
   }
   .news__date {
     color: var(--gray);
+    max-width: 342px;
+  }
+  .news__card {
+    max-width: 342px;
   }
   .news__card:hover .news__image {
     -webkit-transition: all ease-out 0.3s;
@@ -1465,9 +1486,17 @@
             column-gap: 24px;
     row-gap: 48px;
   }
+  @media screen and (max-width: 1200px) {
+    .news-tab {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
   @media (max-width: 992px) {
     .news-tab {
       grid-template-columns: repeat(3, 1fr);
+    }
+    .news__image-container {
+      height: 280px;
     }
   }
   @media (max-width: 768px) {
@@ -2652,6 +2681,12 @@
   }
   #register-password.valid {
     border: 1px solid var(--green-success);
+  }
+  #phone {
+    color: var(--dark-gray);
+  }
+  #phone:focus {
+    color: var(--black);
   }
   .password-validation-message {
     font-size: 12px;
