@@ -15,12 +15,6 @@
   @include hover(color, var(--white));
 }
 
-.link-card:hover {
-  background-color: var(--main);
-}
-
-.link-card-icon:hover path {
+.link-card:hover .link-card-icon path {
   fill: var(--white);
-
-  // @include hover(fill, var(--white));
 }

@@ -8,7 +8,7 @@
     width: 100%;
     margin-bottom: 28px;
     position: relative;
-    
+
     & label {
       margin-bottom: 10px;
     }
@@ -69,7 +69,6 @@
       border: 1px solid var(--red);
     }
   }
-
 
   &__textarea {
     display: flex;
@@ -132,7 +131,6 @@
   display: block;
 }
 
-
 #register-password.invalid {
   border: 1px solid var(--red);
 }
@@ -153,7 +151,6 @@
   font-size: 12px;
   display: block;
 }
-
 
 .form__checkbox-container {
   display: block;
@@ -195,6 +192,10 @@
   border: 1px solid var(--dark-gray);
 }
 
+.form__checkbox-checkmark--dark.invalid {
+  border: 1px solid var(--red);
+}
+
 .form__checkbox-container:hover input ~ .form__checkbox-checkmark {
   border-color: var(--light-blue);
 }
@@ -207,7 +208,7 @@
   border-color: var(--dark-gray);
 }
 
-.form__checkbox-container:hover .form__checkbox-container input + span{
+.form__checkbox-container:hover .form__checkbox-container input + span {
   color: var(--white);
 }
 
