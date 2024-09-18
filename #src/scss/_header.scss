@@ -160,9 +160,7 @@
   background-color: var(--main);
   position: relative;
 
-  &:hover {
-    background-color: var(--main-hover);
-  }
+  @include hover(background-color, var(--main-hover));
 
   &:disabled {
     background-color: var(--gray);

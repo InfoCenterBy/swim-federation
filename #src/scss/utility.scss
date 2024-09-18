@@ -15,8 +15,8 @@
   border-radius: 50%;
 }
 
-.scroll-to-top:hover {
-  background-color: var(--main-hover);
+.scroll-to-top {
+  @include hover(background-color, var(--main-hover));
 }
 
 body.no-scroll {

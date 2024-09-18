@@ -14,13 +14,16 @@
   &__image-container {
     margin-bottom: 16px;
     overflow: hidden;
-    max-width: 346px;
+    max-width: 342px;
+    height: 280px;
+    
   }
 
   &__image {
     transition: $transition-3;
     transform: scale(1);
     width: 100%;
+    height: 100%;
   }
 
   &__label {
@@ -58,10 +61,16 @@
     margin-bottom: 8px;
     line-height: 24px;
     font-weight: 500;
+    max-width: 342px;
   }
 
   &__date {
     color: var(--gray);
+    max-width: 342px;
+  }
+
+  &__card {
+    max-width: 342px;
   }
 }
 
@@ -81,9 +90,19 @@
   row-gap: 48px;
 }
 
+@media screen and (max-width: 1200px) {
+  .news-tab {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 992px) {
   .news-tab {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .news__image-container {
+    height: 280px;
+    
   }
 }
 
