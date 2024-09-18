@@ -1,0 +1,11 @@
+.achievements {
+  height: 450px;
+  background-image: url("../img/achievements-bg.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-bottom: 40px;
+
+  &__title {
+    padding-top: 150px;
+  }
+}

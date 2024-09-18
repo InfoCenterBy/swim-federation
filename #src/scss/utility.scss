@@ -39,3 +39,12 @@ body.no-scroll {
   color: var(--black);
   margin-bottom: 24px;
 }
+
+.h2-page-title {
+  font-family: $ff-raleway;
+  font-feature-settings: "lnum";
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--white);
+  text-align: left;
+}

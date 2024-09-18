@@ -28,10 +28,12 @@
   @import "register";
   @import "modal";
   @import "history";
+  @import "achievements";
   @import "./elements/block-header";
   @import "./elements/feedback-form";
   @import "./elements/breadcrumbs";
   @import "./elements/sidebar-menu";
+  @import "./elements/link-card";
 
   html {
     height: auto;
