@@ -141,6 +141,14 @@
   border: 1px solid var(--green-success);
 }
 
+#phone {
+  color: var(--dark-gray);
+}
+
+#phone:focus {
+  color: var(--black);
+}
+
 .password-validation-message {
   font-size: 12px;
   display: block;
