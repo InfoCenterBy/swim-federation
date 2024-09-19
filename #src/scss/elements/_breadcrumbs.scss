@@ -1,7 +1,9 @@
 .breadcrumbs {
   display: flex;
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 7px;
   margin-bottom: 24px;
+  flex-wrap: wrap;
 
   &__item {
     font-size: 14px;

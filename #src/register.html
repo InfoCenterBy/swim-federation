@@ -1,52 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('./components/_head.html', {title: "Регистрация"})
-<body>
-  <div class="wrapper">
-    @@include('./components/_register-header.html')
-    <main class="main">
-      <div class="container-fluid register__content">
-        <div class="container register__form-container">
-          <form class="register__form" action="#">
-            <p class="register__form-title">Регистрация</p>
-            <div class="form__input--small">
-              <label class="color-black" for="email">Email<span class="color-red">*</span></label>
-              <input class="bg-fa mb-0" id="email" type="text" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" placeholder="____@__.__" required>
-              <span class="input-error-message  fs-14 color-red">Это поле обязательно для заполнения</span>
-            </div>
-            
-            <div class="form__input--small mb-0">
-              <label for="pass">Пароль<span class="color-red">*</span></label>
-              <input class="password-input bg-fa" id="register-password" type="password" placeholder="Введите пароль" required>
-              <i id="toggle-password" class="password-icon bi bi-eye-slash"></i>
-              <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
-            </div>
-            
-            <p class="password-info-message fs-14 color-dark-gray mb-4 lh-110">
-              Пароль должен быть не менее 8 символов длиной, содержать латинские символы верхнего регистра (A-Z), содержать латинские символы нижнего регистра (a-z), содержать цифры (0-9).
-            </p>
-            <div class="form__input--small">
-              <label for="confirm-pass">Подтвердите пароль<span class="color-red">*</span></label>
-              <input class="password-input bg-fa" id="confirm-pass" type="password" placeholder="Подтвердите пароль" required>
-              <i id="toggle-password" class="password-icon bi bi-eye-slash"></i>
-              <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
-            </div>
-            <div class="form__checkbox">
-              <label class="form__checkbox-container">
-                <input type="checkbox" required/>
-                <span class="form__checkbox-text">Согласие на обработку</span>
-                <a class="link-main" href="#">персональных данных</a>
-                <span class="form__checkbox-checkmark--dark"></span>
-              </label>
-            </div>
-            <button class="form__button--blue mb-4" type="submit">Зарегистрироваться</button>
-            <p class="text-center">Уже есть аккаунт? <a class="link-main" href="login.html">Авторизоваться</a></p>
-          </form>
+  @@include('./components/_head.html', {title: "Регистрация"})
+  <body>
+    <div class="wrapper">
+      @@include('./components/_register-header.html')
+      <main class="main">
+        <div class="container-fluid register__content">
+          <div class="container register__form-container">
+            <form
+              class="register__form"
+              action="#">
+              <p class="register__form-title">Регистрация</p>
+              <div class="form__input--small">
+                <label
+                  class="color-black"
+                  for="email">
+                  Email
+                  <span class="color-red">*</span>
+                </label>
+                <input
+                  class="bg-fa mb-0"
+                  id="email"
+                  type="text"
+                  pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$"
+                  placeholder="____@__.__"
+                  required />
+                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+              </div>
+
+              <div class="form__input--small mb-2">
+                <label for="pass">
+                  Пароль
+                  <span class="color-red">*</span>
+                </label>
+                <input
+                  class="password-input bg-fa"
+                  id="register-password"
+                  type="password"
+                  placeholder="Введите пароль"
+                  required />
+                <i
+                  id="toggle-password"
+                  class="password-icon bi bi-eye-slash"></i>
+                <span class="password-error-message fs-14 color-red">Пароль не соответствует требованиям</span>
+                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+              </div>
+
+              <p class="password-info-message fs-14 color-dark-gray mb-4 lh-110">
+                Пароль должен быть не менее 8 символов длиной, содержать латинские символы верхнего регистра (A-Z), содержать
+                латинские символы нижнего регистра (a-z), содержать цифры (0-9).
+              </p>
+              <div class="form__input--small">
+                <label for="confirm-pass">
+                  Подтвердите пароль
+                  <span class="color-red">*</span>
+                </label>
+                <input
+                  class="password-input bg-fa"
+                  id="confirm-pass"
+                  type="password"
+                  placeholder="Подтвердите пароль"
+                  required />
+                <i
+                  id="toggle-password"
+                  class="password-icon bi bi-eye-slash"></i>
+                <span class="password-error-message fs-14 color-red">Пароль не соответствует требованиям</span>
+                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+              </div>
+              <div class="form__checkbox">
+                <label class="form__checkbox-container">
+                  <input
+                    type="checkbox"
+                    required />
+                  <span class="form__checkbox-text">Согласие на обработку</span>
+                  <a
+                    class="link-main"
+                    href="#">
+                    персональных данных
+                  </a>
+                  <span class="form__checkbox-checkmark--dark"></span>
+                </label>
+              </div>
+              <button
+                class="form__button--blue mb-4"
+                type="submit">
+                Зарегистрироваться
+              </button>
+              <p class="text-center">
+                Уже есть аккаунт?
+                <a
+                  class="link-main"
+                  href="login.html">
+                  Авторизоваться
+                </a>
+              </p>
+            </form>
+          </div>
         </div>
-      </div>
-    </main>
-    @@include('./components/_register-footer.html')
-  </div>
-  @@include('./components/_script.html')
-</body>
+      </main>
+      @@include('./components/_register-footer.html')
+    </div>
+    @@include('./components/_script.html')
+  </body>
 </html>

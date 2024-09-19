@@ -32,6 +32,30 @@
   }
 }
 
+.input-error-message {
+  display: none;
+}
+
+.input-error-message.active {
+  display: block;
+}
+
+.password-error-message {
+  display: none;
+}
+
+.password-error-message.active {
+  display: block;
+}
+
+.password-input.invalid {
+  border: 1px solid var(--red);
+}
+
+.password-input.valid {
+  border: 1px solid var(--green-success);
+}
+
 @media screen and (max-width: 568px) {
   .register__form {
     padding: 32px 16px;

@@ -124,22 +124,6 @@
   }
 }
 
-.input-error-message {
-  display: none;
-}
-
-.input-error-message.active {
-  display: block;
-}
-
-#register-password.invalid {
-  border: 1px solid var(--red);
-}
-
-#register-password.valid {
-  border: 1px solid var(--green-success);
-}
-
 #phone {
   color: var(--dark-gray);
 }
