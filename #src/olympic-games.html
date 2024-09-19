@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('./components/_head.html', {title: "Достижения и награды"})
+  @@include('./components/_head.html', {title: "Олимпийские игры"})
   <body>
     <div class="wrapper">
       @@include('./components/_header.html')
       <main>
-        <div class="container-fluid achievements">
+        <div class="container-fluid olympic">
           <button
             id="scroll-to-top"
             class="scroll-to-top">
@@ -14,19 +14,20 @@
               alt="" />
           </button>
           <div class="container">
-            <h1 class="achievements__title h2-page-title">Достижения и награды</h1>
+            <h1 class="olympic__title h2-page-title">Олимпийские игры</h1>
           </div>
         </div>
         <div class="container">
           <nav>
             <ul class="breadcrumbs">
-              <li class="breadcrumbs__item"><a href="#">Главная</a></li>
-              <li class="breadcrumbs__item active">Достижения и награды</li>
+              <li class="breadcrumbs__item"><a href="/index.html">Главная</a></li>
+              <li class="breadcrumbs__item"><a href="/achievements.html">Достижения и награды</a></li>
+              <li class="breadcrumbs__item active">Олимпийские игры</li>
             </ul>
           </nav>
-          <div class="achievements__content">
-            <div class="achievements__wrapper">
-              <div class="achievements__body">
+          <div class="olympic__content">
+            <div class="olympic__wrapper">
+              <div class="olympic__body">
                 <p class="mb-2">
                   <span>
                     Спортивное плавание в Беларуси имеет давние традиции. Первый чемпионат республики был проведен в 1927 году.
@@ -56,7 +57,7 @@
                 </p>
                 <a
                   class="link-card mb-5"
-                  href="/olympic-games.html">
+                  href="#">
                   <span>Олимпийские игры</span>
                   <svg
                     class="link-card-icon"
@@ -140,7 +141,7 @@
               </div>
             </div>
 
-            <aside class="achievements__sidebar sidebar__menu">
+            <aside class="olympic__sidebar sidebar__menu">
               <nav>
                 <ul class="sidebar__menu-list">
                   <li class="sidebar__menu-item">

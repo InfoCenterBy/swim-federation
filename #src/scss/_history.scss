@@ -5,16 +5,6 @@
   background-position: 50% 50%;
   margin-bottom: 40px;
 
-  &__title {
-    font-size: 48px;
-    font-family: $ff-raleway;
-    color: var(--white);
-    font-weight: 700;
-    text-align: left;
-    max-width: 1100px;
-    padding-top: 150px;
-  }
-
   &__list {
     display: flex;
     flex-direction: column;
@@ -193,10 +183,6 @@
 }
 
 @media screen and (max-width: 576px) {
-  .history__title {
-    font-size: 28px;
-  }
-
   .history__item-date {
     font-size: 16px;
     padding: 8px;

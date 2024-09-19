@@ -1,6 +1,6 @@
-.achievements {
+.olympic {
   height: 450px;
-  background-image: url("../img/achievements-bg.png");
+  background-image: url("../img/olympic-games-bg.png");
   background-size: cover;
   background-position: 50% 50%;
   margin-bottom: 40px;
@@ -22,18 +22,18 @@
 }
 
 @media screen and (max-width: 679px) {
-  .achievements__sidebar {
+  .olympic__sidebar {
     order: 1;
     position: static !important;
   }
 
-  .achievements__wrapper {
+  .olympic__wrapper {
     order: 2;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .achievements__title {
+  .olympic__title {
     font-size: 32px;
   }
 }
