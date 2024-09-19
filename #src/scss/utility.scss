@@ -7,12 +7,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--main);
+  background-color: var(--white);
+  border: 1px solid var(--main);
   cursor: pointer;
   display: none;
   font-size: 18px;
   z-index: 100000;
   border-radius: 50%;
+}
+
+.scroll-to-top path {
+  transform: translateY(-2px);
+}
+
+@media (hover: hover) {
+  .scroll-to-top:hover path {
+    fill: var(--white);
+  }
+}
+
+@media (hover: nonve) {
+  .scroll-to-top:active path {
+    fill: var(--white);
+  }
 }
 
 .scroll-to-top {

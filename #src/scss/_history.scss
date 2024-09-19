@@ -114,11 +114,11 @@
 
 .results-table th {
   background-color: var(--light-gray);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .results-table tfoot td {
-  font-weight: 600;
+  font-weight: 500;
   background-color: var(--light-gray);
 }
 
@@ -132,6 +132,48 @@
 }
 
 @media screen and (max-width: 768px) {
+  .results-table,
+  .results-table thead,
+  .results-table tbody,
+  .results-table tfoot,
+  .results-table th,
+  .results-table td,
+  .results-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .results-table thead {
+    display: none;
+  }
+
+  .results-table tr {
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .results-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    text-align: left;
+  }
+
+  .results-table td::before {
+    content: attr(data-label);
+    flex-basis: 40%;
+    font-weight: 500;
+    // padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .results-table td[data-label="№"] {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 679px) {
   .history__sidebar {
     order: 1;
   }
