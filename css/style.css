@@ -580,6 +580,25 @@
   .bg-fa {
     background-color: var(--white);
   }
+  .h1-title {
+    font-size: 48px;
+    font-family: "Raleway", sans-serif;
+    color: var(--white);
+    font-weight: 700;
+    text-align: left;
+    max-width: 1100px;
+    padding-top: 150px;
+  }
+  @media screen and (max-width: 768px) {
+    .h1-title {
+      font-size: 32px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .h1-title {
+      font-size: 28px;
+    }
+  }
   .h3-title {
     font-family: "Raleway", sans-serif;
     -webkit-font-feature-settings: "lnum";
@@ -2344,15 +2363,6 @@
     background-position: 50% 50%;
     margin-bottom: 40px;
   }
-  .history__title {
-    font-size: 48px;
-    font-family: "Raleway", sans-serif;
-    color: var(--white);
-    font-weight: 700;
-    text-align: left;
-    max-width: 1100px;
-    padding-top: 150px;
-  }
   .history__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2528,9 +2538,6 @@
     }
   }
   @media screen and (max-width: 576px) {
-    .history__title {
-      font-size: 28px;
-    }
     .history__item-date {
       font-size: 16px;
       padding: 8px;
@@ -2556,6 +2563,113 @@
   }
   .achievements__title {
     padding-top: 150px;
+  }
+  .achievements__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 24px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 80px;
+  }
+  .achievements__wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(75% - 24px);
+            flex: 1 1 calc(75% - 24px);
+  }
+  @media screen and (max-width: 679px) {
+    .achievements__sidebar {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      position: static !important;
+    }
+    .achievements__wrapper {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .achievements__title {
+      font-size: 32px;
+    }
+  }
+  .olympic {
+    height: 450px;
+    background-image: url("../img/olympic-games-bg.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 40px;
+  }
+  .olympic__title {
+    padding-top: 150px;
+  }
+  .olympic__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 24px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 80px;
+  }
+  .olympic__wrapper {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(75% - 24px);
+            flex: 0 1 calc(75% - 24px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
+  }
+  .olympic-2012 {
+    background-image: url("../img/olympic-bg/olympic-2012-bg.png");
+  }
+  .table-container {
+    overflow-x: auto;
+    width: 100%;
+  }
+  .olympic-table {
+    border-collapse: collapse;
+    overflow-x: auto;
+  }
+  .olympic-table th,
+  .olympic-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  .olympic-table td {
+    vertical-align: middle;
+    font-weight: normal;
+  }
+  .olympic-table th {
+    background-color: var(--light-gray);
+    font-weight: 500;
+  }
+  @media screen and (max-width: 679px) {
+    .olympic__sidebar {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      position: static !important;
+    }
+    .olympic__wrapper {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .olympic__title {
+      font-size: 32px;
+    }
   }
   .block__header {
     display: -webkit-box;
@@ -2771,7 +2885,7 @@
   }
   .password-icon {
     position: absolute;
-    top: 44px;
+    top: 40px;
     right: 14px;
     cursor: pointer;
     font-size: 20px;
@@ -3065,6 +3179,67 @@
   }
   .link-card:hover .link-card-icon path {
     fill: var(--white);
+  }
+  .olympic-game-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    border: 1px solid var(--main);
+    background-color: var(--white);
+    color: var(--main);
+    font-size: 18px;
+    padding: 24px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+  }
+  .olympic-game-link__title {
+    color: var(--black);
+    font-weight: 500;
+  }
+  .olympic-game-link__text {
+    color: var(--dark-gray);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .olympic-game-link:hover {
+      background-color: var(--main);
+    }
+  }
+  @media (hover: none) {
+    .olympic-game-link:active {
+      background-color: var(--main);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .olympic-game-link:hover {
+      color: var(--white);
+    }
+  }
+  @media (hover: none) {
+    .olympic-game-link:active {
+      color: var(--white);
+    }
+  }
+  .olympic-game-link:hover .olympic-game-link__icon path {
+    fill: var(--white);
+  }
+  @media (hover: hover) {
+    .olympic-game-link:hover .olympic-game-link__title,
+    .olympic-game-link:hover .olympic-game-link__text {
+      color: var(--white);
+    }
+  }
+  @media (hover: none) {
+    .olympic-game-link:active .olympic-game-link__title,
+    .olympic-game-link:active .olympic-game-link__text {
+      color: var(--white);
+    }
   }
   html {
     height: auto;
