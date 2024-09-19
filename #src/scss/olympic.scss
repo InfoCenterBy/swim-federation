@@ -17,8 +17,42 @@
   }
 
   &__wrapper {
-    flex: 1 1 calc(75% - 24px);
+    flex: 0 1 calc(75% - 24px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
+}
+
+.olympic-2012 {
+  background-image: url("../img/olympic-bg/olympic-2012-bg.png");
+}
+
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.olympic-table {
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+.olympic-table th,
+.olympic-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.olympic-table td {
+  vertical-align: middle;
+  font-weight: normal;
+}
+
+.olympic-table th {
+  background-color: var(--light-gray);
+  font-weight: 500;
 }
 
 @media screen and (max-width: 679px) {

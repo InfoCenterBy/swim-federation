@@ -1,0 +1,42 @@
+.olympic-game-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid var(--main);
+  background-color: var(--white);
+  color: var(--main);
+  font-size: 18px;
+  padding: 24px;
+  transition: $transition-2;
+
+  &__title {
+    color: var(--black);
+    font-weight: 500;
+  }
+
+  &__text {
+    color: var(--dark-gray);
+  }
+
+  @include hover(background-color, var(--main));
+  @include hover(color, var(--white));
+}
+
+.olympic-game-link:hover .olympic-game-link__icon path {
+  fill: var(--white);
+}
+
+@media (hover: hover) {
+  .olympic-game-link:hover .olympic-game-link__title,
+  .olympic-game-link:hover .olympic-game-link__text {
+    color: var(--white);
+  }
+}
+
+@media (hover: none) {
+  .olympic-game-link:active .olympic-game-link__title,
+  .olympic-game-link:active .olympic-game-link__text {
+    color: var(--white);
+  }
+}
