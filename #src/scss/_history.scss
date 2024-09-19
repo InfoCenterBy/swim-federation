@@ -143,6 +143,10 @@
     width: 100%;
   }
 
+  .results-table tbody tr td {
+    border-bottom: 1px solid var(--light-gray);
+  }
+
   .results-table thead {
     display: none;
   }
@@ -163,11 +167,15 @@
     content: attr(data-label);
     flex-basis: 40%;
     font-weight: 500;
-    // padding-right: 10px;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .history__title {
+    font-size: 32px;
+    padding-top: 150px;
+  }
+
   .results-table td[data-label="№"] {
     display: none;
   }
@@ -176,6 +184,7 @@
 @media screen and (max-width: 679px) {
   .history__sidebar {
     order: 1;
+    position: static !important;
   }
 
   .history__wrapper {

@@ -100,9 +100,14 @@
 
 @media screen and (max-width: 768px) {
   .sidebar__menu {
-    position: static;
     z-index: 0;
     top: 80px;
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar__menu {
+    position: static;
   }
 }
