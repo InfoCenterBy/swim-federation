@@ -538,12 +538,28 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: var(--main);
+    background-color: var(--white);
+    border: 1px solid var(--main);
     cursor: pointer;
     display: none;
     font-size: 18px;
     z-index: 100000;
     border-radius: 50%;
+  }
+  .scroll-to-top path {
+    -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  @media (hover: hover) {
+    .scroll-to-top:hover path {
+      fill: var(--white);
+    }
+  }
+  @media (hover: nonve) {
+    .scroll-to-top:active path {
+      fill: var(--white);
+    }
   }
   @media (hover: hover) and (pointer: fine) {
     .scroll-to-top:hover {
@@ -572,6 +588,15 @@
     font-size: 24px;
     color: var(--black);
     margin-bottom: 24px;
+  }
+  .h2-page-title {
+    font-family: "Raleway", sans-serif;
+    -webkit-font-feature-settings: "lnum";
+            font-feature-settings: "lnum";
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--white);
+    text-align: left;
   }
   .header {
     display: -webkit-box;
@@ -2225,6 +2250,31 @@
       padding: 48px 8px;
     }
   }
+  .forgot-password__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .forgot-password__body {
+    max-width: 480px;
+    background-color: var(--white);
+    padding: 32px;
+    text-align: center;
+  }
+  .forgot-password__text {
+    margin-bottom: 24px;
+    color: var(--dark-gray);
+  }
   .modal-window {
     display: none;
     position: fixed;
@@ -2404,10 +2454,10 @@
   }
   .results-table th {
     background-color: var(--light-gray);
-    font-weight: 600;
+    font-weight: 500;
   }
   .results-table tfoot td {
-    font-weight: 600;
+    font-weight: 500;
     background-color: var(--light-gray);
   }
   .results-table td {
@@ -2418,6 +2468,46 @@
     padding-left: 10px;
   }
   @media screen and (max-width: 768px) {
+    .results-table,
+    .results-table thead,
+    .results-table tbody,
+    .results-table tfoot,
+    .results-table th,
+    .results-table td,
+    .results-table tr {
+      display: block;
+      width: 100%;
+    }
+    .results-table thead {
+      display: none;
+    }
+    .results-table tr {
+      margin-bottom: 15px;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .results-table td {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding: 10px 5px;
+      text-align: left;
+    }
+    .results-table td::before {
+      content: attr(data-label);
+      -ms-flex-preferred-size: 40%;
+          flex-basis: 40%;
+      font-weight: 500;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .results-table td[data-label=№] {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 679px) {
     .history__sidebar {
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
@@ -2448,6 +2538,16 @@
     .history__wrapper {
       width: 100%;
     }
+  }
+  .achievements {
+    height: 450px;
+    background-image: url("../img/achievements-bg.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 40px;
+  }
+  .achievements__title {
+    padding-top: 150px;
   }
   .block__header {
     display: -webkit-box;
@@ -2595,7 +2695,8 @@
     position: relative;
   }
   .form__input--small label {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
+    font-weight: 500;
   }
   .form__input--small input {
     padding: 12px;
@@ -2727,6 +2828,9 @@
     width: 24px;
     background-color: var(--white);
     border: 1px solid var(--dark-gray);
+  }
+  .form__checkbox-checkmark--dark.invalid {
+    border: 1px solid var(--red);
   }
   .form__checkbox-container:hover input ~ .form__checkbox-checkmark {
     border-color: var(--light-blue);
@@ -2906,6 +3010,49 @@
       top: 80px;
       margin: 0;
     }
+  }
+  .link-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    border: 1px solid var(--main);
+    background-color: var(--white);
+    color: var(--main);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 24px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .link-card:hover {
+      background-color: var(--main);
+    }
+  }
+  @media (hover: none) {
+    .link-card:active {
+      background-color: var(--main);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .link-card:hover {
+      color: var(--white);
+    }
+  }
+  @media (hover: none) {
+    .link-card:active {
+      color: var(--white);
+    }
+  }
+  .link-card:hover .link-card-icon path {
+    fill: var(--white);
   }
   html {
     height: auto;
