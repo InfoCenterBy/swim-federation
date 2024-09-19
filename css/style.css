@@ -2478,6 +2478,9 @@
       display: block;
       width: 100%;
     }
+    .results-table tbody tr td {
+      border-bottom: 1px solid var(--light-gray);
+    }
     .results-table thead {
       display: none;
     }
@@ -2503,6 +2506,10 @@
     }
   }
   @media screen and (max-width: 768px) {
+    .history__title {
+      font-size: 32px;
+      padding-top: 150px;
+    }
     .results-table td[data-label=№] {
       display: none;
     }
@@ -2512,6 +2519,7 @@
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1;
+      position: static !important;
     }
     .history__wrapper {
       -webkit-box-ordinal-group: 3;
@@ -3005,10 +3013,14 @@
   }
   @media screen and (max-width: 768px) {
     .sidebar__menu {
-      position: static;
       z-index: 0;
       top: 80px;
       margin: 0;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .sidebar__menu {
+      position: static;
     }
   }
   .link-card {
