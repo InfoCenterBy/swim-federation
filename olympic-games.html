@@ -639,35 +639,35 @@
 
       <main>
         <div class="container-fluid olympic">
-          <button
-            id="scroll-to-top"
-            class="scroll-to-top">
-            <img
-              src="./img/icons/chevron-up-dark.svg"
-              alt="" />
+          <div class="container">
+            <nav>
+              <ul class="breadcrumbs">
+                <li class="breadcrumbs__item--light"><a href="/index.html">Главная</a></li>
+                <li class="breadcrumbs__item--light"><a href="/achievements.html">Достижения и награды</a></li>
+                <li class="breadcrumbs__item--light active">Олимпийские игры</li>
+              </ul>
+            </nav>
+          </div>
+          <button id="scroll-to-top" class="scroll-to-top">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.55731 5.8074C9.61537 5.74919 9.68434 5.70301 9.76027 5.67151C9.8362 5.64 9.9176 5.62378 9.99981 5.62378C10.082 5.62378 10.1634 5.64 10.2394 5.67151C10.3153 5.70301 10.3843 5.74919 10.4423 5.8074L17.9423 13.3074C18.0597 13.4248 18.1256 13.5839 18.1256 13.7499C18.1256 13.9159 18.0597 14.075 17.9423 14.1924C17.825 14.3098 17.6658 14.3757 17.4998 14.3757C17.3338 14.3757 17.1747 14.3098 17.0573 14.1924L9.99981 7.13365L2.94231 14.1924C2.82495 14.3098 2.66578 14.3757 2.49981 14.3757C2.33384 14.3757 2.17467 14.3098 2.05731 14.1924C1.93995 14.075 1.87402 13.9159 1.87402 13.7499C1.87402 13.5839 1.93995 13.4248 2.05731 13.3074L9.55731 5.8074Z"
+                fill="#273C8D"
+              />
+            </svg>
           </button>
           <div class="container">
-            <h1 class="olympic__title h2-page-title">Олимпийские игры</h1>
+            <h1 class="h1-title">Олимпийские игры</h1>
           </div>
         </div>
-        <div class="container">
-          <nav>
-            <ul class="breadcrumbs">
-              <li class="breadcrumbs__item"><a href="/index.html">Главная</a></li>
-              <li class="breadcrumbs__item"><a href="/achievements.html">Достижения и награды</a></li>
-              <li class="breadcrumbs__item active">Олимпийские игры</li>
-            </ul>
-          </nav>
-        </div>
+
         <div class="container olympic__content">
           <div class="olympic__wrapper">
-            <a
-              class="olympic-game-link"
-              href="/olympic-games-2016.html">
+            <a class="olympic-game-link" href="/olympic-games-2016.html">
               <span class="d-flex align-items-center gap-3">
-                <img
-                  src="./img/olympic-logos/olympic-2016.png"
-                  alt="" />
+                <img src="./img/olympic-logos/olympic-2016.png" alt="" />
                 <span class="d-flex flex-column gap-3">
                   <span class="olympic-game-link__title">Олимпийские игры-2016. Рио-де-Жанейро</span>
                   <span class="olympic-game-link__text">Бразилия</span>
@@ -679,19 +679,17 @@
                 height="32"
                 viewBox="0 0 32 32"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M2 15.9998C2 15.7346 2.10536 15.4802 2.29289 15.2927C2.48043 15.1052 2.73478 14.9998 3 14.9998H26.586L20.292 8.7078C20.1042 8.52003 19.9987 8.26535 19.9987 7.9998C19.9987 7.73425 20.1042 7.47957 20.292 7.2918C20.4798 7.10402 20.7344 6.99854 21 6.99854C21.2656 6.99854 21.5202 7.10402 21.708 7.2918L29.708 15.2918C29.8011 15.3847 29.875 15.495 29.9254 15.6165C29.9758 15.738 30.0018 15.8683 30.0018 15.9998C30.0018 16.1313 29.9758 16.2616 29.9254 16.3831C29.875 16.5046 29.8011 16.6149 29.708 16.7078L21.708 24.7078C21.5202 24.8956 21.2656 25.0011 21 25.0011C20.7344 25.0011 20.4798 24.8956 20.292 24.7078C20.1042 24.52 19.9987 24.2653 19.9987 23.9998C19.9987 23.7342 20.1042 23.4796 20.292 23.2918L26.586 16.9998H3C2.73478 16.9998 2.48043 16.8944 2.29289 16.7069C2.10536 16.5194 2 16.265 2 15.9998Z"
-                  fill="#273C8D" />
+                  fill="#273C8D"
+                />
               </svg>
             </a>
-            <a
-              class="olympic-game-link"
-              href="/olympic-games-2012.html">
+            <a class="olympic-game-link" href="/olympic-games-2012.html">
               <span class="d-flex align-items-center gap-3">
-                <img
-                  src="./img/olympic-logos/olympic-2012.png"
-                  alt="" />
+                <img src="./img/olympic-logos/olympic-2012.png" alt="" />
                 <span class="d-flex flex-column gap-3">
                   <span class="olympic-game-link__title">Олимпийские игры - 2012. Лондон</span>
                   <span class="olympic-game-link__text">Великобритания</span>
@@ -703,19 +701,17 @@
                 height="32"
                 viewBox="0 0 32 32"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M2 15.9998C2 15.7346 2.10536 15.4802 2.29289 15.2927C2.48043 15.1052 2.73478 14.9998 3 14.9998H26.586L20.292 8.7078C20.1042 8.52003 19.9987 8.26535 19.9987 7.9998C19.9987 7.73425 20.1042 7.47957 20.292 7.2918C20.4798 7.10402 20.7344 6.99854 21 6.99854C21.2656 6.99854 21.5202 7.10402 21.708 7.2918L29.708 15.2918C29.8011 15.3847 29.875 15.495 29.9254 15.6165C29.9758 15.738 30.0018 15.8683 30.0018 15.9998C30.0018 16.1313 29.9758 16.2616 29.9254 16.3831C29.875 16.5046 29.8011 16.6149 29.708 16.7078L21.708 24.7078C21.5202 24.8956 21.2656 25.0011 21 25.0011C20.7344 25.0011 20.4798 24.8956 20.292 24.7078C20.1042 24.52 19.9987 24.2653 19.9987 23.9998C19.9987 23.7342 20.1042 23.4796 20.292 23.2918L26.586 16.9998H3C2.73478 16.9998 2.48043 16.8944 2.29289 16.7069C2.10536 16.5194 2 16.265 2 15.9998Z"
-                  fill="#273C8D" />
+                  fill="#273C8D"
+                />
               </svg>
             </a>
-            <a
-              class="olympic-game-link"
-              href="/olympic-games.html">
+            <a class="olympic-game-link" href="/olympic-games-2008.html">
               <span class="d-flex align-items-center gap-3">
-                <img
-                  src="./img/olympic-logos/olympic-2008.png"
-                  alt="" />
+                <img src="./img/olympic-logos/olympic-2008.png" alt="" />
                 <span class="d-flex flex-column gap-3">
                   <span class="olympic-game-link__title">Олимпийские игры - 2008. Пекин</span>
                   <span class="olympic-game-link__text">Китай</span>
@@ -727,19 +723,17 @@
                 height="32"
                 viewBox="0 0 32 32"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M2 15.9998C2 15.7346 2.10536 15.4802 2.29289 15.2927C2.48043 15.1052 2.73478 14.9998 3 14.9998H26.586L20.292 8.7078C20.1042 8.52003 19.9987 8.26535 19.9987 7.9998C19.9987 7.73425 20.1042 7.47957 20.292 7.2918C20.4798 7.10402 20.7344 6.99854 21 6.99854C21.2656 6.99854 21.5202 7.10402 21.708 7.2918L29.708 15.2918C29.8011 15.3847 29.875 15.495 29.9254 15.6165C29.9758 15.738 30.0018 15.8683 30.0018 15.9998C30.0018 16.1313 29.9758 16.2616 29.9254 16.3831C29.875 16.5046 29.8011 16.6149 29.708 16.7078L21.708 24.7078C21.5202 24.8956 21.2656 25.0011 21 25.0011C20.7344 25.0011 20.4798 24.8956 20.292 24.7078C20.1042 24.52 19.9987 24.2653 19.9987 23.9998C19.9987 23.7342 20.1042 23.4796 20.292 23.2918L26.586 16.9998H3C2.73478 16.9998 2.48043 16.8944 2.29289 16.7069C2.10536 16.5194 2 16.265 2 15.9998Z"
-                  fill="#273C8D" />
+                  fill="#273C8D"
+                />
               </svg>
             </a>
-            <a
-              class="olympic-game-link"
-              href="/olympic-games.html">
+            <a class="olympic-game-link" href="/olympic-games-2004.html">
               <span class="d-flex align-items-center gap-3">
-                <img
-                  src="./img/olympic-logos/olympic-2004.png"
-                  alt="" />
+                <img src="./img/olympic-logos/olympic-2004.png" alt="" />
                 <span class="d-flex flex-column gap-3">
                   <span class="olympic-game-link__title">Олимпийские игры - 2004. Афины</span>
                   <span class="olympic-game-link__text">Греция</span>
@@ -751,19 +745,17 @@
                 height="32"
                 viewBox="0 0 32 32"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M2 15.9998C2 15.7346 2.10536 15.4802 2.29289 15.2927C2.48043 15.1052 2.73478 14.9998 3 14.9998H26.586L20.292 8.7078C20.1042 8.52003 19.9987 8.26535 19.9987 7.9998C19.9987 7.73425 20.1042 7.47957 20.292 7.2918C20.4798 7.10402 20.7344 6.99854 21 6.99854C21.2656 6.99854 21.5202 7.10402 21.708 7.2918L29.708 15.2918C29.8011 15.3847 29.875 15.495 29.9254 15.6165C29.9758 15.738 30.0018 15.8683 30.0018 15.9998C30.0018 16.1313 29.9758 16.2616 29.9254 16.3831C29.875 16.5046 29.8011 16.6149 29.708 16.7078L21.708 24.7078C21.5202 24.8956 21.2656 25.0011 21 25.0011C20.7344 25.0011 20.4798 24.8956 20.292 24.7078C20.1042 24.52 19.9987 24.2653 19.9987 23.9998C19.9987 23.7342 20.1042 23.4796 20.292 23.2918L26.586 16.9998H3C2.73478 16.9998 2.48043 16.8944 2.29289 16.7069C2.10536 16.5194 2 16.265 2 15.9998Z"
-                  fill="#273C8D" />
+                  fill="#273C8D"
+                />
               </svg>
             </a>
-            <a
-              class="olympic-game-link"
-              href="/olympic-games.html">
+            <a class="olympic-game-link" href="/olympic-games.html">
               <span class="d-flex align-items-center gap-3">
-                <img
-                  src="./img/olympic-logos/olympic-2000.png"
-                  alt="" />
+                <img src="./img/olympic-logos/olympic-2000.png" alt="" />
                 <span class="d-flex flex-column gap-3">
                   <span class="olympic-game-link__title">Олимпийские игры - 2000. Сидней</span>
                   <span class="olympic-game-link__text">Австралия</span>
@@ -775,19 +767,17 @@
                 height="32"
                 viewBox="0 0 32 32"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M2 15.9998C2 15.7346 2.10536 15.4802 2.29289 15.2927C2.48043 15.1052 2.73478 14.9998 3 14.9998H26.586L20.292 8.7078C20.1042 8.52003 19.9987 8.26535 19.9987 7.9998C19.9987 7.73425 20.1042 7.47957 20.292 7.2918C20.4798 7.10402 20.7344 6.99854 21 6.99854C21.2656 6.99854 21.5202 7.10402 21.708 7.2918L29.708 15.2918C29.8011 15.3847 29.875 15.495 29.9254 15.6165C29.9758 15.738 30.0018 15.8683 30.0018 15.9998C30.0018 16.1313 29.9758 16.2616 29.9254 16.3831C29.875 16.5046 29.8011 16.6149 29.708 16.7078L21.708 24.7078C21.5202 24.8956 21.2656 25.0011 21 25.0011C20.7344 25.0011 20.4798 24.8956 20.292 24.7078C20.1042 24.52 19.9987 24.2653 19.9987 23.9998C19.9987 23.7342 20.1042 23.4796 20.292 23.2918L26.586 16.9998H3C2.73478 16.9998 2.48043 16.8944 2.29289 16.7069C2.10536 16.5194 2 16.265 2 15.9998Z"
-                  fill="#273C8D" />
+                  fill="#273C8D"
+                />
               </svg>
             </a>
-            <a
-              class="olympic-game-link"
-              href="/olympic-games.html">
+            <a class="olympic-game-link" href="/olympic-games.html">
               <span class="d-flex align-items-center gap-3">
-                <img
-                  src="./img/olympic-logos/olympic-1996.png"
-                  alt="" />
+                <img src="./img/olympic-logos/olympic-1996.png" alt="" />
                 <span class="d-flex flex-column gap-3">
                   <span class="olympic-game-link__title">Олимпийские игры - 1996. Атланта</span>
                   <span class="olympic-game-link__text">США</span>
@@ -799,19 +789,17 @@
                 height="32"
                 viewBox="0 0 32 32"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M2 15.9998C2 15.7346 2.10536 15.4802 2.29289 15.2927C2.48043 15.1052 2.73478 14.9998 3 14.9998H26.586L20.292 8.7078C20.1042 8.52003 19.9987 8.26535 19.9987 7.9998C19.9987 7.73425 20.1042 7.47957 20.292 7.2918C20.4798 7.10402 20.7344 6.99854 21 6.99854C21.2656 6.99854 21.5202 7.10402 21.708 7.2918L29.708 15.2918C29.8011 15.3847 29.875 15.495 29.9254 15.6165C29.9758 15.738 30.0018 15.8683 30.0018 15.9998C30.0018 16.1313 29.9758 16.2616 29.9254 16.3831C29.875 16.5046 29.8011 16.6149 29.708 16.7078L21.708 24.7078C21.5202 24.8956 21.2656 25.0011 21 25.0011C20.7344 25.0011 20.4798 24.8956 20.292 24.7078C20.1042 24.52 19.9987 24.2653 19.9987 23.9998C19.9987 23.7342 20.1042 23.4796 20.292 23.2918L26.586 16.9998H3C2.73478 16.9998 2.48043 16.8944 2.29289 16.7069C2.10536 16.5194 2 16.265 2 15.9998Z"
-                  fill="#273C8D" />
+                  fill="#273C8D"
+                />
               </svg>
             </a>
-            <a
-              class="olympic-game-link"
-              href="/olympic-games.html">
+            <a class="olympic-game-link" href="/olympic-games.html">
               <span class="d-flex align-items-center gap-3">
-                <img
-                  src="./img/olympic-logos/olympic-1992.png"
-                  alt="" />
+                <img src="./img/olympic-logos/olympic-1992.png" alt="" />
                 <span class="d-flex flex-column gap-3">
                   <span class="olympic-game-link__title">Олимпийские игры - 1992. Барселона</span>
                   <span class="olympic-game-link__text">Испания</span>
@@ -823,19 +811,17 @@
                 height="32"
                 viewBox="0 0 32 32"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M2 15.9998C2 15.7346 2.10536 15.4802 2.29289 15.2927C2.48043 15.1052 2.73478 14.9998 3 14.9998H26.586L20.292 8.7078C20.1042 8.52003 19.9987 8.26535 19.9987 7.9998C19.9987 7.73425 20.1042 7.47957 20.292 7.2918C20.4798 7.10402 20.7344 6.99854 21 6.99854C21.2656 6.99854 21.5202 7.10402 21.708 7.2918L29.708 15.2918C29.8011 15.3847 29.875 15.495 29.9254 15.6165C29.9758 15.738 30.0018 15.8683 30.0018 15.9998C30.0018 16.1313 29.9758 16.2616 29.9254 16.3831C29.875 16.5046 29.8011 16.6149 29.708 16.7078L21.708 24.7078C21.5202 24.8956 21.2656 25.0011 21 25.0011C20.7344 25.0011 20.4798 24.8956 20.292 24.7078C20.1042 24.52 19.9987 24.2653 19.9987 23.9998C19.9987 23.7342 20.1042 23.4796 20.292 23.2918L26.586 16.9998H3C2.73478 16.9998 2.48043 16.8944 2.29289 16.7069C2.10536 16.5194 2 16.265 2 15.9998Z"
-                  fill="#273C8D" />
+                  fill="#273C8D"
+                />
               </svg>
             </a>
-            <a
-              class="olympic-game-link"
-              href="/olympic-games.html">
+            <a class="olympic-game-link" href="/olympic-games.html">
               <span class="d-flex align-items-center gap-3">
-                <img
-                  src="./img/olympic-logos/olympic-1988.png"
-                  alt="" />
+                <img src="./img/olympic-logos/olympic-1988.png" alt="" />
                 <span class="d-flex flex-column gap-3">
                   <span class="olympic-game-link__title">Олимпийские игры - 1988. Сеул</span>
                   <span class="olympic-game-link__text">Южная Корея</span>
@@ -847,19 +833,17 @@
                 height="32"
                 viewBox="0 0 32 32"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M2 15.9998C2 15.7346 2.10536 15.4802 2.29289 15.2927C2.48043 15.1052 2.73478 14.9998 3 14.9998H26.586L20.292 8.7078C20.1042 8.52003 19.9987 8.26535 19.9987 7.9998C19.9987 7.73425 20.1042 7.47957 20.292 7.2918C20.4798 7.10402 20.7344 6.99854 21 6.99854C21.2656 6.99854 21.5202 7.10402 21.708 7.2918L29.708 15.2918C29.8011 15.3847 29.875 15.495 29.9254 15.6165C29.9758 15.738 30.0018 15.8683 30.0018 15.9998C30.0018 16.1313 29.9758 16.2616 29.9254 16.3831C29.875 16.5046 29.8011 16.6149 29.708 16.7078L21.708 24.7078C21.5202 24.8956 21.2656 25.0011 21 25.0011C20.7344 25.0011 20.4798 24.8956 20.292 24.7078C20.1042 24.52 19.9987 24.2653 19.9987 23.9998C19.9987 23.7342 20.1042 23.4796 20.292 23.2918L26.586 16.9998H3C2.73478 16.9998 2.48043 16.8944 2.29289 16.7069C2.10536 16.5194 2 16.265 2 15.9998Z"
-                  fill="#273C8D" />
+                  fill="#273C8D"
+                />
               </svg>
             </a>
-            <a
-              class="olympic-game-link"
-              href="/olympic-games.html">
+            <a class="olympic-game-link" href="/olympic-games.html">
               <span class="d-flex align-items-center gap-3">
-                <img
-                  src="./img/olympic-logos/olympic-1984.png"
-                  alt="" />
+                <img src="./img/olympic-logos/olympic-1984.png" alt="" />
                 <span class="d-flex flex-column gap-3">
                   <span class="olympic-game-link__title">Олимпийские игры - 1984. Лос-Анджелес</span>
                   <span class="olympic-game-link__text">США</span>
@@ -871,19 +855,17 @@
                 height="32"
                 viewBox="0 0 32 32"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M2 15.9998C2 15.7346 2.10536 15.4802 2.29289 15.2927C2.48043 15.1052 2.73478 14.9998 3 14.9998H26.586L20.292 8.7078C20.1042 8.52003 19.9987 8.26535 19.9987 7.9998C19.9987 7.73425 20.1042 7.47957 20.292 7.2918C20.4798 7.10402 20.7344 6.99854 21 6.99854C21.2656 6.99854 21.5202 7.10402 21.708 7.2918L29.708 15.2918C29.8011 15.3847 29.875 15.495 29.9254 15.6165C29.9758 15.738 30.0018 15.8683 30.0018 15.9998C30.0018 16.1313 29.9758 16.2616 29.9254 16.3831C29.875 16.5046 29.8011 16.6149 29.708 16.7078L21.708 24.7078C21.5202 24.8956 21.2656 25.0011 21 25.0011C20.7344 25.0011 20.4798 24.8956 20.292 24.7078C20.1042 24.52 19.9987 24.2653 19.9987 23.9998C19.9987 23.7342 20.1042 23.4796 20.292 23.2918L26.586 16.9998H3C2.73478 16.9998 2.48043 16.8944 2.29289 16.7069C2.10536 16.5194 2 16.265 2 15.9998Z"
-                  fill="#273C8D" />
+                  fill="#273C8D"
+                />
               </svg>
             </a>
-            <a
-              class="olympic-game-link"
-              href="/olympic-games.html">
+            <a class="olympic-game-link" href="/olympic-games.html">
               <span class="d-flex align-items-center gap-3">
-                <img
-                  src="./img/olympic-logos/olympic-1980.png"
-                  alt="" />
+                <img src="./img/olympic-logos/olympic-1980.png" alt="" />
                 <span class="d-flex flex-column gap-3">
                   <span class="olympic-game-link__title">Олимпийские игры - 1980. Москва</span>
                   <span class="olympic-game-link__text">СССР</span>
@@ -895,19 +877,17 @@
                 height="32"
                 viewBox="0 0 32 32"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M2 15.9998C2 15.7346 2.10536 15.4802 2.29289 15.2927C2.48043 15.1052 2.73478 14.9998 3 14.9998H26.586L20.292 8.7078C20.1042 8.52003 19.9987 8.26535 19.9987 7.9998C19.9987 7.73425 20.1042 7.47957 20.292 7.2918C20.4798 7.10402 20.7344 6.99854 21 6.99854C21.2656 6.99854 21.5202 7.10402 21.708 7.2918L29.708 15.2918C29.8011 15.3847 29.875 15.495 29.9254 15.6165C29.9758 15.738 30.0018 15.8683 30.0018 15.9998C30.0018 16.1313 29.9758 16.2616 29.9254 16.3831C29.875 16.5046 29.8011 16.6149 29.708 16.7078L21.708 24.7078C21.5202 24.8956 21.2656 25.0011 21 25.0011C20.7344 25.0011 20.4798 24.8956 20.292 24.7078C20.1042 24.52 19.9987 24.2653 19.9987 23.9998C19.9987 23.7342 20.1042 23.4796 20.292 23.2918L26.586 16.9998H3C2.73478 16.9998 2.48043 16.8944 2.29289 16.7069C2.10536 16.5194 2 16.265 2 15.9998Z"
-                  fill="#273C8D" />
+                  fill="#273C8D"
+                />
               </svg>
             </a>
-            <a
-              class="olympic-game-link"
-              href="/olympic-games.html">
+            <a class="olympic-game-link" href="/olympic-games.html">
               <span class="d-flex align-items-center gap-3">
-                <img
-                  src="./img/olympic-logos/olympic-1976.png"
-                  alt="" />
+                <img src="./img/olympic-logos/olympic-1976.png" alt="" />
                 <span class="d-flex flex-column gap-3">
                   <span class="olympic-game-link__title">Олимпийские игры - 1976. Монреаль</span>
                   <span class="olympic-game-link__text">Канада</span>
@@ -919,19 +899,17 @@
                 height="32"
                 viewBox="0 0 32 32"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M2 15.9998C2 15.7346 2.10536 15.4802 2.29289 15.2927C2.48043 15.1052 2.73478 14.9998 3 14.9998H26.586L20.292 8.7078C20.1042 8.52003 19.9987 8.26535 19.9987 7.9998C19.9987 7.73425 20.1042 7.47957 20.292 7.2918C20.4798 7.10402 20.7344 6.99854 21 6.99854C21.2656 6.99854 21.5202 7.10402 21.708 7.2918L29.708 15.2918C29.8011 15.3847 29.875 15.495 29.9254 15.6165C29.9758 15.738 30.0018 15.8683 30.0018 15.9998C30.0018 16.1313 29.9758 16.2616 29.9254 16.3831C29.875 16.5046 29.8011 16.6149 29.708 16.7078L21.708 24.7078C21.5202 24.8956 21.2656 25.0011 21 25.0011C20.7344 25.0011 20.4798 24.8956 20.292 24.7078C20.1042 24.52 19.9987 24.2653 19.9987 23.9998C19.9987 23.7342 20.1042 23.4796 20.292 23.2918L26.586 16.9998H3C2.73478 16.9998 2.48043 16.8944 2.29289 16.7069C2.10536 16.5194 2 16.265 2 15.9998Z"
-                  fill="#273C8D" />
+                  fill="#273C8D"
+                />
               </svg>
             </a>
-            <a
-              class="olympic-game-link"
-              href="/olympic-games.html">
+            <a class="olympic-game-link" href="/olympic-games.html">
               <span class="d-flex align-items-center gap-3">
-                <img
-                  src="./img/olympic-logos/olympic-1972.png"
-                  alt="" />
+                <img src="./img/olympic-logos/olympic-1972.png" alt="" />
                 <span class="d-flex flex-column gap-3">
                   <span class="olympic-game-link__title">Олимпийские игры - 1972. Мюнхен</span>
                   <span class="olympic-game-link__text">Германия</span>
@@ -943,10 +921,12 @@
                 height="32"
                 viewBox="0 0 32 32"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M2 15.9998C2 15.7346 2.10536 15.4802 2.29289 15.2927C2.48043 15.1052 2.73478 14.9998 3 14.9998H26.586L20.292 8.7078C20.1042 8.52003 19.9987 8.26535 19.9987 7.9998C19.9987 7.73425 20.1042 7.47957 20.292 7.2918C20.4798 7.10402 20.7344 6.99854 21 6.99854C21.2656 6.99854 21.5202 7.10402 21.708 7.2918L29.708 15.2918C29.8011 15.3847 29.875 15.495 29.9254 15.6165C29.9758 15.738 30.0018 15.8683 30.0018 15.9998C30.0018 16.1313 29.9758 16.2616 29.9254 16.3831C29.875 16.5046 29.8011 16.6149 29.708 16.7078L21.708 24.7078C21.5202 24.8956 21.2656 25.0011 21 25.0011C20.7344 25.0011 20.4798 24.8956 20.292 24.7078C20.1042 24.52 19.9987 24.2653 19.9987 23.9998C19.9987 23.7342 20.1042 23.4796 20.292 23.2918L26.586 16.9998H3C2.73478 16.9998 2.48043 16.8944 2.29289 16.7069C2.10536 16.5194 2 16.265 2 15.9998Z"
-                  fill="#273C8D" />
+                  fill="#273C8D"
+                />
               </svg>
             </a>
           </div>
@@ -970,27 +950,18 @@
                           data-bs-toggle="collapse"
                           data-bs-target="#accordion-body-1"
                           aria-expanded="false"
-                          aria-controls="accordion-body-1">
+                          aria-controls="accordion-body-1"
+                        >
                           Структура и руководство
                         </button>
                       </p>
-                      <div
-                        id="accordion-body-1"
-                        class="accordion-collapse collapse">
+                      <div id="accordion-body-1" class="accordion-collapse collapse">
                         <ul class="sidebar__accordion-list">
                           <li class="sidebar__accordion-list-item">
-                            <a
-                              class=""
-                              href="#">
-                              Устав «БФП»
-                            </a>
+                            <a class="" href="#"> Устав «БФП» </a>
                           </li>
                           <li class="sidebar__accordion-list-item">
-                            <a
-                              class=""
-                              href="#">
-                              Программа развития плавания
-                            </a>
+                            <a class="" href="#"> Программа развития плавания </a>
                           </li>
                         </ul>
                       </div>

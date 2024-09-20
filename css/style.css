@@ -587,7 +587,7 @@
     font-weight: 700;
     text-align: left;
     max-width: 1100px;
-    padding-top: 150px;
+    padding-top: 120px;
   }
   @media screen and (max-width: 768px) {
     .h1-title {
@@ -597,6 +597,7 @@
   @media screen and (max-width: 576px) {
     .h1-title {
       font-size: 28px;
+      padding-top: 85px;
     }
   }
   .h3-title {
@@ -2430,7 +2431,7 @@
     text-align: center;
     font-family: "Raleway", sans-serif;
     z-index: 2;
-    line-height: 120%;
+    line-height: 90%;
   }
   .history__item:not(:nth-last-child(-n+1))::after {
     content: "";
@@ -2622,7 +2623,7 @@
     margin-bottom: 40px;
   }
   .olympic__title {
-    padding-top: 150px;
+    padding-top: 120px;
   }
   .olympic__content {
     display: -webkit-box;
@@ -2693,6 +2694,7 @@
   @media screen and (max-width: 576px) {
     .olympic__title {
       font-size: 32px;
+      padding-top: 75px;
     }
   }
   .block__header {
@@ -3030,7 +3032,7 @@
        -moz-column-gap: 20px;
             column-gap: 20px;
     row-gap: 7px;
-    margin-bottom: 24px;
+    margin-block: 32px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -3039,15 +3041,39 @@
     position: relative;
   }
   .breadcrumbs__item a {
-    color: var(--dark-gray);
+    color: var(--dark-dray);
   }
   .breadcrumbs__item a:hover {
     color: var(--main);
+  }
+  .breadcrumbs__item.active {
+    color: var(--black);
   }
   .breadcrumbs__item:not(:last-child)::after {
     content: "";
     position: absolute;
     background: url("../img/icons/chevron-right.svg");
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+  }
+  .breadcrumbs__item--light {
+    font-size: 14px;
+    position: relative;
+  }
+  .breadcrumbs__item--light a {
+    color: var(--white);
+  }
+  .breadcrumbs__item--light a:hover {
+    color: var(--light-blue);
+  }
+  .breadcrumbs__item--light.active {
+    color: var(--light-blue);
+  }
+  .breadcrumbs__item--light:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    background: url("../img/icons/chevron-right-light.svg");
     width: 12px;
     height: 12px;
     margin-left: 4px;
@@ -3279,7 +3305,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     min-height: 100vh;
-    background-color: var(--color-white);
+    background-color: var(--white);
     -webkit-font-feature-settings: "lnum";
             font-feature-settings: "lnum";
   }
