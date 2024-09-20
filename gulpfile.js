@@ -14,7 +14,7 @@ let path = {
   },
   src: {
     html: [source_folder + "/**/*.html"],
-    css: source_folder + "/scss/style.scss",
+    css: [source_folder + "/scss/style.scss", source_folder + "/scss/style-cabinet.scss"],
     js: source_folder + "/js/script.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.ttf",
@@ -63,28 +63,30 @@ function html() {
 }
 
 function css() {
-  return src(path.src.css)
-    .pipe(
-      scss({
-        outputStyle: "expanded",
-      })
-    )
-    // .pipe(group_media())
-    .pipe(
-      autoprefixer({
-        overrideBrowserslist: ["last 5 versions"],
-        cascade: true,
-      })
-    )
-    .pipe(dest(path.build.css))
-    .pipe(clean_css())
-    .pipe(
-      rename({
-        extname: ".min.css",
-      })
-    )
-    .pipe(dest(path.build.css))
-    .pipe(browsersync.stream());
+  return (
+    src(path.src.css)
+      .pipe(
+        scss({
+          outputStyle: "expanded",
+        })
+      )
+      // .pipe(group_media())
+      .pipe(
+        autoprefixer({
+          overrideBrowserslist: ["last 5 versions"],
+          cascade: true,
+        })
+      )
+      .pipe(dest(path.build.css))
+      .pipe(clean_css())
+      .pipe(
+        rename({
+          extname: ".min.css",
+        })
+      )
+      .pipe(dest(path.build.css))
+      .pipe(browsersync.stream())
+  );
 }
 
 function js() {
@@ -102,17 +104,19 @@ function js() {
 }
 
 function images() {
-  return src(path.src.img)
-    // .pipe(
-    //   imagemin({
-    //     progressive: true,
-    //     svgoPlugins: [{ removeViewBox: false }],
-    //     interlaced: true,
-    //     optimizationLevel: 3, // 0 to 7
-    //   })
-    // )
-    .pipe(dest(path.build.img))
-    .pipe(browsersync.stream());
+  return (
+    src(path.src.img)
+      // .pipe(
+      //   imagemin({
+      //     progressive: true,
+      //     svgoPlugins: [{ removeViewBox: false }],
+      //     interlaced: true,
+      //     optimizationLevel: 3, // 0 to 7
+      //   })
+      // )
+      .pipe(dest(path.build.img))
+      .pipe(browsersync.stream())
+  );
 }
 
 function audio() {
