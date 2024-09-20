@@ -2,7 +2,7 @@
   display: flex;
   column-gap: 20px;
   row-gap: 7px;
-  margin-bottom: 24px;
+  margin-block: 32px;
   flex-wrap: wrap;
 
   &__item {
@@ -10,7 +10,7 @@
     position: relative;
 
     & a {
-      color: var(--dark-gray);
+      color: var(--dark-dray);
 
       &:hover {
         color: var(--main);
@@ -18,10 +18,40 @@
     }
   }
 
+  &__item.active {
+    color: var(--black);
+  }
+
   &__item:not(:last-child)::after {
     content: "";
     position: absolute;
     background: url("../img/icons/chevron-right.svg");
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+  }
+
+  &__item--light {
+    font-size: 14px;
+    position: relative;
+
+    & a {
+      color: var(--white);
+
+      &:hover {
+        color: var(--light-blue);
+      }
+    }
+  }
+
+  &__item--light.active {
+    color: var(--light-blue);
+  }
+
+  &__item--light:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    background: url("../img/icons/chevron-right-light.svg");
     width: 12px;
     height: 12px;
     margin-left: 4px;
