@@ -1,0 +1,43 @@
+.cabinet__profile-info {
+  display: flex;
+  margin-left: 96px;
+}
+
+.cabinet__profile-info .dropdown-toggle {
+  padding: 0;
+  padding-bottom: 4px;
+  color: var(--black);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.cabinet__profile-info .dropdown-menu {
+  margin-top: 43px !important;
+}
+
+.cabinet__profile-info .header-dropdown .dropdown-toggle::after {
+  width: 10px;
+  height: 10px;
+}
+
+.cabinet__profile-info:hover .header-dropdown .dropdown-toggle::after {
+  transform: rotate(225deg) translate(-5px, -5px);
+}
+
+.profile-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: $transition-2;
+}
+
+.cabinet__profile-info:hover .profile-btn {
+  background-color: var(--main-hover);
+}
