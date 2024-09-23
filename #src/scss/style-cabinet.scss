@@ -122,3 +122,16 @@
     padding-inline: 15px;
   }
 }
+
+@media (min-width: 1800px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-inline: 15px;
+  }
+}
