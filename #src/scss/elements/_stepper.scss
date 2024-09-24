@@ -1,0 +1,68 @@
+.stepper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 24px;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 240px;
+  white-space: nowrap;
+}
+
+.step-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 1px solid var(--gray);
+  display: flex;
+  font-family: $ff-raleway;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: var(--dark-gray);
+  margin-bottom: 16px;
+  cursor: not-allowed;
+}
+
+.step-label {
+  font-size: 16px;
+  color: var(--black);
+}
+
+.step.active .step-number {
+  background-color: var(--main);
+  border-color: var(--main);
+  color: #fff;
+  cursor: default;
+}
+
+.step::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 61%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--gray);
+  z-index: -1;
+}
+
+.step:last-child::before {
+  content: none;
+}
+
+// .step.active::before,
+// .step.active ~ .step::before {
+//   background-color: var(--main);
+// }

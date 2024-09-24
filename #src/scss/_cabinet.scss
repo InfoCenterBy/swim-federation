@@ -1,9 +1,19 @@
 .cabinet {
   &__container {
+    display: flex;
+    flex: 1;
   }
 
   &__header {
     padding-inline: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--white);
+
+    & .dropdown-menu {
+      border-top: none;
+    }
   }
 
   &__aside {
@@ -13,6 +23,7 @@
     background-color: var(--main);
     top: 92px;
     padding-top: 128px;
+    transition: $transition-2;
 
     &-button {
       width: 40px;
@@ -27,14 +38,32 @@
       transition: $transition-2;
       border: 1px solid transparent;
 
-      &:hover {
-        background-color: var(--main-hover);
-        border: 1px solid var(--white);
+      @media (hover: hover) {
+        &:hover {
+          background-color: var(--light-blue);
+          border: 1px solid var(--white);
+        }
+
+        &:hover svg path {
+          fill: var(--main);
+        }
       }
 
-      &:hover svg path {
-        fill: var(--white);
+      @media (hover: none) {
+        &:active {
+          background-color: var(--light-blue);
+          border: 1px solid var(--white);
+          fill: var(--white);
+        }
+
+        &:active svg path {
+          fill: var(--main);
+        }
       }
+    }
+
+    &-button.compact {
+      transform: rotate(180deg);
     }
 
     &-menu-item {
@@ -45,28 +74,51 @@
         display: flex;
         align-items: center;
         width: 100%;
-        padding: 16px 32px;
+        padding: 16px 30px;
         color: var(--white);
         font-size: 16px;
         font-weight: 500;
         gap: 8px;
       }
 
-      &:hover {
-        background-color: var(--light-blue);
+      @media (hover: hover) {
+        &:hover {
+          background-color: var(--light-blue);
+        }
+
+        &:hover a {
+          color: var(--main);
+        }
+
+        &:hover svg path {
+          fill: var(--main);
+        }
       }
 
-      &:hover a {
-        color: var(--main);
-      }
+      @media (hover: none) {
+        &:active {
+          background-color: var(--light-blue);
+        }
 
-      &:hover svg path {
-        fill: var(--main);
+        &:active a {
+          color: var(--main);
+        }
+
+        &:active svg path {
+          fill: var(--main);
+        }
       }
+    }
+
+    &-menu-item svg {
+      width: 28px;
+      height: 28px;
     }
 
     &-menu-item svg path {
       fill: var(--white);
+      width: 28px;
+      height: 28px;
     }
 
     &-menu-item.active {
@@ -74,14 +126,86 @@
 
       & a {
         padding: 16px 32px;
+        color: var(--black);
+      }
+
+      & svg path {
+        fill: var(--main);
       }
     }
+
+    &-menu-text {
+      white-space: nowrap;
+      overflow: hidden;
+      transition: $transition-2;
+    }
+  }
+
+  &__aside.compact {
+    transition: $transition-2;
+    width: 88px;
+  }
+
+  &__aside.compact .cabinet__aside-menu-text {
+    opacity: 0;
+    font-size: 0px;
+    visibility: hidden;
+  }
+
+  &__aside.compact .cabinet__aside-menu-item a {
+    padding: 16px 30px;
+    gap: 0px;
+  }
+
+  &__content {
+    margin-left: 300px;
+    background-color: #f5f6f8;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    transition: $transition-2;
+    padding: 64px 40px;
+    align-items: flex-start;
+
+    &-button {
+      background-color: var(--main);
+      color: var(--white);
+      padding: 12px 16px;
+      display: inline-block;
+      font-size: 16px;
+      transition: $transition-2;
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: var(--main-hover);
+        }
+      }
+
+      @media (hover: none) {
+        &:active {
+          background-color: var(--main-hover);
+        }
+      }
+
+      &:active {
+        background-color: var(--blue);
+      }
+    }
+  }
+
+  &__content.full {
+    margin-left: 88px;
   }
 
   &__footer {
     margin-left: 300px;
     padding-inline: 40px;
     background-color: var(--main);
+    transition: $transition-2;
+  }
+
+  &__footer.full {
+    margin-left: 88px;
   }
 
   &__profile-info {
@@ -99,6 +223,8 @@
 
   &__profile-info .dropdown-menu {
     margin-top: 43px !important;
+    border-top: 1px solid var(--light-gray);
+    background-color: var(--white);
   }
 
   &__profile-info .header-dropdown .dropdown-toggle::after {
@@ -127,4 +253,21 @@
   cursor: pointer;
   margin-right: 8px;
   transition: $transition-2;
+}
+
+.cabinet__aside,
+.cabinet__content,
+.cabinet__footer,
+.cabinet__aside-button {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cabinet__aside.ready,
+.cabinet__content.ready,
+.cabinet__footer.ready,
+.cabinet__aside-button.ready {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.001s ease;
 }

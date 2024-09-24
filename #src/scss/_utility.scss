@@ -88,3 +88,17 @@ body.no-scroll {
   color: var(--white);
   text-align: left;
 }
+
+.h2-title {
+  font-family: $ff-raleway;
+  font-feature-settings: "lnum";
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--main);
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.no-transition {
+  transition: none;
+}
