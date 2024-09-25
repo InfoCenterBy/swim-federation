@@ -1,0 +1,35 @@
+.input-error-message {
+  display: none;
+}
+
+.input-error-message.active {
+  display: block;
+}
+
+.form-select {
+  border-radius: 0;
+  border: 1px solid var(--gray);
+  padding: 12px;
+}
+
+.form-select:focus {
+  box-shadow: none;
+}
+
+.cabinet__form {
+  margin-top: 48px;
+  max-width: 500px;
+  width: 100%;
+
+  &-step {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.step-next-button:disabled {
+  background-color: var(--gray);
+  color: var(--white);
+  cursor: not-allowed;
+}
