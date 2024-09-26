@@ -17,6 +17,11 @@
       padding: 16px 12px;
       border: 1px solid var(--gray);
     }
+
+    & input:disabled {
+      background-color: var(--gray);
+      color: var(--dark-gray);
+    }
   }
 
   &__input.invalid {
@@ -51,6 +56,11 @@
     & input {
       padding: 12px;
       border: 1px solid var(--gray);
+    }
+
+    & input:disabled {
+      background-color: var(--gray);
+      color: var(--dark-gray);
     }
   }
 
@@ -129,6 +139,14 @@
 }
 
 #phone:focus {
+  color: var(--black);
+}
+
+#additional-phone {
+  color: var(--dark-gray);
+}
+
+#additional-phone:focus {
   color: var(--black);
 }
 

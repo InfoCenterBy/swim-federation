@@ -175,17 +175,7 @@
       font-size: 16px;
       transition: $transition-2;
 
-      @media (hover: hover) {
-        &:hover {
-          background-color: var(--main-hover);
-        }
-      }
-
-      @media (hover: none) {
-        &:active {
-          background-color: var(--main-hover);
-        }
-      }
+      @include hover(background-color, var(--main-hover));
 
       &:active {
         background-color: var(--blue);
@@ -259,7 +249,7 @@
 .cabinet__content,
 .cabinet__footer,
 .cabinet__aside-button {
-  opacity: 0;
+  // opacity: 0;
   visibility: hidden;
 }
 
@@ -267,7 +257,7 @@
 .cabinet__content.ready,
 .cabinet__footer.ready,
 .cabinet__aside-button.ready {
-  opacity: 1;
+  // opacity: 1;
   visibility: visible;
-  transition: all 0.001s ease;
+  transition: all 0.01s ease;
 }

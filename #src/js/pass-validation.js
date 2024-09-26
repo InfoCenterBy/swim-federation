@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const passwordInputs = document.querySelectorAll(".password-input");
-  console.log(passwordInputs);
 
   const validationMessage = document.querySelector(".password-info-message");
 

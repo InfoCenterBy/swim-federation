@@ -1,2 +1,5 @@
 @@include('cabinet-aside.js', {})
 @@include('cabinet-application-form.js', {})
+@@include('phone-mask.js', {})
+@@include('cabinet-file-upload.js', {})
+@@include('cabinet-modal.js', {})

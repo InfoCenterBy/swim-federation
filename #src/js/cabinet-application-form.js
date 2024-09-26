@@ -1,29 +1,33 @@
-const yearSelect = document.getElementById("year-select");
+const yearSelect = document.querySelectorAll("#year-select");
 const startYear = 1940;
 const currentYear = new Date().getFullYear();
 
-for (let year = currentYear; year >= startYear; year--) {
-  const option = document.createElement("option");
-  option.value = year;
-  option.textContent = year;
-  yearSelect.appendChild(option);
-}
+yearSelect.forEach((select) => {
+  for (let year = currentYear; year >= startYear; year--) {
+    const option = document.createElement("option");
+    option.value = year;
+    option.textContent = year;
+    select.appendChild(option);
+  }
+});
 
-const daySelect = document.getElementById("day-select");
+const daySelect = document.querySelectorAll("#day-select");
 
-for (let day = 1; day <= 31; day++) {
-  const option = document.createElement("option");
-  option.value = day;
-  option.textContent = day;
-  daySelect.appendChild(option);
-}
+daySelect.forEach((select) => {
+  for (let day = 1; day <= 31; day++) {
+    const option = document.createElement("option");
+    option.value = day;
+    option.textContent = day;
+    select.appendChild(option);
+  }
+});
 
+// проверка на заполненость полей
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".cabinet__form");
   const button = document.querySelector(".step-next-button");
   const requiredInputs = form.querySelectorAll("input[required], select[required]");
 
-  // Проверяем, заполнены ли все обязательные поля
   function checkFormCompletion() {
     let allFilled = true;
     requiredInputs.forEach((input) => {
@@ -32,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Активируем кнопку, если все поля заполнены
     if (allFilled) {
       button.removeAttribute("disabled");
     } else {
@@ -40,11 +43,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Добавляем обработчик события на изменение значений в полях
   requiredInputs.forEach((input) => {
     input.addEventListener("input", checkFormCompletion);
   });
 
-  // Запускаем проверку при загрузке страницы
   checkFormCompletion();
+});
+
+// проверка селектов для 4 пункта
+const region = document.getElementById("region");
+const city = document.getElementById("city");
+const school = document.getElementById("school");
+
+region.addEventListener("change", function () {
+  if (region.value !== "") {
+    city.disabled = false;
+  }
+});
+
+city.addEventListener("change", function () {
+  if (city.value !== "") {
+    school.disabled = false;
+  }
 });

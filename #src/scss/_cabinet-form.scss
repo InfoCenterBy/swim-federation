@@ -10,6 +10,12 @@
   border-radius: 0;
   border: 1px solid var(--gray);
   padding: 12px;
+  font-size: 16px;
+}
+
+.form-select:disabled {
+  background-color: var(--gray);
+  color: var(--dark-gray);
 }
 
 .form-select:focus {
@@ -22,14 +28,122 @@
   width: 100%;
 
   &-step {
-    display: flex;
     flex-direction: column;
     gap: 24px;
+    display: none;
   }
+
+  &-step.active {
+    flex-direction: column;
+    gap: 24px;
+    display: flex;
+  }
+}
+
+.step-prev-button {
+  background-color: var(--white);
+  color: var(--main);
+  border: 1px solid var(--main);
+
+  @include hover(background-color, var(--main-hover));
+  @include hover(color, var(--white));
+  @include hover(border-color, var(--main-hover));
 }
 
 .step-next-button:disabled {
   background-color: var(--gray);
   color: var(--white);
   cursor: not-allowed;
+}
+
+.step-submit-button:disabled {
+  background-color: var(--gray);
+  color: var(--white);
+  cursor: not-allowed;
+}
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.custom-file-button {
+  background-color: var(--main);
+  color: var(--white);
+  padding: 12px;
+  cursor: pointer;
+  transition: $transition-2;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  @include hover(background-color, var(--main-hover));
+}
+
+.file-upload-section.hidden {
+  display: none;
+}
+
+.file-upload-body {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.file-upload-body.hidden {
+  display: none;
+}
+
+.file-input-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.file-input.hidden {
+  display: none;
+}
+
+.cancel-button {
+  padding: 4px;
+  color: var(--dark-gray);
+  background-color: var(--white);
+}
+
+.file-preview {
+  width: 100%;
+  border: 1px solid var(--gray);
+  padding: 12px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-preview.hidden {
+  display: none;
+}
+
+.file-thumbnail {
+  max-width: 50px;
+  max-height: 50px;
+  display: block;
+  margin-right: 10px;
+}
+
+.file-thumbnail.hidden {
+  display: none;
+}
+
+.file-name {
+  font-size: 16px;
+  color: var(--black);
+}
+
+.file-format {
+  color: var(--dark-gray);
+  font-size: 14px;
 }
