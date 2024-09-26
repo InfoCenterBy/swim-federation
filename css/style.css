@@ -618,6 +618,20 @@
     color: var(--white);
     text-align: left;
   }
+  .h2-title {
+    font-family: "Raleway", sans-serif;
+    -webkit-font-feature-settings: "lnum";
+            font-feature-settings: "lnum";
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--main);
+    text-align: left;
+    margin-bottom: 24px;
+  }
+  .no-transition {
+    -webkit-transition: none;
+    transition: none;
+  }
   .header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2420,7 +2434,7 @@
   .history__item-date {
     font-size: 24px;
     display: inline-block;
-    padding: 16px;
+    padding: 16px 32px;
     background-color: var(--main);
     color: var(--white);
     width: 100%;
@@ -2811,6 +2825,10 @@
     padding: 16px 12px;
     border: 1px solid var(--gray);
   }
+  .form__input input:disabled {
+    background-color: var(--gray);
+    color: var(--dark-gray);
+  }
   .form__input.invalid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2849,6 +2867,10 @@
   .form__input--small input {
     padding: 12px;
     border: 1px solid var(--gray);
+  }
+  .form__input--small input:disabled {
+    background-color: var(--gray);
+    color: var(--dark-gray);
   }
   .form__input--small.invalid {
     display: -webkit-box;
@@ -2923,6 +2945,12 @@
     color: var(--dark-gray);
   }
   #phone:focus {
+    color: var(--black);
+  }
+  #additional-phone {
+    color: var(--dark-gray);
+  }
+  #additional-phone:focus {
     color: var(--black);
   }
   .password-validation-message {

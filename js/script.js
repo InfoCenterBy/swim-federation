@@ -217,7 +217,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const passwordInputs = document.querySelectorAll(".password-input");
-  console.log(passwordInputs);
 
   const validationMessage = document.querySelector(".password-info-message");
 
@@ -288,9 +287,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const phoneInput = document.getElementById("phone");
+const additionalPhoneInput = document.getElementById("additional-phone");
 
 if (phoneInput) {
   IMask(phoneInput, {
+    mask: "+{375}(00)000-00-00",
+    lazy: false,
+  });
+}
+
+if (additionalPhoneInput) {
+  IMask(additionalPhoneInput, {
     mask: "+{375}(00)000-00-00",
     lazy: false,
   });
