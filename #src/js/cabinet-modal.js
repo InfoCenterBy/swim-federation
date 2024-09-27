@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("cabinet__form");
-  console.log(form);
-
   const modal = document.getElementById("modal-window");
-
   const closeButton = document.getElementById("modal-close-btn");
   const body = document.body;
 

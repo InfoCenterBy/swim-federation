@@ -61,127 +61,83 @@ function resetFileInput() {
   fileUploadBody.classList.remove("hidden");
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const steps = document.querySelectorAll(".cabinet__form-step");
-//   let currentStep = 0;
-//   const nextButtons = document.querySelectorAll(".step-next-button");
-//   const prevButtons = document.querySelectorAll(".step-prev-button");
-
-//   function showStep(index) {
-//     steps.forEach((step, idx) => {
-//       step.style.display = idx === index ? "flex" : "none";
-//     });
-//     currentStep = index;
-//   }
-
-//   function validateStep(stepIndex) {
-//     const inputs = steps[stepIndex].querySelectorAll("input[required], select[required]");
-
-//     let allValid = true;
-
-//     inputs.forEach((input) => {
-//       if (!input.checkValidity()) {
-//         allValid = false;
-//       }
-//     });
-
-//     return allValid;
-//   }
-
-//   function toggleNextButton(stepIndex) {
-//     const nextButton = steps[stepIndex].querySelector(".step-next-button");
-//     nextButton.disabled = !validateStep(stepIndex);
-//   }
-
-//   function addValidationListeners(stepIndex) {
-//     const inputs = steps[stepIndex].querySelectorAll("input[required], select[required]");
-//     inputs.forEach((input) => {
-//       input.addEventListener("input", () => toggleNextButton(stepIndex));
-//     });
-//   }
-
-//   showStep(currentStep);
-//   steps.forEach((_, index) => addValidationListeners(index));
-
-//   nextButtons.forEach((button, index) => {
-//     button.addEventListener("click", function () {
-//       if (validateStep(index)) {
-//         showStep(index + 1);
-//       }
-//     });
-//   });
-
-//   prevButtons.forEach((button, index) => {
-//     button.addEventListener("click", function () {
-//       showStep(index);
-//     });
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   const steps = document.querySelectorAll(".cabinet__form-step");
   let currentStep = 0;
   const nextButtons = document.querySelectorAll(".step-next-button");
   const prevButtons = document.querySelectorAll(".step-prev-button");
-
-  // Кнопка "Подать заявку" на последнем шаге
-  const submitButton = document.querySelector(".step-submit-button"); // Добавьте нужный селектор для кнопки на последнем шаге
+  const submitButton = document.querySelector(".step-submit-button");
+  const stepperItems = document.querySelectorAll(".stepper .step");
 
   function showStep(index) {
     steps.forEach((step, idx) => {
       step.style.display = idx === index ? "flex" : "none";
     });
+    updateStepper(index);
     currentStep = index;
   }
 
-  // Валидация шагов
+  function updateStepper(index) {
+    stepperItems.forEach((step, idx) => {
+      if (idx <= index) {
+        step.classList.add("active");
+      } else {
+        step.classList.remove("active");
+      }
+    });
+  }
+
+  // Валидация полей на шаге
   function validateStep(stepIndex) {
     const inputs = steps[stepIndex].querySelectorAll("input[required], select[required]");
-
     let allValid = true;
-
     inputs.forEach((input) => {
       if (!input.checkValidity()) {
         allValid = false;
       }
     });
-
     return allValid;
   }
 
-  // Включение/отключение кнопки "Далее"
   function toggleNextButton(stepIndex) {
     const nextButton = steps[stepIndex].querySelector(".step-next-button");
     nextButton.disabled = !validateStep(stepIndex);
   }
 
-  // Включение/отключение кнопки "Подать заявку"
   function toggleSubmitButton() {
-    const lastStepIndex = steps.length - 1; // Последний шаг
-    submitButton.disabled = !validateStep(lastStepIndex);
+    const lastStepIndex = steps.length - 1;
+    const isFileSelected = fileInput.files.length > 0;
+    const isCheckboxChecked = benefitCheckbox.checked;
+    const allFieldsValid = validateStep(lastStepIndex);
+
+    if (isCheckboxChecked) {
+      submitButton.disabled = !(isFileSelected && allFieldsValid);
+    } else {
+      submitButton.disabled = !allFieldsValid;
+    }
   }
 
-  // Добавление слушателей для инпутов на шаге
   function addValidationListeners(stepIndex) {
     const inputs = steps[stepIndex].querySelectorAll("input[required], select[required]");
     inputs.forEach((input) => {
       input.addEventListener("input", () => {
         if (stepIndex === steps.length - 1) {
-          toggleSubmitButton(); // Для последнего шага проверяем кнопку "Подать заявку"
+          toggleSubmitButton();
         } else {
-          toggleNextButton(stepIndex); // Для всех остальных шагов проверяем кнопку "Далее"
+          toggleNextButton(stepIndex);
         }
       });
     });
   }
 
-  // Показываем первый шаг при загрузке
+  benefitCheckbox.addEventListener("change", toggleSubmitButton);
+
+  fileInput.addEventListener("change", toggleSubmitButton);
+
   showStep(currentStep);
 
-  // Добавляем слушатели для всех шагов
   steps.forEach((_, index) => addValidationListeners(index));
 
-  // Обрабатываем нажатие на кнопки "Далее"
   nextButtons.forEach((button, index) => {
     button.addEventListener("click", function () {
       if (validateStep(index)) {
@@ -190,13 +146,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Обрабатываем нажатие на кнопки "Назад"
   prevButtons.forEach((button, index) => {
     button.addEventListener("click", function () {
       showStep(index);
     });
   });
 
-  // Инициализируем проверку для кнопки "Подать заявку" при загрузке
   toggleSubmitButton();
 });
