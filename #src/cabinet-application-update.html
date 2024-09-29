@@ -188,6 +188,21 @@
                 <div class="form__input--small mb-0">
                   <label
                     class="fs-16"
+                    for="membership-card">
+                    Номер членского билета
+                    <span class="color-red">*</span>
+                  </label>
+                  <input
+                    class="bg-fa"
+                    id="membership-card"
+                    type="text"
+                    required />
+                  <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+                </div>
+
+                <div class="form__input--small mb-0">
+                  <label
+                    class="fs-16"
                     for="surname">
                     Дата рождения
                     <span class="color-red">*</span>
@@ -267,6 +282,110 @@
                 </button>
               </div>
               <div class="cabinet__form-step step2">
+                <div id="personal-fields">
+                  <div class="form__input--small mb-0">
+                    <label
+                      class="fs-16"
+                      for="passport-number">
+                      № паспорта
+                      <span class="color-red">*</span>
+                    </label>
+                    <input
+                      class="bg-fa"
+                      id="passport-number"
+                      type="text"
+                      required />
+                    <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+                  </div>
+                  <div class="form__input--small mb-0">
+                    <label
+                      class="fs-16"
+                      for="id-number">
+                      Идентификационный номер
+                      <span class="color-red">*</span>
+                    </label>
+                    <input
+                      class="bg-fa"
+                      id="id-number"
+                      type="text"
+                      required />
+                    <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+                  </div>
+
+                  <div class="form__input--small mb-0">
+                    <label
+                      class="fs-16"
+                      for="issuing-authority">
+                      Кем выдан
+                      <span class="color-red">*</span>
+                    </label>
+                    <input
+                      class="bg-fa"
+                      id="issuing-authority"
+                      type="text"
+                      required />
+                    <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+                  </div>
+
+                  <div class="form__input--small mb-0">
+                    <label
+                      class="fs-16"
+                      for="issue-date">
+                      Дата выдачи
+                      <span class="color-red">*</span>
+                    </label>
+                    <div class="d-flex gap-3">
+                      <select
+                        id="day-select"
+                        class="form-select bg-fa fs-16"
+                        aria-label="day"
+                        required>
+                        <option
+                          selected
+                          disabled
+                          value="">
+                          День
+                        </option>
+                      </select>
+                      <select
+                        class="form-select bg-fa fs-16"
+                        aria-label="month"
+                        required
+                        value="">
+                        <option
+                          selected
+                          disabled>
+                          Месяц
+                        </option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                      <select
+                        id="year-select"
+                        class="form-select bg-fa fs-16"
+                        aria-label="year"
+                        required>
+                        <option
+                          selected
+                          disabled
+                          value="">
+                          Год
+                        </option>
+                      </select>
+                    </div>
+                    <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+                  </div>
+                </div>
                 <div id="representative-fields">
                   <div class="form__input--small mb-0">
                     <label

@@ -147,3 +147,10 @@
   color: var(--dark-gray);
   font-size: 14px;
 }
+
+#representative-fields,
+#personal-fields {
+  flex-direction: column;
+  gap: 24px;
+  display: flex;
+}

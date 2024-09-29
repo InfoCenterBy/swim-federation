@@ -44,19 +44,20 @@
 .step.active .step-number {
   background-color: var(--main);
   border-color: var(--main);
-  color: #fff;
+  color: var(--white);
   cursor: default;
+  z-index: 10;
 }
 
 .step::before {
   content: "";
   position: absolute;
   top: 28px;
-  left: -48%;
+  left: -116px;
   width: 100%;
   height: 2px;
   background-color: var(--gray);
-  z-index: -123;
+  z-index: -1;
 }
 
 .step:first-child::before {

@@ -10,7 +10,11 @@ $colorsMap: (
   "light-blue": #abdef4,
   "red": #cb333d,
   "light-red": #f46b74,
-  "green-success": #038327
+  "light-red-secondary": #f5e5e5,
+  "green-success": #038327,
+  "light-green": #d8f3d8,
+  "yellow": #fcf3c4,
+  "orange": #e88e25,
 );
 
 $ff-raleway: "Raleway", sans-serif;
@@ -80,5 +84,3 @@ $transitionMap: (
     font-size: #{$result} + rem !important;
   }
 }
-
-

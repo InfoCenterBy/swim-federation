@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('./components/_cabinet-head.html', {title: "Заявки"})
+  @@include('./components/_cabinet-head.html', {title: "Профиль"})
   <body>
     <div class="wrapper">
       @@include('./components/_cabinet-header.html')
@@ -94,24 +94,165 @@
               </li>
             </ul>
           </aside>
-          <div class="cabinet__content">
-            <h2 class="h2-title">Заявки</h2>
-            <p class="fs-16 color-dark-gray mb-4">У вас пока нет поданных заявок на вступление в члены ОО «БФП»</p>
-            <p class="fs-16 mb-3">Подать заявку на вступление в члены ОО «БФП»</p>
-            <a
-              class="cabinet__content-button mb-4"
-              href="cabinet-application-submit.html">
-              + Подать заявку
-            </a>
-            <p>
-              Я уже являюсь членом ОО «БФП»,
-              <a
-                class="link-main"
-                href="cabinet-application-update.html">
-                обновить информацию
-              </a>
-            </p>
-          </div>
+          <section class="cabinet__content">
+            <h2 class="h2-title">Профиль</h2>
+            <form
+              class="cabinet__form d-flex flex-column gap-4"
+              action="">
+              <div class="cabinet__profile-photo">
+                <img
+                  src=""
+                  alt="" />
+                <div>
+                  <input />
+                  <p class="fs-14 color-dark-gray">Формат файлов: png, .jpeg, .jpg, (до 2МБ)</p>
+                </div>
+              </div>
+              <div class="form__input--small mb-0">
+                <label
+                  class="fs-16"
+                  for="email">
+                  Email
+                  <span class="color-red">*</span>
+                </label>
+                <input
+                  class="bg-fa"
+                  id="email"
+                  type="text"
+                  value="email@example.com"
+                  required
+                  disabled />
+                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+              </div>
+              <div class="form__input--small mb-0">
+                <label
+                  class="fs-16"
+                  for="last-name">
+                  Фамилия
+                  <span class="color-red">*</span>
+                </label>
+                <input
+                  class="bg-fa"
+                  id="last-name"
+                  type="text"
+                  required />
+                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+              </div>
+              <div class="form__input--small mb-0">
+                <label
+                  class="fs-16"
+                  for="first-name">
+                  Имя
+                  <span class="color-red">*</span>
+                </label>
+                <input
+                  class="bg-fa"
+                  id="first-name"
+                  type="text"
+                  required />
+                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+              </div>
+              <div class="d-flex gap-3">
+                <div class="form__input--small mb-0 w-75">
+                  <label
+                    class="fs-16"
+                    for="surname">
+                    Отчество
+                    <span class="color-red">*</span>
+                  </label>
+                  <input
+                    class="bg-fa"
+                    id="surname"
+                    type="text"
+                    required />
+                  <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+                </div>
+                <div class="form__input--small mb-0 w-25">
+                  <label
+                    class="fs-16"
+                    for="surname">
+                    Пол
+                    <span class="color-red">*</span>
+                  </label>
+                  <select
+                    id="gender-select"
+                    class="form-select bg-fa"
+                    aria-label="Gender selection"
+                    required>
+                    <option
+                      selected
+                      disabled></option>
+                    <option value="female">Ж</option>
+                    <option value="male">М</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form__input--small mb-0">
+                <label
+                  class="fs-16"
+                  for="surname">
+                  Дата рождения
+                  <span class="color-red">*</span>
+                </label>
+                <div class="d-flex gap-3">
+                  <select
+                    id="day-select"
+                    class="birth-day-select form-select bg-fa fs-16"
+                    aria-label="Birth day"
+                    required>
+                    <option
+                      selected
+                      disabled
+                      value="">
+                      День
+                    </option>
+                  </select>
+                  <select
+                    id="month-select"
+                    class="form-select bg-fa fs-16"
+                    aria-label="Birth month"
+                    required>
+                    <option
+                      selected
+                      disabled
+                      value="">
+                      Месяц
+                    </option>
+                    <option value="January">Январь</option>
+                    <option value="February">Февраль</option>
+                    <option value="March">Март</option>
+                    <option value="April">Апрель</option>
+                    <option value="May">Май</option>
+                    <option value="June">Июнь</option>
+                    <option value="July">Июль</option>
+                    <option value="August">Август</option>
+                    <option value="September">Сентябрь</option>
+                    <option value="October">Октябрь</option>
+                    <option value="November">Ноябрь</option>
+                    <option value="December">Декабрь</option>
+                  </select>
+                  <select
+                    id="year-select"
+                    class="birth-year-select form-select bg-fa fs-16"
+                    aria-label="Birth year"
+                    required>
+                    <option
+                      selected
+                      disabled
+                      value="">
+                      Год
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="cabinet__content-button px-4">
+                Сохранить изменения
+              </button>
+            </form>
+          </section>
         </div>
       </main>
 

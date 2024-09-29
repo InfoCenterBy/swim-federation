@@ -166,7 +166,7 @@
     flex: 1;
     transition: $transition-2;
     padding: 64px 40px;
-    align-items: center;
+    align-items: self-start;
 
     &-button {
       background-color: var(--main);
@@ -175,6 +175,7 @@
       display: inline-block;
       font-size: 16px;
       transition: $transition-2;
+      width: fit-content;
 
       @include hover(background-color, var(--main-hover));
 
@@ -232,6 +233,32 @@
   }
 }
 
+.application__status {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+
+  &.approved {
+    background-color: var(--light-green);
+    color: var(--green-success);
+  }
+
+  &.rejected {
+    background-color: var(--light-red-secondary);
+    color: var(--red);
+  }
+
+  &.pending {
+    background-color: var(--yellow);
+    color: var(--orange);
+  }
+
+  &.archive {
+    background-color: var(--gray);
+    color: var(--dark-gray);
+  }
+}
+
 .profile-btn {
   display: none;
   width: 40px;
@@ -259,4 +286,12 @@
 .cabinet__aside-button.ready {
   visibility: visible;
   transition: all 0.01s ease;
+}
+
+#personal-fields.hidden {
+  display: none;
+}
+
+#representative-fields.hidden {
+  display: none;
 }

@@ -3,3 +3,4 @@
 @@include('phone-mask.js', {})
 @@include('cabinet-file-upload.js', {})
 @@include('cabinet-modal.js', {})
+@@include('cabinet-steps-logic.js', {})
