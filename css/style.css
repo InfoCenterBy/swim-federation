@@ -18,7 +18,11 @@
     --light-blue: #abdef4;
     --red: #cb333d;
     --light-red: #f46b74;
+    --light-red-secondary: #f5e5e5;
     --green-success: #038327;
+    --light-green: #d8f3d8;
+    --yellow: #fcf3c4;
+    --orange: #e88e25;
   }
   .bootsrtap-icon {
     display: inline-block;
@@ -631,6 +635,27 @@
   .no-transition {
     -webkit-transition: none;
     transition: none;
+  }
+  .hidden {
+    display: none;
+  }
+  .default-table {
+    border-collapse: collapse;
+    overflow-x: auto;
+    width: 100%;
+  }
+  .default-table th,
+  .default-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  .default-table td {
+    vertical-align: middle;
+  }
+  .default-table th {
+    background-color: var(--light-gray);
+    font-weight: 500;
   }
   .header {
     display: -webkit-box;
@@ -3708,6 +3733,38 @@
   .border-color-light-red {
     border-color: #f46b74 !important;
   }
+  .bg-light-red-secondary {
+    background-color: #f5e5e5;
+  }
+  .color-light-red-secondary {
+    color: #f5e5e5;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hover-light-red-secondary:hover {
+      color: #f5e5e5;
+    }
+  }
+  @media (hover: none) {
+    .hover-light-red-secondary:active {
+      color: #f5e5e5;
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hover-bg-light-red-secondary:hover {
+      background-color: #f5e5e5;
+    }
+  }
+  @media (hover: none) {
+    .hover-bg-light-red-secondary:active {
+      background-color: #f5e5e5;
+    }
+  }
+  .border-1-light-red-secondary {
+    border: 1px solid #f5e5e5;
+  }
+  .border-color-light-red-secondary {
+    border-color: #f5e5e5 !important;
+  }
   .bg-green-success {
     background-color: #038327;
   }
@@ -3739,6 +3796,102 @@
   }
   .border-color-green-success {
     border-color: #038327 !important;
+  }
+  .bg-light-green {
+    background-color: #d8f3d8;
+  }
+  .color-light-green {
+    color: #d8f3d8;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hover-light-green:hover {
+      color: #d8f3d8;
+    }
+  }
+  @media (hover: none) {
+    .hover-light-green:active {
+      color: #d8f3d8;
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hover-bg-light-green:hover {
+      background-color: #d8f3d8;
+    }
+  }
+  @media (hover: none) {
+    .hover-bg-light-green:active {
+      background-color: #d8f3d8;
+    }
+  }
+  .border-1-light-green {
+    border: 1px solid #d8f3d8;
+  }
+  .border-color-light-green {
+    border-color: #d8f3d8 !important;
+  }
+  .bg-yellow {
+    background-color: #fcf3c4;
+  }
+  .color-yellow {
+    color: #fcf3c4;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hover-yellow:hover {
+      color: #fcf3c4;
+    }
+  }
+  @media (hover: none) {
+    .hover-yellow:active {
+      color: #fcf3c4;
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hover-bg-yellow:hover {
+      background-color: #fcf3c4;
+    }
+  }
+  @media (hover: none) {
+    .hover-bg-yellow:active {
+      background-color: #fcf3c4;
+    }
+  }
+  .border-1-yellow {
+    border: 1px solid #fcf3c4;
+  }
+  .border-color-yellow {
+    border-color: #fcf3c4 !important;
+  }
+  .bg-orange {
+    background-color: #e88e25;
+  }
+  .color-orange {
+    color: #e88e25;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hover-orange:hover {
+      color: #e88e25;
+    }
+  }
+  @media (hover: none) {
+    .hover-orange:active {
+      color: #e88e25;
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hover-bg-orange:hover {
+      background-color: #e88e25;
+    }
+  }
+  @media (hover: none) {
+    .hover-bg-orange:active {
+      background-color: #e88e25;
+    }
+  }
+  .border-1-orange {
+    border: 1px solid #e88e25;
+  }
+  .border-color-orange {
+    border-color: #e88e25 !important;
   }
   .border-10 {
     border-radius: 10px;

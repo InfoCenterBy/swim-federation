@@ -1,5 +1,5 @@
 <header class="cabinet__header py-16px">
-  <div class="d-flex justify-content-between align-items-center gap-4">
+  <div class="cabinet__header-desktop justify-content-between align-items-center gap-4">
     <a class="d-block" href="#"><img src="./img/icons/logo.png" alt="Logo" /></a>
     <div class="d-flex flex-wrap gap-2 align-items-center">
       <p class="color-dark-gray">Техническая поддержка:</p>
@@ -20,14 +20,27 @@
           </div>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" href="#">Профиль</a>
+              <a class="dropdown-item" href="cabinet-profile.html">Профиль</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">Изменить пароль</a>
+              <a class="dropdown-item" href="cabinet-change-password.html">Изменить пароль</a>
             </li>
           </ul>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="cabinet__header-mobile justify-content-between">
+    <a class="d-block" href="#"><img src="./img/icons/mobile-logo.png" alt="Logo" /></a>
+    <div class="d-flex">
+      <a class="profile-btn">
+        <img src="./img/icons/person.svg" alt="Profile icon" />
+      </a>
+      <button class="menu-toggle">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
     </div>
   </div>
 </header>

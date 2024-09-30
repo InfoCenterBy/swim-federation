@@ -154,21 +154,26 @@
           </aside>
           <div class="cabinet__content">
             <h2 class="h2-title">Заявки</h2>
-            <p class="fs-16 color-dark-gray mb-4">У вас пока нет поданных заявок на вступление в члены ОО «БФП»</p>
-            <p class="fs-16 mb-3">Подать заявку на вступление в члены ОО «БФП»</p>
-            <a
-              class="cabinet__content-button mb-4"
-              href="cabinet-application-submit.html">
-              + Подать заявку
-            </a>
-            <p>
-              Я уже являюсь членом ОО «БФП»,
-              <a
-                class="link-main"
-                href="cabinet-application-update.html">
-                обновить информацию
-              </a>
-            </p>
+            <div class="table-container">
+              <table class="cabinet__application-table default-table">
+                <thead>
+                  <tr>
+                    <th>Номер заявки</th>
+                    <th>Название</th>
+                    <th>Дата подачи</th>
+                    <th>Статус</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>№129646</td>
+                    <td>Заявка на вступление в члены ОО «БФП»</td>
+                    <td>15.03.2023 14:45</td>
+                    <td><span class="application__status pending">В обработке</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </main>
