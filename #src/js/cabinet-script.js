@@ -4,3 +4,5 @@
 @@include('cabinet-file-upload.js', {})
 @@include('cabinet-modal.js', {})
 @@include('cabinet-steps-logic.js', {})
+@@include('pass-validation.js', {})
+@@include('show-password.js', {})

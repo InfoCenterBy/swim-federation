@@ -103,6 +103,10 @@ body.no-scroll {
   transition: none;
 }
 
+.hidden {
+  display: none;
+}
+
 .default-table {
   border-collapse: collapse;
   overflow-x: auto;
