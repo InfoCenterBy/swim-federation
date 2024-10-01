@@ -11,12 +11,50 @@ document.addEventListener("DOMContentLoaded", function () {
     const benefitCheckbox = document.getElementById("benefit-checkbox");
     const fileInput = document.querySelector(".file-input");
 
+    const phoneInput = document.getElementById("phone");
+    const nextButtonStep3 = document.querySelector(".step-next-button-3");
+
+    function validatePhone() {
+      if (phoneInput.value.length === 18) {
+        nextButtonStep3.disabled = false;
+      } else {
+        nextButtonStep3.disabled = true;
+      }
+    }
+
+    function disableNextButtonOnPhoneStep(stepIndex) {
+      if (stepIndex === 2) {
+        nextButtonStep3.disabled = true;
+        validatePhone();
+      }
+    }
+
     function showStep(index) {
       steps.forEach((step, idx) => {
         step.style.display = idx === index ? "flex" : "none";
       });
       updateStepper(index);
       currentStep = index;
+
+      disableNextButtonOnPhoneStep(index);
+
+      if (index < steps.length - 1) {
+        toggleNextButton(index);
+      }
+    }
+
+    phoneInput.addEventListener("input", validatePhone);
+
+    function showStep(index) {
+      steps.forEach((step, idx) => {
+        step.style.display = idx === index ? "flex" : "none";
+      });
+      updateStepper(index);
+      currentStep = index;
+
+      if (index < steps.length - 1) {
+        toggleNextButton(index);
+      }
     }
 
     function updateStepper(index) {
@@ -42,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function toggleNextButton(stepIndex) {
       const nextButton = steps[stepIndex].querySelector(".step-next-button");
+
       nextButton.disabled = !validateStep(stepIndex);
     }
 
@@ -71,7 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    // Обработчик для проверки возраста и удаления шагов
     const nextStepAgeCheck = document.getElementById("next-step-age-check");
 
     if (nextStepAgeCheck) {
@@ -127,5 +165,6 @@ document.addEventListener("DOMContentLoaded", function () {
     showStep(currentStep);
     steps.forEach((_, index) => addValidationListeners(index));
     toggleSubmitButton();
+    validatePhone();
   }
 });

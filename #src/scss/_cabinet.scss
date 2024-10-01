@@ -42,7 +42,6 @@
       @media (hover: hover) {
         &:hover {
           background-color: var(--light-blue);
-          border: 1px solid var(--white);
         }
 
         &:hover svg path {
@@ -206,7 +205,7 @@
       @include hover(background-color, var(--main-hover));
 
       &:active {
-        background-color: var(--blue);
+        background-color: var(--main);
       }
     }
 
@@ -365,6 +364,13 @@
   display: none;
 }
 
+.cabinet__step-name {
+  display: none;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: $ff-raleway;
+}
+
 .cabinet__header-desktop {
   display: flex;
 }
@@ -384,7 +390,7 @@
   width: 100%;
   height: 100vh;
   padding: 40px 16px;
-  padding-bottom: 100px;
+  padding-bottom: 130px;
   background-color: var(--main);
   color: var(--white);
 
@@ -426,6 +432,10 @@
 }
 
 @media screen and (max-width: 992px) {
+  .cabinet__step-name {
+    display: block;
+  }
+
   .cabinet__header-desktop {
     display: none;
   }
@@ -460,5 +470,11 @@
 
   .cabinet__footer {
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cabinet__footer {
+    padding-inline: 15px;
   }
 }

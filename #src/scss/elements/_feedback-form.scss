@@ -203,7 +203,11 @@
   border-color: var(--light-blue);
 }
 
-.form__checkbox-container:hover input ~ .form__checkbox-checkmark0--dark {
+.form__checkbox-container:hover input ~ .form__checkbox-checkmark--dark {
+  border-color: var(--main);
+}
+
+.form__checkbox-container input:checked ~ .form__checkbox-checkmark--dark {
   border-color: var(--main);
 }
 
@@ -264,4 +268,8 @@
   .form__checkbox-checkmark--dark {
     top: 4px;
   }
+}
+
+.single-line-checkbox {
+  top: -2px;
 }
