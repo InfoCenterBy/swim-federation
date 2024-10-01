@@ -2352,7 +2352,8 @@
     margin-bottom: 24px;
     color: var(--dark-gray);
   }
-  .modal-window {
+  .modal-window,
+  .modal-window-exit {
     display: none;
     position: fixed;
     top: 0;
@@ -2380,6 +2381,17 @@
   }
   @starting-style {
     .modal-window.open {
+      opacity: 0;
+    }
+  }
+  .modal-window-exit.open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+  }
+  @starting-style {
+    .modal-window-exit.open {
       opacity: 0;
     }
   }
