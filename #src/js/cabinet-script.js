@@ -6,3 +6,5 @@
 @@include('cabinet-steps-logic.js', {})
 @@include('pass-validation.js', {})
 @@include('show-password.js', {})
+@@include('cabinet-mobile-menu.js', {})
+@@include('cabinet-modal-exit.js', {})
