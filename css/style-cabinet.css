@@ -740,8 +740,6 @@
   }
   .default-table {
     border-collapse: collapse;
-    overflow-x: auto;
-    width: 100%;
   }
   .default-table th,
   .default-table td {
@@ -1241,8 +1239,12 @@
   }
   .cabinet__application-table {
     max-width: 912px;
+    width: 100%;
   }
   @media screen and (max-width: 992px) {
+    .cabinet__application-table {
+      width: 100%;
+    }
     .cabinet__step-name {
       display: block;
     }
