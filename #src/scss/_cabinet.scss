@@ -477,4 +477,12 @@
   .cabinet__footer {
     padding-inline: 15px;
   }
+
+  .cabinet__content-button {
+    width: 100%;
+  }
+
+  .cabinet__content-button:disabled {
+    width: 100%;
+  }
 }

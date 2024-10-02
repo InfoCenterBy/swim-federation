@@ -36,7 +36,7 @@
 .modal-container {
   background-color: var(--white);
   padding: 40px;
-  width: 100%;
+  width: 90%;
   max-width: 480px;
   position: relative;
 }
@@ -60,6 +60,15 @@
   color: var(--dark-gray);
 }
 
+.btn-close {
+  top: 18px;
+  right: 18px;
+  position: absolute;
+  line-height: 16px;
+  cursor: pointer;
+  color: var(--dark-gray);
+}
+
 .modal-body {
   text-align: center;
 }
@@ -67,4 +76,20 @@
 .modal-text {
   margin-bottom: 24px;
   color: var(--dark-gray);
+}
+
+// bootstrap modal
+.modal {
+  top: 40%;
+}
+
+.modal-dialog {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+.modal-content {
+  padding-inline: 20px;
+  padding-bottom: 20px;
 }
