@@ -640,11 +640,13 @@
     display: none;
   }
   .table-container {
-    overflow-x: auto;
+    overflow: auto;
     width: 100%;
   }
   .default-table {
     border-collapse: collapse;
+    overflow-x: auto;
+    width: 100%;
   }
   .default-table th,
   .default-table td {

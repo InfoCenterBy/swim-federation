@@ -735,11 +735,13 @@
     display: none;
   }
   .table-container {
-    overflow-x: auto;
+    overflow: auto;
     width: 100%;
   }
   .default-table {
     border-collapse: collapse;
+    overflow-x: auto;
+    width: 100%;
   }
   .default-table th,
   .default-table td {
@@ -955,6 +957,7 @@
     -webkit-box-align: self-start;
         -ms-flex-align: self-start;
             align-items: self-start;
+    overflow: auto;
   }
   .cabinet__content-button {
     background-color: var(--main);
@@ -979,6 +982,31 @@
     }
   }
   .cabinet__content-button:active {
+    background-color: var(--main);
+  }
+  .cabinet__content-button--no-stretch {
+    background-color: var(--main);
+    color: var(--white);
+    padding: 12px 16px;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .cabinet__content-button--no-stretch:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .cabinet__content-button--no-stretch:active {
+      background-color: var(--main-hover);
+    }
+  }
+  .cabinet__content-button--no-stretch:active {
     background-color: var(--main);
   }
   .cabinet__content-button:disabled {
@@ -1242,9 +1270,6 @@
     width: 100%;
   }
   @media screen and (max-width: 992px) {
-    .cabinet__application-table {
-      width: 100%;
-    }
     .cabinet__step-name {
       display: block;
     }
