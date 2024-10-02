@@ -135,16 +135,16 @@ document.addEventListener("DOMContentLoaded", function () {
             personalFields.classList.add("hidden");
             representativeFields.classList.remove("hidden");
 
-            const personalFieldsInputs = personalFields.querySelectorAll("input[required], select[required]");
+            const personalFieldsInputs = personalFields.querySelectorAll("input, select");
             personalFieldsInputs.forEach((input) => {
               input.classList.add("hidden");
+              input.removeAttribute("required");
             });
 
-            const representativeFieldsInputs = representativeFields.querySelectorAll(
-              "input[required], select[required]"
-            );
+            const representativeFieldsInputs = representativeFields.querySelectorAll("input, select");
             representativeFieldsInputs.forEach((input) => {
               input.classList.remove("hidden");
+              input.setAttribute("required", "true");
             });
           }
         } else {
@@ -152,16 +152,16 @@ document.addEventListener("DOMContentLoaded", function () {
             personalFields.classList.remove("hidden");
             representativeFields.classList.add("hidden");
 
-            const personalFieldsInputs = personalFields.querySelectorAll("input[required], select[required]");
+            const personalFieldsInputs = personalFields.querySelectorAll("input, select");
             personalFieldsInputs.forEach((input) => {
               input.classList.remove("hidden");
+              input.setAttribute("required", "true");
             });
 
-            const representativeFieldsInputs = representativeFields.querySelectorAll(
-              "input[required], select[required]"
-            );
+            const representativeFieldsInputs = representativeFields.querySelectorAll("input, select");
             representativeFieldsInputs.forEach((input) => {
               input.classList.add("hidden");
+              input.removeAttribute("required");
             });
           }
         }

@@ -107,6 +107,11 @@ body.no-scroll {
   display: none;
 }
 
+.table-container {
+  overflow: auto;
+  width: 100%;
+}
+
 .default-table {
   border-collapse: collapse;
   overflow-x: auto;
