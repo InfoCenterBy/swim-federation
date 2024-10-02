@@ -639,6 +639,10 @@
   .hidden {
     display: none;
   }
+  .table-container {
+    overflow-x: auto;
+    width: 100%;
+  }
   .default-table {
     border-collapse: collapse;
     overflow-x: auto;
@@ -2409,6 +2413,8 @@
     margin-bottom: 16px;
     color: var(--main);
     text-align: center;
+    margin: 0 auto;
+    margin-bottom: 16px;
   }
   .modal-close-btn {
     position: absolute;
@@ -2445,8 +2451,8 @@
     width: 90%;
   }
   .modal-content {
-    padding-inline: 20px;
-    padding-bottom: 20px;
+    padding: 40px;
+    border-radius: 0;
   }
   .history {
     height: 450px;

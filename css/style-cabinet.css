@@ -734,6 +734,10 @@
   .hidden {
     display: none;
   }
+  .table-container {
+    overflow-x: auto;
+    width: 100%;
+  }
   .default-table {
     border-collapse: collapse;
     overflow-x: auto;
@@ -1235,6 +1239,9 @@
         -ms-transform: rotate(-45deg) translate(3px, -3px);
             transform: rotate(-45deg) translate(3px, -3px);
   }
+  .cabinet__application-table {
+    max-width: 912px;
+  }
   @media screen and (max-width: 992px) {
     .cabinet__step-name {
       display: block;
@@ -1585,6 +1592,8 @@
     margin-bottom: 16px;
     color: var(--main);
     text-align: center;
+    margin: 0 auto;
+    margin-bottom: 16px;
   }
   .modal-close-btn {
     position: absolute;
@@ -1621,8 +1630,8 @@
     width: 90%;
   }
   .modal-content {
-    padding-inline: 20px;
-    padding-bottom: 20px;
+    padding: 40px;
+    border-radius: 0;
   }
   .stepper {
     display: -webkit-box;
