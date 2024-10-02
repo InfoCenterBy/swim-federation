@@ -75,33 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // проверка на заполненость полей
-
-  const form = document.querySelector(".cabinet__form");
-  const button = document.querySelector(".step-next-button");
-  const requiredInputs = form.querySelectorAll("input[required], select[required]");
-
-  function checkFormCompletion() {
-    let allFilled = true;
-    requiredInputs.forEach((input) => {
-      if (!input.value.trim()) {
-        allFilled = false;
-      }
-    });
-
-    if (allFilled) {
-      button.removeAttribute("disabled");
-    } else {
-      button.setAttribute("disabled", "disabled");
-    }
-  }
-
-  requiredInputs.forEach((input) => {
-    input.addEventListener("input", checkFormCompletion);
-  });
-
-  checkFormCompletion();
-
   // проверка селектов для 4 пункта
   const region = document.getElementById("region");
   const city = document.getElementById("city");
@@ -119,64 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
-// проверка на возраст
-// legal representative
-
-// const birthMonthSelect = document.getElementById("month-select");
-// const birthDaySelect = document.querySelector(".birth-day-select");
-// const birthYearSelect = document.querySelector(".birth-year-select");
-// const personalFields = document.getElementById("personal-fields");
-// console.log(personalFields);
-
-// const representativeFields = document.getElementById("representative-fields");
-// console.log(representativeFields);
-
-// // Предположим, что кнопка "Следующий шаг" имеет id 'next-step-btn'
-// const nextStepBtn = document.getElementById("next-step-age-check");
-
-// nextStepBtn.addEventListener("click", function () {
-//   const day = birthDaySelect.value;
-//   const month = birthMonthSelect.value;
-//   const year = birthYearSelect.value;
-//   console.log(day);
-//   console.log(month);
-//   console.log(year);
-
-//   const birthDate = new Date(`${year}-${month}-${day}`);
-//   console.log(birthDate);
-
-//   const today = new Date();
-//   console.log(today);
-
-//   // Проверка возраста
-//   const ageDiff = today - birthDate;
-//   console.log(ageDiff);
-
-//   const ageInYears = Math.floor(ageDiff / (1000 * 60 * 60 * 24 * 365.25));
-//   console.log(ageInYears);
-
-//   // if (ageInYears < 16) {
-//   //   // Показываем поля для представителей
-//   //   document.getElementById("representative-fields").style.display = "block";
-//   //   document.getElementById("personal-fields").style.display = "none";
-//   // } else {
-//   //   // Показываем обычные поля
-//   //   document.getElementById("representative-fields").style.display = "none";
-//   //   document.getElementById("personal-fields").style.display = "block";
-//   // }
-//   if (ageInYears < 16) {
-//     // Удаляем блок с личными данными
-//     if (personalFields) {
-//       personalFields.remove();
-//     }
-//   } else {
-//     // Удаляем блок с данными представителей
-//     if (representativeFields) {
-//       representativeFields.remove();
-//     }
-//   }
-// });
 
 const phoneInput = document.getElementById("phone");
 const additionalPhoneInput = document.getElementById("additional-phone");
@@ -263,68 +178,30 @@ if (benefitCheckbox) {
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("cabinet__form");
   const modal = document.getElementById("modal-window");
-  const closeButton = document.getElementById("modal-close-btn");
+  const closeButton = document.querySelectorAll(".modal-close-btn");
   const body = document.body;
 
-  if (modal) {
+  if (modal && form && closeButton) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
       modal.classList.add("open");
-    });
-
-    closeButton.addEventListener("click", function () {
-      modal.classList.remove("open");
-    });
-
-    if (modal.classList.contains("open")) {
       body.classList.add("no-scroll");
-    } else {
-      body.classList.remove("no-scroll");
-    }
+    });
+
+    closeButton.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        modal.classList.remove("open");
+        body.classList.remove("no-scroll");
+      });
+    });
 
     window.addEventListener("click", function (event) {
       if (event.target === modal) {
         modal.classList.remove("open");
+        body.classList.remove("no-scroll");
       }
     });
   }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const fileInput = document.querySelector(".cabinet__profile-img-input");
-  const profileImg = document.querySelector(".cabinet__profile-img img");
-  const profileImgContainer = document.querySelector(".cabinet__profile-img");
-  const customFileButton = document.getElementById("custom-upload-button");
-  const deleteButton = document.getElementById("custom-delete-button");
-
-  customFileButton.addEventListener("click", () => {
-    fileInput.click();
-  });
-
-  fileInput.addEventListener("change", function (event) {
-    const file = event.target.files[0];
-
-    if (file) {
-      const reader = new FileReader();
-
-      reader.onload = function (e) {
-        profileImg.src = e.target.result;
-
-        profileImgContainer.classList.remove("icon");
-        profileImgContainer.classList.add("image");
-        deleteButton.classList.remove("hidden");
-      };
-
-      reader.readAsDataURL(file);
-    }
-  });
-
-  deleteButton.addEventListener("click", function () {
-    profileImg.src = "./img/icons/profile-icon.svg";
-    profileImgContainer.classList.add("icon");
-    profileImgContainer.classList.remove("image");
-    deleteButton.classList.add("hidden");
-  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -340,12 +217,48 @@ document.addEventListener("DOMContentLoaded", function () {
     const benefitCheckbox = document.getElementById("benefit-checkbox");
     const fileInput = document.querySelector(".file-input");
 
+    const phoneInput = document.getElementById("phone");
+    const nextButtonStep3 = document.querySelector(".step-next-button-3");
+
     function showStep(index) {
       steps.forEach((step, idx) => {
         step.style.display = idx === index ? "flex" : "none";
       });
       updateStepper(index);
       currentStep = index;
+
+      if (index < steps.length - 1) {
+        toggleNextButton(index);
+      }
+    }
+
+    function validatePhone() {
+      const phoneDigits = phoneInput.value.replace(/\D/g, "");
+      let phoneValid = true;
+
+      if (phoneDigits.length === 12) {
+        nextButtonStep3.disabled = false;
+        phoneValid = true;
+      } else {
+        nextButtonStep3.disabled = true;
+        phoneValid = false;
+      }
+
+      return phoneValid;
+    }
+
+    phoneInput.addEventListener("input", validatePhone);
+
+    function showStep(index) {
+      steps.forEach((step, idx) => {
+        step.style.display = idx === index ? "flex" : "none";
+      });
+      updateStepper(index);
+      currentStep = index;
+
+      if (index < steps.length - 1) {
+        toggleNextButton(index);
+      }
     }
 
     function updateStepper(index) {
@@ -359,18 +272,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function validateStep(stepIndex) {
-      const inputs = steps[stepIndex].querySelectorAll("input[required], select[required]");
+      const inputs = steps[stepIndex].querySelectorAll("input[required]:not(.hidden), select[required]:not(.hidden)");
       let allValid = true;
+
       inputs.forEach((input) => {
         if (!input.checkValidity()) {
           allValid = false;
         }
       });
+
+      if (stepIndex == 2) {
+        const isValid = validatePhone();
+        return isValid;
+      }
       return allValid;
     }
 
     function toggleNextButton(stepIndex) {
       const nextButton = steps[stepIndex].querySelector(".step-next-button");
+
       nextButton.disabled = !validateStep(stepIndex);
     }
 
@@ -400,7 +320,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    // Обработчик для проверки возраста и удаления шагов
     const nextStepAgeCheck = document.getElementById("next-step-age-check");
 
     if (nextStepAgeCheck) {
@@ -415,15 +334,41 @@ document.addEventListener("DOMContentLoaded", function () {
         const today = new Date();
 
         const ageDiff = today - birthDate;
-        const ageInYears = Math.floor(ageDiff / (1000 * 60 * 60 * 24 * 365.25));
+        const ageInYears = Math.floor(ageDiff / (1000 * 60 * 60 * 24 * 365));
 
         if (ageInYears < 16) {
           if (personalFields) {
-            personalFields.remove();
+            personalFields.classList.add("hidden");
+            representativeFields.classList.remove("hidden");
+
+            const personalFieldsInputs = personalFields.querySelectorAll("input[required], select[required]");
+            personalFieldsInputs.forEach((input) => {
+              input.classList.add("hidden");
+            });
+
+            const representativeFieldsInputs = representativeFields.querySelectorAll(
+              "input[required], select[required]"
+            );
+            representativeFieldsInputs.forEach((input) => {
+              input.classList.remove("hidden");
+            });
           }
         } else {
           if (representativeFields) {
-            representativeFields.remove();
+            personalFields.classList.remove("hidden");
+            representativeFields.classList.add("hidden");
+
+            const personalFieldsInputs = personalFields.querySelectorAll("input[required], select[required]");
+            personalFieldsInputs.forEach((input) => {
+              input.classList.remove("hidden");
+            });
+
+            const representativeFieldsInputs = representativeFields.querySelectorAll(
+              "input[required], select[required]"
+            );
+            representativeFieldsInputs.forEach((input) => {
+              input.classList.add("hidden");
+            });
           }
         }
 
@@ -452,7 +397,6 @@ document.addEventListener("DOMContentLoaded", function () {
     benefitCheckbox.addEventListener("change", toggleSubmitButton);
     fileInput.addEventListener("change", toggleSubmitButton);
 
-    // Начальная инициализация
     showStep(currentStep);
     steps.forEach((_, index) => addValidationListeners(index));
     toggleSubmitButton();
@@ -607,5 +551,42 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const fileInput = document.querySelector(".cabinet__profile-img-input");
+  const profileImg = document.querySelector(".cabinet__profile-img img");
+  const profileImgContainer = document.querySelector(".cabinet__profile-img");
+  const customFileButton = document.getElementById("custom-upload-button");
+  const deleteButton = document.getElementById("custom-delete-button");
+
+  customFileButton.addEventListener("click", () => {
+    fileInput.click();
+  });
+
+  fileInput.addEventListener("change", function (event) {
+    const file = event.target.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        profileImg.src = e.target.result;
+
+        profileImgContainer.classList.remove("icon");
+        profileImgContainer.classList.add("image");
+        deleteButton.classList.remove("hidden");
+      };
+
+      reader.readAsDataURL(file);
+    }
+  });
+
+  deleteButton.addEventListener("click", function () {
+    profileImg.src = "./img/icons/profile-icon.svg";
+    profileImgContainer.classList.add("icon");
+    profileImgContainer.classList.remove("image");
+    deleteButton.classList.add("hidden");
+  });
 });
 

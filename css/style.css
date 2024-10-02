@@ -2398,7 +2398,7 @@
   .modal-container {
     background-color: var(--white);
     padding: 40px;
-    width: 100%;
+    width: 90%;
     max-width: 480px;
     position: relative;
   }
@@ -2419,12 +2419,34 @@
     cursor: pointer;
     color: var(--dark-gray);
   }
+  .btn-close {
+    top: 18px;
+    right: 18px;
+    position: absolute;
+    line-height: 16px;
+    cursor: pointer;
+    color: var(--dark-gray);
+  }
   .modal-body {
     text-align: center;
   }
   .modal-text {
     margin-bottom: 24px;
     color: var(--dark-gray);
+  }
+  .modal {
+    top: 40%;
+  }
+  .modal-dialog {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 90%;
+  }
+  .modal-content {
+    padding-inline: 20px;
+    padding-bottom: 20px;
   }
   .history {
     height: 450px;
@@ -3036,7 +3058,10 @@
   .form__checkbox-container:hover input ~ .form__checkbox-checkmark {
     border-color: var(--light-blue);
   }
-  .form__checkbox-container:hover input ~ .form__checkbox-checkmark0--dark {
+  .form__checkbox-container:hover input ~ .form__checkbox-checkmark--dark {
+    border-color: var(--main);
+  }
+  .form__checkbox-container input:checked ~ .form__checkbox-checkmark--dark {
     border-color: var(--main);
   }
   .form__checkbox-container:hover input ~ .form__checkbox-checkmar--dark {
@@ -3088,6 +3113,9 @@
     .form__checkbox-checkmark--dark {
       top: 4px;
     }
+  }
+  .single-line-checkbox {
+    top: -2px;
   }
   .breadcrumbs {
     display: -webkit-box;
