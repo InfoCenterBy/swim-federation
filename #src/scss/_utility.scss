@@ -133,3 +133,29 @@ body.no-scroll {
   background-color: var(--light-gray);
   font-weight: 500;
 }
+
+.page-content {
+  flex: 0 1 calc(75% - 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page-wrapper {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-bottom: 80px;
+}
+
+@media screen and (max-width: 710px) {
+  .page-sidebar {
+    order: 1;
+    position: static !important;
+  }
+
+  .page-content {
+    order: 2;
+    flex: 0 1 100%;
+  }
+}

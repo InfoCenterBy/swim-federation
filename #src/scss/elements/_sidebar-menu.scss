@@ -96,6 +96,20 @@
       color: var(--main);
     }
   }
+
+  &__accordion-list-item.active {
+    padding: 12px;
+    padding-left: 32px;
+
+    & a {
+      font-weight: 500;
+      color: var(--main);
+    }
+
+    & a:hover {
+      color: var(--main-hover);
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {

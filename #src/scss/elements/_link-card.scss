@@ -13,8 +13,66 @@
 
   @include hover(background-color, var(--main));
   @include hover(color, var(--white));
+
+  &-icon {
+    min-width: 32px;
+    height: 32px;
+  }
 }
 
 .link-card:hover .link-card-icon path {
   fill: var(--white);
+}
+
+.link-card--with-icon {
+  width: 100%;
+  border: 1px solid var(--main);
+  background-color: var(--main);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 16px;
+  transition: $transition-2;
+  height: 178px;
+  font-family: $ff-raleway;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  & .link-card-icon path {
+    fill: var(--white);
+  }
+
+  & .link-card-icon:last-child {
+    align-self: flex-end;
+  }
+
+  @include hover(background-color, var(--white));
+  @include hover(color, var(--main));
+}
+
+.link-card--with-icon {
+  @media (hover: hover) {
+    &:hover .link-card-icon path {
+      stroke-width: 0.1;
+      fill: var(--main);
+    }
+
+    &:active {
+      background-color: var(--main-hover);
+    }
+  }
+
+  @media (hover: none) {
+    &:active .link-card-icon path {
+      stroke-width: 0.1;
+      fill: var(--main);
+    }
+
+    &:active {
+      background-color: var(--main-hover);
+    }
+  }
 }

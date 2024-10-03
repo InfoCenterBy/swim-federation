@@ -1,0 +1,52 @@
+.managment {
+  &__card {
+    padding: 20px;
+    border: 1px solid var(--main);
+    display: flex;
+    gap: 24px;
+    flex: 1 1 calc(50% - 24px);
+
+    &:last-child {
+      flex: 0 1 calc(50% - 13px);
+    }
+  }
+
+  &__card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.managment__card img {
+  min-width: 140px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1040px) {
+  .managment__card:last-child {
+    flex: 1 1 calc(50% - 24px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .managment__card {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    padding-block: 16px;
+  }
+
+  .managment__card-text {
+    align-items: flex-start;
+  }
+
+  .managment__card-text a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+}
