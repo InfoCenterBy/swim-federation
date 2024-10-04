@@ -2887,6 +2887,44 @@
               justify-content: flex-start;
     }
   }
+  .regions__item {
+    border: 1px solid var(--main);
+    padding: 24px;
+    width: 100%;
+  }
+  .regions__item-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 24px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .regions__item-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(33% - 24px);
+            flex: 0 0 calc(33% - 24px);
+    gap: 8px;
+  }
+  @media screen and (max-width: 768px) {
+    .regions__item {
+      padding: 16px;
+    }
+    .regions__item-content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+  }
   .block__header {
     display: -webkit-box;
     display: -ms-flexbox;
