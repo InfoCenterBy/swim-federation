@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('./components/_head.html', {title: "Регионы"})
+  <body>
+    <div class="wrapper">
+      @@include('./components/_header.html')
+      <main>
+        <div class="container">
+          <nav>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item">
+                <a href="structure-and-managment.html">Структура и руководство </a>
+              </li>
+              <li class="breadcrumbs__item active">Регионы</li>
+            </ul>
+          </nav>
+          <h2 class="h2-title">Регионы</h2>
+
+          <section class="page-wrapper">
+            <div class="page-content">
+              <ul class="regions">
+                <li class="regions__item">
+                  <p class="color-main fs-20 fw-semibold mb-3">Витебское областное отделение </p>
+                  <div class="regions__item-content">
+                    <div class="regions__item-block">
+                      <p class="color-dark-gray">Председатель</p>
+                      <p>Лобацевич Валерий Николаевич</p>
+                      <a class="link-main--no-underline" href="tel:80212493660"><i class="bi bi-phone mr-8px"></i>8 (0212) 49 36 60</a>
+                    </div>
+                    <div class="regions__item-block">
+                      <p class="color-dark-gray">Заместитель председателя</p>
+                      <p>Радкевич Евгений Сергеевич</p>
+                      <a class="link-main--no-underline" href="tel:80212261094"><i class="bi bi-phone mr-8px"></i>8 (0212) 26 10 94 <span class="color-dark-gray">(тел/факс)</span></a>
+                      <a class="d-block link-main--no-underline" href="tel:+375295138786">
+                        <i class="bi bi-phone mr-8px"></i>+375 (29) 513 87 86
+                      </a>
+                    </div>
+                    <div class="regions__item-block">
+                      <p class="lh-110"><i class="color-main bi bi-geo-alt mr-8px"></i>Юридический адрес: 210026, г. Витебск, ул.Чехова, 12</p>
+                      <a class="d-block link-main--no-underline" href="tel:80212485009"><i class="bi bi-phone mr-8px"></i>8 (0212) 48 50 09 <span class="color-dark-gray">(тел/факс)</span> </a>
+                      <a class="link-main--no-underline" href="mailto:sdyhor8@sdyhor8-vitebsk.by"><i class="bi bi-envelope mr-8px"></i>sdyhor8@sdyhor8-vitebsk.by</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <aside class="structure__sidebar sidebar__menu page-sidebar">
+              <nav>
+                <ul class="sidebar__menu-list">
+                  <li class="sidebar__menu-item">
+                    <a href="history.html">История</a>
+                  </li>
+                  <li class="sidebar__menu-item">
+                    <a href="achievements.html">Достижения и награды</a>
+                  </li>
+                  <li class="">
+                    <div class="accordion">
+                      <div class="sidebar__accordion-item accordion-item active">
+                        <p class="sidebar__accordion-header accordion-header">
+                          <button
+                            class="sidebar__accordion-button accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#accordion-body-1"
+                            aria-expanded="false"
+                            aria-controls="accordion-body-1">
+                            Структура и руководство
+                          </button>
+                        </p>
+                        <div id="accordion-body-1" class="accordion-collapse">
+                          <ul class="sidebar__accordion-list">
+                            <li class="sidebar__accordion-list-item">
+                              <a href="managment.html">Руководство</a>
+                            </li>
+                            <li class="sidebar__accordion-list-item">
+                              <a href="elected-agencies.html">Выборные органы</a>
+                            </li>
+                            <li class="sidebar__accordion-list-item active">
+                              <a href="regions.html">Регионы</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="sidebar__menu-item">
+                    <a href="#">Членство ОО «БФП»</a>
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+          </section>
+          
+        </div>
+      </main>
+      @@include('./components/_footer.html') @@include('./components/_script.html')
+    </div>
+  </body>
+</html>

@@ -54,7 +54,7 @@
     border-radius: unset;
 
     &::after {
-      background-image: url("../../img/icons/chevron-down.svg");
+      background-image: url("../img/icons/chevron-down.svg");
       width: 24px;
       height: 20px;
     }
@@ -66,7 +66,7 @@
     color: var(--white);
 
     &::after {
-      background-image: url("../../img/icons/chevron-up.svg");
+      background-image: url("../img/icons/chevron-up.svg");
       width: 24px;
       height: 20px;
     }

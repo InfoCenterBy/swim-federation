@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('./components/_head.html', {title: "Ревизионная комиссия"})
+  <body>
+    <div class="wrapper">
+      @@include('./components/_header.html')
+      <main>
+        <div class="container">
+          <nav>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item">
+                <a href="structure-and-managment.html">Структура и руководство </a>
+              </li>
+              <li class="breadcrumbs__item"><a href="elected-agencies.html">Выборные органы</a></li>
+              <li class="breadcrumbs__item active">Ревизионная комиссия</li>
+            </ul>
+          </nav>
+          <h2 class="h2-title">Ревизионная комиссия</h2>
+
+          <div class="table-container">
+            <table class="default-table mb-5">
+              <thead>
+                <tr>
+                  <th>№</th>
+                  <th>Фамилия, имя, отчество</th>
+                  <th>Должность</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Алина Татьяна Викторовна</td>
+                  <td>главный бухгалтер учреждения «РЦОП по водным видам спорта»</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Даниленко Елена Борисовна</td>
+                  <td>заместитель главного бухгалтера учреждения «РЦОП по водным видам спорта»</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Поворова Лариса Николаевна</td>
+                  <td>ведущий экономист учреждения «РЦОП по водным видам спорта»</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+      @@include('./components/_footer.html') @@include('./components/_script.html')
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+.regions {
+ &__item {
+  border: 1px solid var(--main);
+  padding: 24px;
+  width: 100%;
+ }
+
+ &__item-content {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+ }
+
+ &__item-block {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(33% - 24px);
+  gap: 8px;
+ }
+}
+
+@media screen and (max-width: 768px) {
+  .regions__item {
+    padding: 16px
+  }
+  .regions__item-content  {
+    flex-direction: column;
+  }
+}
