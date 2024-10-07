@@ -9,12 +9,17 @@
     &:last-child {
       flex: 0 1 calc(50% - 13px);
     }
+
+    & img {
+      align-self: flex-start;
+    }
   }
 
   &__card-text {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    align-self: flex-start;
   }
 }
 
@@ -25,9 +30,15 @@
   border-radius: 50%;
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1340px) {
   .managment__card:last-child {
     flex: 1 1 calc(50% - 24px);
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .managment__card:last-child {
+    flex: 1 1 100%;
   }
 }
 
