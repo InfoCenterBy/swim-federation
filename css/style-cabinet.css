@@ -1565,7 +1565,7 @@
   }
   .header-link {
     position: relative;
-    padding-block: 31px;
+    padding-block: 32px;
   }
   .header-link:hover {
     color: var(--main);

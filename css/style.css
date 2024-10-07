@@ -714,6 +714,7 @@
     transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+    border-bottom: 1px solid var(--light-gray);
   }
   .header__accordion {
     display: -webkit-box;
@@ -1148,7 +1149,7 @@
   }
   .header-link {
     position: relative;
-    padding-block: 31px;
+    padding-block: 32px;
   }
   .header-link:hover {
     color: var(--main);
