@@ -6,6 +6,7 @@
   z-index: 1000;
   background-color: white;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 1px solid var(--light-gray);
 
   &__accordion {
     display: flex;
