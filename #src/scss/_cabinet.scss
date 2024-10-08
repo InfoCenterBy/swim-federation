@@ -25,6 +25,10 @@
     top: 92px;
     padding-top: 128px;
     transition: $transition-2;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-bottom: 300px;
 
     &-button {
       width: 40px;
@@ -64,6 +68,12 @@
 
     &-button.compact {
       transform: rotate(180deg);
+    }
+
+    &-menu {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
 
     &-menu-item {
@@ -108,6 +118,10 @@
           fill: var(--main);
         }
       }
+    }
+
+    &-menu-item:last-child {
+      margin-top: auto;
     }
 
     &-menu-item svg {

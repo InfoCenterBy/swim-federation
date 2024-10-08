@@ -152,14 +152,14 @@ body.no-scroll {
   padding-bottom: 80px;
 }
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 1010px) {
   .page-sidebar {
     order: 1;
     position: static !important;
   }
 
   .page-content {
-    order: 2;
     flex: 0 1 100%;
+    order: 2;
   }
 }

@@ -1,12 +1,16 @@
 .institutions {
-  padding: 16px;
-  border: 1px solid var(--main);
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 464px;
-  height: 548px;
-  overflow-y: auto;
+  gap: 24px;
+
+  &__list {
+    padding: 16px;
+    border: 1px solid var(--main);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 548px;
+    overflow-y: auto;
+  }
 
   &__item {
     display: flex;
@@ -14,11 +18,29 @@
     gap: 12px;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--gray);
-    
   }
 
   &__map {
     width: 100%;
+  }
+}
 
+@media screen and (max-width: 1040px) {
+  .institutions {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .institutions__list {
+    width: 100%;
+    order: 2;
+  }
+
+  .institutions__item {
+    width: 100%;
+  }
+
+  .institutions__map {
+    order: 1;
   }
 }

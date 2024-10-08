@@ -8,3 +8,4 @@
 @@include('modal.js', {})
 @@include('phone-mask.js', {})
 @@include('scroll-to-top.js', {})
+@@include('slider.js', {})

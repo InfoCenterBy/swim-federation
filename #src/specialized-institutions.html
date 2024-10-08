@@ -5,8 +5,15 @@
     <div class="wrapper">
       @@include('./components/_header.html')
       <main>
-        <button id="scroll-to-top" class="scroll-to-top">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button
+          id="scroll-to-top"
+          class="scroll-to-top">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -28,7 +35,9 @@
             <div class="page-content">
               <ul class="d-flex gap-4 flex-wrap">
                 <li class="w-100">
-                  <a class="link-card" href="institutions-brest.html">
+                  <a
+                    class="link-card"
+                    href="institutions-brest.html">
                     <span class="mr-8px">Брест и Брестская область</span>
                     <svg
                       class="link-card-icon"
@@ -44,7 +53,9 @@
                   </a>
                 </li>
                 <li class="w-100">
-                  <a class="link-card" href="institutions-vitebsk.html">
+                  <a
+                    class="link-card"
+                    href="institutions-vitebsk.html">
                     <span>Витебск и Витебская область</span>
                     <svg
                       class="link-card-icon"
@@ -60,7 +71,9 @@
                   </a>
                 </li>
                 <li class="w-100">
-                  <a class="link-card" href="institutions-grodno.html">
+                  <a
+                    class="link-card"
+                    href="institutions-grodno.html">
                     <span>Гродно и Гродненская область</span>
                     <svg
                       class="link-card-icon"
@@ -76,10 +89,10 @@
                   </a>
                 </li>
                 <li class="w-100">
-                  <a class="link-card" href="institutions-gomel.html">
-                    <span class="mr-8px">
-                      Гомель и Гомельская область
-                    </span>
+                  <a
+                    class="link-card"
+                    href="institutions-gomel.html">
+                    <span class="mr-8px">Гомель и Гомельская область</span>
                     <svg
                       class="link-card-icon"
                       width="32"
@@ -94,10 +107,10 @@
                   </a>
                 </li>
                 <li class="w-100">
-                  <a class="link-card" href="institutions-minsk-obl.html">
-                    <span class="mr-8px">
-                      Минская область
-                    </span>
+                  <a
+                    class="link-card"
+                    href="institutions-minsk-obl.html">
+                    <span class="mr-8px">Минская область</span>
                     <svg
                       class="link-card-icon"
                       width="32"
@@ -112,10 +125,10 @@
                   </a>
                 </li>
                 <li class="w-100">
-                  <a class="link-card" href="institutions-mogilev.html">
-                    <span class="mr-8px">
-                      Могилёв и Могилёвская область
-                    </span>
+                  <a
+                    class="link-card"
+                    href="institutions-mogilev.html">
+                    <span class="mr-8px">Могилёв и Могилёвская область</span>
                     <svg
                       class="link-card-icon"
                       width="32"
@@ -130,10 +143,10 @@
                   </a>
                 </li>
                 <li class="w-100">
-                  <a class="link-card" href="institutions-minsk.html">
-                    <span class="mr-8px">
-                      Минск
-                    </span>
+                  <a
+                    class="link-card"
+                    href="institutions-minsk.html">
+                    <span class="mr-8px">Минск</span>
                     <svg
                       class="link-card-icon"
                       width="32"
@@ -152,7 +165,7 @@
 
             <aside class="structure__sidebar sidebar__menu page-sidebar">
               <nav>
-                @@include('./elements/schools-sidebar.html')
+                @@include('./elements/schools-sidebar.html', {activeSection: 'Специализированные учебно-спортивные учреждения'})
               </nav>
             </aside>
           </section>
