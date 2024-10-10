@@ -12,6 +12,10 @@
 
     & img {
       align-self: flex-start;
+      min-width: 140px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
     }
   }
 
@@ -23,25 +27,20 @@
   }
 }
 
-.managment__card img {
-  min-width: 140px;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-}
-
 .managment {
   &__card--small {
     padding: 20px;
     border: 1px solid var(--main);
     display: flex;
     gap: 24px;
-    min-width: 50%;
-    flex: 0;
     max-width: 695px;
 
     & img {
       align-self: flex-start;
+      min-width: 140px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
     }
   }
 
@@ -50,33 +49,6 @@
     flex-direction: column;
     gap: 8px;
     align-self: flex-start;
-  }
-}
-
-.managment__card--small img {
-  min-width: 140px;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-}
-
-@media screen and (max-width: 576px) {
-  .managment__card--small {
-    flex-direction: column;
-    align-items: center;
-    padding: 8px;
-    padding-block: 16px;
-  }
-
-  .managment__card-text--small {
-    align-items: flex-start;
-  }
-
-  .managment__card-text--small a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: flex-start;
   }
 }
 
@@ -89,6 +61,12 @@
 @media screen and (max-width: 1040px) {
   .managment__card:last-child {
     flex: 1 1 100%;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .managment__card--small {
+    max-width: 100%;
   }
 }
 
@@ -105,6 +83,26 @@
   }
 
   .managment__card-text a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .managment__card--small {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    padding-block: 16px;
+  }
+
+  .managment__card-text--small {
+    align-items: flex-start;
+  }
+
+  .managment__card-text--small a {
     display: flex;
     align-items: center;
     gap: 8px;

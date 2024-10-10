@@ -56,8 +56,9 @@
 .link-card--with-icon {
   @media (hover: hover) {
     &:hover .link-card-icon path {
-      stroke-width: 0.1;
+      stroke-width: 0.4;
       fill: var(--main);
+      stroke: var(--main);
     }
 
     &:active {
@@ -67,8 +68,9 @@
 
   @media (hover: none) {
     &:active .link-card-icon path {
-      stroke-width: 0.1;
+      stroke-width: 0.2;
       fill: var(--main);
+      stroke: var(--main);
     }
 
     &:active {
