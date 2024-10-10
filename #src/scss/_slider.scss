@@ -15,14 +15,14 @@
   align-items: center;
 }
 
-.swiper-slide {
+.default-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100% !important;
 }
 
-.swiper-slide img {
+.default-slide img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -42,7 +42,7 @@
     padding-inline: 0;
   }
 
-  .swiper-slide img {
+  .default-slide img {
     width: 100%;
     height: auto;
   }

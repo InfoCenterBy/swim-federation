@@ -1,7 +1,4 @@
 const slider = new Swiper(".slider", {
-  slidesPerView: 1,
-  spaceBetween: 10,
-
   breakpoints: {
     330: {
       slidesPerView: 1,
