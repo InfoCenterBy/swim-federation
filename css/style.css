@@ -2865,6 +2865,10 @@
   .managment__card img {
     -ms-flex-item-align: start;
         align-self: flex-start;
+    min-width: 140px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
   }
   .managment__card-text {
     display: -webkit-box;
@@ -2878,12 +2882,6 @@
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
-  .managment__card img {
-    min-width: 140px;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-  }
   .managment__card--small {
     padding: 20px;
     border: 1px solid var(--main);
@@ -2891,15 +2889,15 @@
     display: -ms-flexbox;
     display: flex;
     gap: 24px;
-    min-width: 50%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0;
-            flex: 0;
     max-width: 695px;
   }
   .managment__card--small img {
     -ms-flex-item-align: start;
         align-self: flex-start;
+    min-width: 140px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
   }
   .managment__card-text--small {
     display: -webkit-box;
@@ -2913,42 +2911,6 @@
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
-  .managment__card--small img {
-    min-width: 140px;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-  }
-  @media screen and (max-width: 576px) {
-    .managment__card--small {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      padding: 8px;
-      padding-block: 16px;
-    }
-    .managment__card-text--small {
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-    }
-    .managment__card-text--small a {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      gap: 8px;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
-    }
-  }
   @media screen and (max-width: 1340px) {
     .managment__card:last-child {
       -webkit-box-flex: 1;
@@ -2961,6 +2923,11 @@
       -webkit-box-flex: 1;
           -ms-flex: 1 1 100%;
               flex: 1 1 100%;
+    }
+  }
+  @media screen and (max-width: 1040px) {
+    .managment__card--small {
+      max-width: 100%;
     }
   }
   @media screen and (max-width: 576px) {
@@ -2981,6 +2948,36 @@
               align-items: flex-start;
     }
     .managment__card-text a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 8px;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .managment__card--small {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 8px;
+      padding-block: 16px;
+    }
+    .managment__card-text--small {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+    }
+    .managment__card-text--small a {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -3201,7 +3198,7 @@
     height: 450px;
     background-image: url("../img/masters/masters-clubs-zubr-banner.png");
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 47% 50%;
     margin-bottom: 40px;
   }
   .block__header {
@@ -3823,8 +3820,9 @@
   }
   @media (hover: hover) {
     .link-card--with-icon:hover .link-card-icon path {
-      stroke-width: 0.1;
+      stroke-width: 0.4;
       fill: var(--main);
+      stroke: var(--main);
     }
     .link-card--with-icon:active {
       background-color: var(--main-hover);
@@ -3832,8 +3830,9 @@
   }
   @media (hover: none) {
     .link-card--with-icon:active .link-card-icon path {
-      stroke-width: 0.1;
+      stroke-width: 0.2;
       fill: var(--main);
+      stroke: var(--main);
     }
     .link-card--with-icon:active {
       background-color: var(--main-hover);
@@ -4598,7 +4597,7 @@
 @media (min-width: 320px) {
   .container,
   .container-sm {
-    max-width: 420px;
+    max-width: 520px;
     margin: 0 auto;
     padding-inline: 10px;
   }
