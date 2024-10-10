@@ -1,12 +1,9 @@
 .photos-videos {
   padding-block: 100px;
   flex: 1;
-
-  
 }
 
 .photos {
-
   &__header {
     margin-bottom: 32px;
   }
@@ -15,9 +12,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    justify-items: center;
   }
 }
-
 
 .photos-videos__container {
   display: flex;

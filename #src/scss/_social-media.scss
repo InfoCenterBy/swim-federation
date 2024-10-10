@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+    justify-items: center;
   }
 }
 
@@ -81,5 +82,10 @@
 @media screen and (max-width: 576px) {
   .social-media__cards {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .social-media__instagram {
+    width: 340px;
+    height: 340px;
   }
 }

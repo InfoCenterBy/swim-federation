@@ -117,8 +117,67 @@
 }
 
 .dropdown-menu {
-  min-width: 100%; /* минимальная ширина dropdown равна ширине родителя */
+  min-width: 100%;
 }
 .dropdown-item {
   width: 100%;
+}
+
+.news-dropdown button {
+  background-color: transparent;
+}
+
+.news-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0px;
+}
+
+.news-dropdown .dropdown-toggle::after {
+  content: "";
+  display: inline-block;
+  margin-left: 8px;
+  border: solid var(--black);
+  border-width: 0 1px 1px 0;
+  padding: 3px;
+  transform: rotate(45deg) translate(0, 0);
+  transition: transform ease 0.2s;
+}
+
+.news-dropdown:hover .dropdown-toggle::after,
+.news-dropdown[aria-expanded="true"] .dropdown-toggle::after {
+  transform: rotate(225deg) translate(-3px, -2px);
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.news-dropdown .dropdown-menu {
+  border-radius: 0;
+  border-top: 3px solid var(--light-red);
+}
+
+.news-dropdown .dropdown-menu li {
+  padding: 12px;
+}
+
+.news-dropdown .dropdown-menu li:hover {
+  background-color: var(--light-red);
+  color: var(--white);
+}
+
+.news-dropdown .dropdown-menu li:hover button {
+  color: var(--white);
+}
+
+.news-dropdown .dropdown-menu li:active {
+  background-color: var(--ligt-red);
+}
+
+.news-dropdown .dropdown-toggle {
+  padding-inline: 8px;
+  padding-bottom: 4px;
+  font-weight: 500;
+}
+
+.news-dropdown:hover .dropdown-toggle {
+  color: var(--light-red);
 }
