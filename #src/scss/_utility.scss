@@ -146,6 +146,14 @@ body.no-scroll {
   overflow: auto;
 }
 
+.page-content--no-menu {
+  flex: 0 1 calc(75% - 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: auto;
+}
+
 .page-wrapper {
   display: flex;
   gap: 24px;
@@ -170,6 +178,12 @@ body.no-scroll {
     & iframe {
       height: 190px;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-content--no-menu {
+    flex: 1 1 100%;
   }
 }
 
