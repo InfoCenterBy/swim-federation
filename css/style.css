@@ -1724,20 +1724,19 @@
   .news-tab--big-cards .news__card {
     max-width: unset;
   }
-  .news-tab--big-cards .news__card:not(:first-child):not(:nth-child(5n)) {
-    max-width: 342px;
-  }
-  .news-tab--big-cards .news__card:first-child {
-    grid-column: span 2;
-  }
-  .news-tab--big-cards .news__card:nth-child(5n) {
-    grid-column: span 2;
-  }
   .news-tab--big-cards .news__description--dark {
     max-width: unset;
   }
   .news-tab--big-cards .news__image-container {
     max-width: unset;
+  }
+  .news-tab--big-cards .news__card:not(:first-child):not(:nth-child(5n)) {
+    max-width: 342px;
+  }
+  .news-tab--big-cards .news__card:nth-child(1),
+  .news-tab--big-cards .news__card:nth-child(10),
+  .news-tab--big-cards .news__card:nth-child(15) {
+    grid-column: span 2;
   }
   @media screen and (max-width: 1200px) {
     .news-tab {
