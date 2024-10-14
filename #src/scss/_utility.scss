@@ -181,11 +181,25 @@ body.no-scroll {
   font-weight: 500;
 }
 
+.default-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .page-content {
   flex: 0 1 calc(75% - 24px);
   display: flex;
   flex-direction: column;
   gap: 24px;
+  overflow: auto;
+}
+
+.page-content-32 {
+  flex: 0 1 calc(75% - 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
   overflow: auto;
 }
 
@@ -195,6 +209,24 @@ body.no-scroll {
   flex-direction: column;
   gap: 24px;
   overflow: auto;
+}
+
+.page-content--full-width {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .page-content--no-menu {
+    flex: 1 1 100%;
+  }
+
+  .page-content-32 {
+    flex: 1 1 100%;
+  }
 }
 
 .page-wrapper {
@@ -221,12 +253,6 @@ body.no-scroll {
     & iframe {
       height: 190px;
     }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .page-content--no-menu {
-    flex: 1 1 100%;
   }
 }
 

@@ -27,7 +27,7 @@
   border-top: 2px solid var(--main);
 }
 
-.header-dropdown .dropdown-menu li {
+.header-dropdown .dropdown-menu .dropdown-item {
   padding: 12px;
 }
 
@@ -84,7 +84,7 @@
   border-top: 2px solid var(--light-blue);
 }
 
-.header-top-dropdown .dropdown-menu li {
+.header-top-dropdown .dropdown-menu .dropdown-item {
   padding: 12px;
 }
 
@@ -119,8 +119,13 @@
 .dropdown-menu {
   min-width: 100%;
 }
+
 .dropdown-item {
   width: 100%;
+}
+
+.news-dropdown {
+  position: relative;
 }
 
 .news-dropdown button {
@@ -130,6 +135,8 @@
 .news-dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0px;
+  left: -100px;
+  z-index: 1;
 }
 
 .news-dropdown .dropdown-toggle::after {
@@ -155,7 +162,9 @@
   border-top: 3px solid var(--light-red);
 }
 
-.news-dropdown .dropdown-menu li {
+.news-dropdown .dropdown-menu button {
+  text-align: left;
+  width: 100%;
   padding: 12px;
 }
 

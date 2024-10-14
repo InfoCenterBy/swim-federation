@@ -10,6 +10,7 @@
     gap: 16px;
     height: 548px;
     overflow-y: auto;
+    max-width: 464px;
   }
 
   &__item {
@@ -32,6 +33,7 @@
   }
 
   .institutions__list {
+    max-width: 100%;
     width: 100%;
     order: 2;
   }

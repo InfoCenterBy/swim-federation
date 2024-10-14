@@ -84,7 +84,6 @@
 
 .nav-underline--dark {
   position: relative;
-  height: 100%;
 }
 
 .nav-underline--dark::after {
@@ -141,6 +140,17 @@
     background-color: var(--white);
     z-index: 0;
   }
+
+  .nav-underline--dark::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--gray);
+    z-index: 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -149,10 +159,20 @@
     position: absolute;
     left: 0;
     bottom: 3px;
-    width: 100%;
-    transform: scaleX(calc(1 + (0.68 * (var(--scroll-x) / var(--scroll-max)))));
+    width: 134%;
     height: 1px;
     background-color: var(--white);
+    z-index: 0;
+  }
+
+  .nav-underline--dark::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 142%;
+    height: 1px;
+    background-color: var(--gray);
     z-index: 0;
   }
 }
