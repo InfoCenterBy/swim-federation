@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Олимпиец</title>
+  <title>Архив</title>
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
@@ -414,199 +414,400 @@
 </header>
 
       <main>
-        <div class="container-fluid clubs clubs-olympiets">
-          <div class="container">
-            <nav>
-              <ul class="breadcrumbs">
-                <li class="breadcrumbs__item--light"><a href="index.html">Главная</a></li>
-                <li class="breadcrumbs__item--light"><a href="clubs.html">Клубы</a></li>
-                <li class="breadcrumbs__item--light active">Олимпиец</li>
-              </ul>
-            </nav>
-          </div>
-          <div class="container">
-            <h1 class="h1-title">Олимпиец</h1>
-          </div>
-        </div>
-
+        <button
+          id="scroll-to-top"
+          class="scroll-to-top">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.55731 5.8074C9.61537 5.74919 9.68434 5.70301 9.76027 5.67151C9.8362 5.64 9.9176 5.62378 9.99981 5.62378C10.082 5.62378 10.1634 5.64 10.2394 5.67151C10.3153 5.70301 10.3843 5.74919 10.4423 5.8074L17.9423 13.3074C18.0597 13.4248 18.1256 13.5839 18.1256 13.7499C18.1256 13.9159 18.0597 14.075 17.9423 14.1924C17.825 14.3098 17.6658 14.3757 17.4998 14.3757C17.3338 14.3757 17.1747 14.3098 17.0573 14.1924L9.99981 7.13365L2.94231 14.1924C2.82495 14.3098 2.66578 14.3757 2.49981 14.3757C2.33384 14.3757 2.17467 14.3098 2.05731 14.1924C1.93995 14.075 1.87402 13.9159 1.87402 13.7499C1.87402 13.5839 1.93995 13.4248 2.05731 13.3074L9.55731 5.8074Z"
+              fill="#273C8D" />
+          </svg>
+        </button>
         <div class="container">
-          <section class="page-wrapper">
-            <div class="page-content">
-              <p>
-                Клуб плавания «Олимпиец» (далее — клуб «Олимпиец») открыт с 2015 года при участии ОО «Белорусская федерация плавания». Он
-                является пионером и флагманом среди существующих сейчас частных клубов. Основной идеей при его создании была концепция
-                поиска, развития и воспитания спортсменов путем тщательного отбора талантливых детей. Наша стратегия состоит в правильном
-                начальном обучении плаванию как можно большего количества детей с последующим разделением их на группы, соответствующие их
-                навыкам и способностям.
-              </p>
-              <div class="slider-container">
-                <div class="swiper slider">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide default-slide">
-                      <img src="./img/clubs/olympiets-slide.png" alt="" />
-                    </div>
-                    <div class="swiper-slide default-slide">
-                      <img src="./img/clubs/olympiets-slide.png" alt="" />
-                    </div>
-                    <div class="swiper-slide default-slide">Slide 3</div>
+          <nav>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item"><a href="news.html">Новости</a></li>
+              <li class="breadcrumbs__item active">Архив</li>
+            </ul>
+          </nav>
+
+          <h2 class="h2-title">Архив</h2>
+
+          <section class="page-wrapper pb-5">
+            <div class="page-content--full-width">
+              <div class="d-flex align-items-end gap-3 flex-wrap">
+                <div class="d-flex flex-column gap-2">
+                  <label class="fs-16">Период</label>
+                  <div class="d-flex gap-3">
+                    <input
+                      class="form-input--small"
+                      type="text"
+                      placeholder="дд.мм.гггг" />
+                    <input
+                      class="form-input--small"
+                      type="text"
+                      placeholder="дд.мм.гггг" />
                   </div>
                 </div>
+                <div class="d-flex flex-column gap-2 flex-grow-1 flex-lg-grow-0">
+                  <label
+                    class="fs-16"
+                    for="section-select">
+                    Раздел
+                  </label>
+                  <select
+                    id="section-select"
+                    class="form-select">
+                    <option
+                      selected
+                      disabled>
+                      Выберите раздел
+                    </option>
+                    <option value="all">Все</option>
+                    <option value="news">Наши новости</option>
+                    <option value="smi">СМИ</option>
+                    <option value="congrats">Поздравления</option>
+                    <option value="anti-doping">Антидопинг</option>
+                    <option value="world-aquatics">World Aquatics</option>
+                    <option value="european-aquatics">European Aquatics</option>
+                  </select>
+                </div>
 
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="d-flex gap-3 flex-grow-1 flex-lg-grow-0">
+                  <a
+                    class="button"
+                    href="#">
+                    Применить
+                  </a>
+                  <a
+                    class="button--secondary"
+                    href="#">
+                    Очистить
+                  </a>
+                </div>
               </div>
-
-              <div>
-                <p class="mb-2">
-                  В дальнейшем лучшие из них, имеющие желание и упорство развиваться в плавании, переводятся в сборную клуба, которая дает
-                  им возможность совершенствовать свое мастерство, совершая регулярные выезды на сборы и соревнования, тем самым добиваясь
-                  новых целей и закаляя характер. За четыре года работы клуба нам уже есть чем гордиться — наши спортсмены, участвуя в
-                  большом количестве соревнований в РБ и за ее пределами, показывают блестящие результаты среди своих сверстников!
-                </p>
-                <p class="mb-2">
-                  Сейчас в клубе тренируются 930 детей с 5 до 12 лет. В сборной состоят 130 человек. Совместно с клубом плавания «АкваСтарс»
-                  с 2016 года проводится турнир «Детская лига плавания». На сегодняшний день он состоит из четырех этапов и в нем участвуют
-                  спортсмены из пяти стран.
-                </p>
-
-                <p>
-                  Также представители клуба участвуют в соревнованиях в категории «Мастерс». Всего выступают десять человек, среди которых
-                  стоит отметить Андрея Ванина, Юлию Твердую, Екатерину Смолякову и Андрея Альшевича. Они уже являются победителями и
-                  призерами как республиканских состязаний, так и международных.
-                </p>
-              </div>
-              <div>
-                <p class="mb-2">
-                  <span class="fw-semibold">Соучредитель и директор клуба:</span>
-                  — Андрей Владимирович Альшевич.
-                </p>
-                <p>
-                  <span class="fw-semibold">Подробная информация:</span>
-                  <a class="link-main--no-underline" href="https://vk.com/club158719602"> https://vk.com/club158719602 </a>
-                </p>
+              <div class="news-tab--big-cards">
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--main">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/news-img5.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--main">наши новости</p>
+                  <p class="news__description--dark">
+                    Белорусские пловцы дополнили нашу медальную копилку, выступив в «Эстафете дружбы» в Якутске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/4.jpg"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--blue">наши новости</p>
+                  <p class="news__description--dark">Открытый Кубок Беларуси по плаванию стартовал в Бресте</p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/news-img5.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--red">наши новости</p>
+                  <p class="news__description--dark">
+                    Белорусские пловцы дополнили нашу медальную копилку, выступив в «Эстафете дружбы» в Якутске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--light-blue">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--light-blue">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--light-blue">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--light-blue">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--light-blue">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--light-blue">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--light-blue">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--light-blue">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--light-blue">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--light-blue">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--light-blue">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--light-blue">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
+                <a
+                  href="#"
+                  class="news__card">
+                  <div class="news__image-container">
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
+                  </div>
+                  <p class="news__label news__label--light-blue">наши новости</p>
+                  <p class="news__description--dark">
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
+                  </p>
+                  <p class="news__date">18 июня 2024</p>
+                </a>
               </div>
             </div>
-
-            <aside class="sidebar__menu page-sidebar">
-              <nav><ul class="sidebar__menu-list">
-  <li>
-    <div class="accordion">
-      <div class="sidebar__accordion-item accordion-item active">
-        <p class="sidebar__accordion-header accordion-header">
-          <button
-            class="sidebar__accordion-button accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#accordion-body-1"
-            aria-expanded="false"
-            aria-controls="accordion-body-1">
-            Специализированные учебно-спортивные учреждения
-          </button>
-        </p>
-        <div id="accordion-body-1" class="accordion-collapse show">
-          <ul class="sidebar__accordion-list">
-            <li class="sidebar__accordion-list-item">
-              <a href="institutions-brest.html">Брест и Брестская область</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="institutions-vitebsk.html">Витебск и Витебская область</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="institutions-grondo.html">Гродно и Гродненская область</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="institutions-gomel.html">Гомель и Гомельская область</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="institutions-minsk-obl.html">Минская область</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="institutions-mogilev.html">Могилёв и Могилёвская область</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="institutions-minsk.html">Минск</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </li>
-  <li>
-    <div class="accordion">
-      <div class="sidebar__accordion-item accordion-item">
-        <p class="sidebar__accordion-header accordion-header">
-          <button
-            class="sidebar__accordion-button accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#accordion-body-2"
-            aria-expanded="false"
-            aria-controls="accordion-body-2">
-            Клубы
-          </button>
-        </p>
-        <div id="accordion-body-2" class="accordion-collapse collapse">
-          <ul class="sidebar__accordion-list">
-            <li class="sidebar__accordion-list-item">
-              <a href="clubs-olympiets.html">Олимпиец</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="institutions-vitebsk.html">АкваСтарс</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="institutions-grondo.html">Школа плавания Ирины Ларичевой</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="institutions-gomel.html">Белый медведь</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="institutions-minsk-obl.html">Ватертим</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="institutions-mogilev.html">Swimminsk</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="institutions-minsk.html">Belswim</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </li>
-  <li>
-    <div class="accordion">
-      <div class="sidebar__accordion-item accordion-item">
-        <p class="sidebar__accordion-header accordion-header">
-          <button
-            class="sidebar__accordion-button accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#accordion-body-3"
-            aria-expanded="false"
-            aria-controls="accordion-body-3">
-            Мастерс
-          </button>
-        </p>
-        <div id="accordion-body-3" class="accordion-collapse collapse">
-          <ul class="sidebar__accordion-list">
-            <li class="sidebar__accordion-list-item">
-              <a href="masters.html">Мастерс в Беларуси</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="council-members-list.html">Список членов Совета</a>
-            </li>
-            <li class="sidebar__accordion-list-item">
-              <a href="masters-clubs.html">Клубы</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </li>
-</ul>
-</nav>
-            </aside>
           </section>
+          <nav aria-label="pagination">
+  <ul class="pagination justify-content-center align-items-center">
+    <li class="page-item disabled mr-4">
+      <a class="page-link">Назад</a>
+    </li>
+    <li class="page-item active">
+      <a
+        class="page-link"
+        href="#">
+        1
+      </a>
+    </li>
+    <li class="page-item disabled">
+      <a
+        class="page-link"
+        href="#">
+        2
+      </a>
+    </li>
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="#">
+        3
+      </a>
+    </li>
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="#">
+        10
+      </a>
+    </li>
+    <li class="page-item ml-4">
+      <a
+        class="page-link"
+        href="#">
+        Вперед
+      </a>
+    </li>
+  </ul>
+</nav>
+
         </div>
       </main>
       <footer class="footer">
