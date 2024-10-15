@@ -804,6 +804,15 @@
     max-width: 1100px;
     padding-top: 120px;
   }
+  .wrap-text {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-hyphens: auto;
+        hyphens: auto;
+  }
+  .no-anchor {
+    overflow-anchor: none;
+  }
   @media screen and (max-width: 768px) {
     .h1-title {
       font-size: 32px;

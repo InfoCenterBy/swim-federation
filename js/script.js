@@ -376,8 +376,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const tabTriggerEl = document.querySelector('button[data-bs-target="' + hash + '"]');
 
     if (tabTriggerEl) {
-      let tab = new bootstrap.Tab(tabTriggerEl);
-      tab.show();
+      tabTriggerEl.click((e) => {
+        e.preventDefault();
+      });
     }
   }
 });
