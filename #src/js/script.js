@@ -9,3 +9,5 @@
 @@include('phone-mask.js', {})
 @@include('scroll-to-top.js', {})
 @@include('slider.js', {})
+@@include('handle-select-placeholder-color.js', {})
+@@include('handle-link-to-tab.js', {})

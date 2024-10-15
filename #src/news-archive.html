@@ -5,8 +5,15 @@
     <div class="wrapper">
       @@include('./components/_header.html')
       <main>
-        <button id="scroll-to-top" class="scroll-to-top">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button
+          id="scroll-to-top"
+          class="scroll-to-top">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -27,174 +34,324 @@
 
           <section class="page-wrapper pb-5">
             <div class="page-content--full-width">
+              <div class="d-flex align-items-end gap-3 flex-wrap">
+                <div class="d-flex flex-column gap-2">
+                  <label class="fs-16 fw-medium">Период</label>
+                  <div class="d-flex gap-3">
+                    <input
+                      class="form-input--small"
+                      type="text"
+                      placeholder="дд.мм.гггг" />
+                    <input
+                      class="form-input--small"
+                      type="text"
+                      placeholder="дд.мм.гггг" />
+                  </div>
+                </div>
+                <div class="d-flex flex-column gap-2 flex-grow-1 flex-lg-grow-0">
+                  <label
+                    class="fs-16 fw-medium"
+                    for="section-select">
+                    Раздел
+                  </label>
+                  <select
+                    id="section-select"
+                    class="form-select">
+                    <option
+                      selected
+                      disabled>
+                      Выберите раздел
+                    </option>
+                    <option value="all">Все</option>
+                    <option value="news">Наши новости</option>
+                    <option value="smi">СМИ</option>
+                    <option value="congrats">Поздравления</option>
+                    <option value="anti-doping">Антидопинг</option>
+                    <option value="world-aquatics">World Aquatics</option>
+                    <option value="european-aquatics">European Aquatics</option>
+                  </select>
+                </div>
+
+                <div class="d-flex gap-3 flex-grow-1 flex-lg-grow-0">
+                  <a
+                    class="button"
+                    href="#">
+                    Применить
+                  </a>
+                  <a
+                    class="button--secondary"
+                    href="#">
+                    Очистить
+                  </a>
+                </div>
+              </div>
               <div class="news-tab--big-cards">
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--main">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/news-img5.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/news-img5.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--main">наши новости</p>
                   <p class="news__description--dark">
                     Белорусские пловцы дополнили нашу медальную копилку, выступив в «Эстафете дружбы» в Якутске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/4.jpg" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/4.jpg"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--blue">наши новости</p>
                   <p class="news__description--dark">Открытый Кубок Беларуси по плаванию стартовал в Бресте</p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/news-img5.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/news-img5.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--red">наши новости</p>
                   <p class="news__description--dark">
                     Белорусские пловцы дополнили нашу медальную копилку, выступив в «Эстафете дружбы» в Якутске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--light-blue">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--light-blue">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--light-blue">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--light-blue">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--light-blue">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--light-blue">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--light-blue">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--light-blue">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--light-blue">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--light-blue">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--light-blue">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--light-blue">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
-                <a href="#" class="news__card">
+                <a
+                  href="#"
+                  class="news__card">
                   <div class="news__image-container">
-                    <img class="news__image" src="./img/event-img1.png" alt="Фото" />
+                    <img
+                      class="news__image"
+                      src="./img/event-img1.png"
+                      alt="Фото" />
                   </div>
                   <p class="news__label news__label--light-blue">наши новости</p>
                   <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию в Обнинске
+                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
+                    в Обнинске
                   </p>
-                  <p class="news__date">18 июня 2024</p>
+                  <p class="news__date--dark">18 июня 2024</p>
                 </a>
               </div>
             </div>

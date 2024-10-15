@@ -1,0 +1,77 @@
+.button {
+  background-color: var(--main);
+  color: var(--white);
+  padding: 12px 24px;
+  display: inline-block;
+  font-size: 16px;
+  transition: $transition-2;
+  width: fit-content;
+  line-height: 21px;
+
+  @include hover(background-color, var(--main-hover));
+
+  &:active {
+    background-color: var(--main);
+  }
+}
+
+.button--no-stretch {
+  background-color: var(--main);
+  color: var(--white);
+  padding: 12px 16px;
+  display: inline-block;
+  font-size: 16px;
+  transition: $transition-2;
+  width: fit-content;
+
+  @include hover(background-color, var(--main-hover));
+
+  &:active {
+    background-color: var(--main);
+  }
+}
+
+.button:disabled {
+  background-color: var(--gray);
+  color: var(--dark-gray);
+  padding: 12px 16px;
+  display: inline-block;
+  font-size: 16px;
+  transition: $transition-2;
+  width: fit-content;
+  cursor: not-allowed;
+}
+
+.button--secondary:disabled {
+  background-color: var(--gray);
+  color: var(--dark-gray);
+  padding: 12px 16px;
+  display: inline-block;
+  font-size: 16px;
+  transition: $transition-2;
+  width: fit-content;
+  cursor: not-allowed;
+}
+
+.button--secondary {
+  background-color: var(--white);
+  color: var(--main);
+  border: 1px solid var(--main);
+  font-size: 16px;
+  line-height: 21px;
+
+  padding: 12px 24px;
+  transition: $transition-2;
+
+  @include hover(background-color, var(--main-hover));
+  @include hover(color, var(--white));
+  @include hover(border-color, var(--main-hover));
+}
+
+@media screen and (max-width: 576px) {
+  .button,
+  .button--secondary {
+    text-align: center;
+    width: 100%;
+  }
+}

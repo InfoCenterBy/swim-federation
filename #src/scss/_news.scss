@@ -57,6 +57,10 @@
     &--main {
       background-color: var(--main);
       color: var(--white);
+      transition: $transition-2;
+
+      @include hover(background-color, var(--main-hover));
+      @include hover(color, var(--white));
     }
   }
 
@@ -78,6 +82,11 @@
 
   &__date {
     color: var(--gray);
+    max-width: 342px;
+  }
+
+  &__date--dark {
+    color: var(--dark-gray);
     max-width: 342px;
   }
 
