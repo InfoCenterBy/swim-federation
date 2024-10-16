@@ -277,3 +277,13 @@ body.no-scroll {
     order: 2;
   }
 }
+
+.text-content {
+  & p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  & .slider-container {
+    margin-block: 32px;
+  }
+}

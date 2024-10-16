@@ -49,6 +49,7 @@
   }
 
   &__description {
+    height: 130px;
     position: absolute;
     padding: 12px 20px;
     right: 0;
@@ -59,8 +60,14 @@
     text-align: left;
     font-size: 18px;
     font-weight: 500;
+    -webkit-transform: translateY(34px);
+    -ms-transform: translateY(34px);
     transform: translateY(34px);
-    transition: $transition-3;
+    -webkit-transition: all ease-out 0.3s;
+    transition: all ease-out 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &-text {
       margin-bottom: 16px;
