@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Архив</title>
+  <title>Фото</title>
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
@@ -414,400 +414,106 @@
 </header>
 
       <main>
-        <button
-          id="scroll-to-top"
-          class="scroll-to-top">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M9.55731 5.8074C9.61537 5.74919 9.68434 5.70301 9.76027 5.67151C9.8362 5.64 9.9176 5.62378 9.99981 5.62378C10.082 5.62378 10.1634 5.64 10.2394 5.67151C10.3153 5.70301 10.3843 5.74919 10.4423 5.8074L17.9423 13.3074C18.0597 13.4248 18.1256 13.5839 18.1256 13.7499C18.1256 13.9159 18.0597 14.075 17.9423 14.1924C17.825 14.3098 17.6658 14.3757 17.4998 14.3757C17.3338 14.3757 17.1747 14.3098 17.0573 14.1924L9.99981 7.13365L2.94231 14.1924C2.82495 14.3098 2.66578 14.3757 2.49981 14.3757C2.33384 14.3757 2.17467 14.3098 2.05731 14.1924C1.93995 14.075 1.87402 13.9159 1.87402 13.7499C1.87402 13.5839 1.93995 13.4248 2.05731 13.3074L9.55731 5.8074Z"
-              fill="#273C8D" />
-          </svg>
-        </button>
-        <div class="container">
-          <nav>
-            <ul class="breadcrumbs">
-              <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
-              <li class="breadcrumbs__item"><a href="news.html">Новости</a></li>
-              <li class="breadcrumbs__item active">Архив</li>
-            </ul>
-          </nav>
+        <div class="container-fluid photo-albums">
+          <div class="container">
+            <nav>
+              <ul class="breadcrumbs">
+                <li class="breadcrumbs__item--light"><a href="index.html">Главная</a></li>
+                <li class="breadcrumbs__item--light active">Фото</li>
+              </ul>
+            </nav>
+          </div>
+          <button id="scroll-to-top" class="scroll-to-top">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.55731 5.8074C9.61537 5.74919 9.68434 5.70301 9.76027 5.67151C9.8362 5.64 9.9176 5.62378 9.99981 5.62378C10.082 5.62378 10.1634 5.64 10.2394 5.67151C10.3153 5.70301 10.3843 5.74919 10.4423 5.8074L17.9423 13.3074C18.0597 13.4248 18.1256 13.5839 18.1256 13.7499C18.1256 13.9159 18.0597 14.075 17.9423 14.1924C17.825 14.3098 17.6658 14.3757 17.4998 14.3757C17.3338 14.3757 17.1747 14.3098 17.0573 14.1924L9.99981 7.13365L2.94231 14.1924C2.82495 14.3098 2.66578 14.3757 2.49981 14.3757C2.33384 14.3757 2.17467 14.3098 2.05731 14.1924C1.93995 14.075 1.87402 13.9159 1.87402 13.7499C1.87402 13.5839 1.93995 13.4248 2.05731 13.3074L9.55731 5.8074Z"
+                fill="#273C8D" />
+            </svg>
+          </button>
+          <div class="container">
+            <h1 class="h1-title">Фото</h1>
+          </div>
+        </div>
 
-          <h2 class="h2-title">Архив</h2>
-
-          <section class="page-wrapper pb-5">
-            <div class="page-content--full-width">
-              <div class="d-flex align-items-end gap-3 flex-wrap">
-                <div class="d-flex flex-column gap-2">
-                  <label class="fs-16 fw-medium">Период</label>
-                  <div class="d-flex gap-3">
-                    <input
-                      class="form-input--small"
-                      type="text"
-                      placeholder="дд.мм.гггг" />
-                    <input
-                      class="form-input--small"
-                      type="text"
-                      placeholder="дд.мм.гггг" />
+        <div class="container page-wrapper">
+          <div class="page-content--full-width">
+            <div class="photo-albums__cards">
+              <a href="#" class="photo__card">
+                <div class="photo__image-container">
+                  <img class="photo__image" src="./img//news-img1.png" alt="Фото" />
+                  <div class="photo__description">
+                    <p class="photo__description-text">Семинар для тренеров по плаванию в Минске 13 апреля 2024 года</p>
+                    <p class="photo__description-number"><i class="bi bi-camera"></i>24</p>
                   </div>
                 </div>
-                <div class="d-flex flex-column gap-2 flex-grow-1 flex-lg-grow-0">
-                  <label
-                    class="fs-16 fw-medium"
-                    for="section-select">
-                    Раздел
-                  </label>
-                  <select
-                    id="section-select"
-                    class="form-select">
-                    <option
-                      selected
-                      disabled>
-                      Выберите раздел
-                    </option>
-                    <option value="all">Все</option>
-                    <option value="news">Наши новости</option>
-                    <option value="smi">СМИ</option>
-                    <option value="congrats">Поздравления</option>
-                    <option value="anti-doping">Антидопинг</option>
-                    <option value="world-aquatics">World Aquatics</option>
-                    <option value="european-aquatics">European Aquatics</option>
-                  </select>
+              </a>
+              <a href="#" class="photo__card">
+                <div class="photo__image-container">
+                  <img class="photo__image" src="./img/news-img2.png" alt="Фото" />
+                  <div class="photo__description">
+                    <p class="photo__description-text">Семинар для тренеров по плаванию в Минске 13 апреля 2024 года</p>
+                    <p class="photo__description-number"><i class="bi bi-camera"></i>24</p>
+                  </div>
                 </div>
-
-                <div class="d-flex gap-3 flex-grow-1 flex-lg-grow-0">
-                  <a
-                    class="button"
-                    href="#">
-                    Применить
-                  </a>
-                  <a
-                    class="button--secondary"
-                    href="#">
-                    Очистить
-                  </a>
+              </a>
+              <a href="#" class="photo__card">
+                <div class="photo__image-container">
+                  <img class="photo__image" src="./img/news-img3.png" alt="Фото" />
+                  <div class="photo__description">
+                    <p class="photo__description-text">Семинар для тренеров по плаванию в Минске 13 апреля 2024 года</p>
+                    <p class="photo__description-number"><i class="bi bi-camera"></i>24</p>
+                  </div>
                 </div>
-              </div>
-              <div class="news-tab--big-cards">
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
+              </a>
+              <a href="#" class="photo__card">
+                <div class="photo__image-container">
+                  <img class="photo__image" src="./img/news-img4.png" alt="Фото" />
+                  <div class="photo__description">
+                    <p class="photo__description-text">Семинар для тренеров по плаванию в Минске 13 апреля 2024 года</p>
+                    <p class="photo__description-number"><i class="bi bi-camera"></i>24</p>
                   </div>
-                  <p class="news__label news__label--main">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/news-img5.png"
-                      alt="Фото" />
+                </div>
+              </a>
+              <a href="#" class="photo__card">
+                <div class="photo__image-container">
+                  <img class="photo__image" src="./img//news-img1.png" alt="Фото" />
+                  <div class="photo__description">
+                    <p class="photo__description-text">Семинар для тренеров по плаванию в Минске 13 апреля 2024 года</p>
+                    <p class="photo__description-number"><i class="bi bi-camera"></i>24</p>
                   </div>
-                  <p class="news__label news__label--main">наши новости</p>
-                  <p class="news__description--dark">
-                    Белорусские пловцы дополнили нашу медальную копилку, выступив в «Эстафете дружбы» в Якутске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/4.jpg"
-                      alt="Фото" />
+                </div>
+              </a>
+              <a href="#" class="photo__card">
+                <div class="photo__image-container">
+                  <img class="photo__image" src="./img/news-img2.png" alt="Фото" />
+                  <div class="photo__description">
+                    <p class="photo__description-text">Семинар для тренеров по плаванию в Минске 13 апреля 2024 года</p>
+                    <p class="photo__description-number"><i class="bi bi-camera"></i>24</p>
                   </div>
-                  <p class="news__label news__label--blue">наши новости</p>
-                  <p class="news__description--dark">Открытый Кубок Беларуси по плаванию стартовал в Бресте</p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/news-img5.png"
-                      alt="Фото" />
+                </div>
+              </a>
+              <a href="#" class="photo__card">
+                <div class="photo__image-container">
+                  <img class="photo__image" src="./img/news-img3.png" alt="Фото" />
+                  <div class="photo__description">
+                    <p class="photo__description-text">Семинар для тренеров по плаванию в Минске 13 апреля 2024 года</p>
+                    <p class="photo__description-number"><i class="bi bi-camera"></i>24</p>
                   </div>
-                  <p class="news__label news__label--red">наши новости</p>
-                  <p class="news__description--dark">
-                    Белорусские пловцы дополнили нашу медальную копилку, выступив в «Эстафете дружбы» в Якутске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
+                </div>
+              </a>
+              <a href="#" class="photo__card">
+                <div class="photo__image-container">
+                  <img class="photo__image" src="./img/news-img4.png" alt="Фото" />
+                  <div class="photo__description">
+                    <p class="photo__description-text">Семинар для тренеров по плаванию в Минске 13 апреля 2024 года</p>
+                    <p class="photo__description-number"><i class="bi bi-camera"></i>24</p>
                   </div>
-                  <p class="news__label news__label--light-blue">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
-                  </div>
-                  <p class="news__label news__label--light-blue">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
-                  </div>
-                  <p class="news__label news__label--light-blue">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
-                  </div>
-                  <p class="news__label news__label--light-blue">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
-                  </div>
-                  <p class="news__label news__label--light-blue">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
-                  </div>
-                  <p class="news__label news__label--light-blue">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
-                  </div>
-                  <p class="news__label news__label--light-blue">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
-                  </div>
-                  <p class="news__label news__label--light-blue">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
-                  </div>
-                  <p class="news__label news__label--light-blue">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
-                  </div>
-                  <p class="news__label news__label--light-blue">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
-                  </div>
-                  <p class="news__label news__label--light-blue">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
-                  </div>
-                  <p class="news__label news__label--light-blue">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-                <a
-                  href="#"
-                  class="news__card">
-                  <div class="news__image-container">
-                    <img
-                      class="news__image"
-                      src="./img/event-img1.png"
-                      alt="Фото" />
-                  </div>
-                  <p class="news__label news__label--light-blue">наши новости</p>
-                  <p class="news__description--dark">
-                    Анна Петруцкая обновила юниорский рекорд Беларуси и стала бронзовым призером на Первенстве России по плаванию
-                    в Обнинске
-                  </p>
-                  <p class="news__date--dark">18 июня 2024</p>
-                </a>
-              </div>
+                </div>
+              </a>
             </div>
-          </section>
-          <nav aria-label="pagination">
-  <ul class="pagination justify-content-center align-items-center">
-    <li class="page-item disabled mr-4">
-      <a class="page-link">Назад</a>
-    </li>
-    <li class="page-item active">
-      <a
-        class="page-link"
-        href="#">
-        1
-      </a>
-    </li>
-    <li class="page-item disabled">
-      <a
-        class="page-link"
-        href="#">
-        2
-      </a>
-    </li>
-    <li class="page-item">
-      <a
-        class="page-link"
-        href="#">
-        3
-      </a>
-    </li>
-    <li class="page-item">
-      <a
-        class="page-link"
-        href="#">
-        10
-      </a>
-    </li>
-    <li class="page-item ml-4">
-      <a
-        class="page-link"
-        href="#">
-        Вперед
-      </a>
-    </li>
-  </ul>
-</nav>
-
+          </div>
         </div>
       </main>
       <footer class="footer">

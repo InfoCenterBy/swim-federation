@@ -998,6 +998,12 @@
               order: 2;
     }
   }
+  .text-content p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  .text-content .slider-container {
+    margin-block: 32px;
+  }
   .cabinet__container {
     display: -webkit-box;
     display: -ms-flexbox;
