@@ -3864,6 +3864,18 @@
   .photos-detail__card {
     max-width: 464px;
     height: 310px;
+    cursor: pointer;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    overflow: hidden;
+  }
+  .photos-detail__card:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
   }
   .photos-detail__card img {
     width: 100%;
