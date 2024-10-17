@@ -535,7 +535,7 @@
   .news-dropdown {
     position: relative;
   }
-  .news-dropdown button {
+  .news-dropdown .dropdown-link {
     background-color: transparent;
   }
   .news-dropdown:hover .dropdown-menu {
@@ -570,7 +570,8 @@
     border-radius: 0;
     border-top: 3px solid var(--light-red);
   }
-  .news-dropdown .dropdown-menu button {
+  .news-dropdown .dropdown-menu .dropdown-link {
+    display: block;
     text-align: left;
     width: 100%;
     padding: 12px;
@@ -579,11 +580,16 @@
     background-color: var(--light-red);
     color: var(--white);
   }
-  .news-dropdown .dropdown-menu li:hover button {
+  .news-dropdown .dropdown-menu li:hover .dropdown-link {
     color: var(--white);
   }
-  .news-dropdown .dropdown-menu li:active {
-    background-color: var(--ligt-red);
+  .news-dropdown .dropdown-menu li:active .dropdown-link {
+    background-color: var(--light-red);
+    color: var(--red);
+  }
+  .news-dropdown .dropdown-menu .dropdown-link.active {
+    color: var(--red);
+    font-weight: 500;
   }
   .news-dropdown .dropdown-toggle {
     padding-inline: 8px;
