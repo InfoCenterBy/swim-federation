@@ -3684,7 +3684,7 @@
     color: var(--black);
     background-color: var(--white);
     min-width: 130px;
-    max-width: 200px;
+    max-width: 220px;
     width: 100%;
   }
   @media screen and (max-width: 992px) {
