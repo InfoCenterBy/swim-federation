@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мастерс</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+  <div class="container-fluid header-top">
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <div class="language-block d-flex flex-row gap-3 align-items-center">
+          <a class="language-button active">РУС</a>
+          <a class="language-button">EN</a>
+        </div>
+        <div class="d-flex gap-4 align-items-center">
+          <div class="dropdown header-top-dropdown cursor-pointer" aria-expanded="false">
+            <p class="dropdown-toggle">Национальные и сборные команды</p>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">Национальная команда</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Состав команд</a>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown header-top-dropdown cursor-pointer" aria-expanded="false">
+            <p class="dropdown-toggle">Результаты соревнований</p>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">Национальная команда</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Состав команд</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="socials d-flex gap-2">
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <svg
+                  class="socials__icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8 1.44578C10.1205 1.44578 10.4096 1.44578 11.2771 1.44578C12.0482 1.44578 12.4337 1.63855 12.7229 1.73494C13.1084 1.92771 13.3976 2.0241 13.6867 2.31325C13.9759 2.60241 14.1687 2.89157 14.2651 3.27711C14.3614 3.56627 14.4578 3.95181 14.5542 4.72289C14.5542 5.59036 14.5542 5.78313 14.5542 8C14.5542 10.2169 14.5542 10.4096 14.5542 11.2771C14.5542 12.0482 14.3614 12.4337 14.2651 12.7229C14.0723 13.1084 13.9759 13.3976 13.6867 13.6867C13.3976 13.9759 13.1084 14.1687 12.7229 14.2651C12.4337 14.3614 12.0482 14.4578 11.2771 14.5542C10.4096 14.5542 10.2169 14.5542 8 14.5542C5.78313 14.5542 5.59036 14.5542 4.72289 14.5542C3.95181 14.5542 3.56627 14.3614 3.27711 14.2651C2.89157 14.0723 2.60241 13.9759 2.31325 13.6867C2.0241 13.3976 1.83133 13.1084 1.73494 12.7229C1.63855 12.4337 1.54217 12.0482 1.44578 11.2771C1.44578 10.4096 1.44578 10.2169 1.44578 8C1.44578 5.78313 1.44578 5.59036 1.44578 4.72289C1.44578 3.95181 1.63855 3.56627 1.73494 3.27711C1.92771 2.89157 2.0241 2.60241 2.31325 2.31325C2.60241 2.0241 2.89157 1.83133 3.27711 1.73494C3.56627 1.63855 3.95181 1.54217 4.72289 1.44578C5.59036 1.44578 5.87952 1.44578 8 1.44578ZM8 0C5.78313 0 5.59036 0 4.72289 0C3.85542 0 3.27711 0.192772 2.79518 0.385543C2.31325 0.578314 1.83133 0.867471 1.3494 1.3494C0.867471 1.83133 0.674699 2.21687 0.385543 2.79518C0.192772 3.27711 0.0963856 3.85542 0 4.72289C0 5.59036 0 5.87952 0 8C0 10.2169 0 10.4096 0 11.2771C0 12.1446 0.192772 12.7229 0.385543 13.2048C0.578314 13.6867 0.867471 14.1687 1.3494 14.6506C1.83133 15.1325 2.21687 15.3253 2.79518 15.6145C3.27711 15.8072 3.85542 15.9036 4.72289 16C5.59036 16 5.87952 16 8 16C10.1205 16 10.4096 16 11.2771 16C12.1446 16 12.7229 15.8072 13.2048 15.6145C13.6867 15.4217 14.1687 15.1325 14.6506 14.6506C15.1325 14.1687 15.3253 13.7831 15.6145 13.2048C15.8072 12.7229 15.9036 12.1446 16 11.2771C16 10.4096 16 10.1205 16 8C16 5.87952 16 5.59036 16 4.72289C16 3.85542 15.8072 3.27711 15.6145 2.79518C15.4217 2.31325 15.1325 1.83133 14.6506 1.3494C14.1687 0.867471 13.7831 0.674699 13.2048 0.385543C12.7229 0.192772 12.1446 0.0963856 11.2771 0C10.4096 0 10.2169 0 8 0Z"
+                    fill="#273C8D" />
+                  <path
+                    d="M8 3.85542C5.68675 3.85542 3.85542 5.68675 3.85542 8C3.85542 10.3133 5.68675 12.1446 8 12.1446C10.3133 12.1446 12.1446 10.3133 12.1446 8C12.1446 5.68675 10.3133 3.85542 8 3.85542ZM8 10.6988C6.55422 10.6988 5.30121 9.54217 5.30121 8C5.30121 6.55422 6.45783 5.30121 8 5.30121C9.44579 5.30121 10.6988 6.45783 10.6988 8C10.6988 9.44579 9.44579 10.6988 8 10.6988Z"
+                    fill="#273C8D" />
+                  <path
+                    d="M12.241 4.72289C12.7733 4.72289 13.2048 4.29136 13.2048 3.75904C13.2048 3.22671 12.7733 2.79518 12.241 2.79518C11.7086 2.79518 11.2771 3.22671 11.2771 3.75904C11.2771 4.29136 11.7086 4.72289 12.241 4.72289Z"
+                    fill="#273C8D" />
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="">
+                <svg
+                  class="socials__icon"
+                  width="10"
+                  height="19"
+                  viewBox="0 0 10 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.32586 10.2918H9.3036L9.77113 7.24834H6.32525V5.58498C6.32525 4.32069 6.73585 3.1996 7.91132 3.1996H9.80019V0.543695C9.46833 0.498608 8.76643 0.399902 7.44017 0.399902C4.67075 0.399902 3.04713 1.87134 3.04713 5.22366V7.24834H0.200195V10.2918H3.04713V18.6567C3.61095 18.742 4.18203 18.7999 4.76825 18.7999C5.29815 18.7999 5.81534 18.7512 6.32586 18.6817V10.2918Z"
+                    fill="#273C8D" />
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="">
+                <svg
+                  class="socials__icon"
+                  width="16"
+                  height="15"
+                  viewBox="0 0 16 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.4002 1.08188L12.9959 13.6339C12.9959 13.6339 12.6594 14.5042 11.7353 14.0868L6.18786 9.68216L6.16213 9.66918C6.91147 8.97241 12.7221 3.56223 12.9761 3.31699C13.3692 2.93719 13.1251 2.71108 12.6687 2.99798L4.08563 8.64247L0.774306 7.48871C0.774306 7.48871 0.253201 7.29676 0.20307 6.87938C0.152278 6.46132 0.791456 6.23521 0.791456 6.23521L14.2907 0.751256C14.2907 0.751256 15.4002 0.246442 15.4002 1.08188Z"
+                    fill="#273C8D" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <a class="header-top__profile-button" href="#">
+            <img class="" src="./img/icons/person.svg" alt="Person icon" />
+            <span>Личный кабинет</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container header-bottom">
+    <div class="d-flex align-items-center justify-content-between w-100">
+      <a href="index.html">
+        <img src="./img/icons/logo.png" alt="Logo" />
+      </a>
+      <div class="header-bottom__nav">
+        <div class="dropdown header-dropdown cursor-pointer" aria-expanded="false">
+          <p class="dropdown-toggle">О федерации</p>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="history.html">История</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="achievements.html">Достижения и награды</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="structure-and-managment.html">Структура и руководство</a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown header-dropdown cursor-pointer" aria-expanded="false">
+          <p class="dropdown-toggle">Документы и положения</p>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Устав «БФП»</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Программа развития плавания</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Положения</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Свидетельства</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Мастерс</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Информация</a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown header-dropdown cursor-pointer" aria-expanded="false">
+          <p class="dropdown-toggle">Школы и клубы</p>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="specialized-institutions.html">
+                Специализированные учебно-
+                <br />
+                спортивные учреждения
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="clubs.html">Клубы</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="masters.html">Мастерс</a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown header-dropdown cursor-pointer" aria-expanded="false">
+          <p class="dropdown-toggle">Разрядные требования и нормативы</p>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Разрядные требования</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Нормативы</a>
+            </li>
+          </ul>
+        </div>
+        <a class="header-bottom__links header-link" href="#">Новости</a>
+        <a class="header-bottom__links header-link" href="#">Контакты</a>
+      </div>
+      <div class="search-container">
+        <button class="search-btn">
+          <img class="search-icon" src="./img/icons/search.svg" alt="Search icon" />
+        </button>
+        <input type="text" class="search-input" placeholder="Поиск..." />
+      </div>
+    </div>
+  </div>
+  <!-- mobile header -->
+  <div class="mobile-header">
+    <div class="container">
+      <div class="mobile-header__container">
+        <div class="mobile-header__logo">
+          <img src="./img/icons/mobile-logo.png" alt="Logo" class="mobile-logo" />
+          <div class="mobile__language-block language-block d-flex flex-row gap-3">
+            <a class="mobile__language-button language-button active">РУС</a>
+            <a class="mobile__language-button language-button">EN</a>
+          </div>
+        </div>
+        <div class="mobile-header__buttons">
+          <button class="search-btn search-btn-mobile">
+            <img class="search-icon" src="./img/icons/search.svg" alt="Search icon" />
+          </button>
+          <a class="profile-btn">
+            <img src="./img/icons/person.svg" alt="Profile icon" />
+          </a>
+          <button class="menu-toggle">
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="mobile-nav">
+      <div class="mobile-nav-content">
+        <div class="header__accordion accordion" id="accordion">
+          <div class="header__accordion-item accordion-item">
+            <h2 class="header__accordion-header accordion-header">
+              <button
+                class="header__accordion-button accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#accordion-body-1"
+                aria-expanded="false"
+                aria-controls="accordion-body-1">
+                О федерации
+              </button>
+            </h2>
+            <div id="accordion-body-1" class="accordion-collapse collapse">
+              <div class="header__accordion-body accordion-body">
+                <ul class="header__accordion-body-list">
+                  <li>
+                    <a class="header__accordion-body-item" href="history.html">История</a>
+                  </li>
+                  <li>
+                    <a class="header__accordion-body-item" href="achievements.html">Достижения и награды</a>
+                  </li>
+                  <li>
+                    <a class="header__accordion-body-item" href="structure-and-managments.html"
+                      >Структура и руководство</a
+                    >
+                  </li>
+                  <li>
+                    <a class="header__accordion-body-item" href="#">Членство ОО «БФП»</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header__accordion-item accordion-item">
+            <h2 class="header__accordion-header accordion-header">
+              <button
+                class="header__accordion-button accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#accordion-body-2"
+                aria-expanded="false"
+                aria-controls="accordion-body-2">
+                Документы и положения
+              </button>
+            </h2>
+            <div id="accordion-body-2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="header__accordion-body-list">
+                  <li>
+                    <a class="header__accordion-body-item" href="#">Устав «БФП»</a>
+                  </li>
+                  <li>
+                    <a class="header__accordion-body-item" href="#">Программа развития плавания</a>
+                  </li>
+                  <li>
+                    <a class="header__accordion-body-item" href="#">Положения</a>
+                  </li>
+                  <li>
+                    <a class="header__accordion-body-item" href="#">Свидетельства</a>
+                  </li>
+                  <li>
+                    <a class="header__accordion-body-item" href="#">Мастерс</a>
+                  </li>
+                  <li>
+                    <a class="header__accordion-body-item" href="#">Информация</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header__accordion-item accordion-item">
+            <h2 class="header__accordion-header accordion-header">
+              <button
+                class="header__accordion-button accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#accordion-body-3"
+                aria-expanded="false"
+                aria-controls="accordion-body-3">
+                Школы и клубы
+              </button>
+            </h2>
+            <div id="accordion-body-3" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="header__accordion-body-list">
+                  <li>
+                    <a class="header__accordion-body-item" href="specialized-institutions.html">
+                      Специализированные учебно-
+                      <br />
+                      спортивные учреждения
+                    </a>
+                  </li>
+                  <li>
+                    <a class="header__accordion-body-item" href="clubs.html">Клубы</a>
+                  </li>
+                  <li>
+                    <a class="header__accordion-body-item" href="masters.html">Мастерс</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header__accordion-item accordion-item">
+            <h2 class="header__accordion-header accordion-header">
+              <button
+                class="header__accordion-button accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#accordion-body-4"
+                aria-expanded="false"
+                aria-controls="accordion-body-4">
+                Разрядные требования и нормативы
+              </button>
+            </h2>
+            <div id="accordion-body-4" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="header__accordion-body-list">
+                  <li>
+                    <a class="header__accordion-body-item" href="#">Разрядные требования</a>
+                  </li>
+                  <li>
+                    <a class="header__accordion-body-item" href="#">Нормативы</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header__accordion-item accordion-item">
+            <h2 class="header__accordion-header accordion-header">
+              <button
+                class="header__accordion-button accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#accordion-body-5"
+                aria-expanded="false"
+                aria-controls="accordion-body-5">
+                Национальные и сборные команды
+              </button>
+            </h2>
+            <div id="accordion-body-5" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="header__accordion-body-list">
+                  <li>
+                    <a class="header__accordion-body-item" href="#">Национальная команда</a>
+                  </li>
+                  <li>
+                    <a class="header__accordion-body-item" href="#">Состав команд</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header__accordion-item accordion-item">
+            <h2 class="header__accordion-header accordion-header">
+              <button
+                class="header__accordion-button accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#accordion-body-6"
+                aria-expanded="false"
+                aria-controls="accordion-body-6">
+                Результаты соревнований
+              </button>
+            </h2>
+            <div id="accordion-body-6" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul class="header__accordion-body-list">
+                  <li>
+                    <a class="header__accordion-body-item" href="#">Национальная команда</a>
+                  </li>
+                  <li>
+                    <a class="header__accordion-body-item" href="#">Состав команд</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex gap-4 flex-column">
+            <a class="link color-white" href="#">Новости</a>
+            <a class="link color-white" href="#">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-search">
+      <div class="form__input">
+        <input type="text" placeholder="Введите запрос" />
+      </div>
+      <a class="search-btn-mobile--inner" href="#">
+        <img class="search-icon" src="./img/icons/search-btn-mobile-inner.svg" alt="Search icon" />
+      </a>
+    </div>
+  </div>
+</header>
+
+      <main>
+        <div class="container">
+          <nav>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item active">Мастерс</li>
+            </ul>
+          </nav>
+
+          <h2 class="h2-title">Мастерс</h2>
+
+          <section class="page-wrapper">
+            <div class="page-content">
+              <p class="h3-title">Образец устава ОО:</p>
+              <div class="documents__cards">
+                <a class="download-card" href="#">
+                  <p class="download-card__text">
+                    Положение о порядке вступления в члены Общественного объединения «Белорусская федерация плавания», уплаты членских
+                    взносов и учета членов Федерации
+                  </p>
+                  <svg
+                    class="download-card__icon"
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5162_3253)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.5 12.5C1.5 15.2848 2.60625 17.9555 4.57538 19.9246C6.54451 21.8938 9.21523 23 12 23C14.7848 23 17.4555 21.8938 19.4246 19.9246C21.3938 17.9555 22.5 15.2848 22.5 12.5C22.5 9.71523 21.3938 7.04451 19.4246 5.07538C17.4555 3.10625 14.7848 2 12 2C9.21523 2 6.54451 3.10625 4.57538 5.07538C2.60625 7.04451 1.5 9.71523 1.5 12.5ZM24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5ZM12.75 7.25C12.75 7.05109 12.671 6.86032 12.5303 6.71967C12.3897 6.57902 12.1989 6.5 12 6.5C11.8011 6.5 11.6103 6.57902 11.4697 6.71967C11.329 6.86032 11.25 7.05109 11.25 7.25V15.9395L8.031 12.719C7.89017 12.5782 7.69916 12.4991 7.5 12.4991C7.30084 12.4991 7.10983 12.5782 6.969 12.719C6.82817 12.8598 6.74905 13.0508 6.74905 13.25C6.74905 13.4492 6.82817 13.6402 6.969 13.781L11.469 18.281C11.5387 18.3508 11.6214 18.4063 11.7125 18.4441C11.8037 18.4819 11.9013 18.5013 12 18.5013C12.0987 18.5013 12.1963 18.4819 12.2874 18.4441C12.3786 18.4063 12.4613 18.3508 12.531 18.281L17.031 13.781C17.1718 13.6402 17.2509 13.4492 17.2509 13.25C17.2509 13.0508 17.1718 12.8598 17.031 12.719C16.8902 12.5782 16.6992 12.4991 16.5 12.4991C16.3008 12.4991 16.1098 12.5782 15.969 12.719L12.75 15.9395V7.25Z"
+                        fill="#273C8D" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5162_3253">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+                <a class="download-card" href="#">
+                  <p class="download-card__text">
+                    Положение о порядке вступления в члены Общественного объединения «Белорусская федерация плавания», уплаты членских
+                    взносов и учета членов Федерации
+                  </p>
+                  <svg
+                    class="download-card__icon"
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5162_3253)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.5 12.5C1.5 15.2848 2.60625 17.9555 4.57538 19.9246C6.54451 21.8938 9.21523 23 12 23C14.7848 23 17.4555 21.8938 19.4246 19.9246C21.3938 17.9555 22.5 15.2848 22.5 12.5C22.5 9.71523 21.3938 7.04451 19.4246 5.07538C17.4555 3.10625 14.7848 2 12 2C9.21523 2 6.54451 3.10625 4.57538 5.07538C2.60625 7.04451 1.5 9.71523 1.5 12.5ZM24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5ZM12.75 7.25C12.75 7.05109 12.671 6.86032 12.5303 6.71967C12.3897 6.57902 12.1989 6.5 12 6.5C11.8011 6.5 11.6103 6.57902 11.4697 6.71967C11.329 6.86032 11.25 7.05109 11.25 7.25V15.9395L8.031 12.719C7.89017 12.5782 7.69916 12.4991 7.5 12.4991C7.30084 12.4991 7.10983 12.5782 6.969 12.719C6.82817 12.8598 6.74905 13.0508 6.74905 13.25C6.74905 13.4492 6.82817 13.6402 6.969 13.781L11.469 18.281C11.5387 18.3508 11.6214 18.4063 11.7125 18.4441C11.8037 18.4819 11.9013 18.5013 12 18.5013C12.0987 18.5013 12.1963 18.4819 12.2874 18.4441C12.3786 18.4063 12.4613 18.3508 12.531 18.281L17.031 13.781C17.1718 13.6402 17.2509 13.4492 17.2509 13.25C17.2509 13.0508 17.1718 12.8598 17.031 12.719C16.8902 12.5782 16.6992 12.4991 16.5 12.4991C16.3008 12.4991 16.1098 12.5782 15.969 12.719L12.75 15.9395V7.25Z"
+                        fill="#273C8D" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5162_3253">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+                <a class="download-card" href="#">
+                  <p class="download-card__text">
+                    Положение о порядке вступления в члены Общественного объединения «Белорусская федерация плавания», уплаты членских
+                    взносов и учета членов Федерации
+                  </p>
+                  <svg
+                    class="download-card__icon"
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5162_3253)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.5 12.5C1.5 15.2848 2.60625 17.9555 4.57538 19.9246C6.54451 21.8938 9.21523 23 12 23C14.7848 23 17.4555 21.8938 19.4246 19.9246C21.3938 17.9555 22.5 15.2848 22.5 12.5C22.5 9.71523 21.3938 7.04451 19.4246 5.07538C17.4555 3.10625 14.7848 2 12 2C9.21523 2 6.54451 3.10625 4.57538 5.07538C2.60625 7.04451 1.5 9.71523 1.5 12.5ZM24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5ZM12.75 7.25C12.75 7.05109 12.671 6.86032 12.5303 6.71967C12.3897 6.57902 12.1989 6.5 12 6.5C11.8011 6.5 11.6103 6.57902 11.4697 6.71967C11.329 6.86032 11.25 7.05109 11.25 7.25V15.9395L8.031 12.719C7.89017 12.5782 7.69916 12.4991 7.5 12.4991C7.30084 12.4991 7.10983 12.5782 6.969 12.719C6.82817 12.8598 6.74905 13.0508 6.74905 13.25C6.74905 13.4492 6.82817 13.6402 6.969 13.781L11.469 18.281C11.5387 18.3508 11.6214 18.4063 11.7125 18.4441C11.8037 18.4819 11.9013 18.5013 12 18.5013C12.0987 18.5013 12.1963 18.4819 12.2874 18.4441C12.3786 18.4063 12.4613 18.3508 12.531 18.281L17.031 13.781C17.1718 13.6402 17.2509 13.4492 17.2509 13.25C17.2509 13.0508 17.1718 12.8598 17.031 12.719C16.8902 12.5782 16.6992 12.4991 16.5 12.4991C16.3008 12.4991 16.1098 12.5782 15.969 12.719L12.75 15.9395V7.25Z"
+                        fill="#273C8D" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5162_3253">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </div>
+              <p class="h3-title">Протоколы:</p>
+              <p class="h4-title">2023</p>
+              <div class="documents__cards">
+                <a class="download-card" href="#">
+                  <p class="download-card__text">
+                    Положение о порядке вступления в члены Общественного объединения «Белорусская федерация плавания», уплаты членских
+                    взносов и учета членов Федерации
+                  </p>
+                  <svg
+                    class="download-card__icon"
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5162_3253)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.5 12.5C1.5 15.2848 2.60625 17.9555 4.57538 19.9246C6.54451 21.8938 9.21523 23 12 23C14.7848 23 17.4555 21.8938 19.4246 19.9246C21.3938 17.9555 22.5 15.2848 22.5 12.5C22.5 9.71523 21.3938 7.04451 19.4246 5.07538C17.4555 3.10625 14.7848 2 12 2C9.21523 2 6.54451 3.10625 4.57538 5.07538C2.60625 7.04451 1.5 9.71523 1.5 12.5ZM24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5ZM12.75 7.25C12.75 7.05109 12.671 6.86032 12.5303 6.71967C12.3897 6.57902 12.1989 6.5 12 6.5C11.8011 6.5 11.6103 6.57902 11.4697 6.71967C11.329 6.86032 11.25 7.05109 11.25 7.25V15.9395L8.031 12.719C7.89017 12.5782 7.69916 12.4991 7.5 12.4991C7.30084 12.4991 7.10983 12.5782 6.969 12.719C6.82817 12.8598 6.74905 13.0508 6.74905 13.25C6.74905 13.4492 6.82817 13.6402 6.969 13.781L11.469 18.281C11.5387 18.3508 11.6214 18.4063 11.7125 18.4441C11.8037 18.4819 11.9013 18.5013 12 18.5013C12.0987 18.5013 12.1963 18.4819 12.2874 18.4441C12.3786 18.4063 12.4613 18.3508 12.531 18.281L17.031 13.781C17.1718 13.6402 17.2509 13.4492 17.2509 13.25C17.2509 13.0508 17.1718 12.8598 17.031 12.719C16.8902 12.5782 16.6992 12.4991 16.5 12.4991C16.3008 12.4991 16.1098 12.5782 15.969 12.719L12.75 15.9395V7.25Z"
+                        fill="#273C8D" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5162_3253">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+                <a class="download-card" href="#">
+                  <p class="download-card__text">
+                    Положение о порядке вступления в члены Общественного объединения «Белорусская федерация плавания», уплаты членских
+                    взносов и учета членов Федерации
+                  </p>
+                  <svg
+                    class="download-card__icon"
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5162_3253)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.5 12.5C1.5 15.2848 2.60625 17.9555 4.57538 19.9246C6.54451 21.8938 9.21523 23 12 23C14.7848 23 17.4555 21.8938 19.4246 19.9246C21.3938 17.9555 22.5 15.2848 22.5 12.5C22.5 9.71523 21.3938 7.04451 19.4246 5.07538C17.4555 3.10625 14.7848 2 12 2C9.21523 2 6.54451 3.10625 4.57538 5.07538C2.60625 7.04451 1.5 9.71523 1.5 12.5ZM24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5ZM12.75 7.25C12.75 7.05109 12.671 6.86032 12.5303 6.71967C12.3897 6.57902 12.1989 6.5 12 6.5C11.8011 6.5 11.6103 6.57902 11.4697 6.71967C11.329 6.86032 11.25 7.05109 11.25 7.25V15.9395L8.031 12.719C7.89017 12.5782 7.69916 12.4991 7.5 12.4991C7.30084 12.4991 7.10983 12.5782 6.969 12.719C6.82817 12.8598 6.74905 13.0508 6.74905 13.25C6.74905 13.4492 6.82817 13.6402 6.969 13.781L11.469 18.281C11.5387 18.3508 11.6214 18.4063 11.7125 18.4441C11.8037 18.4819 11.9013 18.5013 12 18.5013C12.0987 18.5013 12.1963 18.4819 12.2874 18.4441C12.3786 18.4063 12.4613 18.3508 12.531 18.281L17.031 13.781C17.1718 13.6402 17.2509 13.4492 17.2509 13.25C17.2509 13.0508 17.1718 12.8598 17.031 12.719C16.8902 12.5782 16.6992 12.4991 16.5 12.4991C16.3008 12.4991 16.1098 12.5782 15.969 12.719L12.75 15.9395V7.25Z"
+                        fill="#273C8D" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5162_3253">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+                <a class="download-card" href="#">
+                  <p class="download-card__text">
+                    Положение о порядке вступления в члены Общественного объединения «Белорусская федерация плавания», уплаты членских
+                    взносов и учета членов Федерации
+                  </p>
+                  <svg
+                    class="download-card__icon"
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5162_3253)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.5 12.5C1.5 15.2848 2.60625 17.9555 4.57538 19.9246C6.54451 21.8938 9.21523 23 12 23C14.7848 23 17.4555 21.8938 19.4246 19.9246C21.3938 17.9555 22.5 15.2848 22.5 12.5C22.5 9.71523 21.3938 7.04451 19.4246 5.07538C17.4555 3.10625 14.7848 2 12 2C9.21523 2 6.54451 3.10625 4.57538 5.07538C2.60625 7.04451 1.5 9.71523 1.5 12.5ZM24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5ZM12.75 7.25C12.75 7.05109 12.671 6.86032 12.5303 6.71967C12.3897 6.57902 12.1989 6.5 12 6.5C11.8011 6.5 11.6103 6.57902 11.4697 6.71967C11.329 6.86032 11.25 7.05109 11.25 7.25V15.9395L8.031 12.719C7.89017 12.5782 7.69916 12.4991 7.5 12.4991C7.30084 12.4991 7.10983 12.5782 6.969 12.719C6.82817 12.8598 6.74905 13.0508 6.74905 13.25C6.74905 13.4492 6.82817 13.6402 6.969 13.781L11.469 18.281C11.5387 18.3508 11.6214 18.4063 11.7125 18.4441C11.8037 18.4819 11.9013 18.5013 12 18.5013C12.0987 18.5013 12.1963 18.4819 12.2874 18.4441C12.3786 18.4063 12.4613 18.3508 12.531 18.281L17.031 13.781C17.1718 13.6402 17.2509 13.4492 17.2509 13.25C17.2509 13.0508 17.1718 12.8598 17.031 12.719C16.8902 12.5782 16.6992 12.4991 16.5 12.4991C16.3008 12.4991 16.1098 12.5782 15.969 12.719L12.75 15.9395V7.25Z"
+                        fill="#273C8D" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5162_3253">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </div>
+              <p class="h4-title">2022</p>
+              <div class="documents__cards">
+                <a class="download-card" href="#">
+                  <p class="download-card__text">
+                    Положение о порядке вступления в члены Общественного объединения «Белорусская федерация плавания», уплаты членских
+                    взносов и учета членов Федерации
+                  </p>
+                  <svg
+                    class="download-card__icon"
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5162_3253)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.5 12.5C1.5 15.2848 2.60625 17.9555 4.57538 19.9246C6.54451 21.8938 9.21523 23 12 23C14.7848 23 17.4555 21.8938 19.4246 19.9246C21.3938 17.9555 22.5 15.2848 22.5 12.5C22.5 9.71523 21.3938 7.04451 19.4246 5.07538C17.4555 3.10625 14.7848 2 12 2C9.21523 2 6.54451 3.10625 4.57538 5.07538C2.60625 7.04451 1.5 9.71523 1.5 12.5ZM24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5ZM12.75 7.25C12.75 7.05109 12.671 6.86032 12.5303 6.71967C12.3897 6.57902 12.1989 6.5 12 6.5C11.8011 6.5 11.6103 6.57902 11.4697 6.71967C11.329 6.86032 11.25 7.05109 11.25 7.25V15.9395L8.031 12.719C7.89017 12.5782 7.69916 12.4991 7.5 12.4991C7.30084 12.4991 7.10983 12.5782 6.969 12.719C6.82817 12.8598 6.74905 13.0508 6.74905 13.25C6.74905 13.4492 6.82817 13.6402 6.969 13.781L11.469 18.281C11.5387 18.3508 11.6214 18.4063 11.7125 18.4441C11.8037 18.4819 11.9013 18.5013 12 18.5013C12.0987 18.5013 12.1963 18.4819 12.2874 18.4441C12.3786 18.4063 12.4613 18.3508 12.531 18.281L17.031 13.781C17.1718 13.6402 17.2509 13.4492 17.2509 13.25C17.2509 13.0508 17.1718 12.8598 17.031 12.719C16.8902 12.5782 16.6992 12.4991 16.5 12.4991C16.3008 12.4991 16.1098 12.5782 15.969 12.719L12.75 15.9395V7.25Z"
+                        fill="#273C8D" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5162_3253">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+                <a class="download-card" href="#">
+                  <p class="download-card__text">
+                    Положение о порядке вступления в члены Общественного объединения «Белорусская федерация плавания», уплаты членских
+                    взносов и учета членов Федерации
+                  </p>
+                  <svg
+                    class="download-card__icon"
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5162_3253)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.5 12.5C1.5 15.2848 2.60625 17.9555 4.57538 19.9246C6.54451 21.8938 9.21523 23 12 23C14.7848 23 17.4555 21.8938 19.4246 19.9246C21.3938 17.9555 22.5 15.2848 22.5 12.5C22.5 9.71523 21.3938 7.04451 19.4246 5.07538C17.4555 3.10625 14.7848 2 12 2C9.21523 2 6.54451 3.10625 4.57538 5.07538C2.60625 7.04451 1.5 9.71523 1.5 12.5ZM24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5ZM12.75 7.25C12.75 7.05109 12.671 6.86032 12.5303 6.71967C12.3897 6.57902 12.1989 6.5 12 6.5C11.8011 6.5 11.6103 6.57902 11.4697 6.71967C11.329 6.86032 11.25 7.05109 11.25 7.25V15.9395L8.031 12.719C7.89017 12.5782 7.69916 12.4991 7.5 12.4991C7.30084 12.4991 7.10983 12.5782 6.969 12.719C6.82817 12.8598 6.74905 13.0508 6.74905 13.25C6.74905 13.4492 6.82817 13.6402 6.969 13.781L11.469 18.281C11.5387 18.3508 11.6214 18.4063 11.7125 18.4441C11.8037 18.4819 11.9013 18.5013 12 18.5013C12.0987 18.5013 12.1963 18.4819 12.2874 18.4441C12.3786 18.4063 12.4613 18.3508 12.531 18.281L17.031 13.781C17.1718 13.6402 17.2509 13.4492 17.2509 13.25C17.2509 13.0508 17.1718 12.8598 17.031 12.719C16.8902 12.5782 16.6992 12.4991 16.5 12.4991C16.3008 12.4991 16.1098 12.5782 15.969 12.719L12.75 15.9395V7.25Z"
+                        fill="#273C8D" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5162_3253">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+                <a class="download-card" href="#">
+                  <p class="download-card__text">
+                    Положение о порядке вступления в члены Общественного объединения «Белорусская федерация плавания», уплаты членских
+                    взносов и учета членов Федерации
+                  </p>
+                  <svg
+                    class="download-card__icon"
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5162_3253)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.5 12.5C1.5 15.2848 2.60625 17.9555 4.57538 19.9246C6.54451 21.8938 9.21523 23 12 23C14.7848 23 17.4555 21.8938 19.4246 19.9246C21.3938 17.9555 22.5 15.2848 22.5 12.5C22.5 9.71523 21.3938 7.04451 19.4246 5.07538C17.4555 3.10625 14.7848 2 12 2C9.21523 2 6.54451 3.10625 4.57538 5.07538C2.60625 7.04451 1.5 9.71523 1.5 12.5ZM24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5ZM12.75 7.25C12.75 7.05109 12.671 6.86032 12.5303 6.71967C12.3897 6.57902 12.1989 6.5 12 6.5C11.8011 6.5 11.6103 6.57902 11.4697 6.71967C11.329 6.86032 11.25 7.05109 11.25 7.25V15.9395L8.031 12.719C7.89017 12.5782 7.69916 12.4991 7.5 12.4991C7.30084 12.4991 7.10983 12.5782 6.969 12.719C6.82817 12.8598 6.74905 13.0508 6.74905 13.25C6.74905 13.4492 6.82817 13.6402 6.969 13.781L11.469 18.281C11.5387 18.3508 11.6214 18.4063 11.7125 18.4441C11.8037 18.4819 11.9013 18.5013 12 18.5013C12.0987 18.5013 12.1963 18.4819 12.2874 18.4441C12.3786 18.4063 12.4613 18.3508 12.531 18.281L17.031 13.781C17.1718 13.6402 17.2509 13.4492 17.2509 13.25C17.2509 13.0508 17.1718 12.8598 17.031 12.719C16.8902 12.5782 16.6992 12.4991 16.5 12.4991C16.3008 12.4991 16.1098 12.5782 15.969 12.719L12.75 15.9395V7.25Z"
+                        fill="#273C8D" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5162_3253">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </div>
+              <p class="h4-title">2021</p>
+              <div class="documents__cards">
+                <a class="download-card" href="#">
+                  <p class="download-card__text">
+                    Положение о порядке вступления в члены Общественного объединения «Белорусская федерация плавания», уплаты членских
+                    взносов и учета членов Федерации
+                  </p>
+                  <svg
+                    class="download-card__icon"
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5162_3253)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.5 12.5C1.5 15.2848 2.60625 17.9555 4.57538 19.9246C6.54451 21.8938 9.21523 23 12 23C14.7848 23 17.4555 21.8938 19.4246 19.9246C21.3938 17.9555 22.5 15.2848 22.5 12.5C22.5 9.71523 21.3938 7.04451 19.4246 5.07538C17.4555 3.10625 14.7848 2 12 2C9.21523 2 6.54451 3.10625 4.57538 5.07538C2.60625 7.04451 1.5 9.71523 1.5 12.5ZM24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5ZM12.75 7.25C12.75 7.05109 12.671 6.86032 12.5303 6.71967C12.3897 6.57902 12.1989 6.5 12 6.5C11.8011 6.5 11.6103 6.57902 11.4697 6.71967C11.329 6.86032 11.25 7.05109 11.25 7.25V15.9395L8.031 12.719C7.89017 12.5782 7.69916 12.4991 7.5 12.4991C7.30084 12.4991 7.10983 12.5782 6.969 12.719C6.82817 12.8598 6.74905 13.0508 6.74905 13.25C6.74905 13.4492 6.82817 13.6402 6.969 13.781L11.469 18.281C11.5387 18.3508 11.6214 18.4063 11.7125 18.4441C11.8037 18.4819 11.9013 18.5013 12 18.5013C12.0987 18.5013 12.1963 18.4819 12.2874 18.4441C12.3786 18.4063 12.4613 18.3508 12.531 18.281L17.031 13.781C17.1718 13.6402 17.2509 13.4492 17.2509 13.25C17.2509 13.0508 17.1718 12.8598 17.031 12.719C16.8902 12.5782 16.6992 12.4991 16.5 12.4991C16.3008 12.4991 16.1098 12.5782 15.969 12.719L12.75 15.9395V7.25Z"
+                        fill="#273C8D" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5162_3253">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <aside class="sidebar__menu page-sidebar">
+              <nav><ul class="sidebar__menu-list">
+  <li class="sidebar__menu-item active"><a href="#">Устав OO «БФП»</a></li>
+  <li class="sidebar__menu-item"><a href="#">Программа развития плавания</a></li>
+  <li class="sidebar__menu-item"><a href="#">Положения</a></li>
+  <li class="sidebar__menu-item"><a href="#">Свидетельства</a></li>
+  <li class="sidebar__menu-item"><a href="#">Мастерс</a></li>
+  <li class="sidebar__menu-item"><a href="#">Информация</a></li>
+  <li class="sidebar__menu-item"><a href="#">Календарный план соревнований</a></li>
+  <li class="sidebar__menu-item"><a href="#">Правила соревнований по плаванию</a></li>
+  <li class="sidebar__menu-item"><a href="#">Форма заявки</a></li>
+</ul>
+</nav>
+            </aside>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+  <div class="container-fluid footer__content">
+    <div class="container">
+      <div class="footer__body">
+        <div class="footer__contacts-info">
+          <div class="footer__logo-container">
+            <a href="#"><img src="./img/icons/footer-logo.png" alt="logo" /></a>
+          </div>
+          <ul class="footer__socials socials d-flex gap-3">
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8 1.44578C10.1205 1.44578 10.4096 1.44578 11.2771 1.44578C12.0482 1.44578 12.4337 1.63855 12.7229 1.73494C13.1084 1.92771 13.3976 2.0241 13.6867 2.31325C13.9759 2.60241 14.1687 2.89157 14.2651 3.27711C14.3614 3.56627 14.4578 3.95181 14.5542 4.72289C14.5542 5.59036 14.5542 5.78313 14.5542 8C14.5542 10.2169 14.5542 10.4096 14.5542 11.2771C14.5542 12.0482 14.3614 12.4337 14.2651 12.7229C14.0723 13.1084 13.9759 13.3976 13.6867 13.6867C13.3976 13.9759 13.1084 14.1687 12.7229 14.2651C12.4337 14.3614 12.0482 14.4578 11.2771 14.5542C10.4096 14.5542 10.2169 14.5542 8 14.5542C5.78313 14.5542 5.59036 14.5542 4.72289 14.5542C3.95181 14.5542 3.56627 14.3614 3.27711 14.2651C2.89157 14.0723 2.60241 13.9759 2.31325 13.6867C2.0241 13.3976 1.83133 13.1084 1.73494 12.7229C1.63855 12.4337 1.54217 12.0482 1.44578 11.2771C1.44578 10.4096 1.44578 10.2169 1.44578 8C1.44578 5.78313 1.44578 5.59036 1.44578 4.72289C1.44578 3.95181 1.63855 3.56627 1.73494 3.27711C1.92771 2.89157 2.0241 2.60241 2.31325 2.31325C2.60241 2.0241 2.89157 1.83133 3.27711 1.73494C3.56627 1.63855 3.95181 1.54217 4.72289 1.44578C5.59036 1.44578 5.87952 1.44578 8 1.44578ZM8 0C5.78313 0 5.59036 0 4.72289 0C3.85542 0 3.27711 0.192772 2.79518 0.385543C2.31325 0.578314 1.83133 0.867471 1.3494 1.3494C0.867471 1.83133 0.674699 2.21687 0.385543 2.79518C0.192772 3.27711 0.0963856 3.85542 0 4.72289C0 5.59036 0 5.87952 0 8C0 10.2169 0 10.4096 0 11.2771C0 12.1446 0.192772 12.7229 0.385543 13.2048C0.578314 13.6867 0.867471 14.1687 1.3494 14.6506C1.83133 15.1325 2.21687 15.3253 2.79518 15.6145C3.27711 15.8072 3.85542 15.9036 4.72289 16C5.59036 16 5.87952 16 8 16C10.1205 16 10.4096 16 11.2771 16C12.1446 16 12.7229 15.8072 13.2048 15.6145C13.6867 15.4217 14.1687 15.1325 14.6506 14.6506C15.1325 14.1687 15.3253 13.7831 15.6145 13.2048C15.8072 12.7229 15.9036 12.1446 16 11.2771C16 10.4096 16 10.1205 16 8C16 5.87952 16 5.59036 16 4.72289C16 3.85542 15.8072 3.27711 15.6145 2.79518C15.4217 2.31325 15.1325 1.83133 14.6506 1.3494C14.1687 0.867471 13.7831 0.674699 13.2048 0.385543C12.7229 0.192772 12.1446 0.0963856 11.2771 0C10.4096 0 10.2169 0 8 0Z"
+                    fill="#273C8D"
+                  />
+                  <path
+                    d="M8 3.85542C5.68675 3.85542 3.85542 5.68675 3.85542 8C3.85542 10.3133 5.68675 12.1446 8 12.1446C10.3133 12.1446 12.1446 10.3133 12.1446 8C12.1446 5.68675 10.3133 3.85542 8 3.85542ZM8 10.6988C6.55422 10.6988 5.30121 9.54217 5.30121 8C5.30121 6.55422 6.45783 5.30121 8 5.30121C9.44579 5.30121 10.6988 6.45783 10.6988 8C10.6988 9.44579 9.44579 10.6988 8 10.6988Z"
+                    fill="#273C8D"
+                  />
+                  <path
+                    d="M12.241 4.72289C12.7733 4.72289 13.2048 4.29136 13.2048 3.75904C13.2048 3.22671 12.7733 2.79518 12.241 2.79518C11.7086 2.79518 11.2771 3.22671 11.2771 3.75904C11.2771 4.29136 11.7086 4.72289 12.241 4.72289Z"
+                    fill="#273C8D"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.32586 10.2918H9.3036L9.77113 7.24834H6.32525V5.58498C6.32525 4.32069 6.73585 3.1996 7.91132 3.1996H9.80019V0.543695C9.46833 0.498608 8.76643 0.399902 7.44017 0.399902C4.67075 0.399902 3.04713 1.87134 3.04713 5.22366V7.24834H0.200195V10.2918H3.04713V18.6567C3.61095 18.742 4.18203 18.7999 4.76825 18.7999C5.29815 18.7999 5.81534 18.7512 6.32586 18.6817V10.2918Z"
+                    fill="#273C8D"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.4002 1.08188L12.9959 13.6339C12.9959 13.6339 12.6594 14.5042 11.7353 14.0868L6.18786 9.68216L6.16213 9.66918C6.91147 8.97241 12.7221 3.56223 12.9761 3.31699C13.3692 2.93719 13.1251 2.71108 12.6687 2.99798L4.08563 8.64247L0.774306 7.48871C0.774306 7.48871 0.253201 7.29676 0.20307 6.87938C0.152278 6.46132 0.791456 6.23521 0.791456 6.23521L14.2907 0.751256C14.2907 0.751256 15.4002 0.246442 15.4002 1.08188Z"
+                    fill="#273C8D"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <ul class="footer__contacts">
+            <li>
+              <a class="d-flex gap-2 color-white hover-light-blue" href="tel:80172404671"><i class="bi bi-phone"></i>8(017)-240-46-71</a>
+            </li>
+            <li>
+              <a class="d-flex gap-2 color-white hover-light-blue" href="mainto:bfp2002@mail.ru"><i class="bi bi-envelope"></i>bfp2002@mail.ru</a>
+            </li>
+            <li>
+              <p class="d-flex gap-2"><i class="bi bi-clock"></i> пн-пт: 9:00-17:00</p>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__menu">
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a href="#">Национальный рейтинг пловцов</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#">Академия развития</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#">Членство ОО «БФП»</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#">Клубы</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#">Разрядные требования</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#">Нормативы</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#">Мероприятия</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="#">Антидопинг</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__additional-info">
+          <p class="mb-3">Введите свой e-mail, чтобы подписаться на новостную рассылку</p>
+          <div class="footer__email-newsletter">
+            <div class="form__input mb-0">
+              <input  type="email" placeholder="Email">
+            </div>
+            <button class="form__button">Подписаться</button>
+          </div>
+          <div class="footer__legal-info">
+            <p class="fw-semibold mb-2">
+              Юридическая информация
+            </p>
+            <p class="fs-14 mb-2">
+              Общественное объединение «Белорусская федерация плавания» 220020, г.Минск, пр.Победителей, 109, к.111/1, УНП 100152854.
+            </p>
+            <p class="fs-14 mb-2"> 
+              Свидетельство о государственной регистрации № 01382, выдано Министерством юстиции Республики Беларусь 15 марта 2006 года.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="fs-14">©2024, Белорусская федерация плавания</p>
+        <p class="fs-14">Сайт разработан:<a class="color-white hover-light-blue" href="https://info-center.by/"> РУП «Информационно-издательский центр по налогам и сборам»</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="js/script.min.js"></script>
+
+    </div>
+  </body>
+</html>
