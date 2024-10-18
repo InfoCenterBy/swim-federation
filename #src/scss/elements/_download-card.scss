@@ -1,0 +1,28 @@
+.download-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border: 1px solid var(--gray);
+  padding: 16px 24px;
+  transition: $transition-2;
+  flex: 0 1 514px;
+
+  &:hover {
+    cursor: pointer;
+    border-color: var(--main);
+  }
+
+  &__text {
+    color: var(--main);
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+}

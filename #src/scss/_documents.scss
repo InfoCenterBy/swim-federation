@@ -1,5 +1,11 @@
 .documents__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
-.documents__card {
+@media screen and (max-width: 768px) {
+  .documents__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
