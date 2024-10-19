@@ -116,6 +116,14 @@ body.no-scroll {
   overflow-anchor: none;
 }
 
+.page-banner {
+  height: 450px;
+  background-color: var(--main);
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-bottom: 40px;
+}
+
 @media screen and (max-width: 768px) {
   .h1-title {
     font-size: 32px;
