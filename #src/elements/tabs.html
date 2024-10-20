@@ -1,0 +1,99 @@
+<ul
+  class="nav nav-underline--dark news__tabs order-2 order-md-1"
+  id="myTab"
+  role="tablist">
+  <li
+    class="nav-item"
+    role="presentation">
+    <button
+      class="nav-link--dark active"
+      id="all-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#all-tab-pane"
+      type="button"
+      role="tab"
+      aria-controls="all-tab-pane"
+      aria-selected="true">
+      Все
+    </button>
+  </li>
+  <li
+    class="nav-item"
+    role="presentation">
+    <button
+      class="nav-link--dark"
+      id="news-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#news-tab-pane"
+      type="button"
+      role="tab"
+      aria-controls="news-tab-pane"
+      aria-selected="false">
+      Наши новости
+    </button>
+  </li>
+  <li
+    class="nav-item"
+    role="presentation">
+    <div
+      class="dropdown news-dropdown cursor-pointer"
+      aria-expanded="false">
+      <p class="dropdown-toggle">Еще</p>
+      <ul class="dropdown-menu">
+        <li role="presentation">
+          <a
+            class="dropdown-link"
+            id="anti-doping-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#anti-doping-tab-pane"
+            role="tab"
+            aria-controls="anti-doping-tab-pane"
+            aria-selected="false">
+            Антидопинг
+          </a>
+        </li>
+        <li role="presentation">
+          <a
+            class="dropdown-link"
+            id="world-aquatics-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#world-aquatics-tab-pane"
+            role="tab"
+            aria-controls="world-aquatics-tab-pane"
+            aria-selected="false">
+            World Aquatics
+          </a>
+        </li>
+        <li role="presentation">
+          <a
+            class="dropdown-link"
+            id="european-aquatics-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#european-aquatics-tab-pane"
+            role="tab"
+            aria-controls="european-aquatics-tab-pane"
+            aria-selected="false">
+            European Aquatics
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+</ul>
+
+<div
+  class="tab-content"
+  id="myTabContent">
+  <div
+    class="tab-pane fade show active"
+    id="all-tab-pane"
+    role="tabpanel"
+    aria-labelledby="all-tab-tab"
+    tabindex="0"></div>
+  <div
+    class="tab-pane fade"
+    id="news-tab-pane"
+    role="tabpanel"
+    aria-labelledby="news-tab"
+    tabindex="0"></div>
+</div>
