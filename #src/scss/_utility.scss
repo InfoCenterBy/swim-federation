@@ -245,6 +245,41 @@ body.no-scroll {
   overflow: auto;
 }
 
+.w-40 {
+  width: 40%;
+}
+
+.cast-table {
+  max-width: 1056px;
+  overflow: auto;
+
+  & td {
+    line-height: 130%;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  &__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 16px;
+    margin-bottom: 10px;
+  }
+
+  & span {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cast-table__img {
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .page-content--no-menu {
     flex: 1 1 100%;
@@ -301,5 +336,15 @@ body.no-scroll {
 
   & .slider-container {
     margin-block: 32px;
+  }
+}
+
+.sp-image {
+  display: inline-block;
+  max-width: 100%;
+
+  & img {
+    width: 100%;
+    height: auto;
   }
 }
