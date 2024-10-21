@@ -889,6 +889,18 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 16px;
+    margin-bottom: 10px;
+  }
+  .cast-table span {
+    text-align: center;
+  }
+  @media screen and (max-width: 576px) {
+    .cast-table__img {
+      margin-right: 0;
+      text-align: center;
+    }
   }
   @media screen and (max-width: 1200px) {
     .page-content--no-menu {
@@ -2023,8 +2035,8 @@
               flex: 0 0 auto;
     }
     .news__header {
-      padding-bottom: 120px;
-      margin-bottom: -120px;
+      padding-bottom: 133px;
+      margin-bottom: -133px;
     }
   }
   @media (max-width: 576px) {
