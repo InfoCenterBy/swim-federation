@@ -960,6 +960,14 @@
   .text-content .slider-container {
     margin-block: 32px;
   }
+  .sp-image {
+    display: inline-block;
+    max-width: 100%;
+  }
+  .sp-image img {
+    width: 100%;
+    height: auto;
+  }
   .header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3686,7 +3694,7 @@
     border: 1px solid var(--gray);
     padding: 12px;
     font-size: 16px;
-    color: var(--dark-gray);
+    color: var(--black);
     background-color: var(--white);
     width: 340px;
   }

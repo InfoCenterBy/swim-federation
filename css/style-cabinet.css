@@ -1054,6 +1054,14 @@
   .text-content .slider-container {
     margin-block: 32px;
   }
+  .sp-image {
+    display: inline-block;
+    max-width: 100%;
+  }
+  .sp-image img {
+    width: 100%;
+    height: auto;
+  }
   .cabinet__container {
     display: -webkit-box;
     display: -ms-flexbox;
