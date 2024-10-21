@@ -354,33 +354,3 @@ const slider = new Swiper(".slider", {
     prevEl: ".swiper-button-prev",
   },
 });
-
-// const selects = document.querySelectorAll(".form-select");
-
-// if (selects) {
-//   selects.forEach((select) => {
-//     select.addEventListener("change", function () {
-//       if (select.value === "") {
-//         select.style.color = "#797979";
-//       } else {
-//         select.style.color = "#1d1d1d";
-//       }
-//     });
-//   });
-// }
-
-document.addEventListener("DOMContentLoaded", function () {
-  const hash = window.location.hash;
-
-  if (hash) {
-    const tabTriggerEl = document.querySelector('button[data-bs-target="' + hash + '"]');
-
-    if (tabTriggerEl) {
-      tabTriggerEl.click((e) => {
-        e.preventDefault();
-      });
-    }
-  }
-
-  window.location.hash = "";
-});

@@ -819,6 +819,13 @@
   .no-anchor {
     overflow-anchor: none;
   }
+  .page-banner {
+    height: 450px;
+    background-color: var(--main);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 40px;
+  }
   @media screen and (max-width: 768px) {
     .h1-title {
       font-size: 32px;
@@ -959,6 +966,23 @@
             flex-direction: column;
     gap: 32px;
     overflow: auto;
+  }
+  .w-40 {
+    width: 40%;
+  }
+  .cast-table {
+    max-width: 1056px;
+    overflow: auto;
+  }
+  .cast-table td {
+    line-height: 130%;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+  .cast-table__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
   }
   @media screen and (max-width: 1200px) {
     .page-content--no-menu {

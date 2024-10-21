@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Олимпийские игры - 1988. Сеул</title>
+  <title>Национальная команда</title>
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
@@ -667,52 +667,118 @@
 </header>
 
       <main>
-        <div class="container-fluid olympic olympic-2012">
-          <div class="container breadcrumbs__container">
+        <div class="container-fluid page-banner" style="background-image: url('./img/national-team-banner.png')">
+          <div class="container">
             <nav>
               <ul class="breadcrumbs">
                 <li class="breadcrumbs__item--light"><a href="index.html">Главная</a></li>
-                <li class="breadcrumbs__item--light"><a href="achievements.html">Достижения и награды</a></li>
-                <li class="breadcrumbs__item--light"><a href="olympic-games.html">Олимпийские игры</a></li>
-                <li class="breadcrumbs__item--light active">Олимпийские игры - 1988. Сеул</li>
+                <li class="breadcrumbs__item--light active">Национальная команда</li>
               </ul>
             </nav>
           </div>
-
+          <button id="scroll-to-top" class="scroll-to-top">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.55731 5.8074C9.61537 5.74919 9.68434 5.70301 9.76027 5.67151C9.8362 5.64 9.9176 5.62378 9.99981 5.62378C10.082 5.62378 10.1634 5.64 10.2394 5.67151C10.3153 5.70301 10.3843 5.74919 10.4423 5.8074L17.9423 13.3074C18.0597 13.4248 18.1256 13.5839 18.1256 13.7499C18.1256 13.9159 18.0597 14.075 17.9423 14.1924C17.825 14.3098 17.6658 14.3757 17.4998 14.3757C17.3338 14.3757 17.1747 14.3098 17.0573 14.1924L9.99981 7.13365L2.94231 14.1924C2.82495 14.3098 2.66578 14.3757 2.49981 14.3757C2.33384 14.3757 2.17467 14.3098 2.05731 14.1924C1.93995 14.075 1.87402 13.9159 1.87402 13.7499C1.87402 13.5839 1.93995 13.4248 2.05731 13.3074L9.55731 5.8074Z"
+                fill="#273C8D" />
+            </svg>
+          </button>
           <div class="container">
-            <h1 class="h1-title">Олимпийские игры - 1988. Сеул</h1>
+            <h1 class="h1-title">Национальная команда</h1>
           </div>
         </div>
-        <div class="container olympic__content">
-          <div class="olympic__wrapper">
-            <div>
-              <p class="mb-2">
-                <span>Игры XXIV Олимпиады проходили в Сеуле с 17 сентября по 2 октября 1988 года.</span>
-              </p>
-              <p class="mb-2">
-                <span>
-                  Количество стран-участниц – 159, количество спортсменов - 8465. Было разыграно 263 комплекта наград в
-                  27 видах спорта.Игры 1984 года в Лос-Анджелесе сборная СССР пропускала по причине политического
-                  бойкота. Поэтому на Сеульской Олимпиаде перед советскими спортсменами стояла задача доказать, что они
-                  как и прежде являются законодателями мод в мировом спорте.Сборная СССР заняла первое место в
-                  общекомандном зачете, завоевав 132 медали, из них 55 золотых, 31 серебряных и 46 бронзовых.
-                </span>
-              </p>
+
+        <div class="container">
+          <section class="page-wrapper">
+            <div class="page-content">
+              <div>
+                <ul class="tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link--dark active"
+                      id="main-cast"
+                      data-bs-toggle="tab"
+                      data-bs-target="#main-cast-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="main-cast"
+                      aria-selected="true">
+                      Основной состав
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link--dark"
+                      id="trainers"
+                      data-bs-toggle="tab"
+                      data-bs-target="#trainers-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="trainers"
+                      aria-selected="false">
+                      Тренеры
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="main-cast-pane" role="tabpanel" aria-labelledby="main-cast-tab" tabindex="0">
+                  <div class="table-container">
+                    <table class="default-table cast-table mb-5">
+                      <thead>
+                        <tr>
+                          <th>№</th>
+                          <th class="w-40">ФИО</th>
+                          <th>Регалии</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>
+                            <img class="cast-table__img" src="./img/cast/shimanovich.png" alt="" />
+                            <span>Шиманович Илья Сергеевич</span>
+                          </td>
+                          <td>
+                            Чемпион мира, двукратный чемпион Европы в 25-метровых бассейнах, неоднократный призе чемпионатов мира и Европы,
+                            финалист Олимпийских игр в Токио, обладатель мирового рекорда на дистанции 100 м брассом на короткой воде.
+                            Двукратный победитель летних Универсиад.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td class="d-flex align-items-center gap-3">
+                            <img src="./img/cast/shkurday.png" alt="" />Шкурдай Анастасия Евгеньевна
+                          </td>
+                          <td>Чемпионка Европы среди юниоров 2017 года в Нетании (Израиль) на дистанции 50 м баттерфляем.</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td class="d-flex align-items-center gap-3"><img src="./img/cast/zmushko.png" alt="" />Змушко Алина Игоревна</td>
+                          <td>Рекордсмен Республики Беларусь по плаванию, бронзовый призер этапов Кубка мира</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="trainers-pane" role="tabpanel" aria-labelledby="trainers-tab" tabindex="0"></div>
+              </div>
             </div>
 
-            <button id="scroll-to-top" class="scroll-to-top">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M9.55731 5.8074C9.61537 5.74919 9.68434 5.70301 9.76027 5.67151C9.8362 5.64 9.9176 5.62378 9.99981 5.62378C10.082 5.62378 10.1634 5.64 10.2394 5.67151C10.3153 5.70301 10.3843 5.74919 10.4423 5.8074L17.9423 13.3074C18.0597 13.4248 18.1256 13.5839 18.1256 13.7499C18.1256 13.9159 18.0597 14.075 17.9423 14.1924C17.825 14.3098 17.6658 14.3757 17.4998 14.3757C17.3338 14.3757 17.1747 14.3098 17.0573 14.1924L9.99981 7.13365L2.94231 14.1924C2.82495 14.3098 2.66578 14.3757 2.49981 14.3757C2.33384 14.3757 2.17467 14.3098 2.05731 14.1924C1.93995 14.075 1.87402 13.9159 1.87402 13.7499C1.87402 13.5839 1.93995 13.4248 2.05731 13.3074L9.55731 5.8074Z"
-                  fill="#273C8D" />
-              </svg>
-            </button>
-          </div>
+            <aside class="sidebar__menu page-sidebar">
+              <nav>
+                <ul class="sidebar__menu-list">
+                  <li class="sidebar__menu-item active"><a href="#">Национальная команда</a></li>
+                  <li class="sidebar__menu-item"><a href="#">Состав команд</a></li>
+                </ul>
+              </nav>
+            </aside>
+          </section>
         </div>
       </main>
-
       <footer class="footer">
   <div class="container-fluid footer__content">
     <div class="container">
