@@ -813,8 +813,10 @@
   .wrap-text {
     overflow-wrap: break-word;
     word-wrap: break-word;
+    word-break: break-all;
     -ms-hyphens: auto;
         hyphens: auto;
+    max-width: 100%;
   }
   .no-anchor {
     overflow-anchor: none;
@@ -1059,8 +1061,10 @@
     max-width: 100%;
   }
   .sp-image img {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
+    display: block;
   }
   .cabinet__container {
     display: -webkit-box;
