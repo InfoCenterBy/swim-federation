@@ -77,6 +77,7 @@
 @media screen and (max-width: 1100px) {
   .footer__body {
     justify-content: center;
+    gap: 24px;
   }
 
   .footer__menu {
@@ -125,6 +126,6 @@
     align-items: start;
     flex-direction: column;
     gap: 16px;
-    margin-top: 24px;
+    margin-top: 16px;
   }
 }

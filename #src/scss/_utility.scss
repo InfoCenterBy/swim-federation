@@ -109,7 +109,9 @@ body.no-scroll {
 .wrap-text {
   overflow-wrap: break-word;
   word-wrap: break-word;
+  word-break: break-all;
   hyphens: auto;
+  max-width: 100%;
 }
 
 .no-anchor {
@@ -344,7 +346,9 @@ body.no-scroll {
   max-width: 100%;
 
   & img {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
+    display: block;
   }
 }
