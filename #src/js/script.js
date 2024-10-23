@@ -9,3 +9,4 @@
 @@include('phone-mask.js', {})
 @@include('scroll-to-top.js', {})
 @@include('slider.js', {})
+@@include('dropdown-show-on-mozilla.js', {})

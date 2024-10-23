@@ -204,6 +204,7 @@
     gap: 32px;
     align-items: start;
     overflow-x: scroll;
+    scrollbar-width: none;
   }
 
   .news__header::-webkit-scrollbar {

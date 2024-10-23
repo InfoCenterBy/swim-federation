@@ -120,6 +120,11 @@
   min-width: 100%;
 }
 
+.dropdown-menu.show {
+  display: block;
+  left: -100px;
+}
+
 .dropdown-item {
   width: 100%;
 }
@@ -189,7 +194,7 @@
 
 .news-dropdown .dropdown-toggle {
   padding-inline: 8px;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   font-weight: 500;
 }
 
