@@ -529,6 +529,10 @@
   .dropdown-menu {
     min-width: 100%;
   }
+  .dropdown-menu.show {
+    display: block;
+    left: -100px;
+  }
   .dropdown-item {
     width: 100%;
   }
@@ -2046,6 +2050,7 @@
           -ms-flex-align: start;
               align-items: start;
       overflow-x: scroll;
+      scrollbar-width: none;
     }
     .news__header::-webkit-scrollbar {
       display: none;

@@ -527,6 +527,10 @@
   .dropdown-menu {
     min-width: 100%;
   }
+  .dropdown-menu.show {
+    display: block;
+    left: -100px;
+  }
   .dropdown-item {
     width: 100%;
   }

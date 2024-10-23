@@ -354,3 +354,13 @@ const slider = new Swiper(".slider", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+if (window.innerWidth <= 768) {
+  document.querySelectorAll(".dropdown").forEach(function (dropdown) {
+    dropdown.addEventListener("click", function (e) {
+      e.preventDefault();
+      const menu = this.querySelector(".dropdown-menu");
+      menu.classList.toggle("show");
+    });
+  });
+}
