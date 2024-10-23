@@ -178,6 +178,12 @@
   .news-tab--big-cards .news__card:nth-child(15) {
     grid-column: 1;
   }
+
+  .news__card,
+  .news__description--dark,
+  .news__image-container {
+    max-width: unset;
+  }
 }
 
 @media (max-width: 992px) {
@@ -243,5 +249,9 @@
 @media (max-width: 576px) {
   .news-tab {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .tab-pane {
+    width: 100%;
   }
 }

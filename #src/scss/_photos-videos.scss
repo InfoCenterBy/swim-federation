@@ -82,6 +82,10 @@
     overflow: hidden;
     max-width: 343px;
     height: 388px;
+
+    @media screen and (max-width: 576px) {
+      max-width: unset;
+    }
   }
 
   &__image {
