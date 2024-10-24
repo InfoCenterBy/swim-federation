@@ -586,8 +586,8 @@
     color: var(--white);
   }
   .news-dropdown .dropdown-menu li:active .dropdown-link {
-    background-color: var(--light-red);
-    color: var(--red);
+    background-color: var(--red);
+    color: var(--white);
   }
   .news-dropdown .dropdown-menu .dropdown-link.active {
     color: var(--red);
@@ -878,6 +878,11 @@
     text-align: left;
     margin-bottom: 24px;
   }
+  @media screen and (max-width: 768px) {
+    .h2-title {
+      font-size: 28px;
+    }
+  }
   .no-transition {
     -webkit-transition: none;
     transition: none;
@@ -1059,6 +1064,21 @@
   }
   .text-content .slider-container {
     margin-block: 32px;
+  }
+  .marked-list {
+    margin-left: 20px;
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12px;
+  }
+  .marked-list li {
+    list-style: disc;
   }
   .sp-image {
     display: inline-block;
