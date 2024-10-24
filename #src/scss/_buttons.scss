@@ -68,9 +68,30 @@
   @include hover(border-color, var(--main-hover));
 }
 
+.button--light-blue {
+  background-color: var(--light-blue);
+  color: var(--main);
+  border: 1px solid var(--main);
+  font-size: 16px;
+  line-height: 21px;
+
+  padding: 12px 24px;
+  transition: $transition-2;
+
+  @include hover(background-color, var(--blue));
+  @include hover(color, var(--white));
+  @include hover(border-color, var(--blue));
+
+  &:active {
+    background-color: var(--light-blue);
+    color: var(--main);
+  }
+}
+
 @media screen and (max-width: 576px) {
   .button,
-  .button--secondary {
+  .button--secondary,
+  .button--light-blue {
     text-align: center;
     width: 100%;
   }

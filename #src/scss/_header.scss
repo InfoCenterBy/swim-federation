@@ -52,6 +52,11 @@
 }
 
 .accordion-button:not(.collapsed) {
+  color: var(--main);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
   box-shadow: none;
 }
 

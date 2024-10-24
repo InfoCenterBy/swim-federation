@@ -379,3 +379,7 @@ body.no-scroll {
     display: block;
   }
 }
+
+.after-no::after {
+  content: none;
+}
