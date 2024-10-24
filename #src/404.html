@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('./components/_head.html', {title: "Страница не найдена"})
+  <body>
+    <div class="wrapper">
+      @@include('./components/_header.html')
+      <main>
+        <section class="container page-wrapper">
+          <div class="page-content--full-width pt-5">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <div class="w-auto">
+                <img
+                  class="w-100"
+                  src="./img/icons/404.svg"
+                  alt="404" />
+              </div>
+              <p class="text-center mb-2">Мы не смогли найти страницу которую вы запрашиваете.</p>
+              <p class="text-center mb-4">Возможно она была удалена или вы ввели неверный адрес.</p>
+              <a
+                class="button--no-stretch"
+                href="index.html">
+                Вернуться на главную
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('./components/_footer.html') @@include('./components/_script.html')
+    </div>
+  </body>
+</html>
