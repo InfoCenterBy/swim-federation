@@ -1,6 +1,28 @@
 .contacts-location {
+  display: flex;
+  gap: 24px;
+
+  &__info,
+  &__map {
+    flex: 1 1 calc(50% - 24px);
+  }
+
   &__info {
     border: 1px solid var(--main);
     padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contacts-location {
+    flex-wrap: wrap;
+  }
+
+  .contacts-location__info,
+  .contacts-location__map {
+    flex: 1 1 100%;
   }
 }

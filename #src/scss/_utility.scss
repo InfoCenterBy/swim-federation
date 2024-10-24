@@ -345,6 +345,15 @@ body.no-scroll {
   & .slider-container {
     margin-block: 32px;
   }
+
+  & a {
+    color: var(--main);
+    transition: $transition-2;
+
+    &:hover {
+      color: var(--main-hover);
+    }
+  }
 }
 
 .marked-list {
