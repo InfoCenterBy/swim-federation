@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('./components/_head.html', {title: "Результаты поиска"})
+  <body>
+    <div class="wrapper">
+      @@include('./components/_header.html')
+      <main>
+        <button id="scroll-to-top" class="scroll-to-top">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.55731 5.8074C9.61537 5.74919 9.68434 5.70301 9.76027 5.67151C9.8362 5.64 9.9176 5.62378 9.99981 5.62378C10.082 5.62378 10.1634 5.64 10.2394 5.67151C10.3153 5.70301 10.3843 5.74919 10.4423 5.8074L17.9423 13.3074C18.0597 13.4248 18.1256 13.5839 18.1256 13.7499C18.1256 13.9159 18.0597 14.075 17.9423 14.1924C17.825 14.3098 17.6658 14.3757 17.4998 14.3757C17.3338 14.3757 17.1747 14.3098 17.0573 14.1924L9.99981 7.13365L2.94231 14.1924C2.82495 14.3098 2.66578 14.3757 2.49981 14.3757C2.33384 14.3757 2.17467 14.3098 2.05731 14.1924C1.93995 14.075 1.87402 13.9159 1.87402 13.7499C1.87402 13.5839 1.93995 13.4248 2.05731 13.3074L9.55731 5.8074Z"
+              fill="#273C8D" />
+          </svg>
+        </button>
+        <div class="container">
+          <nav>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item active">Результаты поиска</li>
+            </ul>
+          </nav>
+
+          <h2 class="h2-title">Результаты поиска</h2>
+
+          <section class="page-wrapper">
+            <div class="page-content--full-width">
+              <div>
+                <div class="d-flex w-100 gap-3 mb-2">
+                  <div class="w-100 position-relative">
+                    <input class="form-input w-100" type="text" />
+                    <i class="remove-icon bi bi-x"></i>
+                  </div>
+                  <button class="button">Найти</button>
+                </div>
+                <p class="fs-14 color-dark-gray">Найдено: 0 результатов</p>
+              </div>
+              <div class="search-results">
+                <p class="mt-4 mb-2">По вашему запросу ничего не найдено.</p>
+                <p>Попробуйте изменить запрос или воспользоваться другими ключевыми словами.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      @@include('./components/_footer.html') @@include('./components/_script.html')
+    </div>
+  </body>
+</html>

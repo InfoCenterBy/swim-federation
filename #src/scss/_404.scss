@@ -1,0 +1,9 @@
+.image-404 {
+  transform: translateX(65px);
+}
+
+@media screen and (max-width: 576px) {
+  .image-404 {
+    transform: translateX(0px);
+  }
+}

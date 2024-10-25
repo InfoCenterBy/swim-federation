@@ -15,6 +15,22 @@
   }
 }
 
+.button--default {
+  background-color: var(--main);
+  color: var(--white);
+  padding: 12px 24px;
+  display: inline-block;
+  font-size: 16px;
+  transition: $transition-2;
+  line-height: 21px;
+
+  @include hover(background-color, var(--main-hover));
+
+  &:active {
+    background-color: var(--main);
+  }
+}
+
 .button--no-stretch {
   background-color: var(--main);
   color: var(--white);
@@ -78,13 +94,13 @@
   padding: 12px 24px;
   transition: $transition-2;
 
-  @include hover(background-color, var(--blue));
+  @include hover(background-color, var(--main-hover));
   @include hover(color, var(--white));
-  @include hover(border-color, var(--blue));
+  @include hover(border-color, var(--main-hover));
 
   &:active {
-    background-color: var(--light-blue);
-    color: var(--main);
+    background-color: var(--main);
+    color: var(--white);
   }
 }
 

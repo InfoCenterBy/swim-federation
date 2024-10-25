@@ -62,6 +62,20 @@
   --bs-form-switch-bg: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy00IC00IDggOCc+PGNpcmNsZSByPSczJyBmaWxsPScjZmZmJy8+PC9zdmc+");
 }
 
+.remove-icon {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  padding: 4px;
+  cursor: pointer;
+  color: var(--gray);
+  font-size: 24px;
+
+  &:hover {
+    color: var(--dark-gray);
+  }
+}
+
 @media screen and (max-width: 992px) {
   .form-select {
     width: 100%;
