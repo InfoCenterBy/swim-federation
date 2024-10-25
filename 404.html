@@ -671,11 +671,11 @@
           <div class="page-content--full-width pt-5">
             <div class="d-flex flex-column align-items-center justify-content-center">
               <div class="w-auto">
-                <img class="w-100" src="./img/icons/404.svg" alt="404" />
+                <img class="image-404 w-100" src="./img/icons/404.svg" alt="404" />
               </div>
               <p class="text-center mb-2">Мы не смогли найти страницу которую вы запрашиваете.</p>
               <p class="text-center mb-4">Возможно она была удалена или вы ввели неверный адрес.</p>
-              <a class="button--no-stretch" href="index.html"> Вернуться на главную </a>
+              <a class="button--no-stretch py-3 px-4" href="index.html"> Вернуться на главную </a>
             </div>
           </div>
         </section>
@@ -901,8 +901,8 @@
                       data-bs-target="#collapseOneCookie"
                       aria-expanded="true"
                       aria-controls="collapseOneCookie">
-                      <span>Необходимые</span>
-                      <p class="fs-14 color-main fw-semibold">Всегда активно</p>
+                      <p>Необходимые</p>
+                      <p class="fs-16 color-main fw-semibold">Всегда активно</p>
                     </button>
                     <div
                       class="form-check form-switch d-flex justify-content-center align-content-center align-items-center col-sm-1 col-2 fs-20 p-0 m-0">
@@ -1002,16 +1002,14 @@
                 </div>
               </div>
             </div>
-            <div class="modal-footer border-0 justify-content-between row">
-              <div class="d-flex col-lg-6 gap-3 flex-lg-nowrap flex-wrap mt-3">
-                <button class="button accept-all-m button-full w-100" data-dismiss="alert" aria-label="Close">Принять все</button>
-                <button class="button--secondary reject-all-m button-empty w-100" data-dismiss="alert" aria-label="Close">
-                  Отклонить все
-                </button>
+            <div class="modal-footer border-0 flex-lg-nowrap justify-content-between flex-column flex-lg-row">
+              <div class="d-flex gap-3 flex-column flex-lg-row w-100 w-lg-auto mt-3">
+                <button class="button--default accept-all-m" data-dismiss="alert" aria-label="Close">Принять все</button>
+                <button class="button--secondary reject-all-m" data-dismiss="alert" aria-label="Close">Отклонить все</button>
               </div>
-              <div class="d-flex col-lg-4 mt-3">
-                <button class="button--secondary w-100 save-settings-cookies" data-dismiss="alert" aria-label="Close">Сохранить</button>
-              </div>
+              <button class="button--secondary save-settings-cookies mt-3 align-self-stretch" data-dismiss="alert" aria-label="Close">
+                Сохранить
+              </button>
             </div>
           </div>
         </div>
