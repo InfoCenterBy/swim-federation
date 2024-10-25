@@ -1065,6 +1065,14 @@
   .text-content .slider-container {
     margin-block: 32px;
   }
+  .text-content a {
+    color: var(--main);
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+  }
+  .text-content a:hover {
+    color: var(--main-hover);
+  }
   .marked-list {
     margin-left: 20px;
     padding-left: 0;
@@ -1089,6 +1097,9 @@
     max-width: 100%;
     height: auto;
     display: block;
+  }
+  .after-no::after {
+    content: none;
   }
   .cabinet__container {
     display: -webkit-box;
@@ -2015,6 +2026,14 @@
   }
   .modal-dialog {
     top: 40%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 90%;
+  }
+  .modal-dialog--cookie {
+    top: 20%;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
