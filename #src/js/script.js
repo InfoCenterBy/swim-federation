@@ -10,3 +10,4 @@
 @@include('scroll-to-top.js', {})
 @@include('slider.js', {})
 @@include('dropdown-show-on-mozilla.js', {})
+@@include('clear-input.js', {})
