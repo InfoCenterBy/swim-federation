@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css") layer(vendor);
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
@@ -11,6 +12,7 @@
     --gray: #cfcccc;
     --light-gray: #eaeaea;
     --main: #273c8d;
+    --light-main: #ced7f9;
     --main-hover: #5b6eb5;
     --blue: #0e7dac;
     --light-blue: #abdef4;
@@ -915,6 +917,119 @@
     background-color: var(--light-gray);
     font-weight: 500;
   }
+  .default-table--small {
+    border-collapse: collapse;
+    overflow-x: auto;
+    width: 100%;
+  }
+  .default-table--small th,
+  .default-table--small td {
+    padding: 10px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  .default-table--small th {
+    padding: 16px;
+  }
+  .default-table--small td {
+    vertical-align: middle;
+  }
+  .default-table--small th {
+    background-color: var(--light-gray);
+    font-weight: 500;
+  }
+  @media (max-width: 768px) {
+    .default-table--small {
+      display: block;
+      width: 100%;
+    }
+    .default-table--small thead {
+      display: none;
+    }
+    .default-table--small tbody {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 15px;
+    }
+    .default-table--small tr {
+      display: grid;
+      grid-template-columns: 1fr;
+      background-color: var(--white);
+      border: 1px solid var(--main);
+    }
+    .default-table--small td {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      border-bottom: 0;
+      padding: 10px;
+    }
+    .default-table--small td:nth-child(1)::before {
+      content: "№";
+      font-weight: medium;
+      font-size: 16px;
+      color: var(--black);
+    }
+    .default-table--small td:nth-child(2)::before {
+      content: "Дата выставления";
+      font-weight: medium;
+      font-size: 16px;
+      color: var(--black);
+    }
+    .default-table--small td:nth-child(3)::before {
+      content: "Тип взноса";
+      font-weight: medium;
+      font-size: 16px;
+      color: var(--black);
+    }
+    .default-table--small td:nth-child(4)::before {
+      content: "Номер в ЕРИП";
+      font-weight: medium;
+      font-size: 16px;
+      color: var(--black);
+    }
+    .default-table--small td:nth-child(5)::before {
+      content: "Статус оплаты";
+      font-weight: medium;
+      font-size: 16px;
+      color: var(--black);
+    }
+    .default-table--small td:nth-child(6)::before {
+      content: "Дата оплаты";
+      font-weight: medium;
+      font-size: 16px;
+      color: var(--black);
+    }
+    .default-table--small td:nth-child(7)::before {
+      content: "Сумма";
+      font-weight: medium;
+      font-size: 16px;
+      color: var(--black);
+    }
+    .default-table--small td:nth-child(8)::before {
+      content: "Оплатить";
+      font-weight: medium;
+      font-size: 16px;
+      color: var(--black);
+    }
+    .default-table--small td::before {
+      width: 100px;
+      margin-right: 10px;
+      color: var(--black);
+      white-space: nowrap;
+    }
+  }
   .default-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1106,6 +1221,32 @@
   }
   .after-no::after {
     content: none;
+  }
+  .badge {
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 0;
+  }
+  .badge.green {
+    background-color: var(--light-green);
+    color: var(--green-success);
+  }
+  .badge.red {
+    background-color: var(--light-red-secondary);
+    color: var(--red);
+  }
+  .badge.orange {
+    background-color: var(--yellow);
+    color: var(--orange);
+  }
+  .badge.gray {
+    background-color: var(--gray);
+    color: var(--dark-gray);
+  }
+  .badge.blue {
+    background-color: var(--light-main);
+    color: var(--main);
   }
   .cabinet__container {
     display: -webkit-box;
@@ -2050,6 +2191,245 @@
     padding: 40px;
     border-radius: 0;
   }
+  .ag-theme-quartz {
+    --ag-wrapper-border-radius: 0 !important;
+    --ag-border-radius: 0 !important;
+  }
+  .ag-theme-quartz .ag-header {
+    --ag-header-background-color: var(--light-gray);
+  }
+  .button {
+    background-color: var(--main);
+    color: var(--white);
+    padding: 12px 24px;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    line-height: 21px;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .button:active {
+      background-color: var(--main-hover);
+    }
+  }
+  .button:active {
+    background-color: var(--main);
+  }
+  .button--small {
+    background-color: var(--main);
+    color: var(--white);
+    padding: 6px 16px;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    line-height: 21px;
+    font-weight: normal;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--small:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .button--small:active {
+      background-color: var(--main-hover);
+    }
+  }
+  .button--small:active {
+    background-color: var(--main);
+  }
+  .button--default {
+    background-color: var(--main);
+    color: var(--white);
+    padding: 12px 24px;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    line-height: 21px;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--default:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .button--default:active {
+      background-color: var(--main-hover);
+    }
+  }
+  .button--default:active {
+    background-color: var(--main);
+  }
+  .button--no-stretch {
+    background-color: var(--main);
+    color: var(--white);
+    padding: 12px 16px;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--no-stretch:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .button--no-stretch:active {
+      background-color: var(--main-hover);
+    }
+  }
+  .button--no-stretch:active {
+    background-color: var(--main);
+  }
+  .button:disabled {
+    background-color: var(--gray);
+    color: var(--dark-gray);
+    padding: 12px 16px;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    cursor: not-allowed;
+  }
+  .button-disabled--small {
+    background-color: var(--gray);
+    color: var(--dark-gray);
+    padding: 6px 16px;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    cursor: not-allowed;
+  }
+  .button--secondary:disabled {
+    background-color: var(--gray);
+    color: var(--dark-gray);
+    padding: 12px 16px;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    cursor: not-allowed;
+  }
+  .button--secondary {
+    background-color: var(--white);
+    color: var(--main);
+    border: 1px solid var(--main);
+    font-size: 16px;
+    line-height: 21px;
+    padding: 12px 24px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--secondary:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .button--secondary:active {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--secondary:hover {
+      color: var(--white);
+    }
+  }
+  @media (hover: none) {
+    .button--secondary:active {
+      color: var(--white);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--secondary:hover {
+      border-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .button--secondary:active {
+      border-color: var(--main-hover);
+    }
+  }
+  .button--light-blue {
+    background-color: var(--light-blue);
+    color: var(--main);
+    border: 1px solid var(--main);
+    font-size: 16px;
+    line-height: 21px;
+    padding: 12px 24px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--light-blue:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .button--light-blue:active {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--light-blue:hover {
+      color: var(--white);
+    }
+  }
+  @media (hover: none) {
+    .button--light-blue:active {
+      color: var(--white);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--light-blue:hover {
+      border-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .button--light-blue:active {
+      border-color: var(--main-hover);
+    }
+  }
+  .button--light-blue:active {
+    background-color: var(--main);
+    color: var(--white);
+  }
+  @media screen and (max-width: 576px) {
+    .button,
+    .button--secondary,
+    .button--light-blue {
+      text-align: center;
+      width: 100%;
+    }
+  }
   .stepper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2487,6 +2867,68 @@
   }
   .single-line-checkbox {
     top: -2px;
+  }
+  .pagination {
+    margin-bottom: 100px;
+  }
+  .page-item.disabled .page-link {
+    color: var(--dark-gray);
+  }
+  .page-item.disabled .page-link:hover {
+    cursor: not-allowed;
+  }
+  .page-item:not(:first-child):not(:last-child) .page-link {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 40px;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page-item:not(:first-child):not(:last-child) .page-link:hover {
+    background-color: var(--main-hover);
+    color: var(--white);
+  }
+  .page-item:not(:first-child):not(:last-child) {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .page-item:not(:first-child):not(:last-child).active {
+    background-color: var(--main);
+  }
+  .page-item:not(:first-child):not(:last-child).active .page-link {
+    color: var(--white);
+  }
+  .page-item:not(:first-child):not(:last-child).disabled {
+    background-color: var(--gray);
+  }
+  .page-item:not(:first-child):not(:last-child).disabled .page-link {
+    color: var(--white);
+  }
+  .page-item:first-child:not(.disabled) .page-link,
+  .page-item:last-child:not(.disabled) .page-link {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .page-item:first-child:not(.disabled) .page-link:hover,
+  .page-item:last-child:not(.disabled) .page-link:hover {
+    color: var(--main-hover);
+  }
+  .page-item:first-child:not(.disabled) .page-link:active,
+  .page-item:last-child:not(.disabled) .page-link:active {
+    color: var(--main);
+  }
+  @media screen and (max-width: 576px) {
+    .pagination {
+      margin-bottom: 80px;
+    }
   }
   html {
     height: auto;
