@@ -394,11 +394,7 @@ if (clearIcon && searchInput) {
   });
 }
 
-// Grid API: Access to Grid API methods
-
-// Grid Options: Contains all of the grid configurations
 const gridOptions = {
-  // Data to be displayed
   rowData: [
     { make: "Tesla", model: "Model Y", price: 64950, electric: true },
     { make: "Ford", model: "F-Series", price: 33850, electric: false },
@@ -407,43 +403,49 @@ const gridOptions = {
     { make: "Fiat", model: "500", price: 15774, electric: false },
     { make: "Nissan", model: "Juke", price: 20675, electric: false },
   ],
-  // Columns to be displayed (Should match rowData properties)
+
   columnDefs: [{ field: "make" }, { field: "model" }, { field: "price" }, { field: "electric" }],
   defaultColDef: {
     flex: 1,
   },
-  // onColumnMoved: () => saveColumnState,
-  onColumnMoved: () => console.log("123"),
-  onColumnResized: () => saveColumnState,
-  onSortChanged: () => saveColumnState,
-  onGridReady: () => loadColumnState,
+
+  onColumnMoved: onColumnMoved,
+  onColumnResized: onColumnResized,
+  onSortChanged: onSortChanged,
+  onGridReady: onGridReady,
 };
 
-console.log(gridOptions);
+function onColumnMoved(params) {
+  const columnState = params.api.getColumnState();
+  console.log("moved");
 
-function saveColumnState() {
-  const columnState = gridOptions.columnApi.getColumnState();
-  localStorage.setItem("columnState", JSON.stringify(columnState));
+  localStorage.setItem("agColumnState", JSON.stringify(columnState));
 }
 
-function loadColumnState() {
-  const savedState = localStorage.getItem("columnState");
-  if (savedState) {
-    gridOptions.columnApi.applyColumnState({
-      state: JSON.parse(savedState),
-      applyOrder: true,
-    });
+function onColumnResized(params) {
+  const columnState = params.api.getColumnState();
+  console.log("resize");
+
+  localStorage.setItem("agColumnState", JSON.stringify(columnState));
+}
+
+function onSortChanged(params) {
+  const columnState = params.api.getColumnState();
+  console.log("sort");
+
+  localStorage.setItem("agColumnState", JSON.stringify(columnState));
+}
+
+function onGridReady(params) {
+  const columnState = JSON.parse(localStorage.getItem("agColumnState"));
+
+  if (columnState) {
+    console.log("ready");
+
+    params.api.applyColumnState({ state: columnState, applyOrder: true });
   }
 }
 
-// Загружаем состояние при первой инициализации
-loadColumnState();
-
-function clearColumnState() {
-  localStorage.removeItem("columnState");
-  gridOptions.columnApi.resetColumnState();
-}
-
 const ediv = document.querySelector("#myGrid");
-// Create Grid: Create new grid within the #myGrid div, using the Grid Options object
+
 const gridApi = agGrid.createGrid(ediv, gridOptions);
