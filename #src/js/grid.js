@@ -13,25 +13,41 @@ const gridOptions = {
     flex: 1,
   },
 
-  onColumnMoved: (params) => saveColumnState(params),
-  onColumnResized: () => console.log("456"),
-  onSortChanged: () => console.log("789"),
-  onGridReady: (params) => {
-    const columnApi = params.api;
-
-    const columnState = columnApi.getColumnState();
-
-    console.log("Текущее состояние колонок:", columnState);
-
-    localStorage.setItem("columnState", JSON.stringify(columnState));
-  },
+  onColumnMoved: onColumnMoved,
+  onColumnResized: onColumnResized,
+  onSortChanged: onSortChanged,
+  onGridReady: onGridReady,
 };
 
-function saveColumnState(params) {
-  console.log("123");
-
+function onColumnMoved(params) {
   const columnState = params.api.getColumnState();
+  console.log("moved");
+
   localStorage.setItem("agColumnState", JSON.stringify(columnState));
+}
+
+function onColumnResized(params) {
+  const columnState = params.api.getColumnState();
+  console.log("resize");
+
+  localStorage.setItem("agColumnState", JSON.stringify(columnState));
+}
+
+function onSortChanged(params) {
+  const columnState = params.api.getColumnState();
+  console.log("sort");
+
+  localStorage.setItem("agColumnState", JSON.stringify(columnState));
+}
+
+function onGridReady(params) {
+  const columnState = JSON.parse(localStorage.getItem("agColumnState"));
+
+  if (columnState) {
+    console.log("ready");
+
+    params.api.applyColumnState({ state: columnState, applyOrder: true });
+  }
 }
 
 const ediv = document.querySelector("#myGrid");
