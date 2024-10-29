@@ -9,3 +9,4 @@
 @@include('cabinet-mobile-menu.js', {})
 @@include('cabinet-modal-exit.js', {})
 @@include('cabinet-photo-upload.js', {})
+@@include('grid.js', {})

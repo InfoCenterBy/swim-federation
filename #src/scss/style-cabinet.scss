@@ -15,9 +15,12 @@
   @import "cabinet-form";
   @import "link";
   @import "modal";
+  @import "ag-grid-table";
+  @import "buttons";
   @import "./elements/stepper";
   @import "./elements/breadcrumbs";
   @import "./elements/feedback-form";
+  @import "./elements/pagination";
 
   html {
     height: auto;

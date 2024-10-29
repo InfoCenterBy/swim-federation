@@ -219,6 +219,120 @@ body.no-scroll {
   font-weight: 500;
 }
 
+.default-table--small {
+  border-collapse: collapse;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.default-table--small th,
+.default-table--small td {
+  padding: 10px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.default-table--small th {
+  padding: 16px;
+}
+
+.default-table--small td {
+  vertical-align: middle;
+}
+
+.default-table--small th {
+  background-color: var(--light-gray);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .default-table--small {
+    display: block;
+    width: 100%;
+  }
+
+  .default-table--small thead {
+    display: none;
+  }
+
+  .default-table--small tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .default-table--small tr {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--white);
+    border: 1px solid var(--main);
+  }
+
+  .default-table--small td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0;
+    padding: 10px;
+  }
+
+  .default-table--small td:nth-child(1)::before {
+    content: "№";
+    font-weight: medium;
+    font-size: 16px;
+    color: var(--black);
+  }
+  .default-table--small td:nth-child(2)::before {
+    content: "Дата выставления";
+    font-weight: medium;
+    font-size: 16px;
+    color: var(--black);
+  }
+  .default-table--small td:nth-child(3)::before {
+    content: "Тип взноса";
+    font-weight: medium;
+    font-size: 16px;
+    color: var(--black);
+  }
+  .default-table--small td:nth-child(4)::before {
+    content: "Номер в ЕРИП";
+    font-weight: medium;
+    font-size: 16px;
+    color: var(--black);
+  }
+  .default-table--small td:nth-child(5)::before {
+    content: "Статус оплаты";
+    font-weight: medium;
+    font-size: 16px;
+    color: var(--black);
+  }
+  .default-table--small td:nth-child(6)::before {
+    content: "Дата оплаты";
+    font-weight: medium;
+    font-size: 16px;
+    color: var(--black);
+  }
+  .default-table--small td:nth-child(7)::before {
+    content: "Сумма";
+    font-weight: medium;
+    font-size: 16px;
+    color: var(--black);
+  }
+  .default-table--small td:nth-child(8)::before {
+    content: "Оплатить";
+    font-weight: medium;
+    font-size: 16px;
+    color: var(--black);
+  }
+
+  .default-table--small td::before {
+    width: 100px;
+    margin-right: 10px;
+    color: var(--black);
+    white-space: nowrap;
+  }
+}
+
 .default-list {
   display: flex;
   flex-direction: column;
@@ -390,4 +504,36 @@ body.no-scroll {
 
 .after-no::after {
   content: none;
+}
+
+.badge {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 0;
+
+  &.green {
+    background-color: var(--light-green);
+    color: var(--green-success);
+  }
+
+  &.red {
+    background-color: var(--light-red-secondary);
+    color: var(--red);
+  }
+
+  &.orange {
+    background-color: var(--yellow);
+    color: var(--orange);
+  }
+
+  &.gray {
+    background-color: var(--gray);
+    color: var(--dark-gray);
+  }
+
+  &.blue {
+    background-color: var(--light-main);
+    color: var(--main);
+  }
 }
