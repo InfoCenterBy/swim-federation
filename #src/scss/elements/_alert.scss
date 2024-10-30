@@ -1,4 +1,22 @@
 .alert {
-  margin-bottom: 16px;
   border-radius: 0;
+  padding: 16px;
+  position: relative;
+
+  &-icon {
+    position: absolute;
+  }
+
+  &-text {
+    padding-left: 26px;
+    display: block;
+  }
+}
+
+.alert.blue {
+  background-color: var(--light-main);
+}
+
+.alert.yellow {
+  background-color: var(--yellow);
 }

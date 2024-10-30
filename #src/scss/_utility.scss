@@ -506,6 +506,10 @@ body.no-scroll {
   content: none;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
 .badge {
   font-weight: 600;
   font-size: 14px;
