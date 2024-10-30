@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Профиль</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="css/style-cabinet.css" />
+</head>
+
+  <body>
+    <div class="wrapper">
+      <header class="cabinet__header py-16px">
+  <div class="cabinet__header-desktop justify-content-between align-items-center gap-4">
+    <a
+      class="d-block"
+      href="cabinet-applications.html">
+      <img
+        src="./img/icons/logo.png"
+        alt="Logo" />
+    </a>
+    <div class="d-flex flex-wrap gap-2 align-items-center">
+      <p class="color-dark-gray">Техническая поддержка:</p>
+      <a
+        class="color-main hover-main-hover"
+        href="tel:80172404671">
+        <i class="mr-8px bi bi-phone"></i>
+        8(017)-240-46-71
+      </a>
+      <div class="cabinet__profile-info">
+        <div
+          class="dropdown header-dropdown cursor-pointer d-flex"
+          aria-expanded="false">
+          <div class="dropdown-toggle d-flex">
+            <div class="profile-btn">
+              <img
+                src="./img/icons/person.svg"
+                alt="Profile icon" />
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <p class="">Иванов Иван Иванович</p>
+              <p class="fs-14 color-dark-gray">член ОО «БФП»</p>
+            </div>
+          </div>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                href="cabinet-profile.html">
+                Профиль
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="cabinet-change-password.html">
+                Изменить пароль
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cabinet__header-mobile">
+    <div class="d-flex justify-content-between w-100">
+      <a
+        class="d-block"
+        href="cabinet-applications.html">
+        <img
+          src="./img/icons/mobile-logo.png"
+          alt="Logo" />
+      </a>
+      <div class="d-flex">
+        <a class="cabinet__profile-btn profile-btn">
+          <img
+            src="./img/icons/person.svg"
+            alt="Profile icon" />
+        </a>
+        <button class="menu-toggle">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+    <section class="cabinet__mobile-menu">
+      <ul class="cabinet__mobile-menu-list">
+        <li class="cabinet__mobile-menu-item">
+          <a href="cabinet-applications.html">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.16439 26H19.836C22.5227 26 24.7107 23.8362 24.7107 21.175V5.42495C24.7107 2.76369 22.5227 0.599951 19.836 0.599951H8.16439C5.47768 0.599951 3.28965 2.76369 3.28965 5.42495V21.175C3.28965 23.8362 5.47767 26 8.16439 26ZM4.5507 5.42495C4.5507 3.45466 6.17079 1.84995 8.16439 1.84995H19.836C21.8296 1.84995 23.4496 3.45466 23.4496 5.42495V21.175C23.4496 23.1452 21.8296 24.75 19.836 24.75H8.16439C6.17079 24.75 4.5507 23.1452 4.5507 21.175V5.42495ZM20.4665 6.47495C20.4665 6.12894 20.1831 5.84995 19.836 5.84995H13.4696C13.1226 5.84995 12.8391 6.12894 12.8391 6.47495C12.8391 6.82096 13.1226 7.09995 13.4696 7.09995H19.836C20.1831 7.09995 20.4665 6.82096 20.4665 6.47495ZM20.4665 12.775C20.4665 12.4289 20.1831 12.15 19.836 12.15H13.4696C13.1226 12.15 12.8391 12.4289 12.8391 12.775C12.8391 13.121 13.1226 13.4 13.4696 13.4H19.836C20.1831 13.4 20.4665 13.121 20.4665 12.775ZM20.4665 19.075C20.4665 18.7289 20.1831 18.4499 19.836 18.4499H13.4696C13.1226 18.4499 12.8391 18.7289 12.8391 19.075C12.8391 19.421 13.1226 19.7 13.4696 19.7H19.836C20.1831 19.7 20.4665 19.421 20.4665 19.075ZM8.16439 8.14995H10.2865C10.6336 8.14995 10.917 7.87096 10.917 7.52495V5.42495C10.917 5.07894 10.6336 4.79995 10.2865 4.79995H8.16439C7.8173 4.79995 7.53386 5.07894 7.53386 5.42495V7.52495C7.53386 7.87096 7.8173 8.14995 8.16439 8.14995ZM9.65596 6.04995V6.89995H8.79491V6.04995H9.65596ZM8.16439 14.45H10.2865C10.6336 14.45 10.917 14.171 10.917 13.825V11.725C10.917 11.3789 10.6336 11.0999 10.2865 11.0999H8.16439C7.8173 11.0999 7.53386 11.3789 7.53386 11.725V13.825C7.53386 14.171 7.8173 14.45 8.16439 14.45ZM9.65596 12.35V13.2H8.79491V12.35H9.65596ZM8.16439 20.75H10.2865C10.6336 20.75 10.917 20.471 10.917 20.125V18.025C10.917 17.6789 10.6336 17.4 10.2865 17.4H8.16439C7.8173 17.4 7.53386 17.6789 7.53386 18.025V20.125C7.53386 20.471 7.8173 20.75 8.16439 20.75ZM9.65596 18.65V19.5H8.79491V18.65H9.65596Z"
+                fill="#273C8D"
+                stroke="#273C8D"
+                stroke-width="0.2" />
+            </svg>
+            <span class="color-white">Заявки</span>
+          </a>
+        </li>
+      </ul>
+
+      <div>
+        <p class="cabinet__mobile-menu-item mb-4">
+          <a href="#">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.24961 14.0035V14.0031V14.003V14.003V14.003V14.003V14.003V14.0029V14.0029V14.0029V14.0029V14.0029V14.0028V14.0028V14.0028V14.0028V14.0028V14.0027V14.0027V14.0027V14.0027V14.0026V14.0026V14.0026V14.0026V14.0026V14.0026V14.0025V14.0025V14.0025V14.0025V14.0025V14.0025V14.0024V14.0024V14.0024V14.0024V14.0024V14.0024V14.0023V14.0023V14.0023V14.0023V14.0023V14.0023V14.0023V14.0022V14.0022V14.0022V14.0022V14.0022V14.0022V14.0021V14.0021V14.0021V14.0021V14.0021V14.0021V14.002V14.002V14.002V14.002V14.002V14.002V14.0019V14.0019V14.0019V14.0019V14.0019V14.0019V14.0018V14.0018V14.0018V14.0018V14.0018V14.0018V14.0018V14.0017V14.0017V14.0017V14.0017V14.0017V14.0017V14.0016V14.0016V14.0016V14.0016V14.0016V14.0016V14.0015V14.0015V14.0015V14.0015V14.0015V14.0015V14.0014V14.0014V14.0014V14.0014V14.0014V14.0014V14.0013V14.0013V14.0013V14.0013V14.0013V14.0013V14.0012V14.0012V14.0012V14.0012V14.0012V14.0012V14.0012V14.0011V14.0011V14.0011V14.0011V14.0011V14.0011V14.001V14.001V14.001V14.001V14.001V14.001V14.0009V14.0009V14.0009V14.0009V14.0009V14.0008V14.0008V14.0008V14.0008V14.0008V14.0007V14.0007V14.0007V14.0007V14.0007V14.0006V14.0006V14.0006V14.0006V14.0006V14.0005V14.0005V14.0005V14.0005V14.0005V14.0004V14.0004V14.0004V14.0004V14.0004V14.0004V14.0003V14.0003V14.0003V14.0003V14.0003V14.0003V14.0002V14.0002V14.0002V14.0002V14.0002V14.0002V14.0001V14.0001V14.0001V14.0001V14.0001V14.0001V14V14V14V14V14V14V13.9999V13.9999V13.9999V13.9999V13.9999V13.9998V13.9998V13.9998V13.9998V13.9998V13.9998V13.9997V13.9997V13.9997V13.9997V13.9997V13.9996V13.9996V13.9996V13.9996V13.9996V13.9996V13.9995V13.9995V13.9995V13.9995V13.9995V13.9994V13.9994V13.9994V13.9994V13.9994V13.9994V13.9993V13.9993V13.9993V13.9993V13.9993V13.9992V13.9992V13.9992V13.9992V13.9992V13.9992V13.9991V13.9991V13.9991V13.9991V13.9991V13.9991V13.999V13.999V13.999V13.999V13.999V13.999V13.9989V13.9989V13.9989V13.9989V13.9989V13.9989V13.9988V13.9988V13.9988V13.9988V13.9988V13.9988V13.9987V13.9987V13.9987V13.9987V13.9987V13.9987V13.9987V13.9986V13.9986V13.9986V13.9986V13.9986V13.9986V13.9985V13.9985V13.9985V13.9985V13.9985V13.9984V13.9984V13.9984V13.9984V13.9984V13.9984V13.9983V13.9983V13.9983V13.9983V13.9983V13.9983V13.9982V13.9982V13.9982V13.9982V13.9982V13.9982V13.9981V13.9981V13.9981V13.9981V13.9981V13.9981V13.998V13.998V13.998V13.998V13.998V13.998V13.9979V13.9979V13.9979V13.9979V13.9979V13.9979V13.9978V13.9978V13.9978V13.9978C1.24961 13.2476 1.54516 12.5456 2.07867 12.0199L2.07879 12.0197L6.42676 7.74423C6.69218 7.48285 7.12002 7.48477 7.38123 7.75215C7.64313 8.0181 7.6392 8.44614 7.37303 8.7069L3.02518 12.9823L3.0251 12.9824C2.92157 13.084 2.83775 13.1998 2.77201 13.326H19.7746C20.1473 13.326 20.4496 13.6283 20.4496 14.001C20.4496 14.3736 20.1473 14.676 19.7746 14.676H2.77448C2.8398 14.7993 2.92273 14.9131 3.02434 15.0135C3.02435 15.0135 3.02436 15.0135 3.02437 15.0135L7.37328 19.2942L7.37331 19.2942C7.63916 19.556 7.64203 19.9838 7.38124 20.2487L7.38096 20.249C7.249 20.3823 7.07477 20.4499 6.90056 20.4499C6.72954 20.4499 6.5578 20.3852 6.42664 20.2555C6.42659 20.2554 6.42654 20.2554 6.42649 20.2553L2.07774 15.9748C2.07772 15.9748 2.0777 15.9748 2.07768 15.9748C1.54498 15.4509 1.25183 14.75 1.24961 14.0035ZM14.5246 16.9999C14.8973 16.9999 15.1996 17.3023 15.1996 17.6749V21.8749C15.1996 23.8186 16.781 25.3999 18.7246 25.3999H21.8746C23.8183 25.3999 25.3996 23.8186 25.3996 21.8749V6.1249C25.3996 4.18125 23.8183 2.5999 21.8746 2.5999H18.7246C16.781 2.5999 15.1996 4.18125 15.1996 6.1249V10.3249C15.1996 10.6975 14.8973 10.9999 14.5246 10.9999C14.152 10.9999 13.8496 10.6975 13.8496 10.3249V6.1249C13.8496 3.43701 16.0367 1.2499 18.7246 1.2499H21.8746C24.5625 1.2499 26.7496 3.43701 26.7496 6.1249V21.8749C26.7496 24.5628 24.5625 26.7499 21.8746 26.7499H18.7246C16.0367 26.7499 13.8496 24.5628 13.8496 21.8749V17.6749C13.8496 17.3023 14.152 16.9999 14.5246 16.9999Z"
+                fill="#273C8D"
+                stroke="#273C8D"
+                stroke-width="0.3" />
+            </svg>
+            <span class="color-white exit-btn">Выход</span>
+          </a>
+        </p>
+
+        <div>
+          <p class="color-white mb-3 fw-normal">Техническая поддержка:</p>
+          <a
+            class="color-white hover-main-hover fw-normal"
+            href="tel:80172404671">
+            <i class="mr-8px bi bi-phone"></i>
+            8(017)-240-46-71
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="cabinet__mobile-profile">
+      <ul class="d-flex flex-column gap-4">
+        <li>
+          <a
+            class="color-white"
+            href="cabinet-profile.html">
+            Профиль
+          </a>
+        </li>
+        <li>
+          <a
+            class="color-white"
+            href="cabinet-change-password.html">
+            Изменить пароль
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+</header>
+
+
+      <main class="main">
+        <div class="cabinet__container">
+          <aside class="cabinet__aside">
+            <button class="cabinet__aside-button">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M18.7501 10.0001C18.7501 9.8343 18.6843 9.67533 18.5671 9.55812C18.4499 9.44091 18.2909 9.37506 18.1251 9.37506H3.38389L7.31764 5.44256C7.37575 5.38445 7.42185 5.31546 7.45329 5.23954C7.48474 5.16361 7.50093 5.08224 7.50093 5.00006C7.50093 4.91788 7.48474 4.8365 7.45329 4.76058C7.42185 4.68465 7.37575 4.61567 7.31764 4.55756C7.25953 4.49945 7.19054 4.45335 7.11462 4.4219C7.0387 4.39045 6.95732 4.37427 6.87514 4.37427C6.79296 4.37427 6.71159 4.39045 6.63566 4.4219C6.55974 4.45335 6.49075 4.49945 6.43264 4.55756L1.43264 9.55756C1.37444 9.61561 1.32826 9.68458 1.29675 9.76052C1.26524 9.83645 1.24902 9.91785 1.24902 10.0001C1.24902 10.0823 1.26524 10.1637 1.29675 10.2396C1.32826 10.3155 1.37444 10.3845 1.43264 10.4426L6.43264 15.4426C6.49075 15.5007 6.55974 15.5468 6.63566 15.5782C6.71159 15.6097 6.79296 15.6258 6.87514 15.6258C6.95732 15.6258 7.0387 15.6097 7.11462 15.5782C7.19054 15.5468 7.25953 15.5007 7.31764 15.4426C7.37575 15.3844 7.42185 15.3155 7.45329 15.2395C7.48474 15.1636 7.50093 15.0822 7.50093 15.0001C7.50093 14.9179 7.48474 14.8365 7.45329 14.7606C7.42185 14.6847 7.37575 14.6157 7.31764 14.5576L3.38389 10.6251H18.1251C18.2909 10.6251 18.4499 10.5592 18.5671 10.442C18.6843 10.3248 18.7501 10.1658 18.7501 10.0001Z"
+                  fill="#273C8D" />
+              </svg>
+            </button>
+
+            <ul class="cabinet__aside-menu">
+              <li class="cabinet__aside-menu-item active">
+                <a href="cabinet-applications.html">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8.16439 26H19.836C22.5227 26 24.7107 23.8362 24.7107 21.175V5.42495C24.7107 2.76369 22.5227 0.599951 19.836 0.599951H8.16439C5.47768 0.599951 3.28965 2.76369 3.28965 5.42495V21.175C3.28965 23.8362 5.47767 26 8.16439 26ZM4.5507 5.42495C4.5507 3.45466 6.17079 1.84995 8.16439 1.84995H19.836C21.8296 1.84995 23.4496 3.45466 23.4496 5.42495V21.175C23.4496 23.1452 21.8296 24.75 19.836 24.75H8.16439C6.17079 24.75 4.5507 23.1452 4.5507 21.175V5.42495ZM20.4665 6.47495C20.4665 6.12894 20.1831 5.84995 19.836 5.84995H13.4696C13.1226 5.84995 12.8391 6.12894 12.8391 6.47495C12.8391 6.82096 13.1226 7.09995 13.4696 7.09995H19.836C20.1831 7.09995 20.4665 6.82096 20.4665 6.47495ZM20.4665 12.775C20.4665 12.4289 20.1831 12.15 19.836 12.15H13.4696C13.1226 12.15 12.8391 12.4289 12.8391 12.775C12.8391 13.121 13.1226 13.4 13.4696 13.4H19.836C20.1831 13.4 20.4665 13.121 20.4665 12.775ZM20.4665 19.075C20.4665 18.7289 20.1831 18.4499 19.836 18.4499H13.4696C13.1226 18.4499 12.8391 18.7289 12.8391 19.075C12.8391 19.421 13.1226 19.7 13.4696 19.7H19.836C20.1831 19.7 20.4665 19.421 20.4665 19.075ZM8.16439 8.14995H10.2865C10.6336 8.14995 10.917 7.87096 10.917 7.52495V5.42495C10.917 5.07894 10.6336 4.79995 10.2865 4.79995H8.16439C7.8173 4.79995 7.53386 5.07894 7.53386 5.42495V7.52495C7.53386 7.87096 7.8173 8.14995 8.16439 8.14995ZM9.65596 6.04995V6.89995H8.79491V6.04995H9.65596ZM8.16439 14.45H10.2865C10.6336 14.45 10.917 14.171 10.917 13.825V11.725C10.917 11.3789 10.6336 11.0999 10.2865 11.0999H8.16439C7.8173 11.0999 7.53386 11.3789 7.53386 11.725V13.825C7.53386 14.171 7.8173 14.45 8.16439 14.45ZM9.65596 12.35V13.2H8.79491V12.35H9.65596ZM8.16439 20.75H10.2865C10.6336 20.75 10.917 20.471 10.917 20.125V18.025C10.917 17.6789 10.6336 17.4 10.2865 17.4H8.16439C7.8173 17.4 7.53386 17.6789 7.53386 18.025V20.125C7.53386 20.471 7.8173 20.75 8.16439 20.75ZM9.65596 18.65V19.5H8.79491V18.65H9.65596Z"
+                      fill="#273C8D"
+                      stroke="#273C8D"
+                      stroke-width="0.2" />
+                  </svg>
+                  <span class="cabinet__aside-menu-text">Заявки</span>
+                </a>
+              </li>
+              <li class="cabinet__aside-menu-item exit-btn">
+                <a href="#">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.24961 14.0035V14.0031V14.003V14.003V14.003V14.003V14.003V14.0029V14.0029V14.0029V14.0029V14.0029V14.0028V14.0028V14.0028V14.0028V14.0028V14.0027V14.0027V14.0027V14.0027V14.0026V14.0026V14.0026V14.0026V14.0026V14.0026V14.0025V14.0025V14.0025V14.0025V14.0025V14.0025V14.0024V14.0024V14.0024V14.0024V14.0024V14.0024V14.0023V14.0023V14.0023V14.0023V14.0023V14.0023V14.0023V14.0022V14.0022V14.0022V14.0022V14.0022V14.0022V14.0021V14.0021V14.0021V14.0021V14.0021V14.0021V14.002V14.002V14.002V14.002V14.002V14.002V14.0019V14.0019V14.0019V14.0019V14.0019V14.0019V14.0018V14.0018V14.0018V14.0018V14.0018V14.0018V14.0018V14.0017V14.0017V14.0017V14.0017V14.0017V14.0017V14.0016V14.0016V14.0016V14.0016V14.0016V14.0016V14.0015V14.0015V14.0015V14.0015V14.0015V14.0015V14.0014V14.0014V14.0014V14.0014V14.0014V14.0014V14.0013V14.0013V14.0013V14.0013V14.0013V14.0013V14.0012V14.0012V14.0012V14.0012V14.0012V14.0012V14.0012V14.0011V14.0011V14.0011V14.0011V14.0011V14.0011V14.001V14.001V14.001V14.001V14.001V14.001V14.0009V14.0009V14.0009V14.0009V14.0009V14.0008V14.0008V14.0008V14.0008V14.0008V14.0007V14.0007V14.0007V14.0007V14.0007V14.0006V14.0006V14.0006V14.0006V14.0006V14.0005V14.0005V14.0005V14.0005V14.0005V14.0004V14.0004V14.0004V14.0004V14.0004V14.0004V14.0003V14.0003V14.0003V14.0003V14.0003V14.0003V14.0002V14.0002V14.0002V14.0002V14.0002V14.0002V14.0001V14.0001V14.0001V14.0001V14.0001V14.0001V14V14V14V14V14V14V13.9999V13.9999V13.9999V13.9999V13.9999V13.9998V13.9998V13.9998V13.9998V13.9998V13.9998V13.9997V13.9997V13.9997V13.9997V13.9997V13.9996V13.9996V13.9996V13.9996V13.9996V13.9996V13.9995V13.9995V13.9995V13.9995V13.9995V13.9994V13.9994V13.9994V13.9994V13.9994V13.9994V13.9993V13.9993V13.9993V13.9993V13.9993V13.9992V13.9992V13.9992V13.9992V13.9992V13.9992V13.9991V13.9991V13.9991V13.9991V13.9991V13.9991V13.999V13.999V13.999V13.999V13.999V13.999V13.9989V13.9989V13.9989V13.9989V13.9989V13.9989V13.9988V13.9988V13.9988V13.9988V13.9988V13.9988V13.9987V13.9987V13.9987V13.9987V13.9987V13.9987V13.9987V13.9986V13.9986V13.9986V13.9986V13.9986V13.9986V13.9985V13.9985V13.9985V13.9985V13.9985V13.9984V13.9984V13.9984V13.9984V13.9984V13.9984V13.9983V13.9983V13.9983V13.9983V13.9983V13.9983V13.9982V13.9982V13.9982V13.9982V13.9982V13.9982V13.9981V13.9981V13.9981V13.9981V13.9981V13.9981V13.998V13.998V13.998V13.998V13.998V13.998V13.9979V13.9979V13.9979V13.9979V13.9979V13.9979V13.9978V13.9978V13.9978V13.9978C1.24961 13.2476 1.54516 12.5456 2.07867 12.0199L2.07879 12.0197L6.42676 7.74423C6.69218 7.48285 7.12002 7.48477 7.38123 7.75215C7.64313 8.0181 7.6392 8.44614 7.37303 8.7069L3.02518 12.9823L3.0251 12.9824C2.92157 13.084 2.83775 13.1998 2.77201 13.326H19.7746C20.1473 13.326 20.4496 13.6283 20.4496 14.001C20.4496 14.3736 20.1473 14.676 19.7746 14.676H2.77448C2.8398 14.7993 2.92273 14.9131 3.02434 15.0135C3.02435 15.0135 3.02436 15.0135 3.02437 15.0135L7.37328 19.2942L7.37331 19.2942C7.63916 19.556 7.64203 19.9838 7.38124 20.2487L7.38096 20.249C7.249 20.3823 7.07477 20.4499 6.90056 20.4499C6.72954 20.4499 6.5578 20.3852 6.42664 20.2555C6.42659 20.2554 6.42654 20.2554 6.42649 20.2553L2.07774 15.9748C2.07772 15.9748 2.0777 15.9748 2.07768 15.9748C1.54498 15.4509 1.25183 14.75 1.24961 14.0035ZM14.5246 16.9999C14.8973 16.9999 15.1996 17.3023 15.1996 17.6749V21.8749C15.1996 23.8186 16.781 25.3999 18.7246 25.3999H21.8746C23.8183 25.3999 25.3996 23.8186 25.3996 21.8749V6.1249C25.3996 4.18125 23.8183 2.5999 21.8746 2.5999H18.7246C16.781 2.5999 15.1996 4.18125 15.1996 6.1249V10.3249C15.1996 10.6975 14.8973 10.9999 14.5246 10.9999C14.152 10.9999 13.8496 10.6975 13.8496 10.3249V6.1249C13.8496 3.43701 16.0367 1.2499 18.7246 1.2499H21.8746C24.5625 1.2499 26.7496 3.43701 26.7496 6.1249V21.8749C26.7496 24.5628 24.5625 26.7499 21.8746 26.7499H18.7246C16.0367 26.7499 13.8496 24.5628 13.8496 21.8749V17.6749C13.8496 17.3023 14.152 16.9999 14.5246 16.9999Z"
+                      fill="#273C8D"
+                      stroke="#273C8D"
+                      stroke-width="0.3" />
+                  </svg>
+                  <span class="cabinet__aside-menu-text">Выход</span>
+                </a>
+              </li>
+            </ul>
+          </aside>
+          <section class="cabinet__content">
+            <h2 class="h2-title">Профиль</h2>
+            <form class="cabinet__form d-flex flex-column gap-4 mt-0" action="">
+              <div class="cabinet__profile-container">
+                <div class="cabinet__profile-img icon">
+                  <img src="./img/icons/profile-icon.svg" alt="Profile" />
+                </div>
+
+                <div class="cabinet__upload-btn d-flex flex-column align-items-start justify-content-between">
+                  <div class="d-flex gap-sm-4 flex-column flex-sm-row gap-2">
+                    <button type="button" id="custom-upload-button" class="cabinet__content-button">
+                      <span>Загрузить фото</span>
+                    </button>
+                    <button type="button" id="custom-delete-button" class="cabinet__content-button--secondary hidden">
+                      <span>Удалить фото</span>
+                    </button>
+                  </div>
+                  <input type="file" class="cabinet__profile-img-input hidden" accept=".png, .jpeg, .jpg, .heic" />
+                  <p class="fs-14 color-dark-gray mt-2">Формат файлов: png, .jpeg, .jpg, (до 2МБ)</p>
+                </div>
+              </div>
+
+              <div class="cabinet__member-card">
+                <div class="member-card__header">
+                  <img  src="../img/icons/logo.png" alt="Лого" />
+                  <div>
+                    <p class="member-card__title">БЕЛОРУССКАЯ ФЕДЕРАЦИЯ ПЛАВАНИЯ</p>
+                    <p class="member-card__subtitle">ЧЛЕНСКИЙ БИЛЕТ</p>
+                  </div>
+                </div>
+                <div class="member-card__content">
+                  <div class="d-flex w-100 mb-3 mb-lg-5 flex-wrap flex-sm-nowrap">
+                    <img class="member-card__avatar mb-4 mb-lg-0" src="../img/member-avatar.png" alt="" />
+                    <div class="d-flex flex-column gap-3 gap-lg-5 w-100">
+                      <div class="d-flex w-100 flex-wrap flex-md-nowrap">
+                        <div class="w-40">
+                          <p class="fs-14 color-black mb-2">Фамилия</p>
+                          <p class="fs-20 color-main ff-raleway fw-semibold">Иванов</p>
+                        </div>
+                        <div class="w-40">
+                          <p class="fs-14 color-black mb-2">Дата рождения</p>
+                          <p class="fs-20 color-main ff-raleway fw-semibold">31.08.1995</p>
+                        </div>
+                      </div>
+
+                      <div class="d-flex w-100 flex-wrap flex-md-nowrap">
+                        <div class="w-40">
+                          <p class="fs-14 color-black mb-2">Имя</p>
+                          <p class="fs-20 color-main ff-raleway fw-semibold">Иван</p>
+                        </div>
+                        <div class=w-40">
+                          <p class="fs-14 color-black mb-2">Пол</p>
+                          <p class="fs-20 color-main ff-raleway fw-semibold">М</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex w-100 flex-wrap flex-md-nowrap gap-3">
+                    <div class="w-40">
+                      <p class="fs-14 color-black mb-2">Личный номер</p>
+                      <p class="fs-20 color-main ff-raleway fw-semibold no-wrap">201 01 0001</p>
+                    </div>
+                    <div class="w-100">
+                      <p class="fs-14 color-black mb-2">Статус</p>
+                      <p class="fs-20 color-main ff-raleway fw-semibold">Исполнительный директор</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="alert blue" role="alert">
+                <span class="alert-icon">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5794_19396)">
+                      <path
+                        d="M10 18.75C7.67936 18.75 5.45376 17.8281 3.81282 16.1872C2.17187 14.5462 1.25 12.3206 1.25 10C1.25 7.67936 2.17187 5.45376 3.81282 3.81282C5.45376 2.17187 7.67936 1.25 10 1.25C12.3206 1.25 14.5462 2.17187 16.1872 3.81282C17.8281 5.45376 18.75 7.67936 18.75 10C18.75 12.3206 17.8281 14.5462 16.1872 16.1872C14.5462 17.8281 12.3206 18.75 10 18.75ZM10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10C20 7.34784 18.9464 4.8043 17.0711 2.92893C15.1957 1.05357 12.6522 0 10 0C7.34784 0 4.8043 1.05357 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C4.8043 18.9464 7.34784 20 10 20Z"
+                        fill="#273C8D" />
+                      <path
+                        d="M11.1625 8.235L8.3 8.59375L8.1975 9.06875L8.76 9.1725C9.1275 9.26 9.2 9.3925 9.12 9.75875L8.1975 14.0937C7.955 15.215 8.32875 15.7425 9.2075 15.7425C9.88875 15.7425 10.68 15.4275 11.0388 14.995L11.1487 14.475C10.8987 14.695 10.5337 14.7825 10.2912 14.7825C9.9475 14.7825 9.8225 14.5413 9.91125 14.1163L11.1625 8.235ZM11.25 5.625C11.25 5.95652 11.1183 6.27446 10.8839 6.50888C10.6495 6.7433 10.3315 6.875 10 6.875C9.66848 6.875 9.35054 6.7433 9.11612 6.50888C8.8817 6.27446 8.75 5.95652 8.75 5.625C8.75 5.29348 8.8817 4.97554 9.11612 4.74112C9.35054 4.5067 9.66848 4.375 10 4.375C10.3315 4.375 10.6495 4.5067 10.8839 4.74112C11.1183 4.97554 11.25 5.29348 11.25 5.625Z"
+                        fill="#273C8D" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5794_19396">
+                        <rect width="20" height="20" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                <span class="fs-14 alert-text">
+                  Для изменения данных профиля (кроме мобильного телефона) обратитесь по телефону
+                  <a href="tel:80172404671" class="link-main--no-underline">8(017)-240-46-71</a>
+                </span>
+              </div>
+
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="email">
+                  Email
+                  <span class="color-red">*</span>
+                </label>
+                <input class="bg-fa" id="email" type="text" value="email@example.com" required disabled />
+                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="last-name">
+                  Фамилия
+                  <span class="color-red">*</span>
+                </label>
+                <input class="bg-fa" id="last-name" type="text" required value="Иванов" disabled />
+                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="first-name">
+                  Имя
+                  <span class="color-red">*</span>
+                </label>
+                <input class="bg-fa" id="first-name" type="text" required value="Иван" disabled />
+                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+              </div>
+              <div class="d-flex gap-3">
+                <div class="form__input--small mb-0 w-75">
+                  <label class="fs-16" for="surname">
+                    Отчество
+                    <span class="color-red">*</span>
+                  </label>
+                  <input class="bg-fa" id="surname" type="text" required value="Иванович" disabled />
+                  <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+                </div>
+                <div class="form__input--small mb-0 w-25">
+                  <label class="fs-16" for="surname">
+                    Пол
+                    <span class="color-red">*</span>
+                  </label>
+                  <select id="gender-select" class="form-select bg-fa" aria-label="Gender selection" required disabled>
+                    <option value="female">Ж</option>
+                    <option selected value="male">М</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="group">
+                  Группа
+                  <span class="color-red">*</span>
+                </label>
+                <div class="d-flex gap-3">
+                  <select id="group" class="form-select bg-fa fs-16" aria-label="group" disabled required>
+                    <option selected disabled value="">Спортсмен</option>
+                    <option value="Sportsman ">Спортсмен</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="email">
+                  Номер членского билета
+                  <span class="color-red">*</span>
+                </label>
+                <input class="bg-fa" id="email" type="text" value="1295677" required disabled />
+              </div>
+
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="surname">
+                  Дата рождения
+                  <span class="color-red">*</span>
+                </label>
+                <div class="d-flex gap-3">
+                  <select id="day-select" class="birth-day-select form-select bg-fa fs-16" aria-label="Birth day" disabled required>
+                    <option selected disabled value="07">07</option>
+                  </select>
+                  <select id="month-select" class="form-select bg-fa fs-16" aria-label="Birth month" required disabled>
+                    <option selected disabled value="March">Март</option>
+                    <option value="January">Январь</option>
+                    <option value="February">Февраль</option>
+                    <option value="March">Март</option>
+                    <option value="April">Апрель</option>
+                    <option value="May">Май</option>
+                    <option value="June">Июнь</option>
+                    <option value="July">Июль</option>
+                    <option value="August">Август</option>
+                    <option value="September">Сентябрь</option>
+                    <option value="October">Октябрь</option>
+                    <option value="November">Ноябрь</option>
+                    <option value="December">Декабрь</option>
+                  </select>
+                  <select id="year-select" class="birth-year-select form-select bg-fa fs-16" aria-label="Birth year" required disabled>
+                    <option selected disabled value="1989">1989</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="phone"> Мобильный телефон<span class="color-red">*</span> </label>
+                <input class="bg-fa color-black" id="phone" type="text" required value="+375 (29)-456-12-90" />
+                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+              </div>
+
+              <button type="button" class="cabinet__content-button px-4" data-bs-toggle="modal" data-bs-target="#saveChanges">
+                Сохранить изменения
+              </button>
+            </form>
+          </section>
+        </div>
+      </main>
+
+      <footer class="cabinet__footer">
+  <div class="bg-main py-5 py-lg-3">
+    <div class="d-flex justify-content-between align-items-center gap-4 flex-wrap">
+      <a
+        class="d-block"
+        href="#">
+        <img
+          src="./img/icons/footer-logo.png"
+          alt="Logo" />
+      </a>
+      <p class="color-white fs-14">©2024, Белорусская федерация плавания</p>
+      <span class="fs-14 color-white">
+        Сайт разработан:
+        <a
+          class="color-white hover-light-blue"
+          href="https://info-center.by/">
+          РУП «Информационно-издательский центр по налогам и сборам»
+        </a>
+      </span>
+    </div>
+  </div>
+  <div
+    id="modal-window-exit"
+    class="modal-window">
+    <div class="modal-container">
+      <span
+        class="modal-close-btn"
+        id="modal-close-btn">
+        &times;
+      </span>
+      <h2 class="modal-title">Выйти из личного кабинета</h2>
+      <div class="modal-body">
+        <p class="modal-text">Вы действительно хотите выйти из личного кабинета?</p>
+        <div class="d-flex gap-4 justify-content-center">
+          <button class="cabinet__content-button">Выйти</button>
+          <button class="cabinet__content-button--secondary cancel-btn">Отмена</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="js/cabinet-script.min.js"></script>
+
+    </div>
+    <div class="modal fade" id="saveChanges" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="saveChangesLabel">Изменения успешно сохранены</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="./img/icons/thumbs-up-trust.svg" alt="Thumbs-up icon" />
+            <p class="mt-4">Ваши данные сохранены</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

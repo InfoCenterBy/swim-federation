@@ -1222,6 +1222,9 @@
   .after-no::after {
     content: none;
   }
+  .no-wrap {
+    white-space: nowrap;
+  }
   .badge {
     font-weight: 600;
     font-size: 14px;
@@ -1831,6 +1834,67 @@
       width: 100%;
     }
   }
+  .cabinet__member-card {
+    padding: 32px;
+    border: 1px solid var(--main);
+    background-image: url("../img/member-card-bg.png");
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    min-height: 366px;
+  }
+  .member-card__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .member-card__header img {
+    width: 84px;
+    height: 60px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .member-card__content {
+    margin-top: 24px;
+  }
+  .member-card__avatar {
+    width: 130px;
+    height: 130px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-right: 24px;
+  }
+  @media screen and (max-width: 576px) {
+    .member-card__avatar {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+    }
+  }
+  .member-card__title {
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    color: var(--main);
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--main);
+    text-align: center;
+  }
+  .member-card__subtitle {
+    font-size: 18px;
+    color: var(--main);
+    text-transform: uppercase;
+    padding-top: 8px;
+    text-align: center;
+  }
+  @media screen and (max-width: 576px) {
+    .cabinet__member-card {
+      padding: 16px;
+    }
+  }
   .input-error-message {
     display: none;
   }
@@ -1853,7 +1917,7 @@
   }
   .cabinet__form {
     margin-top: 48px;
-    max-width: 500px;
+    max-width: 570px;
     width: 100%;
   }
   .cabinet__form-step {
@@ -2929,6 +2993,24 @@
     .pagination {
       margin-bottom: 80px;
     }
+  }
+  .alert {
+    border-radius: 0;
+    padding: 16px;
+    position: relative;
+  }
+  .alert-icon {
+    position: absolute;
+  }
+  .alert-text {
+    padding-left: 26px;
+    display: block;
+  }
+  .alert.blue {
+    background-color: var(--light-main);
+  }
+  .alert.yellow {
+    background-color: var(--yellow);
   }
   html {
     height: auto;
