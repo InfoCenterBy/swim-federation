@@ -435,6 +435,12 @@
   flex-direction: column;
   justify-content: space-between;
 
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
   &-item a {
     color: var(--white);
   }
