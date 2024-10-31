@@ -559,6 +559,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const profileImgContainer = document.querySelector(".cabinet__profile-img");
   const customFileButton = document.getElementById("custom-upload-button");
   const deleteButton = document.getElementById("custom-delete-button");
+  const memberCardImg = document.querySelector(".member-card__avatar");
 
   customFileButton.addEventListener("click", () => {
     fileInput.click();
@@ -572,6 +573,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       reader.onload = function (e) {
         profileImg.src = e.target.result;
+        memberCardImg.src = e.target.result;
+        memberCardImg.classList.remove("hidden");
 
         profileImgContainer.classList.remove("icon");
         profileImgContainer.classList.add("image");
@@ -587,6 +590,7 @@ document.addEventListener("DOMContentLoaded", function () {
     profileImgContainer.classList.add("icon");
     profileImgContainer.classList.remove("image");
     deleteButton.classList.add("hidden");
+    memberCardImg.classList.add("hidden");
   });
 });
 
