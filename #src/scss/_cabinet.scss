@@ -352,6 +352,7 @@
   cursor: pointer;
   margin-right: 8px;
   transition: $transition-2;
+  flex-shrink: 0;
 }
 
 .menu-toggle {
