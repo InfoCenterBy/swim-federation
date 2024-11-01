@@ -1004,6 +1004,11 @@
     max-width: 1056px;
     overflow: auto;
   }
+  @media screen and (max-width: 992px) {
+    .cast-table tr td:nth-child(2) {
+      text-align: center;
+    }
+  }
   .cast-table td {
     line-height: 130%;
     font-size: 16px;
@@ -5259,7 +5264,6 @@
     color: var(--main);
     overflow-wrap: break-word;
     word-wrap: break-word;
-    word-break: break-all;
     -ms-hyphens: auto;
         hyphens: auto;
     max-width: 100%;
