@@ -62,6 +62,10 @@
   --bs-form-switch-bg: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy00IC00IDggOCc+PGNpcmNsZSByPSczJyBmaWxsPScjZmZmJy8+PC9zdmc+");
 }
 
+.form-switch .form-check-input:checked {
+  border: none !important;
+}
+
 .remove-icon {
   position: absolute;
   top: 6px;
