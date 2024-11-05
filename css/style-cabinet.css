@@ -2274,8 +2274,37 @@
     --ag-wrapper-border-radius: 0 !important;
     --ag-border-radius: 0 !important;
   }
+  .ag-center-cols-viewport .ag-cell {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-block: 8px;
+  }
   .ag-theme-quartz .ag-header {
     --ag-header-background-color: var(--light-gray);
+  }
+  .ag-badge .ag-cell-value {
+    padding: 8px 16px;
+    color: var(--black);
+  }
+  .ag-badge.blue span {
+    background-color: var(--light-main);
+    color: var(--main);
+  }
+  .ag-badge.green span {
+    background-color: var(--light-green);
+    color: var(--green-success);
+  }
+  .ag-badge.red span {
+    background-color: var(--light-red-secondary);
+    color: var(--red);
+  }
+  .ag-badge.yellow span {
+    background-color: var(--yellow);
+    color: var(--orange);
   }
   .button {
     background-color: var(--main);
