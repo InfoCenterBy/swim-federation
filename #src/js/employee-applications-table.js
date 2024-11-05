@@ -1,119 +1,212 @@
+class CustomButtonComponent {
+  eGui;
+  eButton;
+  eventListener;
+
+  init() {
+    this.eGui = document.createElement("div");
+    let eButton = document.createElement("button");
+    eButton.className = "btn-simple";
+    eButton.textContent = "Click Me!";
+    this.eventListener = () => alert("Button Clicked!");
+    eButton.addEventListener("click", this.eventListener);
+    this.eGui.appendChild(eButton);
+  }
+
+  getGui() {
+    return this.eGui;
+  }
+
+  refresh() {
+    return true;
+  }
+
+  destroy() {
+    if (this.eButton) {
+      this.eButton.removeEventListener("click", this.eventListener);
+    }
+  }
+}
+
 const gridOptions = {
+  localeText: AG_GRID_LOCALE_RU,
+  rowHeight: 50,
   rowData: [
     {
-      "№": 12579,
-      ФИО: "Альхимович Евгений Иванович",
-      Email: "kononov@mail.ru",
-      "Тип заявки": "Заявка на вступление в члены ОО «БФП»",
-      "Дата подачи": "15.03.2023 14:45",
-      Статус: "Новая",
+      requestNumber: "44",
+      fio: "Альхимович Евгений Иванович",
+      email: "aroitq@mail.ru",
+      requestType: "Заявка на вступление в члены ОО «БФП»",
+      submissionDate: "15.03.2023 14:45",
+      status: "Новая",
+      approve: "approve",
+      reject: "reject",
     },
     {
-      "№": 12579,
-      ФИО: "Кононович Евгений Иванович",
-      Email: "kononov@mail.ru",
-      "Тип заявки": "Заявка на вступление в члены ОО «БФП»",
-      "Дата подачи": "15.03.2023 14:45",
-      Статус: "Новая",
+      requestNumber: "1",
+      fio: "Кононович Евгений Иванович",
+      email: "laaqper@gmail.com",
+      requestType: "Заявка на вступление в члены ОО «БФП»",
+      submissionDate: "15.03.2023 14:45",
+      status: "Новая",
     },
     {
-      "№": 12579,
-      ФИО: "Кабан Евгений Иванович",
-      Email: "kononov@mail.ru",
-      "Тип заявки": "Заявка на вступление в члены ОО «БФП»",
-      "Дата подачи": "Не 15.03.2023 14:45",
-      Статус: "Новая",
+      requestNumber: "77",
+      fio: "Кабан Евгений Иванович",
+      email: "kononov@mail.ru",
+      requestType: "Заявка на вступление в члены ОО «БФП»",
+      submissionDate: "Не 15.03.2023 14:45",
+      status: "Новая",
     },
     {
-      "№": 12579,
-      ФИО: "Альхимович Евгений Иванович",
-      Email: "kononov@mail.ru",
-      "Тип заявки": "Заявка на вступление в члены ОО «БФП»",
-      "Дата подачи": "Не 15.03.2023 14:45",
-      Статус: "Одобрена",
+      requestNumber: "123",
+      fio: "Альхимович Евгений Иванович",
+      email: "popoatt@mail.su",
+      requestType: "Заявка на вступление в члены ОО «БФП»",
+      submissionDate: "Не 15.03.2023 14:45",
+      status: "Одобрена",
     },
     {
-      "№": 12579,
-      ФИО: "Кононович Евгений Иванович",
-      Email: "kononov@mail.ru",
-      "Тип заявки": "Заявка на вступление в члены ОО «БФП»",
-      "Дата подачи": "15.03.2023 14:45",
-      Статус: "Одобрена",
+      requestNumber: "98",
+      fio: "Кононович Евгений Иванович",
+      email: "popa@mail.ru",
+      requestType: "Заявка на вступление в члены ОО «БФП»",
+      submissionDate: "15.03.2023 14:45",
+      status: "Одобрена",
     },
     {
-      "№": 12579,
-      ФИО: "Кононович Евгений Иванович",
-      Email: "kononov@mail.ru",
-      "Тип заявки": "Заявка на вступление в члены ОО «БФП»",
-      "Дата подачи": "15.03.2023 14:45",
-      Статус: "Отклонена",
+      requestNumber: "222",
+      fio: "Кононович Евгений Иванович",
+      email: "kaban@mail.ru",
+      requestType: "Заявка на вступление в члены ОО «БФП»",
+      submissionDate: "15.03.2023 14:45",
+      status: "Отклонена",
     },
   ],
 
   columnDefs: [
-    { field: "№" },
-    { field: "ФИО", filter: "agTextColumnFilter" },
-    { field: "Email" },
-    { field: "Тип заявки" },
-    { field: "Дата подачи" },
-    { field: "Статус" },
+    { field: "requestNumber", headerName: "№" },
+    { field: "fio", headerName: "ФИО" },
+    { field: "email", headerName: "Email" },
+    {
+      field: "requestType",
+      headerName: "Тип заявки",
+    },
+    { field: "submissionDate", headerName: "Дата подачи" },
+    {
+      field: "status",
+      headerName: "Статус",
+      cellRenderer: (params) => {
+        return params.value;
+      },
+      cellClassRules: {
+        "ag-badge blue": (params) => params.value === "Новая",
+        "ag-badge green": (params) => params.value === "Одобрена",
+        "ag-badge red": (params) => params.value === "Отклонена",
+      },
+    },
+    {
+      field: "approve",
+      headerName: "",
+      resizable: false,
+      cellRenderer: CustomButtonComponent,
+      // cellRendererParams: {
+      //   clicked: function (field) {
+      //     alert(`${field} was clicked`);
+      //   },
+      // },
+    },
+    {
+      field: "reject",
+      headerName: "",
+      resizable: false,
+    },
+    {
+      field: "view",
+      headerName: "",
+      resizable: false,
+    },
   ],
   defaultColDef: {
     flex: 1,
+    wrapText: true,
+    autoHeight: true,
   },
+
+  pagination: true,
+
+  paginationPageSize: 10,
+
+  paginationPageSizeSelector: [10, 20, 50, 100],
 
   onColumnMoved: onColumnMoved,
   onColumnResized: onColumnResized,
   onSortChanged: onSortChanged,
   onGridReady: onGridReady,
+  isExternalFilterPresent: () => {
+    return (
+      document.getElementById("fioFilterInput").value !== "" ||
+      document.getElementById("requestNumberFilterInput").value !== "" ||
+      document.getElementById("emailFilterInput").value !== "" ||
+      document.getElementById("statusFilterSelect").value !== ""
+    );
+  },
+  doesExternalFilterPass: (node) => {
+    const fioFilterValue = document.getElementById("fioFilterInput").value.toLowerCase();
+    const requestNumberFilterValue = document.getElementById("requestNumberFilterInput").value;
+
+    const emailFilterValue = document.getElementById("emailFilterInput").value.toLowerCase();
+    const statusFilterValue = document.getElementById("statusFilterSelect").value;
+
+    const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
+
+    const requestNumberMatch =
+      !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
+
+    const emailMatch =
+      !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
+
+    const statusMatch = statusFilterValue === "Все" || node.data.status === statusFilterValue;
+
+    return fioMatch && requestNumberMatch && emailMatch && statusMatch;
+  },
 };
 
 function onColumnMoved(params) {
   const columnState = params.api.getColumnState();
-  console.log("moved");
 
   localStorage.setItem("agColumnState", JSON.stringify(columnState));
 }
 
 function onColumnResized(params) {
   const columnState = params.api.getColumnState();
-  console.log("resize");
 
   localStorage.setItem("agColumnState", JSON.stringify(columnState));
 }
 
 function onSortChanged(params) {
   const columnState = params.api.getColumnState();
-  console.log("sort");
 
   localStorage.setItem("agColumnState", JSON.stringify(columnState));
 }
 
 function onGridReady(params) {
   const columnState = JSON.parse(localStorage.getItem("agColumnState"));
-  console.log(columnState);
 
   if (columnState) {
-    console.log("ready");
-
     params.api.applyColumnState({ state: columnState, applyOrder: true });
   }
 
-  const fioFilter = document.getElementById("fio-filter");
+  const applyFilter = () => params.api.onFilterChanged();
 
-  fioFilter.addEventListener("input", function () {
-    const filterText = this.value;
-    console.log(filterText);
-
-    params.api.setColumnFilterModel({
-      colId: {
-        type: "contains",
-        filter: filterText,
-      },
-    });
-  });
+  document.getElementById("fioFilterInput").addEventListener("input", applyFilter);
+  document.getElementById("requestNumberFilterInput").addEventListener("input", applyFilter);
+  document.getElementById("emailFilterInput").addEventListener("input", applyFilter);
+  document.getElementById("statusFilterSelect").addEventListener("change", applyFilter);
 }
 
 const ediv = document.querySelector("#applications-table");
 
 const gridApi = agGrid.createGrid(ediv, gridOptions);
+
+// custom cell button

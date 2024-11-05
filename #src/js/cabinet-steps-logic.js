@@ -43,18 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     phoneInput.addEventListener("input", validatePhone);
 
-    function showStep(index) {
-      steps.forEach((step, idx) => {
-        step.style.display = idx === index ? "flex" : "none";
-      });
-      updateStepper(index);
-      currentStep = index;
-
-      if (index < steps.length - 1) {
-        toggleNextButton(index);
-      }
-    }
-
     function updateStepper(index) {
       stepperItems.forEach((step, idx) => {
         if (idx <= index) {
@@ -66,7 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function validateStep(stepIndex) {
-      const inputs = steps[stepIndex].querySelectorAll("input[required]:not(.hidden), select[required]:not(.hidden)");
+      const inputs = steps[stepIndex].querySelectorAll(
+        "input[required]:not(.hidden), select[required]:not(.hidden)"
+      );
       let allValid = true;
 
       inputs.forEach((input) => {
@@ -141,7 +131,8 @@ document.addEventListener("DOMContentLoaded", function () {
               input.removeAttribute("required");
             });
 
-            const representativeFieldsInputs = representativeFields.querySelectorAll("input, select");
+            const representativeFieldsInputs =
+              representativeFields.querySelectorAll("input, select");
             representativeFieldsInputs.forEach((input) => {
               input.classList.remove("hidden");
               input.setAttribute("required", "true");
@@ -158,7 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
               input.setAttribute("required", "true");
             });
 
-            const representativeFieldsInputs = representativeFields.querySelectorAll("input, select");
+            const representativeFieldsInputs =
+              representativeFields.querySelectorAll("input, select");
             representativeFieldsInputs.forEach((input) => {
               input.classList.add("hidden");
               input.removeAttribute("required");

@@ -9,4 +9,5 @@
 @@include('cabinet-mobile-menu.js', {})
 @@include('cabinet-modal-exit.js', {})
 @@include('cabinet-photo-upload.js', {})
+@@include('ag-grid-locale-ru.js', {})
 @@include('employee-applications-table.js', {})

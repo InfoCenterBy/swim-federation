@@ -11,41 +11,60 @@
             <h2 class="h2-title">Заявки</h2>
             <div class="d-flex gap-3 flex-wrap flex-lg-nowrap w-100 mb-4">
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="fio-filter">ФИО</label>
-                <input class="bg-fa" id="fio-filter" type="text" value="" />
+                <label class="fs-16" for="fioFilterInput">ФИО</label>
+                <input class="bg-fa" id="fioFilterInput" type="text" />
               </div>
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="application-number-filter">Номер заявки</label>
-                <input class="bg-fa" id="application-number-filter" type="text" value="" />
+                <label class="fs-16" for="requestNumberFilterInput">Номер заявки</label>
+                <input class="bg-fa" id="requestNumberFilterInput" type="text" />
               </div>
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="email-filter">Email</label>
-                <input class="bg-fa" id="email-filter" type="text" value="" />
+                <label class="fs-16" for="emailFilterInput">Email</label>
+                <input class="bg-fa" id="emailFilterInput" type="text" />
               </div>
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="status-filter">Статус</label>
+                <label class="fs-16" for="statusFilterSelect">Статус</label>
                 <div class="d-flex gap-3">
-                  <select id="status-filter" class="form-select bg-fa fs-16" aria-label="status">
-                    <option selected value="all">Все</option>
-                    <option value="new">Новая</option>
-                    <option value="approved">Одобрена</option>
-                    <option value="rejected">Отклонена</option>
+                  <select
+                    id="statusFilterSelect"
+                    class="form-select bg-fa fs-16"
+                    aria-label="status"
+                  >
+                    <option selected value="Все">Все</option>
+                    <option value="Новая">Новая</option>
+                    <option value="Одобрена">Одобрена</option>
+                    <option value="Отклонена">Отклонена</option>
                   </select>
                 </div>
               </div>
             </div>
-            <div id="applications-table" class="ag-theme-quartz" style="height: 500px; width: 100%"></div>
+            <div
+              id="applications-table"
+              class="ag-theme-quartz"
+              style="height: 500px; width: 100%"
+            ></div>
           </section>
         </div>
       </main>
       @@include('./components/_cabinet-footer.html')
     </div>
-    <div class="modal fade" id="saveChanges" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="saveChanges"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="saveChangesLabel">Изменения успешно сохранены</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
             <img src="./img/icons/thumbs-up-trust.svg" alt="Thumbs-up icon" />

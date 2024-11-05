@@ -41,12 +41,13 @@ let { src, dest } = require("gulp"),
   clean_css = require("gulp-clean-css"),
   rename = require("gulp-rename"),
   uglify = require("gulp-uglify-es").default,
-  imagemin = require("gulp-imagemin"),
-  svgSprite = require("gulp-svg-sprite"),
-  ttf2woff = require("gulp-ttf2woff"),
-  ttf2woff2 = require("gulp-ttf2woff2"),
-  fonter = require("gulp-fonter"),
-  deploy = require("gulp-gh-pages");
+  terser = require("gulp-terser");
+(imagemin = require("gulp-imagemin")),
+  (svgSprite = require("gulp-svg-sprite")),
+  (ttf2woff = require("gulp-ttf2woff")),
+  (ttf2woff2 = require("gulp-ttf2woff2")),
+  (fonter = require("gulp-fonter")),
+  (deploy = require("gulp-gh-pages"));
 
 function browserSync(done) {
   browsersync.init({
@@ -59,7 +60,10 @@ function browserSync(done) {
 }
 
 function html() {
-  return src(path.src.html).pipe(fileinclude()).pipe(dest(path.build.html)).pipe(browsersync.stream());
+  return src(path.src.html)
+    .pipe(fileinclude())
+    .pipe(dest(path.build.html))
+    .pipe(browsersync.stream());
 }
 
 function css() {
@@ -93,7 +97,12 @@ function js() {
   return src(path.src.js)
     .pipe(fileinclude())
     .pipe(dest(path.build.js))
-    .pipe(uglify())
+    .pipe(
+      terser({
+        keep_fnames: true,
+        mangle: false,
+      })
+    )
     .pipe(
       rename({
         extname: ".min.js",

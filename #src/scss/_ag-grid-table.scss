@@ -3,6 +3,36 @@
   --ag-border-radius: 0 !important;
 }
 
+.ag-center-cols-viewport .ag-cell {
+  display: flex !important;
+  align-items: center;
+  padding-block: 8px;
+}
+
 .ag-theme-quartz .ag-header {
   --ag-header-background-color: var(--light-gray);
+}
+
+.ag-badge {
+  & .ag-cell-value {
+    padding: 8px 16px;
+    color: var(--black);
+  }
+
+  &.blue span {
+    background-color: var(--light-main);
+    color: var(--main);
+  }
+  &.green span {
+    background-color: var(--light-green);
+    color: var(--green-success);
+  }
+  &.red span {
+    background-color: var(--light-red-secondary);
+    color: var(--red);
+  }
+  &.yellow span {
+    background-color: var(--yellow);
+    color: var(--orange);
+  }
 }
