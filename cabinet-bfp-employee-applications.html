@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Профиль</title>
+  <title>Заявки</title>
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
@@ -356,145 +356,44 @@
 </aside>
 
           <section class="cabinet__content">
-            <h2 class="h2-title">Профиль</h2>
-            <form class="cabinet__form d-flex flex-column gap-4 mt-0" action="">
-              <div class="cabinet__profile-container">
-                <div class="cabinet__profile-img icon">
-                  <img src="./img/icons/profile-icon.svg" alt="Profile" />
-                </div>
-
-                <div class="cabinet__upload-btn d-flex flex-column align-items-start justify-content-between">
-                  <div class="d-flex gap-sm-4 flex-column flex-sm-row gap-2">
-                    <button type="button" id="custom-upload-button" class="cabinet__content-button">
-                      <span>Загрузить фото</span>
-                    </button>
-                    <button type="button" id="custom-delete-button" class="cabinet__content-button--secondary hidden">
-                      <span>Удалить фото</span>
-                    </button>
-                  </div>
-                  <input type="file" class="cabinet__profile-img-input hidden" accept=".png, .jpeg, .jpg, .heic" />
-                  <p class="fs-14 color-dark-gray mt-2">Формат файлов: png, .jpeg, .jpg, (до 2МБ)</p>
-                </div>
-              </div>
-
-              <div class="cabinet__member-card">
-                <div class="member-card__header">
-                  <img  src="./img/icons/logo.png" alt="Лого" />
-                  <div>
-                    <p class="member-card__title text-uppercase">БЕЛОРУССКАЯ ФЕДЕРАЦИЯ ПЛАВАНИЯ</p>
-                    <p class="member-card__subtitle text-uppercase">ЧЛЕНСКИЙ БИЛЕТ</p>
-                  </div>
-                </div>
-                <div class="member-card__content">
-                  <div class="d-flex w-100 mb-3 mb-lg-5 flex-wrap flex-sm-nowrap">
-                    <img class="member-card__avatar mb-4 mb-lg-0 hidden" src="./img/member-avatar.png" alt="Фото" />
-                    <div class="d-flex flex-column gap-3 gap-lg-5 w-100">
-                      <div class="d-flex w-100 flex-wrap flex-md-nowrap">
-                        <div class="w-40">
-                          <p class="fs-14 color-black mb-2">Фамилия</p>
-                          <p class="fs-20 color-main ff-raleway fw-semibold">Иванов</p>
-                        </div>
-                        <div class="w-40">
-                          <p class="fs-14 color-black mb-2">Дата рождения</p>
-                          <p class="fs-20 color-main ff-raleway fw-semibold">31.08.1995</p>
-                        </div>
-                      </div>
-
-                      <div class="d-flex w-100 flex-wrap flex-md-nowrap">
-                        <div class="w-40">
-                          <p class="fs-14 color-black mb-2">Имя</p>
-                          <p class="fs-20 color-main ff-raleway fw-semibold">Иван</p>
-                        </div>
-                        <div class=w-40">
-                          <p class="fs-14 color-black mb-2">Пол</p>
-                          <p class="fs-20 color-main ff-raleway fw-semibold">М</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="d-flex w-100 flex-wrap flex-md-nowrap gap-3">
-                    <div class="w-40">
-                      <p class="fs-14 color-black mb-2">Личный номер</p>
-                      <p class="fs-20 color-main ff-raleway fw-semibold no-wrap">201 01 0001</p>
-                    </div>
-                    <div class="w-100">
-                      <p class="fs-14 color-black mb-2">Статус</p>
-                      <p class="fs-20 color-main ff-raleway fw-semibold">Исполнительный директор</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
+            <h2 class="h2-title">Заявки</h2>
+            <div class="d-flex gap-3 flex-wrap flex-lg-nowrap w-100 mb-4">
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="last-name">
-                  Фамилия<span class="color-red">*</span>
-                </label>
-                <input class="bg-fa" id="last-name" type="text" required value="Иванов"/>
-                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+                <label class="fs-16" for="fioFilterInput">ФИО</label>
+                <input class="bg-fa" id="fioFilterInput" type="text" />
               </div>
-              
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="first-name">
-                  Имя<span class="color-red">*</span>
-                </label>
-                <input class="bg-fa" id="first-name" type="text" required value="Иван"/>
-                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+                <label class="fs-16" for="requestNumberFilterInput">Номер заявки</label>
+                <input class="bg-fa" id="requestNumberFilterInput" type="text" />
               </div>
-              
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="surname">
-                  Отчество<span class="color-red">*</span>
-                </label>
-                <input class="bg-fa" id="surname" type="text" required value="Иванович"/>
-                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+                <label class="fs-16" for="emailFilterInput">Email</label>
+                <input class="bg-fa" id="emailFilterInput" type="text" />
               </div>
-
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="email">
-                  Email<span class="color-red">*</span>
-                </label>
-                <input class="bg-fa" id="email" type="text" value="email@example.com" required/>
-                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
-              </div>
-
-              <div class="form__input--small mb-0">
-                <label class="fs-16" for="phone"> Мобильный телефон<span class="color-red">*</span> </label>
-                <input class="bg-fa color-black" id="phone" type="text" required value="+375 (29)-456-12-90" />
-                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
-              </div>
-
-              <div class="form__input--small mb-0">
-                <label class="fs-16" for="group">
-                  Группа<span class="color-red">*</span>
-                </label>
+                <label class="fs-16" for="statusFilterSelect">Статус</label>
                 <div class="d-flex gap-3">
-                  <select id="group" class="form-select bg-fa fs-16" aria-label="group" disabled required>
-                    <option selected disabled value="">сотрудник ОО «БФП» областного уровня</option>
+                  <select
+                    id="statusFilterSelect"
+                    class="form-select bg-fa fs-16"
+                    aria-label="status"
+                  >
+                    <option selected value="Все">Все</option>
+                    <option value="Новая">Новая</option>
+                    <option value="Одобрена">Одобрена</option>
+                    <option value="Отклонена">Отклонена</option>
                   </select>
                 </div>
               </div>
-
-              <div class="form__input--small mb-0">
-                <label class="fs-16" for="group">
-                  Регион<span class="color-red">*</span>
-                </label>
-                <div class="d-flex gap-3">
-                  <select id="group" class="form-select bg-fa fs-16" aria-label="group" disabled required>
-                    <option selected disabled value="">Могилевская область</option>
-                  </select>
-                </div>
-              </div>            
-
-              <button type="button" class="cabinet__content-button px-4" data-bs-toggle="modal" data-bs-target="#saveChanges">
-                Сохранить изменения
-              </button>
-            </form>
+            </div>
+            <div
+              id="applications-table"
+              class="ag-theme-quartz"
+              style="height: 500px; width: 100%"
+            ></div>
           </section>
-          
         </div>
       </main>
-
       <footer class="cabinet__footer">
   <div class="bg-main py-5 py-lg-3">
     <div class="d-flex justify-content-between align-items-center gap-4 flex-wrap">
@@ -536,20 +435,25 @@
     </div>
   </div>
 </footer>
- <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-  crossorigin="anonymous"></script>
-<script src="https://unpkg.com/imask"></script>
-<script src="js/cabinet-script.min.js"></script>
 
     </div>
-    <div class="modal fade" id="saveChanges" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="saveChanges"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="saveChangesLabel">Изменения успешно сохранены</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
             <img src="./img/icons/thumbs-up-trust.svg" alt="Thumbs-up icon" />
@@ -558,5 +462,14 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+
+    <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="js/cabinet-script.min.js"></script>
+
   </body>
 </html>

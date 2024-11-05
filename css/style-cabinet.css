@@ -1249,6 +1249,9 @@
     background-color: var(--light-main);
     color: var(--main);
   }
+  #accordionCookie .accordion-header {
+    background-color: var(--white);
+  }
   .cabinet__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1285,7 +1288,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     height: 100vh;
-    padding-bottom: 300px;
+    padding-bottom: 240px;
   }
   .cabinet__aside-button {
     width: 40px;
@@ -1662,6 +1665,8 @@
     margin-right: 8px;
     -webkit-transition: all ease-out 0.2s;
     transition: all ease-out 0.2s;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
   }
   .menu-toggle {
     width: 40px;
@@ -2263,6 +2268,7 @@
   .modal-content {
     padding: 40px;
     border-radius: 0;
+    background-color: var(--white);
   }
   .ag-theme-quartz {
     --ag-wrapper-border-radius: 0 !important;

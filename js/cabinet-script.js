@@ -597,76 +597,62 @@ document.addEventListener("DOMContentLoaded", function () {
 const gridOptions = {
   rowData: [
     {
-      "№": "1",
-      "Дата выставления": "15.03.2023 14:45",
-      "Тип взноса": "Членский взнос",
-      "Номер в ЕРИП": "ХХХ ХХХ ХХХХ",
-      "Статус оплаты": "Оплачен",
-      "Дата оплаты": "15.03.2023 14:45",
-      Сумма: "40 BYN",
-      Оплатить: "000",
+      requestNumber: "44",
+      fio: "Альхимович Евгений Иванович",
+      email: "kononov@mail.ru",
+      requestType: "Заявка на вступление в члены ОО «БФП»",
+      submissionDate: "15.03.2023 14:45",
+      status: "Новая",
     },
     {
-      "№": "2",
-      "Дата выставления": "15.03.2023 14:45",
-      "Тип взноса": "Членский взнос",
-      "Номер в ЕРИП": "ХХХ ХХХ ХХХХ",
-      "Статус оплаты": "Оплачен",
-      "Дата оплаты": "15.03.2023 14:45",
-      Сумма: "40 BYN",
-      Оплатить: "000",
+      requestNumber: "1",
+      fio: "Кононович Евгений Иванович",
+      email: "kononov@mail.ru",
+      requestType: "Заявка на вступление в члены ОО «БФП»",
+      submissionDate: "15.03.2023 14:45",
+      status: "Новая",
     },
     {
-      "№": "3",
-      "Дата выставления": "01.03.2023 14:45",
-      "Тип взноса": "Членский взнос",
-      "Номер в ЕРИП": "ХХХ ХХХ ХХХХ",
-      "Статус оплаты": "Не оплачен",
-      "Дата оплаты": "15.03.2023 14:45",
-      Сумма: "40 BYN",
-      Оплатить: "000",
+      requestNumber: "77",
+      fio: "Кабан Евгений Иванович",
+      email: "kononov@mail.ru",
+      requestType: "Заявка на вступление в члены ОО «БФП»",
+      submissionDate: "Не 15.03.2023 14:45",
+      status: "Новая",
     },
     {
-      "№": "4",
-      "Дата выставления": "11.03.2023 14:11",
-      "Тип взноса": "Членский взнос",
-      "Номер в ЕРИП": "ХХХ ХХХ ХХХХ",
-      "Статус оплаты": "Не оплачен",
-      "Дата оплаты": "15.03.2023 14:45",
-      Сумма: "40 BYN",
-      Оплатить: "000",
+      requestNumber: "123",
+      fio: "Альхимович Евгений Иванович",
+      email: "kononov@mail.ru",
+      requestType: "Заявка на вступление в члены ОО «БФП»",
+      submissionDate: "Не 15.03.2023 14:45",
+      status: "Одобрена",
     },
     {
-      "№": "5",
-      "Дата выставления": "15.03.2023 14:45",
-      "Тип взноса": "Вступительный взнос ",
-      "Номер в ЕРИП": "ХХХ ХХХ ХХХХ",
-      "Статус оплаты": "Оплачен",
-      "Дата оплаты": "15.03.2023 14:45",
-      Сумма: "40 BYN",
-      Оплатить: "000",
+      requestNumber: "98",
+      fio: "Кононович Евгений Иванович",
+      email: "kononov@mail.ru",
+      requestType: "Заявка на вступление в члены ОО «БФП»",
+      submissionDate: "15.03.2023 14:45",
+      status: "Одобрена",
     },
     {
-      "№": "6",
-      "Дата выставления": "15.03.2023 14:45",
-      "Тип взноса": "Вступительный взнос ",
-      "Номер в ЕРИП": "ХХХ ХХХ ХХХХ",
-      "Статус оплаты": "Оплачен",
-      "Дата оплаты": "15.03.2023 14:45",
-      Сумма: "40 BYN",
-      Оплатить: "000",
+      requestNumber: "222",
+      fio: "Кононович Евгений Иванович",
+      email: "kononov@mail.ru",
+      requestType: "Заявка на вступление в члены ОО «БФП»",
+      submissionDate: "15.03.2023 14:45",
+      status: "Отклонена",
     },
   ],
 
   columnDefs: [
-    { field: "№" },
-    { field: "Дата выставления" },
-    { field: "Тип взноса" },
-    { field: "Номер в ЕРИП" },
-    { field: "Статус оплаты" },
-    { field: "Дата оплаты" },
-    { field: "Сумма" },
-    { field: "Оплатить" },
+    { field: "requestNumber", headerName: "№" },
+    { field: "fio", headerName: "ФИО" },
+    { field: "email", headerName: "Email" },
+    { field: "requestType", headerName: "Тип заявки" },
+    { field: "submissionDate", headerName: "Дата подачи" },
+    { field: "status", headerName: "Статус" },
   ],
   defaultColDef: {
     flex: 1,
@@ -676,6 +662,44 @@ const gridOptions = {
   onColumnResized: onColumnResized,
   onSortChanged: onSortChanged,
   onGridReady: onGridReady,
+  isExternalFilterPresent: () => {
+    //return document.getElementById("fioFilterInput").value !== "";
+    return (
+      document.getElementById("fioFilterInput").value !== "" ||
+      document.getElementById("requestNumberFilterInput").value !== "" ||
+      document.getElementById("emailFilterInput").value !== "" ||
+      document.getElementById("statusFilterSelect").value !== ""
+    );
+  },
+  doesExternalFilterPass: (node) => {
+    // const fioFilterValue = document.getElementById("fioFilterInput").value.toLowerCase();
+    // return node.data.fio.toLowerCase().includes(fioFilterValue);
+    const fioFilterValue = document.getElementById("fioFilterInput").value.toLowerCase();
+    const requestNumberFilterValue = document.getElementById("requestNumberFilterInput").value;
+    console.log(typeof requestNumberFilterValue);
+
+    const emailFilterValue = document.getElementById("emailFilterInput").value.toLowerCase();
+    // const statusFilterValue = document.getElementById("statusFilterSelect").value;
+
+    // Проверяем каждый фильтр: если фильтр пустой, он считается совпадающим
+    const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
+    console.log(fioMatch);
+
+    const requestNumberMatch =
+      !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
+    console.log(requestNumberMatch);
+
+    const emailMatch =
+      !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
+    console.log(emailMatch);
+
+    // const statusMatch = !statusFilterValue || node.data.status === statusFilterValue;
+    // console.log(statusMatch);
+
+    // Вернем true, если все условия фильтра совпадают
+    // return fioMatch && requestNumberMatch && emailMatch && statusMatch;
+    return fioMatch && requestNumberMatch && emailMatch;
+  },
 };
 
 function onColumnMoved(params) {
@@ -687,14 +711,12 @@ function onColumnMoved(params) {
 
 function onColumnResized(params) {
   const columnState = params.api.getColumnState();
-  console.log("resize");
 
   localStorage.setItem("agColumnState", JSON.stringify(columnState));
 }
 
 function onSortChanged(params) {
   const columnState = params.api.getColumnState();
-  console.log("sort");
 
   localStorage.setItem("agColumnState", JSON.stringify(columnState));
 }
@@ -703,13 +725,19 @@ function onGridReady(params) {
   const columnState = JSON.parse(localStorage.getItem("agColumnState"));
 
   if (columnState) {
-    console.log("ready");
-
     params.api.applyColumnState({ state: columnState, applyOrder: true });
   }
+
+  const applyFilter = () => params.api.onFilterChanged();
+  document.getElementById("fioFilterInput").addEventListener("input", function () {
+    params.api.onFilterChanged();
+  });
+  document.getElementById("requestNumberFilterInput").addEventListener("input", applyFilter);
+  document.getElementById("emailFilterInput").addEventListener("input", applyFilter);
+  document.getElementById("statusFilterSelect").addEventListener("change", applyFilter);
 }
 
-const ediv = document.querySelector("#contributions-table");
+const ediv = document.querySelector("#applications-table");
 
 const gridApi = agGrid.createGrid(ediv, gridOptions);
 
