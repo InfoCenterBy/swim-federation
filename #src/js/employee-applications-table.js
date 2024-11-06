@@ -1,32 +1,32 @@
-class CustomButtonComponent {
-  eGui;
-  eButton;
-  eventListener;
+// class CustomButtonComponent {
+//   eGui;
+//   eButton;
+//   eventListener;
 
-  init() {
-    this.eGui = document.createElement("div");
-    let eButton = document.createElement("button");
-    eButton.className = "btn-simple";
-    eButton.textContent = "Click Me!";
-    this.eventListener = () => alert("Button Clicked!");
-    eButton.addEventListener("click", this.eventListener);
-    this.eGui.appendChild(eButton);
-  }
+//   init() {
+//     this.eGui = document.createElement("div");
+//     let eButton = document.createElement("button");
+//     eButton.className = "btn-simple";
+//     eButton.textContent = "Click Me!";
+//     this.eventListener = () => alert("Button Clicked!");
+//     eButton.addEventListener("click", this.eventListener);
+//     this.eGui.appendChild(eButton);
+//   }
 
-  getGui() {
-    return this.eGui;
-  }
+//   getGui() {
+//     return this.eGui;
+//   }
 
-  refresh() {
-    return true;
-  }
+//   refresh() {
+//     return true;
+//   }
 
-  destroy() {
-    if (this.eButton) {
-      this.eButton.removeEventListener("click", this.eventListener);
-    }
-  }
-}
+//   destroy() {
+//     if (this.eButton) {
+//       this.eButton.removeEventListener("click", this.eventListener);
+//     }
+//   }
+// }
 
 const gridOptions = {
   localeText: AG_GRID_LOCALE_RU,
@@ -109,12 +109,27 @@ const gridOptions = {
       field: "approve",
       headerName: "",
       resizable: false,
-      cellRenderer: CustomButtonComponent,
-      // cellRendererParams: {
-      //   clicked: function (field) {
-      //     alert(`${field} was clicked`);
-      //   },
-      // },
+      cellRenderer: (params) => {
+        if (params.data.status === "Новая") {
+          const acceptButton = document.createElement("button");
+          acceptButton.innerText = "Принять";
+          acceptButton.classList.add("button--small");
+          acceptButton.addEventListener("click", () => showPopup("Принять", params));
+
+          const declineButton = document.createElement("button");
+          declineButton.innerText = "Отклонить";
+          declineButton.classList.add("button-small--secondary");
+          declineButton.addEventListener("click", () => showPopup("Отклонить", params));
+
+          const container = document.createElement("div");
+          container.appendChild(acceptButton);
+          container.appendChild(declineButton);
+
+          return container;
+        } else {
+          return "";
+        }
+      },
     },
     {
       field: "reject",
@@ -160,11 +175,9 @@ const gridOptions = {
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
-    const requestNumberMatch =
-      !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
+    const requestNumberMatch = !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
 
-    const emailMatch =
-      !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
+    const emailMatch = !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
 
     const statusMatch = statusFilterValue === "Все" || node.data.status === statusFilterValue;
 
