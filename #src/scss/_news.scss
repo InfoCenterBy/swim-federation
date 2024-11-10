@@ -8,7 +8,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
+
+    & .block__header {
+      padding-bottom: 10px;
+    }
   }
 
   &__image-container {
@@ -209,7 +213,6 @@
     flex-direction: column;
     gap: 32px;
     align-items: start;
-    overflow-x: scroll;
     scrollbar-width: none;
   }
 
@@ -229,20 +232,30 @@
     gap: 8px;
     width: 100%;
     scrollbar-width: none;
-    padding-bottom: 12px;
+    position: relative;
   }
 
-  .news__tabs::-webkit-scrollbar {
+  .news__tabs--dark {
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    gap: 8px;
+    width: 100%;
+    scrollbar-width: none;
+    position: relative;
+    padding-bottom: 145px;
+    margin-bottom: -145px;
+  }
+
+  .news__tabs::-webkit-scrollbar,
+  .news__tabs--dark::-webkit-scrollbar {
     display: none;
   }
 
-  .news__tabs .nav-item {
+  .news__tabs .nav-item,
+  .news__tabs--dark .nav-item {
     flex: 0 0 auto;
-  }
-
-  .news__header {
-    padding-bottom: 133px;
-    margin-bottom: -133px;
   }
 }
 
@@ -254,4 +267,63 @@
   .tab-pane {
     width: 100%;
   }
+}
+
+.news__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Порядок элементов на мобильных устройствах */
+@media (max-width: 768px) {
+  .news__header .block__title {
+    order: 1;
+  }
+
+  .news__header .block__link-container--red {
+    order: 2;
+  }
+
+  .news__tabs,
+  .news__tabs--dark {
+    order: 3;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    gap: 8px;
+    scrollbar-width: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .news__header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.underline {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  height: 1px;
+  background-color: var(--white);
+  z-index: 0;
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.underline--dark {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  height: 1px;
+  background-color: var(--gray);
+  z-index: 0;
+  width: 100%;
+  transition: width 0.3s;
 }

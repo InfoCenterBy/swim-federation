@@ -1,33 +1,3 @@
-// class CustomButtonComponent {
-//   eGui;
-//   eButton;
-//   eventListener;
-
-//   init() {
-//     this.eGui = document.createElement("div");
-//     let eButton = document.createElement("button");
-//     eButton.className = "btn-simple";
-//     eButton.textContent = "Click Me!";
-//     this.eventListener = () => alert("Button Clicked!");
-//     eButton.addEventListener("click", this.eventListener);
-//     this.eGui.appendChild(eButton);
-//   }
-
-//   getGui() {
-//     return this.eGui;
-//   }
-
-//   refresh() {
-//     return true;
-//   }
-
-//   destroy() {
-//     if (this.eButton) {
-//       this.eButton.removeEventListener("click", this.eventListener);
-//     }
-//   }
-// }
-
 const gridOptions = {
   localeText: AG_GRID_LOCALE_RU,
   rowHeight: 50,
@@ -175,9 +145,11 @@ const gridOptions = {
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
-    const requestNumberMatch = !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
+    const requestNumberMatch =
+      !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
 
-    const emailMatch = !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
+    const emailMatch =
+      !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
 
     const statusMatch = statusFilterValue === "Все" || node.data.status === statusFilterValue;
 
@@ -220,6 +192,6 @@ function onGridReady(params) {
 
 const ediv = document.querySelector("#applications-table");
 
-const gridApi = agGrid.createGrid(ediv, gridOptions);
-
-// custom cell button
+if (agGrid) {
+  const gridApi = agGrid.createGrid(ediv, gridOptions);
+}

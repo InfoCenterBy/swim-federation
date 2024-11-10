@@ -11,4 +11,3 @@
 @@include('slider.js', {})
 @@include('dropdown-show-on-mozilla.js', {})
 @@include('clear-input.js', {})
-@@include('grid.js', {})
