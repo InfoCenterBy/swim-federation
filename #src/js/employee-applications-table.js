@@ -3,7 +3,7 @@ const gridOptions = {
   rowHeight: 50,
   rowData: [
     {
-      requestNumber: "44",
+      requestNumber: 44,
       fio: "Альхимович Евгений Иванович",
       email: "aroitq@mail.ru",
       requestType: "Заявка на вступление в члены ОО «БФП»",
@@ -13,7 +13,7 @@ const gridOptions = {
       reject: "reject",
     },
     {
-      requestNumber: "1",
+      requestNumber: 1,
       fio: "Кононович Евгений Иванович",
       email: "laaqper@gmail.com",
       requestType: "Заявка на вступление в члены ОО «БФП»",
@@ -21,7 +21,7 @@ const gridOptions = {
       status: "Новая",
     },
     {
-      requestNumber: "77",
+      requestNumber: 77,
       fio: "Кабан Евгений Иванович",
       email: "kononov@mail.ru",
       requestType: "Заявка на вступление в члены ОО «БФП»",
@@ -29,7 +29,7 @@ const gridOptions = {
       status: "Новая",
     },
     {
-      requestNumber: "123",
+      requestNumber: 123,
       fio: "Альхимович Евгений Иванович",
       email: "popoatt@mail.su",
       requestType: "Заявка на вступление в члены ОО «БФП»",
@@ -37,7 +37,7 @@ const gridOptions = {
       status: "Одобрена",
     },
     {
-      requestNumber: "98",
+      requestNumber: 98,
       fio: "Кононович Евгений Иванович",
       email: "popa@mail.ru",
       requestType: "Заявка на вступление в члены ОО «БФП»",
@@ -45,7 +45,7 @@ const gridOptions = {
       status: "Одобрена",
     },
     {
-      requestNumber: "222",
+      requestNumber: 222,
       fio: "Кононович Евгений Иванович",
       email: "kaban@mail.ru",
       requestType: "Заявка на вступление в члены ОО «БФП»",
@@ -145,11 +145,9 @@ const gridOptions = {
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
-    const requestNumberMatch =
-      !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
+    const requestNumberMatch = !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
 
-    const emailMatch =
-      !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
+    const emailMatch = !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
 
     const statusMatch = statusFilterValue === "Все" || node.data.status === statusFilterValue;
 

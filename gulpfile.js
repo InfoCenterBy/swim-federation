@@ -38,10 +38,15 @@ let { src, dest } = require("gulp"),
   scss = require("gulp-sass")(require("sass")),
   autoprefixer = require("gulp-autoprefixer"),
   // group_media = require("gulp-group-css-media-queries"),
-  clean_css = require("gulp-clean-css"),
+  // clean_css = require("gulp-clean-css"),
+  lightningcss = require("gulp-lightningcss"),
   rename = require("gulp-rename"),
-  uglify = require("gulp-uglify-es").default,
+  // uglify = require("gulp-uglify-es").default,
   terser = require("gulp-terser");
+// postcss = require("gulp-postcss"),
+// cssnano = require("cssnano"),
+// cssVariables = require("postcss-css-variables");
+
 (imagemin = require("gulp-imagemin")),
   (svgSprite = require("gulp-svg-sprite")),
   (ttf2woff = require("gulp-ttf2woff")),
@@ -60,10 +65,7 @@ function browserSync(done) {
 }
 
 function html() {
-  return src(path.src.html)
-    .pipe(fileinclude())
-    .pipe(dest(path.build.html))
-    .pipe(browsersync.stream());
+  return src(path.src.html).pipe(fileinclude()).pipe(dest(path.build.html)).pipe(browsersync.stream());
 }
 
 function css() {
@@ -82,7 +84,7 @@ function css() {
         })
       )
       .pipe(dest(path.build.css))
-      .pipe(clean_css())
+      .pipe(lightningcss())
       .pipe(
         rename({
           extname: ".min.css",
