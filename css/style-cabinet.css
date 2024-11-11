@@ -1252,6 +1252,9 @@
   #accordionCookie .accordion-header {
     background-color: var(--white);
   }
+  #accordionCookie .accordion-body {
+    background-color: var(--white);
+  }
   .cabinet__container {
     display: -webkit-box;
     display: -ms-flexbox;

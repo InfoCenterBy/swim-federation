@@ -1196,42 +1196,12 @@ const AG_GRID_LOCALE_RU = {
   timeFormatHHMMSSAmPm: "HH:MM:SS AM/PM",
 };
 
-class CustomButtonComponent {
-  eGui;
-  eButton;
-  eventListener;
-
-  init() {
-    this.eGui = document.createElement("div");
-    let eButton = document.createElement("button");
-    eButton.className = "btn-simple";
-    eButton.textContent = "Click Me!";
-    this.eventListener = () => alert("Button Clicked!");
-    eButton.addEventListener("click", this.eventListener);
-    this.eGui.appendChild(eButton);
-  }
-
-  getGui() {
-    return this.eGui;
-  }
-
-  refresh() {
-    return true;
-  }
-
-  destroy() {
-    if (this.eButton) {
-      this.eButton.removeEventListener("click", this.eventListener);
-    }
-  }
-}
-
 const gridOptions = {
   localeText: AG_GRID_LOCALE_RU,
   rowHeight: 50,
   rowData: [
     {
-      requestNumber: "44",
+      requestNumber: 44,
       fio: "Альхимович Евгений Иванович",
       email: "aroitq@mail.ru",
       requestType: "Заявка на вступление в члены ОО «БФП»",
@@ -1241,7 +1211,7 @@ const gridOptions = {
       reject: "reject",
     },
     {
-      requestNumber: "1",
+      requestNumber: 1,
       fio: "Кононович Евгений Иванович",
       email: "laaqper@gmail.com",
       requestType: "Заявка на вступление в члены ОО «БФП»",
@@ -1249,7 +1219,7 @@ const gridOptions = {
       status: "Новая",
     },
     {
-      requestNumber: "77",
+      requestNumber: 77,
       fio: "Кабан Евгений Иванович",
       email: "kononov@mail.ru",
       requestType: "Заявка на вступление в члены ОО «БФП»",
@@ -1257,7 +1227,7 @@ const gridOptions = {
       status: "Новая",
     },
     {
-      requestNumber: "123",
+      requestNumber: 123,
       fio: "Альхимович Евгений Иванович",
       email: "popoatt@mail.su",
       requestType: "Заявка на вступление в члены ОО «БФП»",
@@ -1265,7 +1235,7 @@ const gridOptions = {
       status: "Одобрена",
     },
     {
-      requestNumber: "98",
+      requestNumber: 98,
       fio: "Кононович Евгений Иванович",
       email: "popa@mail.ru",
       requestType: "Заявка на вступление в члены ОО «БФП»",
@@ -1273,7 +1243,7 @@ const gridOptions = {
       status: "Одобрена",
     },
     {
-      requestNumber: "222",
+      requestNumber: 222,
       fio: "Кононович Евгений Иванович",
       email: "kaban@mail.ru",
       requestType: "Заявка на вступление в члены ОО «БФП»",
@@ -1307,12 +1277,27 @@ const gridOptions = {
       field: "approve",
       headerName: "",
       resizable: false,
-      cellRenderer: CustomButtonComponent,
-      // cellRendererParams: {
-      //   clicked: function (field) {
-      //     alert(`${field} was clicked`);
-      //   },
-      // },
+      cellRenderer: (params) => {
+        if (params.data.status === "Новая") {
+          const acceptButton = document.createElement("button");
+          acceptButton.innerText = "Принять";
+          acceptButton.classList.add("button--small");
+          acceptButton.addEventListener("click", () => showPopup("Принять", params));
+
+          const declineButton = document.createElement("button");
+          declineButton.innerText = "Отклонить";
+          declineButton.classList.add("button-small--secondary");
+          declineButton.addEventListener("click", () => showPopup("Отклонить", params));
+
+          const container = document.createElement("div");
+          container.appendChild(acceptButton);
+          container.appendChild(declineButton);
+
+          return container;
+        } else {
+          return "";
+        }
+      },
     },
     {
       field: "reject",
@@ -1358,11 +1343,9 @@ const gridOptions = {
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
-    const requestNumberMatch =
-      !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
+    const requestNumberMatch = !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
 
-    const emailMatch =
-      !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
+    const emailMatch = !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
 
     const statusMatch = statusFilterValue === "Все" || node.data.status === statusFilterValue;
 
@@ -1405,7 +1388,7 @@ function onGridReady(params) {
 
 const ediv = document.querySelector("#applications-table");
 
-const gridApi = agGrid.createGrid(ediv, gridOptions);
-
-// custom cell button
+if (agGrid) {
+  const gridApi = agGrid.createGrid(ediv, gridOptions);
+}
 
