@@ -14,8 +14,9 @@
   }
 
   &__card {
+    max-width: 343px;
     width: 100%;
-    height: 100%;
+    height: 343px;
     display: flex;
     justify-content: center;
   }
@@ -29,8 +30,8 @@
   &__image-container {
     position: relative;
     overflow: hidden;
-    max-width: 343px;
-    max-height: 343px;
+    width: 100%;
+    height: 100%;
   }
 
   &__image {

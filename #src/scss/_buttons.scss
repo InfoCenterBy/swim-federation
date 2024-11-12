@@ -98,6 +98,22 @@
   cursor: not-allowed;
 }
 
+.button--secondary-no-stretch {
+  background-color: var(--white);
+  color: var(--main);
+  border: 1px solid var(--main);
+  font-size: 16px;
+  line-height: 21px;
+  width: fit-content;
+
+  padding: 12px 24px;
+  transition: $transition-2;
+
+  @include hover(background-color, var(--main-hover));
+  @include hover(color, var(--white));
+  @include hover(border-color, var(--main-hover));
+}
+
 .button--secondary {
   background-color: var(--white);
   color: var(--main);
@@ -106,6 +122,21 @@
   line-height: 21px;
 
   padding: 12px 24px;
+  transition: $transition-2;
+
+  @include hover(background-color, var(--main-hover));
+  @include hover(color, var(--white));
+  @include hover(border-color, var(--main-hover));
+}
+
+.button--secondary-small {
+  background-color: var(--white);
+  color: var(--main);
+  border: 1px solid var(--main);
+  font-size: 16px;
+  line-height: 21px;
+
+  padding: 6px 16px;
   transition: $transition-2;
 
   @include hover(background-color, var(--main-hover));

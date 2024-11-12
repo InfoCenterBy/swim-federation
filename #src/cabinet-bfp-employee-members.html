@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('./components/_cabinet-head.html', {title: "Члены ОО «БФП»"})
+  <body>
+    <div class="wrapper">
+      @@include('./components/_cabinet-header-bfp-employee.html')
+      <main class="main">
+        <div class="cabinet__container">
+          @@include('./elements/cabinet-employee-sidebar.html')
+          <section class="cabinet__content">
+            <h2 class="h2-title">Члены ОО «БФП»</h2>
+            <div class="d-flex gap-3 flex-wrap flex-lg-nowrap w-100 mb-4">
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="fioFilterInput">ФИО</label>
+                <input class="bg-fa" id="fioFilterInput" type="text" />
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="requestNumberFilterInput">Номер заявки</label>
+                <input class="bg-fa" id="requestNumberFilterInput" type="text" />
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="emailFilterInput">Email</label>
+                <input class="bg-fa" id="emailFilterInput" type="text" />
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="statusFilterSelect">Статус</label>
+                <div class="d-flex gap-3">
+                  <select
+                    id="statusFilterSelect"
+                    class="form-select bg-fa fs-16"
+                    aria-label="status"
+                  >
+                    <option selected value="Все">Все</option>
+                    <option value="Новая">Новая</option>
+                    <option value="Одобрена">Одобрена</option>
+                    <option value="Отклонена">Отклонена</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div
+              id="members-table"
+              class="ag-theme-quartz"
+              style="height: 500px; width: 100%"
+            ></div>
+          </section>
+        </div>
+      </main>
+      @@include('./components/_cabinet-footer.html')
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+
+    @@include('./components/_cabinet-script.html')
+  </body>
+</html>

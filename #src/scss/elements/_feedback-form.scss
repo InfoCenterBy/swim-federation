@@ -195,6 +195,14 @@
   border: 1px solid var(--dark-gray);
 }
 
+.form__checkbox-container input:disabled:checked ~ .form__checkbox-checkmark--dark {
+  background-color: var(--gray);
+  border: 1px solid var(--gray);
+}
+
+.form__checkbox-container input:disabled:checked ~ .form__checkbox-checkmark--dark:after {
+  border-color: var(--white);
+}
 .form__checkbox-checkmark--dark.invalid {
   border: 1px solid var(--red);
 }

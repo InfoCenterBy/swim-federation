@@ -2,6 +2,10 @@
   --ag-wrapper-border-radius: 0 !important;
   --ag-border-radius: 0 !important;
 }
+.ag-theme-quartz .ag-cell-focus {
+  border-color: transparent !important;
+  outline: none !important;
+}
 
 .ag-center-cols-viewport .ag-cell {
   display: flex !important;
@@ -11,6 +15,10 @@
 
 .ag-theme-quartz .ag-header {
   --ag-header-background-color: var(--light-gray);
+}
+
+.ag-cell .ag-cell-focus {
+  border: 3px solid black;
 }
 
 .ag-badge {

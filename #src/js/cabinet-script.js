@@ -11,3 +11,4 @@
 @@include('cabinet-photo-upload.js', {})
 @@include('ag-grid-locale-ru.js', {})
 @@include('employee-applications-table.js', {})
+@@include('employee-members-table.js', {})
