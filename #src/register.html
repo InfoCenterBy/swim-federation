@@ -7,92 +7,72 @@
       <main class="main">
         <div class="container-fluid register__content">
           <div class="container register__form-container">
-            <form
-              class="register__form"
-              action="#">
+            <form class="register__form" action="#">
               <p class="register__form-title">Регистрация</p>
               <div class="form__input--small">
-                <label
-                  class="color-black"
-                  for="email">
-                  Email
-                  <span class="color-red">*</span>
-                </label>
-                <input
-                  class="bg-fa mb-0"
-                  id="email"
-                  type="text"
-                  pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$"
-                  placeholder="____@__.__"
-                  required />
+                <label class="color-black" for="email">Email<span class="color-red">*</span> </label>
+                <input class="bg-fa mb-0" id="email" type="text" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" placeholder="____@__.__" required />
+                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+              </div>
+
+              <div class="form__input--small">
+                <label class="fs-16" for="group">Группа<span class="color-red">*</span></label>
+                <div class="d-flex gap-3">
+                  <select id="group" class="form-select bg-fa fs-16 w-100" aria-label="group" required>
+                    <option selected disabled value="">Выберите группу</option>
+                    <option value="athlete">Спортсмен</option>
+                    <option value="trainer">Тренер</option>
+                    <option value="chairman">Председатель</option>
+                    <option value="administrator">Администратор</option>
+                    <option value="methodist">Методист</option>
+                    <option value="deputy-chairman">Заместитель председателя</option>
+                    <option value="head-coach">Старший тренер</option>
+                    <option value="accountant">Бухгалтер</option>
+                    <option value="executive-director">Исполнительный директор</option>
+                    <option value="director">Директор</option>
+                    <option value="deputy-director">Заместитель директор</option>
+                    <option value="judge">Судья</option>
+                    <option value="press-secretary">Пресс-секретарь</option>
+                    <option value="no-group">Без группы</option>
+                  </select>
+                </div>
                 <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
               </div>
 
               <div class="form__input--small mb-2">
-                <label for="pass">
-                  Пароль
-                  <span class="color-red">*</span>
-                </label>
-                <input
-                  class="password-input bg-fa"
-                  id="register-password"
-                  type="password"
-                  placeholder="Введите пароль"
-                  required />
-                <i
-                  id="toggle-password"
-                  class="password-icon bi bi-eye-slash"></i>
+                <label for="pass">Пароль<span class="color-red">*</span> </label>
+                <input class="password-input bg-fa" id="register-password" type="password" placeholder="Введите пароль" required />
+                <i id="toggle-password" class="password-icon bi bi-eye-slash"></i>
                 <span class="password-error-message fs-14 color-red">Пароль не соответствует требованиям</span>
                 <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
               </div>
 
               <p class="password-info-message fs-14 color-dark-gray mb-4 lh-110">
-                Пароль должен быть не менее 8 символов длиной, содержать латинские символы верхнего регистра (A-Z), содержать
-                латинские символы нижнего регистра (a-z), содержать цифры (0-9).
+                Пароль должен быть не менее 8 символов длиной, содержать латинские символы верхнего регистра (A-Z), содержать латинские
+                символы нижнего регистра (a-z), содержать цифры (0-9).
               </p>
               <div class="form__input--small">
                 <label for="confirm-pass">
                   Подтвердите пароль
                   <span class="color-red">*</span>
                 </label>
-                <input
-                  class="password-input bg-fa"
-                  id="confirm-pass"
-                  type="password"
-                  placeholder="Подтвердите пароль"
-                  required />
-                <i
-                  id="toggle-password"
-                  class="password-icon bi bi-eye-slash"></i>
+                <input class="password-input bg-fa" id="confirm-pass" type="password" placeholder="Подтвердите пароль" required />
+                <i id="toggle-password" class="password-icon bi bi-eye-slash"></i>
                 <span class="password-error-message fs-14 color-red">Пароль не соответствует требованиям</span>
                 <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
               </div>
               <div class="form__checkbox">
                 <label class="form__checkbox-container">
-                  <input
-                    type="checkbox"
-                    required />
+                  <input type="checkbox" required />
                   <span class="form__checkbox-text">Согласие на обработку</span>
-                  <a
-                    class="link-main"
-                    href="#">
-                    персональных данных
-                  </a>
+                  <a class="link-main" href="#"> персональных данных </a>
                   <span class="form__checkbox-checkmark--dark"></span>
                 </label>
               </div>
-              <button
-                class="form__button--blue mb-4"
-                type="submit">
-                Зарегистрироваться
-              </button>
+              <button class="form__button--blue mb-4" type="submit">Зарегистрироваться</button>
               <p class="text-center">
                 Уже есть аккаунт?
-                <a
-                  class="link-main"
-                  href="login.html">
-                  Авторизоваться
-                </a>
+                <a class="link-main" href="login.html"> Авторизоваться </a>
               </p>
             </form>
           </div>

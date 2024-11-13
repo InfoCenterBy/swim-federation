@@ -15,7 +15,12 @@ let path = {
   src: {
     html: [source_folder + "/**/*.html"],
     css: [source_folder + "/scss/style.scss", source_folder + "/scss/style-cabinet.scss"],
-    js: [source_folder + "/js/script.js", source_folder + "/js/cabinet-script.js"],
+    js: [
+      source_folder + "/js/script.js",
+      source_folder + "/js/cabinet-script.js",
+      source_folder + "/js/employee-applications-table.js",
+      source_folder + "/js/employee-members-table.js",
+    ],
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.ttf",
     audio: source_folder + "/audio/*.mp3",

@@ -150,11 +150,9 @@ const gridOptions = {
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
-    const requestNumberMatch =
-      !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
+    const requestNumberMatch = !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
 
-    const emailMatch =
-      !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
+    const emailMatch = !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
 
     const statusMatch = statusFilterValue === "Все" || node.data.status === statusFilterValue;
 

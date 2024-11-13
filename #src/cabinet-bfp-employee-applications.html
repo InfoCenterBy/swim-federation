@@ -25,11 +25,7 @@
               <div class="form__input--small mb-0">
                 <label class="fs-16" for="statusFilterSelect">Статус</label>
                 <div class="d-flex gap-3">
-                  <select
-                    id="statusFilterSelect"
-                    class="form-select bg-fa fs-16"
-                    aria-label="status"
-                  >
+                  <select id="statusFilterSelect" class="form-select bg-fa fs-16" aria-label="status">
                     <option selected value="Все">Все</option>
                     <option value="Новая">Новая</option>
                     <option value="Одобрена">Одобрена</option>
@@ -38,103 +34,55 @@
                 </div>
               </div>
             </div>
-            <div
-              id="applications-table"
-              class="ag-theme-quartz"
-              style="height: 500px; width: 100%"
-            ></div>
+            <div id="applications-table" class="ag-theme-quartz" style="height: 500px; width: 100%"></div>
           </section>
         </div>
       </main>
       @@include('./components/_cabinet-footer.html')
     </div>
-    <div
-      class="modal fade"
-      id="approveApplication"
-      tabindex="-1"
-      aria-labelledby="approveApplicationLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="approveApplication" tabindex="-1" aria-labelledby="approveApplicationLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="approveApplicationLabel">Одобрить заявку</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p class="color-dark-gray mb-4">
-              Для одобрения заявки присвойте члену ОО «БФП» номер билета
-            </p>
+            <p class="color-dark-gray mb-4">Для одобрения заявки присвойте члену ОО «БФП» номер билета</p>
             <div class="form__input--small mb-4">
               <input class="bg-fa" id="member-number" type="text" required />
             </div>
             <div class="d-flex justify-content-between gap-5">
-              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">
-                Одобрить
-              </button>
-              <button
-                type="submit"
-                class="button--secondary px-4"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                Отмена
-              </button>
+              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">Одобрить</button>
+              <button type="submit" class="button--secondary px-4" data-bs-dismiss="modal" aria-label="Close">Отмена</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div
-      class="modal fade"
-      id="rejectApplication"
-      tabindex="-1"
-      aria-labelledby="rejectApplicationLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="rejectApplication" tabindex="-1" aria-labelledby="rejectApplicationLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="rejectApplicationLabel">Отклонить заявку</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <p class="color-dark-gray mb-2">Вы действительно хотите отклонить заявку?</p>
-            <p class="color-dark-gray mb-4">
-              Вы можете оставить комментарий с причиной отклонения.
-            </p>
+            <p class="color-dark-gray mb-4">Вы можете оставить комментарий с причиной отклонения.</p>
             <div class="form__input--small mb-4">
               <textarea class="border-1-gray" id="comment" name="comment" rows="5"> </textarea>
             </div>
             <div class="d-flex justify-content-between gap-5">
-              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">
-                Отклонить
-              </button>
-              <button
-                type="submit"
-                class="button--secondary px-4"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                Отмена
-              </button>
+              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">Отклонить</button>
+              <button type="submit" class="button--secondary px-4" data-bs-dismiss="modal" aria-label="Close">Отмена</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
-
     @@include('./components/_cabinet-script.html')
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <script src="./js/employee-applications-table.js"></script>
   </body>
 </html>

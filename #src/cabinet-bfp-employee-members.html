@@ -11,45 +11,123 @@
             <h2 class="h2-title">Члены ОО «БФП»</h2>
             <div class="d-flex gap-3 flex-wrap flex-lg-nowrap w-100 mb-4">
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="fioFilterInput">ФИО</label>
-                <input class="bg-fa" id="fioFilterInput" type="text" />
+                <label class="fs-16" for="membershipNumberFilter">Номер членского билета</label>
+                <input class="bg-fa" id="membershipNumberFilter" type="text" />
               </div>
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="requestNumberFilterInput">Номер заявки</label>
-                <input class="bg-fa" id="requestNumberFilterInput" type="text" />
+                <label class="fs-16" for="fioFilter">ФИО</label>
+                <input class="bg-fa" id="fioFilter" type="text" />
               </div>
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="emailFilterInput">Email</label>
-                <input class="bg-fa" id="emailFilterInput" type="text" />
+                <label class="fs-16" for="age">Возраст</label>
+                <div class="d-flex align-items-center gap-3">
+                  <span>от</span>
+                  <input class="bg-fa" id="ageFromFilter" type="text" />
+                  <span>до</span>
+                  <input class="bg-fa" id="ageToFilter" type="text" />
+                </div>
               </div>
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="statusFilterSelect">Статус</label>
+                <label class="fs-16" for="genderFilter">Пол</label>
                 <div class="d-flex gap-3">
-                  <select
-                    id="statusFilterSelect"
-                    class="form-select bg-fa fs-16"
-                    aria-label="status"
-                  >
-                    <option selected value="Все">Все</option>
-                    <option value="Новая">Новая</option>
-                    <option value="Одобрена">Одобрена</option>
-                    <option value="Отклонена">Отклонена</option>
+                  <select id="genderFilter" class="form-select bg-fa fs-16" aria-label="gender">
+                    <option selected value="all">Все</option>
+                    <option value="male">М</option>
+                    <option value="female">Ж</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="sportsDegreeFilter">Разряд</label>
+                <div class="d-flex gap-3">
+                  <select id="sportsDegreeFilter" class="form-select bg-fa fs-16" aria-label="sportsDegree">
+                    <option selected value="all">Выберите разряд</option>
+                    <option value="male">М</option>
+                    <option value="female">Ж</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="regionFilter">Регион</label>
+                <div class="d-flex gap-3">
+                  <select id="regionFilter" class="form-select bg-fa fs-16" aria-label="region">
+                    <option selected value="all">Выберите регион</option>
+                    <option value="male">М</option>
+                    <option value="female">Ж</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="cityFilter">Город</label>
+                <div class="d-flex gap-3">
+                  <select id="cityFilter" class="form-select bg-fa fs-16" aria-label="city">
+                    <option selected value="all">Выберите город</option>
+                    <option value="male">М</option>
+                    <option value="female">Ж</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="schoolFilter">Школа</label>
+                <div class="d-flex gap-3">
+                  <select id="schoolFilter" class="form-select bg-fa fs-16" aria-label="school">
+                    <option selected value="all">Выберите город</option>
+                    <option value="male">М</option>
+                    <option value="female">Ж</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="groupFilter">Группа<span class="color-red">*</span></label>
+                <div class="d-flex gap-3">
+                  <select id="groupFilter" class="form-select bg-fa fs-16" aria-label="group">
+                    <option selected disabled value="">Выберите группу</option>
+                    <option value="athlete">Спортсмен</option>
+                    <option value="trainer">Тренер</option>
+                    <option value="chairman">Председатель</option>
+                    <option value="administrator">Администратор</option>
+                    <option value="methodist">Методист</option>
+                    <option value="deputy-chairman">Заместитель председателя</option>
+                    <option value="head-coach">Старший тренер</option>
+                    <option value="accountant">Бухгалтер</option>
+                    <option value="executive-director">Исполнительный директор</option>
+                    <option value="director">Директор</option>
+                    <option value="deputy-director">Заместитель директор</option>
+                    <option value="judge">Судья</option>
+                    <option value="press-secretary">Пресс-секретарь</option>
+                    <option value="no-group">Без группы</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="privilegeFilter">Наличие льгот</label>
+                <div class="d-flex gap-3">
+                  <select id="privilegeFilter" class="form-select bg-fa fs-16" aria-label="privilege">
+                    <option selected value="all">Все</option>
+                    <option value="male">М</option>
+                    <option value="female">Ж</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="privilegeFilter">Активность члена</label>
+                <div class="d-flex gap-3">
+                  <select id="privilegeFilter" class="form-select bg-fa fs-16" aria-label="privilege">
+                    <option selected value="all">Все</option>
+                    <option value="male">М</option>
+                    <option value="female">Ж</option>
                   </select>
                 </div>
               </div>
             </div>
-            <div
-              id="members-table"
-              class="ag-theme-quartz"
-              style="height: 500px; width: 100%"
-            ></div>
+            <div id="members-table" class="ag-theme-quartz" style="height: 500px; width: 100%"></div>
           </section>
         </div>
       </main>
       @@include('./components/_cabinet-footer.html')
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
-
     @@include('./components/_cabinet-script.html')
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <script src="./js/employee-members-table.js"></script>
   </body>
 </html>
