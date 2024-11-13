@@ -2253,7 +2253,7 @@
     color: var(--dark-gray);
   }
   .modal-dialog {
-    top: 40%;
+    top: 25%;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -2277,6 +2277,10 @@
     --ag-wrapper-border-radius: 0 !important;
     --ag-border-radius: 0 !important;
   }
+  .ag-theme-quartz .ag-cell-focus {
+    border-color: transparent !important;
+    outline: none !important;
+  }
   .ag-center-cols-viewport .ag-cell {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -2288,6 +2292,9 @@
   }
   .ag-theme-quartz .ag-header {
     --ag-header-background-color: var(--light-gray);
+  }
+  .ag-cell .ag-cell-focus {
+    border: 3px solid black;
   }
   .ag-badge .ag-cell-value {
     padding: 8px 16px;
@@ -2449,6 +2456,49 @@
     width: fit-content;
     cursor: not-allowed;
   }
+  .button--secondary-no-stretch {
+    background-color: var(--white);
+    color: var(--main);
+    border: 1px solid var(--main);
+    font-size: 16px;
+    line-height: 21px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 12px 24px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--secondary-no-stretch:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .button--secondary-no-stretch:active {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--secondary-no-stretch:hover {
+      color: var(--white);
+    }
+  }
+  @media (hover: none) {
+    .button--secondary-no-stretch:active {
+      color: var(--white);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--secondary-no-stretch:hover {
+      border-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .button--secondary-no-stretch:active {
+      border-color: var(--main-hover);
+    }
+  }
   .button--secondary {
     background-color: var(--white);
     color: var(--main);
@@ -2486,6 +2536,46 @@
   }
   @media (hover: none) {
     .button--secondary:active {
+      border-color: var(--main-hover);
+    }
+  }
+  .button--secondary-small {
+    background-color: var(--white);
+    color: var(--main);
+    border: 1px solid var(--main);
+    font-size: 16px;
+    line-height: 21px;
+    padding: 6px 16px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--secondary-small:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .button--secondary-small:active {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--secondary-small:hover {
+      color: var(--white);
+    }
+  }
+  @media (hover: none) {
+    .button--secondary-small:active {
+      color: var(--white);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .button--secondary-small:hover {
+      border-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .button--secondary-small:active {
       border-color: var(--main-hover);
     }
   }
@@ -2913,6 +3003,13 @@
     width: 24px;
     background-color: var(--white);
     border: 1px solid var(--dark-gray);
+  }
+  .form__checkbox-container input:disabled:checked ~ .form__checkbox-checkmark--dark {
+    background-color: var(--gray);
+    border: 1px solid var(--gray);
+  }
+  .form__checkbox-container input:disabled:checked ~ .form__checkbox-checkmark--dark:after {
+    border-color: var(--white);
   }
   .form__checkbox-checkmark--dark.invalid {
     border: 1px solid var(--red);
