@@ -80,17 +80,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const city = document.getElementById("city");
   const school = document.getElementById("school");
 
-  region.addEventListener("change", function () {
-    if (region.value !== "") {
-      city.disabled = false;
-    }
-  });
+  if (region) {
+    region.addEventListener("change", function () {
+      if (region.value !== "") {
+        city.disabled = false;
+      }
+    });
+  }
 
-  city.addEventListener("change", function () {
-    if (city.value !== "") {
-      school.disabled = false;
-    }
-  });
+  if (city) {
+    city.addEventListener("change", function () {
+      if (city.value !== "") {
+        school.disabled = false;
+      }
+    });
+  }
 });
 
 const phoneInput = document.getElementById("phone");
@@ -247,7 +251,9 @@ document.addEventListener("DOMContentLoaded", function () {
       return phoneValid;
     }
 
-    phoneInput.addEventListener("input", validatePhone);
+    if (phoneInput) {
+      phoneInput.addEventListener("input", validatePhone);
+    }
 
     function updateStepper(index) {
       stepperItems.forEach((step, idx) => {
@@ -260,22 +266,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function validateStep(stepIndex) {
-      const inputs = steps[stepIndex].querySelectorAll(
-        "input[required]:not(.hidden), select[required]:not(.hidden)"
-      );
-      let allValid = true;
+      if (steps[stepIndex]) {
+        const inputs = steps[stepIndex].querySelectorAll(
+          "input[required]:not(.hidden), select[required]:not(.hidden)"
+        );
 
-      inputs.forEach((input) => {
-        if (!input.checkValidity()) {
-          allValid = false;
+        let allValid = true;
+
+        inputs.forEach((input) => {
+          if (!input.checkValidity()) {
+            allValid = false;
+          }
+        });
+
+        if (stepIndex == 2) {
+          const isValid = validatePhone();
+          return isValid;
         }
-      });
-
-      if (stepIndex == 2) {
-        const isValid = validatePhone();
-        return isValid;
+        return allValid;
       }
-      return allValid;
     }
 
     function toggleNextButton(stepIndex) {
@@ -286,14 +295,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function toggleSubmitButton() {
       const lastStepIndex = steps.length - 1;
-      const isFileSelected = fileInput.files.length > 0;
-      const isCheckboxChecked = benefitCheckbox.checked;
-      const allFieldsValid = validateStep(lastStepIndex);
 
-      if (isCheckboxChecked) {
-        submitButton.disabled = !(isFileSelected && allFieldsValid);
-      } else {
-        submitButton.disabled = !allFieldsValid;
+      if (fileInput && benefitCheckbox) {
+        const isFileSelected = fileInput.files.length > 0;
+
+        const isCheckboxChecked = benefitCheckbox.checked;
+
+        const allFieldsValid = validateStep(lastStepIndex);
+
+        if (isCheckboxChecked) {
+          submitButton.disabled = !(isFileSelected && allFieldsValid);
+        } else {
+          submitButton.disabled = !allFieldsValid;
+        }
       }
     }
 
@@ -386,8 +400,12 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    benefitCheckbox.addEventListener("change", toggleSubmitButton);
-    fileInput.addEventListener("change", toggleSubmitButton);
+    if (benefitCheckbox) {
+      benefitCheckbox.addEventListener("change", toggleSubmitButton);
+    }
+    if (fileInput) {
+      fileInput.addEventListener("change", toggleSubmitButton);
+    }
 
     showStep(currentStep);
     steps.forEach((_, index) => addValidationListeners(index));
@@ -553,37 +571,43 @@ document.addEventListener("DOMContentLoaded", function () {
   const deleteButton = document.getElementById("custom-delete-button");
   const memberCardImg = document.querySelector(".member-card__avatar");
 
-  customFileButton.addEventListener("click", () => {
-    fileInput.click();
-  });
+  if (customFileButton) {
+    customFileButton.addEventListener("click", () => {
+      fileInput.click();
+    });
+  }
 
-  fileInput.addEventListener("change", function (event) {
-    const file = event.target.files[0];
+  if (fileInput) {
+    fileInput.addEventListener("change", function (event) {
+      const file = event.target.files[0];
 
-    if (file) {
-      const reader = new FileReader();
+      if (file) {
+        const reader = new FileReader();
 
-      reader.onload = function (e) {
-        profileImg.src = e.target.result;
-        memberCardImg.src = e.target.result;
-        memberCardImg.classList.remove("hidden");
+        reader.onload = function (e) {
+          profileImg.src = e.target.result;
+          memberCardImg.src = e.target.result;
+          memberCardImg.classList.remove("hidden");
 
-        profileImgContainer.classList.remove("icon");
-        profileImgContainer.classList.add("image");
-        deleteButton.classList.remove("hidden");
-      };
+          profileImgContainer.classList.remove("icon");
+          profileImgContainer.classList.add("image");
+          deleteButton.classList.remove("hidden");
+        };
 
-      reader.readAsDataURL(file);
-    }
-  });
+        reader.readAsDataURL(file);
+      }
+    });
+  }
 
-  deleteButton.addEventListener("click", function () {
-    profileImg.src = "./img/icons/profile-icon.svg";
-    profileImgContainer.classList.add("icon");
-    profileImgContainer.classList.remove("image");
-    deleteButton.classList.add("hidden");
-    memberCardImg.classList.add("hidden");
-  });
+  if (deleteButton) {
+    deleteButton.addEventListener("click", function () {
+      profileImg.src = "./img/icons/profile-icon.svg";
+      profileImgContainer.classList.add("icon");
+      profileImgContainer.classList.remove("image");
+      deleteButton.classList.add("hidden");
+      memberCardImg.classList.add("hidden");
+    });
+  }
 });
 
 const AG_GRID_LOCALE_RU = {
