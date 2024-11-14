@@ -28,15 +28,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const city = document.getElementById("city");
   const school = document.getElementById("school");
 
-  region.addEventListener("change", function () {
-    if (region.value !== "") {
-      city.disabled = false;
-    }
-  });
+  if (region) {
+    region.addEventListener("change", function () {
+      if (region.value !== "") {
+        city.disabled = false;
+      }
+    });
+  }
 
-  city.addEventListener("change", function () {
-    if (city.value !== "") {
-      school.disabled = false;
-    }
-  });
+  if (city) {
+    city.addEventListener("change", function () {
+      if (city.value !== "") {
+        school.disabled = false;
+      }
+    });
+  }
 });

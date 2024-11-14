@@ -541,6 +541,16 @@ body.no-scroll {
   }
 }
 
+.search-results__card a b {
+  font-weight: 700;
+  color: var(--main);
+}
+
+.search-results__card p b {
+  font-weight: 500;
+  color: var(--main);
+}
+
 #accordionCookie .accordion-header {
   background-color: var(--white);
 }

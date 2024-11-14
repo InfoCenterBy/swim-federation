@@ -41,7 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
       return phoneValid;
     }
 
-    phoneInput.addEventListener("input", validatePhone);
+    if (phoneInput) {
+      phoneInput.addEventListener("input", validatePhone);
+    }
 
     function updateStepper(index) {
       stepperItems.forEach((step, idx) => {
@@ -54,22 +56,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function validateStep(stepIndex) {
-      const inputs = steps[stepIndex].querySelectorAll(
-        "input[required]:not(.hidden), select[required]:not(.hidden)"
-      );
-      let allValid = true;
+      if (steps[stepIndex]) {
+        const inputs = steps[stepIndex].querySelectorAll(
+          "input[required]:not(.hidden), select[required]:not(.hidden)"
+        );
 
-      inputs.forEach((input) => {
-        if (!input.checkValidity()) {
-          allValid = false;
+        let allValid = true;
+
+        inputs.forEach((input) => {
+          if (!input.checkValidity()) {
+            allValid = false;
+          }
+        });
+
+        if (stepIndex == 2) {
+          const isValid = validatePhone();
+          return isValid;
         }
-      });
-
-      if (stepIndex == 2) {
-        const isValid = validatePhone();
-        return isValid;
+        return allValid;
       }
-      return allValid;
     }
 
     function toggleNextButton(stepIndex) {
@@ -80,14 +85,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function toggleSubmitButton() {
       const lastStepIndex = steps.length - 1;
-      const isFileSelected = fileInput.files.length > 0;
-      const isCheckboxChecked = benefitCheckbox.checked;
-      const allFieldsValid = validateStep(lastStepIndex);
 
-      if (isCheckboxChecked) {
-        submitButton.disabled = !(isFileSelected && allFieldsValid);
-      } else {
-        submitButton.disabled = !allFieldsValid;
+      if (fileInput && benefitCheckbox) {
+        const isFileSelected = fileInput.files.length > 0;
+
+        const isCheckboxChecked = benefitCheckbox.checked;
+
+        const allFieldsValid = validateStep(lastStepIndex);
+
+        if (isCheckboxChecked) {
+          submitButton.disabled = !(isFileSelected && allFieldsValid);
+        } else {
+          submitButton.disabled = !allFieldsValid;
+        }
       }
     }
 
@@ -180,8 +190,12 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    benefitCheckbox.addEventListener("change", toggleSubmitButton);
-    fileInput.addEventListener("change", toggleSubmitButton);
+    if (benefitCheckbox) {
+      benefitCheckbox.addEventListener("change", toggleSubmitButton);
+    }
+    if (fileInput) {
+      fileInput.addEventListener("change", toggleSubmitButton);
+    }
 
     showStep(currentStep);
     steps.forEach((_, index) => addValidationListeners(index));
