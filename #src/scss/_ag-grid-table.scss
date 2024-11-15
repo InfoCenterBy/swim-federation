@@ -22,6 +22,8 @@
 }
 
 .ag-badge {
+  font-weight: 500;
+
   & .ag-cell-value {
     padding: 8px 16px;
     color: var(--black);
@@ -42,6 +44,10 @@
   &.yellow span {
     background-color: var(--yellow);
     color: var(--orange);
+  }
+  &.gray span {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
   }
 }
 

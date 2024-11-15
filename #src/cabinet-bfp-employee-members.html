@@ -43,11 +43,7 @@
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="sportsDegreeFilter">Разряд</label>
                   <div class="d-flex gap-3">
-                    <select
-                      id="sportsDegreeFilter"
-                      class="form-select bg-fa fs-16"
-                      aria-label="sportsDegree"
-                    >
+                    <select id="sportsDegreeFilter" class="form-select bg-fa fs-16" aria-label="sportsDegree">
                       <option selected value="all">Выберите разряд</option>
                       <option value="male">М</option>
                       <option value="female">Ж</option>
@@ -111,11 +107,7 @@
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="privilegeFilter">Наличие льгот</label>
                   <div class="d-flex gap-3">
-                    <select
-                      id="privilegeFilter"
-                      class="form-select bg-fa fs-16"
-                      aria-label="privilege"
-                    >
+                    <select id="privilegeFilter" class="form-select bg-fa fs-16" aria-label="privilege">
                       <option selected value="all">Все</option>
                       <option value="male">М</option>
                       <option value="female">Ж</option>
@@ -125,11 +117,7 @@
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="privilegeFilter">Активность члена</label>
                   <div class="d-flex gap-3">
-                    <select
-                      id="privilegeFilter"
-                      class="form-select bg-fa fs-16"
-                      aria-label="privilege"
-                    >
+                    <select id="privilegeFilter" class="form-select bg-fa fs-16" aria-label="privilege">
                       <option selected value="all">Все</option>
                       <option value="male">М</option>
                       <option value="female">Ж</option>
@@ -139,11 +127,7 @@
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="privilegeFilter">Оплата взносов</label>
                   <div class="d-flex gap-3">
-                    <select
-                      id="privilegeFilter"
-                      class="form-select bg-fa fs-16"
-                      aria-label="privilege"
-                    >
+                    <select id="privilegeFilter" class="form-select bg-fa fs-16" aria-label="privilege">
                       <option selected value="all">Все</option>
                       <option value="male">М</option>
                       <option value="female">Ж</option>
@@ -153,27 +137,46 @@
               </div>
             </div>
 
-            <button id="columnToggleButton">Выбрать колонки</button>
-
-            <div id="columnSelector" class="">
-              <div class="modal-content">
-                <h3>Выберите колонки для отображения</h3>
-                <form id="columnForm">
-                  <!-- Чекбоксы будут добавлены динамически -->
-                </form>
-                <button id="applyColumns">Применить</button>
-                <button id="closeModal">Закрыть</button>
+            <div>
+              <p class="color-dark-gray">*ВВ-вступительный взнос, ЧВ-членский взнос</p>
+              <div class="form__input--small mb-0">
+                <input class="bg-fa" id="globalSearch" type="text" placeholder="Введите запрос" />
+              </div>
+              <button class="button border-1-main"><i class="mr-3 bi bi-upload"></i><span>Загрузить</span></button>
+              <button class="button--secondary"><i class="mr-3 bi bi-download"></i><span>Скачать</span></button>
+              <button id="columnToggleButton">Выбрать колонки</button>
+              <div id="columnSelector" class="">
+                <div class="modal-content">
+                  <h3>Выберите колонки для отображения</h3>
+                  <form id="columnForm"></form>
+                  <button id="applyColumns">Применить</button>
+                  <button id="closeModal">Закрыть</button>
+                </div>
               </div>
             </div>
-            <div
-              id="members-table"
-              class="ag-theme-quartz"
-              style="height: 500px; width: 100%"
-            ></div>
+
+            <div id="members-table" class="ag-theme-quartz" style="height: 500px; width: 100%"></div>
           </section>
         </div>
       </main>
       @@include('./components/_cabinet-footer.html')
+    </div>
+    <div class="modal fade" id="deleteMember" tabindex="-1" aria-labelledby="deleteMemberLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="deleteMemberLabel">Удалить члена ОО «БФП»</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="color-dark-gray mb-4">Вы действительно хотите удалить члена ОО «БФП» ?</p>
+            <div class="d-flex justify-content-evenly gap-5">
+              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">Удалить</button>
+              <button type="button" class="button--secondary px-4" data-bs-dismiss="modal" aria-label="Close">Отмена</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     @@include('./components/_cabinet-script.html')
     <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
