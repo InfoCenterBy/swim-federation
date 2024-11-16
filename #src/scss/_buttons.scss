@@ -1,7 +1,7 @@
 .button {
   background-color: var(--main);
   color: var(--white);
-  padding: 12px 24px;
+  padding: 10px 24px;
   display: inline-block;
   font-size: 16px;
   transition: $transition-2;
@@ -36,7 +36,7 @@
 .button--default {
   background-color: var(--main);
   color: var(--white);
-  padding: 12px 24px;
+  padding: 10px 24px;
   display: inline-block;
   font-size: 16px;
   transition: $transition-2;
@@ -52,7 +52,7 @@
 .button--no-stretch {
   background-color: var(--main);
   color: var(--white);
-  padding: 12px 16px;
+  padding: 10px 16px;
   display: inline-block;
   font-size: 16px;
   transition: $transition-2;
@@ -68,7 +68,7 @@
 .button:disabled {
   background-color: var(--gray);
   color: var(--dark-gray);
-  padding: 12px 16px;
+  padding: 10px 16px;
   display: inline-block;
   font-size: 16px;
   transition: $transition-2;
@@ -90,7 +90,7 @@
 .button--secondary:disabled {
   background-color: var(--gray);
   color: var(--dark-gray);
-  padding: 12px 16px;
+  padding: 10px 16px;
   display: inline-block;
   font-size: 16px;
   transition: $transition-2;
@@ -106,7 +106,7 @@
   line-height: 21px;
   width: fit-content;
 
-  padding: 12px 24px;
+  padding: 10px 24px;
   transition: $transition-2;
 
   @include hover(background-color, var(--main-hover));
@@ -121,7 +121,7 @@
   font-size: 16px;
   line-height: 21px;
 
-  padding: 12px 24px;
+  padding: 10px 24px;
   transition: $transition-2;
 
   @include hover(background-color, var(--main-hover));
@@ -151,7 +151,7 @@
   font-size: 16px;
   line-height: 21px;
 
-  padding: 12px 24px;
+  padding: 10px 24px;
   transition: $transition-2;
 
   @include hover(background-color, var(--main-hover));
