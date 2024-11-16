@@ -2277,6 +2277,7 @@
     width: 90%;
   }
   .modal-content {
+    max-width: 480px;
     padding: 40px;
     border-radius: 0;
     background-color: var(--white);
@@ -2304,6 +2305,9 @@
   .ag-cell .ag-cell-focus {
     border: 3px solid black;
   }
+  .ag-badge {
+    font-weight: 500;
+  }
   .ag-badge .ag-cell-value {
     padding: 8px 16px;
     color: var(--black);
@@ -2323,6 +2327,15 @@
   .ag-badge.yellow span {
     background-color: var(--yellow);
     color: var(--orange);
+  }
+  .ag-badge.gray span {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+  }
+  .ag-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
   }
   .button {
     background-color: var(--main);
