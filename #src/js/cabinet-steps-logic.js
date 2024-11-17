@@ -93,10 +93,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const allFieldsValid = validateStep(lastStepIndex);
 
-        if (isCheckboxChecked) {
-          submitButton.disabled = !(isFileSelected && allFieldsValid);
-        } else {
-          submitButton.disabled = !allFieldsValid;
+        if (submitButton) {
+          if (isCheckboxChecked) {
+            submitButton.disabled = !(isFileSelected && allFieldsValid);
+          } else {
+            submitButton.disabled = !allFieldsValid;
+          }
         }
       }
     }
