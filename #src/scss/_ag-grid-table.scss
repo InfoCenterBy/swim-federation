@@ -61,3 +61,15 @@
   user-select: text !important;
   -webkit-user-select: text !important;
 }
+.columns-select__body {
+  background-color: var(--white);
+  width: 250px;
+  padding: 12px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(103%);
+  z-index: 3;
+  height: 400px;
+  overflow-y: scroll;
+}

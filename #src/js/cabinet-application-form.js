@@ -151,14 +151,14 @@ document.addEventListener("DOMContentLoaded", function () {
   //   }
   // });
   const data1 = {
-    region1: {
-      city1: ["Школа 1", "Школа 2"],
+    "Брестская область": {
+      Брест: ["Школа 1", "Школа 2"],
       city2: ["Школа 3", "Школа 4"],
       city3: ["Школа 5", "Школа 6"],
       city4: ["Школа 7", "Школа 8"],
     },
-    region2: {
-      city5: ["Школа 9", "Школа 10"],
+    "Гомельская область": {
+      Гомель: ["Школа 9", "Школа 10"],
       city6: ["Школа 11", "Школа 12"],
       city7: ["Школа 13", "Школа 14"],
       city8: ["Школа 15", "Школа 16"],
@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function populateCities(regionName) {
     if (citySelect) {
-      citySelect.innerHTML = '<option value="">Выберите город</option>';
+      citySelect.innerHTML = '<option value="all">Выберите город</option>';
       const cities = data1[regionName];
       if (cities) {
         Object.keys(cities).forEach((cityName) => {
@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function populateSchools(regionName, cityName) {
     if (schoolSelect) {
-      schoolSelect.innerHTML = '<option value="">Выберите школу</option>';
+      schoolSelect.innerHTML = '<option value="all">Выберите школу</option>';
       const cities = data1[regionName];
       if (cities) {
         const schools = cities[cityName];
