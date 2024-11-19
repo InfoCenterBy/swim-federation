@@ -72,9 +72,18 @@ const gridOptions = {
       field: "group",
       headerName: "Группа",
       cellClassRules: {
-        "ag-badge blue": (params) => params.value === "Исполнительный директор" || "Генеральный секретарь" || "Судья" || "Пресс-секретарь",
-        "ag-badge green": (params) => params.value === "Председатель" || "Методист" || "Заместитель председателя" || "Бухгалтер",
-        "ag-badge red": (params) => params.value === "Спортсмен" || "Администратор" || "Директор" || "Заместитель директора",
+        "ag-badge blue": (params) =>
+          params.value === "Исполнительный директор" ||
+          "Генеральный секретарь" ||
+          "Судья" ||
+          "Пресс-секретарь",
+        "ag-badge green": (params) =>
+          params.value === "Председатель" ||
+          "Методист" ||
+          "Заместитель председателя" ||
+          "Бухгалтер",
+        "ag-badge red": (params) =>
+          params.value === "Спортсмен" || "Администратор" || "Директор" || "Заместитель директора",
         "ag-badge yellow": (params) => params.value === "Тренер" || "Старший тренер",
         "ag-badge gray": (params) => params.value === "Без группы",
       },
@@ -193,9 +202,11 @@ const gridOptions = {
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
-    const requestNumberMatch = !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
+    const requestNumberMatch =
+      !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
 
-    const emailMatch = !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
+    const emailMatch =
+      !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
 
     const statusMatch = statusFilterValue === "Все" || node.data.status === statusFilterValue;
 
@@ -246,7 +257,7 @@ function createColumnSelectionForm() {
     if (column) {
       checkbox.checked = column.isVisible();
     } else {
-      checkbox.checked = true; // По умолчанию показываем колонку
+      checkbox.checked = true;
     }
 
     const span = document.createElement("span");
@@ -256,7 +267,6 @@ function createColumnSelectionForm() {
     label.appendChild(span);
     form.appendChild(label);
 
-    // Обработчик события на изменение чекбокса
     checkbox.addEventListener("change", () => {
       gridApi.setColumnsVisible([colDef.field], checkbox.checked);
 
