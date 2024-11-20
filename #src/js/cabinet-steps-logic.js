@@ -31,11 +31,15 @@ document.addEventListener("DOMContentLoaded", function () {
       let phoneValid = true;
 
       if (phoneDigits.length === 12) {
-        nextButtonStep3.disabled = false;
+        if (nextButtonStep3) {
+          nextButtonStep3.disabled = false;
+        }
         phoneValid = true;
       } else {
-        nextButtonStep3.disabled = true;
-        phoneValid = false;
+        if (nextButtonStep3) {
+          nextButtonStep3.disabled = true;
+          phoneValid = false;
+        }
       }
 
       return phoneValid;

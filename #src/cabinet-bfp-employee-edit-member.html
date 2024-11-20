@@ -60,18 +60,94 @@
 
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="first-name">
-                    Имя<span class="color-red">*</span>
+                    Отчество<span class="color-red">*</span>
                   </label>
-                  <input class="bg-fa" id="first-name" type="text" required value="Иван" />
+                  <input class="bg-fa" id="first-name" type="text" required value="Иванович" />
+                </div>
+                <div class="form__input--small mb-0">
+                  <label class="fs-16" for="surname"> Имя<span class="color-red">*</span> </label>
+                  <input class="bg-fa" id="surname" type="text" required value="Иван" />
+                </div>
+
+                <div class="form__input--small mb-0">
+                  <label class="fs-16" for="group">Группа<span class="color-red">*</span></label>
+                  <div class="d-flex gap-3">
+                    <select id="group" class="form-select bg-fa fs-16" aria-label="group">
+                      <option value="athlete">Спортсмен</option>
+                      <option value="trainer">Тренер</option>
+                      <option value="chairman">Председатель</option>
+                      <option value="administrator">Администратор</option>
+                      <option value="methodist">Методист</option>
+                      <option value="deputy-chairman">Заместитель председателя</option>
+                      <option value="head-coach">Старший тренер</option>
+                      <option value="accountant">Бухгалтер</option>
+                      <option value="executive-director">Исполнительный директор</option>
+                      <option value="director">Директор</option>
+                      <option value="deputy-director">Заместитель директор</option>
+                      <option value="judge">Судья</option>
+                      <option value="press-secretary">Пресс-секретарь</option>
+                      <option value="no-group">Без группы</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form__input--small mb-0">
+                  <label class="fs-16" for="membershipNumber"
+                    >Номер членского билета<span class="color-red">*</span></label
+                  >
+                  <input class="bg-fa" id="membershipNumber" type="text" required value="2331313" />
+                </div>
+
+                <div class="form__input--small mb-0">
+                  <label class="fs-16" for="surname">
+                    Дата рождения<span class="color-red">*</span>
+                  </label>
+                  <div class="d-flex gap-3">
+                    <select
+                      id="day-select"
+                      class="birth-day-select form-select bg-fa fs-16"
+                      aria-label="Birth day"
+                      required
+                    >
+                      <option selected value="">10</option>
+                    </select>
+                    <select
+                      id="month-select"
+                      class="form-select bg-fa fs-16"
+                      aria-label="Birth month"
+                      required
+                    >
+                      <option selected value="January">Январь</option>
+                      <option value="February">Февраль</option>
+                      <option value="March">Март</option>
+                      <option value="April">Апрель</option>
+                      <option value="May">Май</option>
+                      <option value="June">Июнь</option>
+                      <option value="July">Июль</option>
+                      <option value="August">Август</option>
+                      <option value="September">Сентябрь</option>
+                      <option value="October">Октябрь</option>
+                      <option value="November">Ноябрь</option>
+                      <option value="December">Декабрь</option>
+                    </select>
+                    <select
+                      id="year-select"
+                      class="birth-year-select form-select bg-fa fs-16"
+                      aria-label="Birth year"
+                      required
+                    >
+                      <option selected value="">1992</option>
+                    </select>
+                  </div>
                 </div>
 
                 <div class="d-flex gap-3">
                   <div class="form__input--small mb-0 w-75">
-                    <label class="fs-16" for="surname">
-                      Отчество
+                    <label class="fs-16" for="athleteID">
+                      Athlete ID
                       <span class="color-red">*</span>
                     </label>
-                    <input class="bg-fa" id="surname" type="text" required value="Иванович" />
+                    <input class="bg-fa" id="athleteID" type="text" required value="22222" />
                   </div>
                   <div class="form__input--small mb-0 w-25">
                     <label class="fs-16" for="surname">
@@ -89,165 +165,280 @@
                     </select>
                   </div>
                 </div>
-
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="surname">
-                    Дата рождения
-                    <span class="color-red">*</span>
-                  </label>
-                  <div class="d-flex gap-3">
-                    <select
-                      id="day-select"
-                      class="birth-day-select form-select bg-fa fs-16"
-                      aria-label="Birth day"
-                      required
-                    >
-                      <option selected value="">10</option>
-                    </select>
-                    <select
-                      id="month-select"
-                      class="form-select bg-fa fs-16"
-                      aria-label="Birth month"
-                      required
-                    >
-                      <option selected value="">Январь</option>
-                    </select>
-                    <select
-                      id="year-select"
-                      class="birth-year-select form-select bg-fa fs-16"
-                      aria-label="Birth year"
-                      required
-                    >
-                      <option selected value="">1992</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="address">
-                    Домашний адрес<span class="color-red">*</span>
-                  </label>
-                  <input
-                    class="bg-fa"
-                    id="address"
-                    type="text"
-                    value="г. Минск, ул. Казинца, 1-22"
-                    required
-                  />
-                </div>
               </div>
-              <div class="mb-3 d-flex flex-column gap-3">
-                <h4 class="h4-title mb-3">Паспортные данные</h4>
 
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="passport-number">
-                    № паспорта<span class="color-red">*</span>
-                  </label>
-                  <input
-                    class="bg-fa"
-                    id="passport-number"
-                    type="text"
-                    required
-                    value="MP23901134"
-                  />
-                </div>
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="id-number">
-                    Идентификационный номер<span class="color-red">*</span>
-                  </label>
-                  <input
-                    class="bg-fa"
-                    id="id-number"
-                    type="text"
-                    required
-                    value="2847569342B23A1"
-                  />
-                </div>
-
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="issue-date">
-                    Дата выдачи<span class="color-red">*</span>
-                  </label>
-                  <div class="d-flex gap-3">
-                    <select
-                      id="day-select"
-                      class="form-select bg-fa fs-16"
-                      aria-label="day"
-                      required
-                    >
-                      <option selected value="" disabels>10</option>
-                    </select>
-                    <select class="form-select bg-fa fs-16" aria-label="month" required>
-                      <option selected>Апрель</option>
-                    </select>
-                    <select
-                      id="year-select"
-                      class="form-select bg-fa fs-16"
-                      aria-label="year"
-                      required
-                    >
-                      <option selected value="">2021</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
               <div class="mb-3 d-flex flex-column gap-3">
                 <h4 class="h4-title mb-3">Контактные данные</h4>
+                <div class="form__input--small mb-0">
+                  <label class="fs-16" for="email">Email</label>
+                  <input class="bg-fa" id="email" type="email" value="ivanov@mail.com" />
+                </div>
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="phone">
                     Мобильный телефон<span class="color-red">*</span>
                   </label>
                   <input
-                    class="bg-fa"
+                    class="bg-fa color-black"
                     id="phone"
                     type="text"
                     required
                     value="+375 (44) 555-66-90"
                   />
                 </div>
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="second-phone">
-                    Мобильный номер<span class="color-dark-gray">(дополнительный)</span>
-                  </label>
-                  <input class="bg-fa" id="second-phone" type="text" value="+375 (__) ___-__-__" />
-                </div>
+              </div>
 
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="email">Email</label>
-                  <input class="bg-fa" id="email" type="email" value="ivanov@mail.com" />
+              <div class="mb-3 d-flex flex-column gap-3">
+                <h4 class="h4-title mb-3">Отметка об оплате взносов</h4>
+                <div class="mb-2">
+                  <p class="mb-2">Членский взнос</p>
+                  <div class="d-flex gap-3 flex-wrap">
+                    <div class="d-flex p-2 gap-3 align-items-center border-1-red">
+                      <p>2020</p>
+                      <svg
+                        width="20"
+                        height="21"
+                        viewBox="0 0 20 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_4606_17326)">
+                          <path
+                            d="M10 19.25C7.67936 19.25 5.45376 18.3281 3.81282 16.6872C2.17187 15.0462 1.25 12.8206 1.25 10.5C1.25 8.17936 2.17187 5.95376 3.81282 4.31282C5.45376 2.67187 7.67936 1.75 10 1.75C12.3206 1.75 14.5462 2.67187 16.1872 4.31282C17.8281 5.95376 18.75 8.17936 18.75 10.5C18.75 12.8206 17.8281 15.0462 16.1872 16.6872C14.5462 18.3281 12.3206 19.25 10 19.25ZM10 20.5C12.6522 20.5 15.1957 19.4464 17.0711 17.5711C18.9464 15.6957 20 13.1522 20 10.5C20 7.84784 18.9464 5.3043 17.0711 3.42893C15.1957 1.55357 12.6522 0.5 10 0.5C7.34784 0.5 4.8043 1.55357 2.92893 3.42893C1.05357 5.3043 0 7.84784 0 10.5C0 13.1522 1.05357 15.6957 2.92893 17.5711C4.8043 19.4464 7.34784 20.5 10 20.5Z"
+                            fill="#CB333D"
+                          />
+                          <path
+                            d="M5.8075 6.3075C5.86556 6.2493 5.93453 6.20312 6.01046 6.17161C6.08639 6.1401 6.16779 6.12388 6.25 6.12388C6.33221 6.12388 6.41361 6.1401 6.48954 6.17161C6.56547 6.20312 6.63444 6.2493 6.6925 6.3075L10 9.61625L13.3075 6.3075C13.3656 6.24939 13.4346 6.20329 13.5105 6.17185C13.5864 6.1404 13.6678 6.12421 13.75 6.12421C13.8322 6.12421 13.9136 6.1404 13.9895 6.17185C14.0654 6.20329 14.1344 6.24939 14.1925 6.3075C14.2506 6.36561 14.2967 6.4346 14.3282 6.51052C14.3596 6.58644 14.3758 6.66782 14.3758 6.75C14.3758 6.83218 14.3596 6.91356 14.3282 6.98948C14.2967 7.0654 14.2506 7.13439 14.1925 7.1925L10.8837 10.5L14.1925 13.8075C14.2506 13.8656 14.2967 13.9346 14.3282 14.0105C14.3596 14.0864 14.3758 14.1678 14.3758 14.25C14.3758 14.3322 14.3596 14.4136 14.3282 14.4895C14.2967 14.5654 14.2506 14.6344 14.1925 14.6925C14.1344 14.7506 14.0654 14.7967 13.9895 14.8282C13.9136 14.8596 13.8322 14.8758 13.75 14.8758C13.6678 14.8758 13.5864 14.8596 13.5105 14.8282C13.4346 14.7967 13.3656 14.7506 13.3075 14.6925L10 11.3837L6.6925 14.6925C6.63439 14.7506 6.5654 14.7967 6.48948 14.8282C6.41356 14.8596 6.33218 14.8758 6.25 14.8758C6.16782 14.8758 6.08644 14.8596 6.01052 14.8282C5.9346 14.7967 5.86561 14.7506 5.8075 14.6925C5.74939 14.6344 5.70329 14.5654 5.67185 14.4895C5.6404 14.4136 5.62421 14.3322 5.62421 14.25C5.62421 14.1678 5.6404 14.0864 5.67185 14.0105C5.70329 13.9346 5.74939 13.8656 5.8075 13.8075L9.11625 10.5L5.8075 7.1925C5.7493 7.13444 5.70312 7.06547 5.67161 6.98954C5.6401 6.91361 5.62388 6.83221 5.62388 6.75C5.62388 6.66779 5.6401 6.58639 5.67161 6.51046C5.70312 6.43453 5.7493 6.36556 5.8075 6.3075Z"
+                            fill="#CB333D"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_4606_17326">
+                            <rect
+                              width="20"
+                              height="20"
+                              fill="white"
+                              transform="translate(0 0.5)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="d-flex p-2 gap-3 align-items-center border-1-green-success">
+                      <p>2021</p>
+                      <svg
+                        width="20"
+                        height="21"
+                        viewBox="0 0 20 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_4606_17331)">
+                          <path
+                            d="M10 19.25C7.67936 19.25 5.45376 18.3281 3.81282 16.6872C2.17187 15.0462 1.25 12.8206 1.25 10.5C1.25 8.17936 2.17187 5.95376 3.81282 4.31282C5.45376 2.67187 7.67936 1.75 10 1.75C12.3206 1.75 14.5462 2.67187 16.1872 4.31282C17.8281 5.95376 18.75 8.17936 18.75 10.5C18.75 12.8206 17.8281 15.0462 16.1872 16.6872C14.5462 18.3281 12.3206 19.25 10 19.25ZM10 20.5C12.6522 20.5 15.1957 19.4464 17.0711 17.5711C18.9464 15.6957 20 13.1522 20 10.5C20 7.84784 18.9464 5.3043 17.0711 3.42893C15.1957 1.55357 12.6522 0.5 10 0.5C7.34784 0.5 4.8043 1.55357 2.92893 3.42893C1.05357 5.3043 0 7.84784 0 10.5C0 13.1522 1.05357 15.6957 2.92893 17.5711C4.8043 19.4464 7.34784 20.5 10 20.5Z"
+                            fill="#038327"
+                          />
+                          <path
+                            d="M13.7125 6.7125C13.7036 6.72113 13.6952 6.73031 13.6875 6.74L9.34625 12.2712L6.73 9.65375C6.55228 9.48815 6.31722 9.398 6.07435 9.40228C5.83147 9.40657 5.59974 9.50496 5.42797 9.67672C5.25621 9.84849 5.15782 10.0802 5.15353 10.3231C5.14925 10.566 5.2394 10.801 5.405 10.9788L8.7125 14.2875C8.8016 14.3764 8.90771 14.4465 9.02448 14.4936C9.14125 14.5406 9.26631 14.5637 9.39218 14.5613C9.51806 14.559 9.64217 14.5313 9.75712 14.48C9.87207 14.4286 9.9755 14.3547 10.0612 14.2625L15.0513 8.025C15.2212 7.84666 15.3141 7.60862 15.3099 7.36234C15.3057 7.11605 15.2047 6.88131 15.0288 6.70887C14.8529 6.53643 14.6162 6.44014 14.3699 6.44081C14.1236 6.44149 13.8874 6.53909 13.7125 6.7125Z"
+                            fill="#038327"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_4606_17331">
+                            <rect
+                              width="20"
+                              height="20"
+                              fill="white"
+                              transform="translate(0 0.5)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="d-flex p-2 gap-3 align-items-center border-1-green-success">
+                      <p>2022</p>
+                      <svg
+                        width="20"
+                        height="21"
+                        viewBox="0 0 20 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_4606_17331)">
+                          <path
+                            d="M10 19.25C7.67936 19.25 5.45376 18.3281 3.81282 16.6872C2.17187 15.0462 1.25 12.8206 1.25 10.5C1.25 8.17936 2.17187 5.95376 3.81282 4.31282C5.45376 2.67187 7.67936 1.75 10 1.75C12.3206 1.75 14.5462 2.67187 16.1872 4.31282C17.8281 5.95376 18.75 8.17936 18.75 10.5C18.75 12.8206 17.8281 15.0462 16.1872 16.6872C14.5462 18.3281 12.3206 19.25 10 19.25ZM10 20.5C12.6522 20.5 15.1957 19.4464 17.0711 17.5711C18.9464 15.6957 20 13.1522 20 10.5C20 7.84784 18.9464 5.3043 17.0711 3.42893C15.1957 1.55357 12.6522 0.5 10 0.5C7.34784 0.5 4.8043 1.55357 2.92893 3.42893C1.05357 5.3043 0 7.84784 0 10.5C0 13.1522 1.05357 15.6957 2.92893 17.5711C4.8043 19.4464 7.34784 20.5 10 20.5Z"
+                            fill="#038327"
+                          />
+                          <path
+                            d="M13.7125 6.7125C13.7036 6.72113 13.6952 6.73031 13.6875 6.74L9.34625 12.2712L6.73 9.65375C6.55228 9.48815 6.31722 9.398 6.07435 9.40228C5.83147 9.40657 5.59974 9.50496 5.42797 9.67672C5.25621 9.84849 5.15782 10.0802 5.15353 10.3231C5.14925 10.566 5.2394 10.801 5.405 10.9788L8.7125 14.2875C8.8016 14.3764 8.90771 14.4465 9.02448 14.4936C9.14125 14.5406 9.26631 14.5637 9.39218 14.5613C9.51806 14.559 9.64217 14.5313 9.75712 14.48C9.87207 14.4286 9.9755 14.3547 10.0612 14.2625L15.0513 8.025C15.2212 7.84666 15.3141 7.60862 15.3099 7.36234C15.3057 7.11605 15.2047 6.88131 15.0288 6.70887C14.8529 6.53643 14.6162 6.44014 14.3699 6.44081C14.1236 6.44149 13.8874 6.53909 13.7125 6.7125Z"
+                            fill="#038327"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_4606_17331">
+                            <rect
+                              width="20"
+                              height="20"
+                              fill="white"
+                              transform="translate(0 0.5)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="d-flex p-2 gap-3 align-items-center border-1-green-success">
+                      <p>2023</p>
+                      <svg
+                        width="20"
+                        height="21"
+                        viewBox="0 0 20 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_4606_17331)">
+                          <path
+                            d="M10 19.25C7.67936 19.25 5.45376 18.3281 3.81282 16.6872C2.17187 15.0462 1.25 12.8206 1.25 10.5C1.25 8.17936 2.17187 5.95376 3.81282 4.31282C5.45376 2.67187 7.67936 1.75 10 1.75C12.3206 1.75 14.5462 2.67187 16.1872 4.31282C17.8281 5.95376 18.75 8.17936 18.75 10.5C18.75 12.8206 17.8281 15.0462 16.1872 16.6872C14.5462 18.3281 12.3206 19.25 10 19.25ZM10 20.5C12.6522 20.5 15.1957 19.4464 17.0711 17.5711C18.9464 15.6957 20 13.1522 20 10.5C20 7.84784 18.9464 5.3043 17.0711 3.42893C15.1957 1.55357 12.6522 0.5 10 0.5C7.34784 0.5 4.8043 1.55357 2.92893 3.42893C1.05357 5.3043 0 7.84784 0 10.5C0 13.1522 1.05357 15.6957 2.92893 17.5711C4.8043 19.4464 7.34784 20.5 10 20.5Z"
+                            fill="#038327"
+                          />
+                          <path
+                            d="M13.7125 6.7125C13.7036 6.72113 13.6952 6.73031 13.6875 6.74L9.34625 12.2712L6.73 9.65375C6.55228 9.48815 6.31722 9.398 6.07435 9.40228C5.83147 9.40657 5.59974 9.50496 5.42797 9.67672C5.25621 9.84849 5.15782 10.0802 5.15353 10.3231C5.14925 10.566 5.2394 10.801 5.405 10.9788L8.7125 14.2875C8.8016 14.3764 8.90771 14.4465 9.02448 14.4936C9.14125 14.5406 9.26631 14.5637 9.39218 14.5613C9.51806 14.559 9.64217 14.5313 9.75712 14.48C9.87207 14.4286 9.9755 14.3547 10.0612 14.2625L15.0513 8.025C15.2212 7.84666 15.3141 7.60862 15.3099 7.36234C15.3057 7.11605 15.2047 6.88131 15.0288 6.70887C14.8529 6.53643 14.6162 6.44014 14.3699 6.44081C14.1236 6.44149 13.8874 6.53909 13.7125 6.7125Z"
+                            fill="#038327"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_4606_17331">
+                            <rect
+                              width="20"
+                              height="20"
+                              fill="white"
+                              transform="translate(0 0.5)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+
+                    <div class="d-flex p-2 gap-3 align-items-center border-1-green-success">
+                      <p>2024</p>
+                      <svg
+                        width="20"
+                        height="21"
+                        viewBox="0 0 20 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_4606_17331)">
+                          <path
+                            d="M10 19.25C7.67936 19.25 5.45376 18.3281 3.81282 16.6872C2.17187 15.0462 1.25 12.8206 1.25 10.5C1.25 8.17936 2.17187 5.95376 3.81282 4.31282C5.45376 2.67187 7.67936 1.75 10 1.75C12.3206 1.75 14.5462 2.67187 16.1872 4.31282C17.8281 5.95376 18.75 8.17936 18.75 10.5C18.75 12.8206 17.8281 15.0462 16.1872 16.6872C14.5462 18.3281 12.3206 19.25 10 19.25ZM10 20.5C12.6522 20.5 15.1957 19.4464 17.0711 17.5711C18.9464 15.6957 20 13.1522 20 10.5C20 7.84784 18.9464 5.3043 17.0711 3.42893C15.1957 1.55357 12.6522 0.5 10 0.5C7.34784 0.5 4.8043 1.55357 2.92893 3.42893C1.05357 5.3043 0 7.84784 0 10.5C0 13.1522 1.05357 15.6957 2.92893 17.5711C4.8043 19.4464 7.34784 20.5 10 20.5Z"
+                            fill="#038327"
+                          />
+                          <path
+                            d="M13.7125 6.7125C13.7036 6.72113 13.6952 6.73031 13.6875 6.74L9.34625 12.2712L6.73 9.65375C6.55228 9.48815 6.31722 9.398 6.07435 9.40228C5.83147 9.40657 5.59974 9.50496 5.42797 9.67672C5.25621 9.84849 5.15782 10.0802 5.15353 10.3231C5.14925 10.566 5.2394 10.801 5.405 10.9788L8.7125 14.2875C8.8016 14.3764 8.90771 14.4465 9.02448 14.4936C9.14125 14.5406 9.26631 14.5637 9.39218 14.5613C9.51806 14.559 9.64217 14.5313 9.75712 14.48C9.87207 14.4286 9.9755 14.3547 10.0612 14.2625L15.0513 8.025C15.2212 7.84666 15.3141 7.60862 15.3099 7.36234C15.3057 7.11605 15.2047 6.88131 15.0288 6.70887C14.8529 6.53643 14.6162 6.44014 14.3699 6.44081C14.1236 6.44149 13.8874 6.53909 13.7125 6.7125Z"
+                            fill="#038327"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_4606_17331">
+                            <rect
+                              width="20"
+                              height="20"
+                              fill="white"
+                              transform="translate(0 0.5)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="email">Дата заполнения</label>
-                  <input class="bg-fa" id="email" type="email" value="12.12.2222" />
+                <div>
+                  <p class="mb-2">Вступительный взнос</p>
+                  <div class="d-flex gap-3 flex-wrap">
+                    <div class="d-flex p-2 gap-3 align-items-center border-1-green-success">
+                      <p>2020</p>
+                      <svg
+                        width="20"
+                        height="21"
+                        viewBox="0 0 20 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_4606_17331)">
+                          <path
+                            d="M10 19.25C7.67936 19.25 5.45376 18.3281 3.81282 16.6872C2.17187 15.0462 1.25 12.8206 1.25 10.5C1.25 8.17936 2.17187 5.95376 3.81282 4.31282C5.45376 2.67187 7.67936 1.75 10 1.75C12.3206 1.75 14.5462 2.67187 16.1872 4.31282C17.8281 5.95376 18.75 8.17936 18.75 10.5C18.75 12.8206 17.8281 15.0462 16.1872 16.6872C14.5462 18.3281 12.3206 19.25 10 19.25ZM10 20.5C12.6522 20.5 15.1957 19.4464 17.0711 17.5711C18.9464 15.6957 20 13.1522 20 10.5C20 7.84784 18.9464 5.3043 17.0711 3.42893C15.1957 1.55357 12.6522 0.5 10 0.5C7.34784 0.5 4.8043 1.55357 2.92893 3.42893C1.05357 5.3043 0 7.84784 0 10.5C0 13.1522 1.05357 15.6957 2.92893 17.5711C4.8043 19.4464 7.34784 20.5 10 20.5Z"
+                            fill="#038327"
+                          />
+                          <path
+                            d="M13.7125 6.7125C13.7036 6.72113 13.6952 6.73031 13.6875 6.74L9.34625 12.2712L6.73 9.65375C6.55228 9.48815 6.31722 9.398 6.07435 9.40228C5.83147 9.40657 5.59974 9.50496 5.42797 9.67672C5.25621 9.84849 5.15782 10.0802 5.15353 10.3231C5.14925 10.566 5.2394 10.801 5.405 10.9788L8.7125 14.2875C8.8016 14.3764 8.90771 14.4465 9.02448 14.4936C9.14125 14.5406 9.26631 14.5637 9.39218 14.5613C9.51806 14.559 9.64217 14.5313 9.75712 14.48C9.87207 14.4286 9.9755 14.3547 10.0612 14.2625L15.0513 8.025C15.2212 7.84666 15.3141 7.60862 15.3099 7.36234C15.3057 7.11605 15.2047 6.88131 15.0288 6.70887C14.8529 6.53643 14.6162 6.44014 14.3699 6.44081C14.1236 6.44149 13.8874 6.53909 13.7125 6.7125Z"
+                            fill="#038327"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_4606_17331">
+                            <rect
+                              width="20"
+                              height="20"
+                              fill="white"
+                              transform="translate(0 0.5)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="mb-2 d-flex flex-column gap-3">
                 <h4 class="h4-title mb-3">Дополнительная информация</h4>
                 <div class="form__input--small mb-0">
-                  <label class="fs-16" for="group"> Регион<span class="color-red">*</span> </label>
+                  <label class="fs-16" for="sportsDegreeFilter">Разряд</label>
                   <div class="d-flex gap-3">
-                    <select id="group" class="form-select bg-fa fs-16" aria-label="group" required>
+                    <select
+                      id="sportsDegreeFilter"
+                      class="form-select bg-fa fs-16"
+                      aria-label="sportsDegree"
+                    >
+                      <option value="Нет">Нет</option>
+                      <option value="МСМК">МСМК</option>
+                      <option value="МС">МС</option>
+                      <option value="КМС">КМС</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form__input--small mb-0">
+                  <label class="fs-16" for="region"> Регион<span class="color-red">*</span> </label>
+                  <div class="d-flex gap-3">
+                    <select id="region" class="form-select bg-fa fs-16" aria-label="group" required>
                       <option selected value="">Могилевская область</option>
                     </select>
                   </div>
                 </div>
                 <div class="form__input--small mb-0">
-                  <label class="fs-16" for="group"> Город<span class="color-red">*</span> </label>
+                  <label class="fs-16" for="city"> Город<span class="color-red">*</span> </label>
                   <div class="d-flex gap-3">
-                    <select id="group" class="form-select bg-fa fs-16" aria-label="group" required>
+                    <select id="city" class="form-select bg-fa fs-16" aria-label="group" required>
                       <option selected value="">Минск</option>
                     </select>
                   </div>
                 </div>
                 <div class="form__input--small mb-0">
-                  <label class="fs-16" for="group"> Школа<span class="color-red">*</span> </label>
+                  <label class="fs-16" for="school"> Школа<span class="color-red">*</span> </label>
                   <div class="d-flex gap-3">
-                    <select id="group" class="form-select bg-fa fs-16" aria-label="group" required>
+                    <select id="school" class="form-select bg-fa fs-16" aria-label="group" required>
                       <option selected value="">
                         ГСУСУ Витебский областной ЦОР по водным видам спорта
                       </option>
                     </select>
                   </div>
+                </div>
+                <div class="form__checkbox mb-0">
+                  <label class="form__checkbox-container mb-0">
+                    <input type="checkbox" checked />
+                    <span class="form__checkbox-text">Относится к организации</span>
+                    <span class="form__checkbox-checkmark--dark"></span>
+                  </label>
                 </div>
               </div>
 
@@ -307,35 +498,32 @@
               </div>
               <div class="form__checkbox mb-2">
                 <label class="form__checkbox-container">
-                  <input type="checkbox" required checked />
-                  <span class="form__checkbox-text">Согласие на обработку</span>
-                  <a class="link-main" href="#"> персональных данных </a>
+                  <input type="checkbox" checked />
+                  <span class="form__checkbox-text">Активный член ОО «БФП» </span>
                   <span class="form__checkbox-checkmark--dark"></span>
                 </label>
               </div>
-              <div class="d-flex justify-content-between gap-5 mb-3">
+
+              <div class="mb-4 w-100">
+                <p class="mb-2 fs-18">Примечание</p>
+                <textarea class="border-1-gray w-100" name="note" id="note" rows="8"></textarea>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <a
+                  href="cabinet-bfp-employee-members.html"
+                  class="button--secondary-no-stretch px-4"
+                  >Назад</a
+                >
                 <button
                   type="button"
-                  class="button px-4"
-                  data-bs-target="#approveApplication"
+                  class="cabinet__content-button px-4"
                   data-bs-toggle="modal"
+                  data-bs-target="#saveChanges"
                 >
-                  Одобрить
-                </button>
-                <button
-                  type="button"
-                  class="button--secondary px-4"
-                  data-bs-target="#rejectApplication"
-                  data-bs-toggle="modal"
-                >
-                  Отклонить
+                  Сохранить
                 </button>
               </div>
-              <a
-                href="cabinet-bfp-employee-applications.html"
-                class="button--secondary-no-stretch px-4"
-                >Назад</a
-              >
             </form>
           </section>
         </div>
@@ -345,15 +533,15 @@
     </div>
     <div
       class="modal fade"
-      id="approveApplication"
+      id="saveChanges"
       tabindex="-1"
-      aria-labelledby="approveApplicationLabel"
+      aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="approveApplicationLabel">Одобрить заявку</h1>
+            <h1 class="modal-title fs-5" id="saveChangesLabel">Изменения успешно сохранены</h1>
             <button
               type="button"
               class="btn-close"
@@ -362,68 +550,8 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p class="color-dark-gray mb-4">
-              Для одобрения заявки присвойте члену ОО «БФП» номер билета
-            </p>
-            <div class="form__input--small mb-4">
-              <input class="bg-fa" id="member-number" type="text" required />
-            </div>
-            <div class="d-flex justify-content-between gap-5">
-              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">
-                Одобрить
-              </button>
-              <button
-                type="submit"
-                class="button--secondary px-4"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                Отмена
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade"
-      id="rejectApplication"
-      tabindex="-1"
-      aria-labelledby="rejectApplicationLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="rejectApplicationLabel">Отклонить заявку</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p class="color-dark-gray mb-2">Вы действительно хотите отклонить заявку?</p>
-            <p class="color-dark-gray mb-4">
-              Вы можете оставить комментарий с причиной отклонения.
-            </p>
-            <div class="form__input--small mb-4">
-              <textarea class="border-1-gray" id="comment" name="comment" rows="5"> </textarea>
-            </div>
-            <div class="d-flex justify-content-between gap-5">
-              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">
-                Отклонить
-              </button>
-              <button
-                type="submit"
-                class="button--secondary px-4"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                Отмена
-              </button>
-            </div>
+            <img src="./img/icons/thumbs-up-trust.svg" alt="Thumbs-up icon" />
+            <p class="mt-4">Ваши данные сохранены</p>
           </div>
         </div>
       </div>
