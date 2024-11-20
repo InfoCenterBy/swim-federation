@@ -28,7 +28,7 @@ const swiperMainNav = new Swiper(".swiper.slider-nav", {
   // allowSlideNext: false,
   breakpointsBase: "window",
   autoplay: {
-    delay: 4000,
+    delay: 2000,
     pauseOnMouseEnter: true,
   },
   breakpoints: {
@@ -65,7 +65,7 @@ const swiperMainPartner = new Swiper(".swiper.slider-partner", {
   loop: true,
   allowTouchMove: true,
   autoplay: {
-    delay: 4000,
+    delay: 2000,
     pauseOnMouseEnter: true,
   },
   breakpoints: {

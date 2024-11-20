@@ -43,11 +43,7 @@
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="sportsDegreeFilter">Разряд</label>
                   <div class="d-flex gap-3">
-                    <select
-                      id="sportsDegreeFilter"
-                      class="form-select bg-fa fs-16"
-                      aria-label="sportsDegree"
-                    >
+                    <select id="sportsDegreeFilter" class="form-select bg-fa fs-16" aria-label="sportsDegree">
                       <option selected value="all">Выберите разряд</option>
                       <option value="МСМК">МСМК</option>
                       <option value="МС">МС</option>
@@ -88,7 +84,8 @@
                   <label class="fs-16" for="groupFilter">Группа</label>
                   <div class="d-flex gap-3">
                     <select id="groupFilter" class="form-select bg-fa fs-16" aria-label="group">
-                      <option selected disabled value="">Выберите группу</option>
+                      <!-- <option selected disabled value="all">Выберите группу</option> -->
+                      <option selected value="all">Все</option>
                       <option value="Спортсмен">Спортсмен</option>
                       <option value="Тренер">Тренер</option>
                       <option value="Председатель">Председатель</option>
@@ -109,12 +106,8 @@
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="privilegeFilter">Наличие льгот</label>
                   <div class="d-flex gap-3">
-                    <select
-                      id="privilegeFilter"
-                      class="form-select bg-fa fs-16"
-                      aria-label="privilege"
-                    >
-                      <option selected value="Все">Все</option>
+                    <select id="privilegeFilter" class="form-select bg-fa fs-16" aria-label="privilege">
+                      <option selected value="all">Все</option>
                       <option value="true">Есть льгота</option>
                       <option value="false">Нет льготы</option>
                     </select>
@@ -123,12 +116,8 @@
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="activeMemberFilter">Активность члена</label>
                   <div class="d-flex gap-3">
-                    <select
-                      id="activeMemberFilter"
-                      class="form-select bg-fa fs-16"
-                      aria-label="activeMember"
-                    >
-                      <option selected value="Все">Все</option>
+                    <select id="activeMemberFilter" class="form-select bg-fa fs-16" aria-label="activeMember">
+                      <option selected value="all">Все</option>
                       <option value="true">Активный</option>
                       <option value="false">Неактивный</option>
                     </select>
@@ -148,9 +137,7 @@
               </div>
             </div>
 
-            <div
-              class="d-flex justify-content-between align-items-center w-100 flex-wrap mb-4 position-relative"
-            >
+            <div class="d-flex justify-content-between align-items-center w-100 flex-wrap mb-4 position-relative">
               <p class="color-dark-gray">*ВВ-вступительный взнос, ЧВ-членский взнос</p>
 
               <div class="d-flex gap-4 flex-wrap flex-lg-nowrap">
@@ -163,23 +150,12 @@
                 <button type="button" class="button--secondary d-flex justify-content-center">
                   <i class="mr-3 bi bi-download"></i><span>Скачать</span>
                 </button>
-                <button
-                  type="button"
-                  class="columns-select__toggle-button button"
-                  id="columnToggleButton"
-                >
-                  <svg
-                    width="20"
-                    height="21"
-                    viewBox="0 0 20 21"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                <button type="button" class="columns-select__toggle-button button" id="columnToggleButton">
+                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_4533_24237)">
                       <path
                         d="M0 3C0 2.33696 0.263392 1.70107 0.732233 1.23223C1.20107 0.763392 1.83696 0.5 2.5 0.5L17.5 0.5C18.163 0.5 18.7989 0.763392 19.2678 1.23223C19.7366 1.70107 20 2.33696 20 3V18C20 18.663 19.7366 19.2989 19.2678 19.7678C18.7989 20.2366 18.163 20.5 17.5 20.5H2.5C1.83696 20.5 1.20107 20.2366 0.732233 19.7678C0.263392 19.2989 0 18.663 0 18V3ZM18.75 5.5H13.75V9.25H18.75V5.5ZM18.75 10.5H13.75V14.25H18.75V10.5ZM18.75 15.5H13.75V19.25H17.5C17.8315 19.25 18.1495 19.1183 18.3839 18.8839C18.6183 18.6495 18.75 18.3315 18.75 18V15.5ZM12.5 19.25V15.5H7.5V19.25H12.5ZM6.25 19.25V15.5H1.25V18C1.25 18.3315 1.3817 18.6495 1.61612 18.8839C1.85054 19.1183 2.16848 19.25 2.5 19.25H6.25ZM1.25 14.25H6.25V10.5H1.25V14.25ZM1.25 9.25H6.25V5.5H1.25V9.25ZM7.5 5.5V9.25H12.5V5.5H7.5ZM12.5 10.5H7.5V14.25H12.5V10.5Z"
-                        fill="#FAFAFA"
-                      />
+                        fill="#FAFAFA" />
                     </g>
                     <defs>
                       <clipPath id="clip0_4533_24237">
@@ -193,48 +169,24 @@
               <div id="columnSelector" class="columns-select__body hidden"></div>
             </div>
 
-            <div
-              id="members-table"
-              class="ag-theme-quartz"
-              style="height: 500px; width: 100%"
-            ></div>
+            <div id="members-table" class="ag-theme-quartz" style="height: 500px; width: 100%"></div>
           </section>
         </div>
       </main>
       @@include('./components/_cabinet-footer.html')
     </div>
-    <div
-      class="modal fade"
-      id="deleteMember"
-      tabindex="-1"
-      aria-labelledby="deleteMemberLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="deleteMember" tabindex="-1" aria-labelledby="deleteMemberLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title" id="deleteMemberLabel">Удалить члена ОО «БФП»</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <p class="color-dark-gray mb-4">Вы действительно хотите удалить члена ОО «БФП» ?</p>
             <div class="d-flex justify-content-evenly gap-5">
-              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">
-                Удалить
-              </button>
-              <button
-                type="button"
-                class="button--secondary px-4"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                Отмена
-              </button>
+              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">Удалить</button>
+              <button type="button" class="button--secondary px-4" data-bs-dismiss="modal" aria-label="Close">Отмена</button>
             </div>
           </div>
         </div>

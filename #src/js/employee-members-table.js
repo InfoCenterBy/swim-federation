@@ -5,7 +5,7 @@ const gridOptions = {
     {
       id: 1,
       photo: "member-avatar.png",
-      membershipNumber: 123123123,
+      membershipNumber: "123123123",
       fio: "Альхимович Евгений Иванович",
       email: "aroitq@mail.ru",
       group: "Заместитель директора",
@@ -13,38 +13,84 @@ const gridOptions = {
       benefit: false,
       entranceFeePayment: true,
       memberFeePayment: false,
-      sportDegree: "МСМК",
-      gender: "ж",
+      sportsDegree: "МСМК",
+      gender: "М",
       birthdayDate: "29.05.1989",
       region: "Брестская область",
       city: "Брест",
-      school: "ГСУСУ «Брестский областной ЦОР по водным видам спорта»",
+      school: "Школа5",
       createdAt: "25.04.2007",
       active: false,
-      age: 19,
+      age: 18,
       edit: "",
       delete: "",
     },
     {
-      id: 1,
+      id: 5,
       photo: "member-avatar.png",
-      membershipNumber: 555,
+      membershipNumber: "123123123",
       fio: "Альхимович Евгений Иванович",
       email: "aroitq@mail.ru",
-      group: "Заместитель директора",
+      group: "Судья",
       phone: "+375(17)243-26-71",
       benefit: false,
       entranceFeePayment: true,
       memberFeePayment: false,
-      sportDegree: "МСМК",
-      gender: "ж",
+      sportsDegree: "МСМК",
+      gender: "М",
       birthdayDate: "29.05.1989",
       region: "Брестская область",
-      city: "Брест",
+      city: "Брест2",
       school: "ГСУСУ «Брестский областной ЦОР по водным видам спорта»",
+      createdAt: "25.04.2007",
+      active: false,
+      age: 18,
+      edit: "",
+      delete: "",
+    },
+    {
+      id: 2,
+      photo: "member-avatar.png",
+      membershipNumber: "555",
+      fio: "Кабанчик Валерий Евгенич",
+      email: "aroitq@mail.ru",
+      group: "Без группы",
+      phone: "+375(17)243-26-71",
+      benefit: true,
+      entranceFeePayment: true,
+      memberFeePayment: true,
+      sportsDegree: "МС",
+      gender: "Ж",
+      birthdayDate: "29.05.1989",
+      region: "Гомельская область",
+      city: "Гомель",
+      school: "Школа 3",
       createdAt: "25.04.2007",
       active: true,
       age: 25,
+      edit: "",
+      delete: "",
+    },
+    {
+      id: 3,
+      photo: "member-avatar.png",
+      membershipNumber: "9999991",
+      fio: "Попик Валентина Альбертовна",
+      email: "aroitq@mail.ru",
+      group: "Председатель",
+      phone: "+375(17)243-26-71",
+      benefit: false,
+      entranceFeePayment: false,
+      memberFeePayment: true,
+      sportsDegree: "КМС",
+      gender: "М",
+      birthdayDate: "29.05.1989",
+      region: "Витебская область",
+      city: "Витебск",
+      school: "Школа",
+      createdAt: "25.04.2007",
+      active: true,
+      age: 33,
       edit: "",
       delete: "",
     },
@@ -76,17 +122,20 @@ const gridOptions = {
       cellClassRules: {
         "ag-badge blue": (params) =>
           params.value === "Исполнительный директор" ||
-          "Генеральный секретарь" ||
-          "Судья" ||
-          "Пресс-секретарь",
+          params.value === "Генеральный секретарь" ||
+          params.value === "Судья" ||
+          params.value === "Пресс-секретарь",
         "ag-badge green": (params) =>
           params.value === "Председатель" ||
-          "Методист" ||
-          "Заместитель председателя" ||
-          "Бухгалтер",
+          params.value === "Методист" ||
+          params.value === "Заместитель председателя" ||
+          params.value === "Бухгалтер",
         "ag-badge red": (params) =>
-          params.value === "Спортсмен" || "Администратор" || "Директор" || "Заместитель директора",
-        "ag-badge yellow": (params) => params.value === "Тренер" || "Старший тренер",
+          params.value === "Спортсмен" ||
+          params.value === "Администратор" ||
+          params.value === "Директор" ||
+          params.value === "Заместитель директора",
+        "ag-badge yellow": (params) => params.value === "Тренер" || params.value === "Старший тренер",
         "ag-badge gray": (params) => params.value === "Без группы",
       },
     },
@@ -134,7 +183,7 @@ const gridOptions = {
       },
     },
     {
-      field: "sportDegree",
+      field: "sportsDegree",
       headerName: "Разряд",
       cellRenderer: (params) => {
         return params.value.toUpperCase();
@@ -189,86 +238,87 @@ const gridOptions = {
   onGridReady: onGridReady,
   isExternalFilterPresent: () => {
     return (
-      document.getElementById("membershipNumberFilter").value !== ""
-      // document.getElementById("fioFilter").value !== "" ||
-      // document.getElementById("ageFromFilter").value !== "" ||
-      // document.getElementById("ageToFilter").value !== "" ||
-      // document.getElementById("genderFilter").value !== "all" ||
-      // document.getElementById("sportsDegreeFilter").value !== "all" ||
-      // document.getElementById("region").value !== "all" ||
-      // document.getElementById("city").value !== "all" ||
-      // document.getElementById("school").value !== "all" ||
-      // document.getElementById("groupFilter").value !== "" ||
-      // document.getElementById("privilegeFilter").value !== "all" ||
-      // document.getElementById("activeMemberFilter").value !== "all" ||
-      // document.getElementById("paymentFilter").value !== "all"
+      document.getElementById("membershipNumberFilter").value !== "" ||
+      document.getElementById("fioFilter").value !== "" ||
+      document.getElementById("ageFromFilter").value !== "" ||
+      document.getElementById("ageToFilter").value !== "" ||
+      document.getElementById("genderFilter").value !== "all" ||
+      document.getElementById("sportsDegreeFilter").value !== "all" ||
+      document.getElementById("region").value !== "all" ||
+      document.getElementById("city").value !== "all" ||
+      document.getElementById("school").value !== "all" ||
+      document.getElementById("groupFilter").value !== "all" ||
+      document.getElementById("privilegeFilter").value !== "all" ||
+      document.getElementById("activeMemberFilter").value !== "all" ||
+      document.getElementById("paymentFilter").value !== "all"
     );
   },
   doesExternalFilterPass: (node) => {
     const membershipNumberFilterValue = document.getElementById("membershipNumberFilter").value;
-    // const fioFilterValue = document.getElementById("fioFilter").value.toLowerCase();
+    const fioFilterValue = document.getElementById("fioFilter").value.toLowerCase();
 
-    // const ageFromFilterValue = parseInt(document.getElementById("ageFromFilter").value, 10);
-    // const ageToFilterValue = parseInt(document.getElementById("ageToFilter").value, 10);
+    const ageFromFilterValue = parseInt(document.getElementById("ageFromFilter").value, 10);
+    const ageToFilterValue = parseInt(document.getElementById("ageToFilter").value, 10);
 
-    // const genderFilterValue = document.getElementById("genderFilter").value;
-    // const sportsDegreeFilterValue = document.getElementById("sportsDegreeFilter").value;
-    // const regionFilterValue = document.getElementById("region").value;
-    // const cityFilterValue = document.getElementById("city").value;
-    // const schoolFilterValue = document.getElementById("school").value;
-    // const groupFilterValue = document.getElementById("groupFilter").value;
-    // const privilegeFilterValue = document.getElementById("privilegeFilter").value;
-    // const activeMemberFilterValue = document.getElementById("activeMemberFilter").value;
-    // const paymentFilterValue = document.getElementById("paymentFilter").value;
+    const genderFilterValue = document.getElementById("genderFilter").value;
+    const sportsDegreeFilterValue = document.getElementById("sportsDegreeFilter").value;
+    const regionFilterValue = document.getElementById("region").value;
+    const cityFilterValue = document.getElementById("city").value;
+    const schoolFilterValue = document.getElementById("school").value;
+    const groupFilterValue = document.getElementById("groupFilter").value;
+    const privilegeFilterValue = document.getElementById("privilegeFilter").value;
+    const activeMemberFilterValue = document.getElementById("activeMemberFilter").value;
+    const paymentFilterValue = document.getElementById("paymentFilter").value;
 
     const membershipNumberMatch =
-      !membershipNumberFilterValue ||
-      node.data.membershipNumber.includes(membershipNumberFilterValue);
+      !membershipNumberFilterValue || node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
 
-    // const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
+    const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
-    // const ageMatch =
-    //   (isNaN(ageFromFilterValue) || node.data.age >= ageFromFilterValue) &&
-    //   (isNaN(ageToFilterValue) || node.data.age <= ageToFilterValue);
+    const ageMatch =
+      (isNaN(ageFromFilterValue) || node.data.age >= ageFromFilterValue) && (isNaN(ageToFilterValue) || node.data.age <= ageToFilterValue);
 
-    // const genderMatch = genderFilterValue === "all" || node.data.gender === genderFilterValue;
+    const genderMatch = genderFilterValue === "all" || node.data.gender === genderFilterValue;
 
-    // const sportsDegreeMatch =
-    //   sportsDegreeFilterValue === "all" || node.data.sportsDegree === sportsDegreeFilterValue;
+    const sportsDegreeMatch = sportsDegreeFilterValue === "all" || node.data.sportsDegree === sportsDegreeFilterValue;
 
-    // const regionMatch = regionFilterValue === "all" || node.data.region === regionFilterValue;
+    const regionMatch = regionFilterValue === "all" || node.data.region === regionFilterValue;
 
-    // const cityMatch = cityFilterValue === "all" || node.data.city === cityFilterValue;
+    const cityMatch = cityFilterValue === "all" || node.data.city === cityFilterValue;
 
-    // const schoolMatch = schoolFilterValue === "all" || node.data.school === schoolFilterValue;
+    const schoolMatch = schoolFilterValue === "all" || node.data.school === schoolFilterValue;
 
-    // const groupMatch = !groupFilterValue || node.data.group === groupFilterValue;
+    const groupMatch = groupFilterValue === "all" || node.data.group === groupFilterValue;
 
-    // const privilegeMatch =
-    //   privilegeFilterValue === "all" || String(node.data.hasPrivilege) === privilegeFilterValue;
+    const privilegeMatch = privilegeFilterValue === "all" || String(node.data.benefit) === privilegeFilterValue;
 
-    // const activeMemberMatch =
-    //   activeMemberFilterValue === "all" ||
-    //   String(node.data.isActiveMember) === activeMemberFilterValue;
+    const activeMemberMatch = activeMemberFilterValue === "all" || String(node.data.active) === activeMemberFilterValue;
 
-    // const paymentMatch =
-    //   paymentFilterValue === "all" || node.data.paymentStatus === paymentFilterValue;
+    let paymentMatch = false;
+    if (paymentFilterValue === "all") {
+      paymentMatch = true;
+    } else if (paymentFilterValue === "onlyMember") {
+      paymentMatch = node.data.memberFeePayment === true && node.data.entranceFeePayment === false;
+    } else if (paymentFilterValue === "onlyEntrance") {
+      paymentMatch = node.data.memberFeePayment === false && node.data.entranceFeePayment === true;
+    } else if (paymentFilterValue === "notPaid") {
+      paymentMatch = node.data.memberFeePayment === false && node.data.entranceFeePayment === false;
+    }
 
-    return membershipNumberMatch;
-    // return (
-    //   membershipNumberMatch &&
-    //   fioMatch &&
-    //   ageMatch &&
-    //   genderMatch &&
-    //   sportsDegreeMatch &&
-    //   regionMatch &&
-    //   cityMatch &&
-    //   schoolMatch &&
-    //   groupMatch &&
-    //   privilegeMatch &&
-    //   activeMemberMatch &&
-    //   paymentMatch
-    // );
+    return (
+      membershipNumberMatch &&
+      fioMatch &&
+      ageMatch &&
+      genderMatch &&
+      sportsDegreeMatch &&
+      regionMatch &&
+      cityMatch &&
+      schoolMatch &&
+      groupMatch &&
+      privilegeMatch &&
+      activeMemberMatch &&
+      paymentMatch
+    );
   },
 };
 
@@ -334,8 +384,7 @@ if (toggleCheckboxesBtn && checkboxesBody) {
   });
 
   document.addEventListener("click", (event) => {
-    const isClickInside =
-      checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
+    const isClickInside = checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
     if (!isClickInside) {
       checkboxesBody.classList.add("hidden");
     }
@@ -369,7 +418,6 @@ function onGridReady(params) {
     params.api.applyColumnState({ state: columnState, applyOrder: true });
   }
 
-  const applyFilter = () => params.api.onFilterChanged();
   createColumnSelection();
   const filterInputs = [
     "membershipNumberFilter",
@@ -389,6 +437,7 @@ function onGridReady(params) {
 
   filterInputs.forEach((id) => {
     const element = document.getElementById(id);
+
     if (element) {
       element.addEventListener("input", onFilterChanged);
       element.addEventListener("change", onFilterChanged);
@@ -398,13 +447,21 @@ function onGridReady(params) {
   function onFilterChanged() {
     params.api.onFilterChanged();
   }
-  // document.getElementById("fioFilterInput").addEventListener("input", applyFilter);
-  // document.getElementById("requestNumberFilterInput").addEventListener("input", applyFilter);
-  // document.getElementById("emailFilterInput").addEventListener("input", applyFilter);
-  // document.getElementById("statusFilterSelect").addEventListener("change", applyFilter);
 }
 
 const ediv = document.querySelector("#members-table");
+
+const globalSearchInput = document.getElementById("globalSearch");
+
+if (globalSearchInput) {
+  globalSearchInput.addEventListener("input", function () {
+    gridApi.api.setQuickFilter(globalSearchInput.value);
+  });
+}
+
+function onFilterTextBoxChanged() {
+  gridApi.setGridOption("quickFilterText", document.getElementById("globalSearch").value);
+}
 
 if (agGrid) {
   agGrid.createGrid(ediv, gridOptions);
