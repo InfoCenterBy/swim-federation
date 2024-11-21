@@ -17,11 +17,14 @@
   @import "modal";
   @import "ag-grid-table";
   @import "buttons";
+  @import "documents";
+  @import "videos";
   @import "./elements/stepper";
   @import "./elements/breadcrumbs";
   @import "./elements/feedback-form";
   @import "./elements/pagination";
   @import "./elements/alert";
+  @import "./elements/download-card";
 
   html {
     height: auto;

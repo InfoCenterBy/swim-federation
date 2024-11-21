@@ -116,7 +116,7 @@ const gridOptions = {
     },
   ],
   defaultColDef: {
-    flex: 1,
+    // flex: 1,
     wrapText: true,
     autoHeight: true,
   },
@@ -149,7 +149,7 @@ const gridOptions = {
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
     const requestNumberMatch =
-      !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
+      !requestNumberFilterValue || node.data.requestNumber === parseInt(requestNumberFilterValue);
 
     const emailMatch =
       !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
