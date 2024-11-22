@@ -100,13 +100,17 @@ document.addEventListener("DOMContentLoaded", function () {
       if (selectedRegion !== "") {
         citySelect.disabled = false;
         populateCities(selectedRegion);
-        schoolSelect.disabled = true;
-        schoolSelect.innerHTML = '<option value="">Выберите школу</option>';
+        if (schoolSelect) {
+          schoolSelect.disabled = true;
+          schoolSelect.innerHTML = '<option value="">Выберите школу</option>';
+        }
       } else {
         citySelect.disabled = true;
         citySelect.innerHTML = '<option value="">Выберите город</option>';
-        schoolSelect.disabled = true;
-        schoolSelect.innerHTML = '<option value="">Выберите школу</option>';
+        if (schoolSelect) {
+          schoolSelect.disabled = true;
+          schoolSelect.innerHTML = '<option value="">Выберите школу</option>';
+        }
       }
     });
   }
@@ -116,8 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const selectedCity = this.value;
       const selectedRegion = regionSelect.value;
       if (selectedCity !== "") {
-        schoolSelect.disabled = false;
-        populateSchools(selectedRegion, selectedCity);
+        if (schoolSelect) {
+          schoolSelect.disabled = false;
+          populateSchools(selectedRegion, selectedCity);
+        }
       } else {
         schoolSelect.disabled = true;
         schoolSelect.innerHTML = '<option value="">Выберите школу</option>';

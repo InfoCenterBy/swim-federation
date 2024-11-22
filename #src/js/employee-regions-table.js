@@ -3,17 +3,36 @@ const gridOptions = {
   rowHeight: 50,
   rowData: [
     {
-      id: 5,
+      id: 1,
       region: "Брестская область",
       city: "Брест",
-      createdAt: "24.11.2019",
+      createdAt: "21.11.2019",
+    },
+    {
+      id: 2,
+      region: "Брестская область",
+      city: "Брест",
+      createdAt: "14.11.2019",
+    },
+    {
+      id: 3,
+      region: "Гомельская область",
+      city: "Гомель",
+      createdAt: "25.11.2019",
+    },
+    {
+      id: 4,
+      region: "Брестская область",
+      city: "Брест",
+      createdAt: "05.11.2019",
+    },
+    {
+      id: 5,
+      region: "Гомельская область",
+      city: "Гомель",
+      createdAt: "02.11.2019",
     },
   ],
-  getRowStyle: (params) => {
-    if (params.data.active === false) {
-      return { background: "#EAEAEA", color: "#797979" };
-    }
-  },
 
   columnDefs: [
     { field: "id", headerName: "№" },
@@ -36,12 +55,13 @@ const gridOptions = {
     },
   ],
   defaultColDef: {
-    // flex: 1,
+    flex: 1,
     wrapText: true,
     autoHeight: true,
   },
   autoSizeStrategy: {
-    type: "fitCellContents",
+    type: "fitGridWidth",
+    defaultMinWidth: 100,
   },
 
   pagination: true,
@@ -55,50 +75,16 @@ const gridOptions = {
   onSortChanged: onSortChanged,
   onGridReady: onGridReady,
   isExternalFilterPresent: () => {
-    // return (
-    //   document.getElementById("membershipNumberFilter").value !== "" ||
-    //   document.getElementById("fioFilter").value !== "" ||
-    //   document.getElementById("emailFilter").value !== "" ||
-    //   document.getElementById("paymentStatusFilter").value !== "all" ||
-    //   document.getElementById("contributionTypeFilter").value !== "all" ||
-    //   document.getElementById("paymentTypeFilter").value !== "all"
-    // );
+    return document.getElementById("region").value !== "all" || document.getElementById("city").value !== "all";
   },
   doesExternalFilterPass: (node) => {
-    //   const membershipNumberFilterValue = document.getElementById("membershipNumberFilter").value;
-    //   const fioFilterValue = document.getElementById("fioFilter").value.toLowerCase();
-    //   const emailFilterValue = document.getElementById("emailFilter").value.toLowerCase();
-    //   const paymentStatusFilterValue = document.getElementById("paymentStatusFilter").value;
-    //   const contributionTypeFilterValue = document.getElementById("contributionTypeFilter").value;
-    //   const paymentTypeFilterValue = document.getElementById("paymentTypeFilter").value;
-    //   const membershipNumberMatch =
-    //     !membershipNumberFilterValue ||
-    //     node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
-    //   const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
-    //   const emailMatch =
-    //     !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
-    //   const paymentStatusMatch =
-    //     paymentStatusFilterValue === "all" ||
-    //     String(node.data.paymentStatus) === paymentStatusFilterValue;
-    //   const contributionTypeMatch =
-    //     contributionTypeFilterValue === "all" ||
-    //     String(node.data.contributionType) === contributionTypeFilterValue;
-    //   let paymentTypeMatch = false;
-    //   if (paymentTypeFilterValue === "all") {
-    //     paymentTypeMatch = true;
-    //   } else if (paymentTypeFilterValue === "erip") {
-    //     paymentTypeMatch = node.data.erip === true && node.data.cashless === false;
-    //   } else if (paymentTypeFilterValue === "cashless") {
-    //     paymentTypeMatch = node.data.erip === false && node.data.cashless === true;
-    //   }
-    //   return (
-    //     membershipNumberMatch &&
-    //     fioMatch &&
-    //     emailMatch &&
-    //     paymentStatusMatch &&
-    //     contributionTypeMatch &&
-    //     paymentTypeMatch
-    //   );
+    const regionFilterValue = document.getElementById("region").value;
+    const cityFilterValue = document.getElementById("city").value;
+
+    const regionMatch = regionFilterValue === "all" || node.data.region === regionFilterValue;
+    const cityMatch = cityFilterValue === "all" || node.data.city === cityFilterValue;
+
+    return regionMatch && cityMatch;
   },
 };
 
@@ -135,14 +121,7 @@ function onGridReady(params) {
     params.api.applyColumnState({ state: columnState, applyOrder: true });
   }
 
-  const filterInputs = [
-    "membershipNumberFilter",
-    "fioFilter",
-    "emailFilter",
-    "paymentStatusFilter",
-    "contributionTypeFilter",
-    "paymentTypeFilter",
-  ];
+  const filterInputs = ["region", "city"];
 
   filterInputs.forEach((id) => {
     const element = document.getElementById(id);
