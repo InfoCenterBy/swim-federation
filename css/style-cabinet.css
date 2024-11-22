@@ -2345,6 +2345,20 @@
          user-select: text !important;
     -webkit-user-select: text !important;
   }
+  .columns-select__body {
+    background-color: var(--white);
+    width: 250px;
+    padding: 12px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-transform: translateY(103%);
+        -ms-transform: translateY(103%);
+            transform: translateY(103%);
+    z-index: 3;
+    height: 400px;
+    overflow-y: scroll;
+  }
   .button {
     background-color: var(--main);
     color: var(--white);
@@ -2658,6 +2672,61 @@
     .button--light-blue {
       text-align: center;
       width: 100%;
+    }
+  }
+  .documents__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  @media screen and (max-width: 768px) {
+    .documents__cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .videos {
+    padding-block: 100px;
+  }
+  .videos__header {
+    margin-bottom: 32px;
+  }
+  .videos__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .video__card {
+    height: 388px;
+  }
+  .video__card iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .video__card video {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  @media screen and (max-width: 768px) {
+    .videos__cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .video__card {
+      height: 350px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .video__card {
+      height: 200px;
     }
   }
   .stepper {
@@ -3184,6 +3253,43 @@
   }
   .alert.yellow {
     background-color: var(--yellow);
+  }
+  .download-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 8px;
+    border: 1px solid var(--gray);
+    padding: 16px 24px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 514px;
+            flex: 0 1 514px;
+  }
+  .download-card:hover {
+    cursor: pointer;
+    border-color: var(--main);
+  }
+  .download-card__text {
+    color: var(--main);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-hyphens: auto;
+        hyphens: auto;
+    max-width: 100%;
+  }
+  .download-card__icon {
+    width: 24px;
+    height: 24px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
   }
   html {
     height: auto;

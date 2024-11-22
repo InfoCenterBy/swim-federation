@@ -108,8 +108,6 @@ const gridOptions = {
         if (params.data.status === "Новая") {
           let link = `<a href="cabinet-bfp-employee-applications-detail.html"><i class="color-main hover-main-hover fs-18 bi bi-eye"></i></a>`;
 
-          //viewButton.addEventListener("click", () => showPopup("Отклонить", params));
-
           return link;
         } else {
           return "";
@@ -118,7 +116,7 @@ const gridOptions = {
     },
   ],
   defaultColDef: {
-    flex: 1,
+    // flex: 1,
     wrapText: true,
     autoHeight: true,
   },
@@ -150,9 +148,11 @@ const gridOptions = {
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
-    const requestNumberMatch = !requestNumberFilterValue || node.data.requestNumber.includes(requestNumberFilterValue);
+    const requestNumberMatch =
+      !requestNumberFilterValue || node.data.requestNumber === parseInt(requestNumberFilterValue);
 
-    const emailMatch = !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
+    const emailMatch =
+      !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
 
     const statusMatch = statusFilterValue === "Все" || node.data.status === statusFilterValue;
 
