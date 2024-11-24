@@ -9,22 +9,30 @@
           @@include('./elements/cabinet-employee-sidebar.html')
           <section class="cabinet__content">
             <h2 class="h2-title">Школы</h2>
-            <div class="d-flex gap-4 flex-wrap mb-5 w-50">
+            <div class="d-flex gap-4 flex-wrap mb-5 w-75">
               <div class="d-flex w-100 flex-wrap flex-lg-nowrap gap-4">
                 <div class="form__input--small mb-0">
-                  <label class="fs-16" for="region">Область</label>
+                  <label class="fs-16" for="region">Регион</label>
                   <div class="d-flex gap-3">
                     <select id="region" class="form-select bg-fa fs-16" aria-label="region">
-                      <option selected disabled value="all">Выберите область</option>
+                      <option selected disabled value="all">Выберите регион</option>
                       <option selected value="all">Все</option>
                     </select>
                   </div>
                 </div>
                 <div class="form__input--small mb-0">
-                  <label class="fs-16" for="city">Регион</label>
+                  <label class="fs-16" for="city">Город</label>
                   <div class="d-flex gap-3">
-                    <select id="city" class="form-select bg-fa fs-16" aria-label="paymentStatus">
-                      <option selected disabled value="all">Выберите регион</option>
+                    <select id="city" class="form-select bg-fa fs-16" aria-label="city">
+                      <option selected disabled value="all">Выберите город</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form__input--small mb-0">
+                  <label class="fs-16" for="school">Школа</label>
+                  <div class="d-flex gap-3">
+                    <select id="school" class="form-select bg-fa fs-16" aria-label="school">
+                      <option selected disabled value="all">Выберите школу</option>
                     </select>
                   </div>
                 </div>
@@ -35,30 +43,57 @@
                 <div class="form__input--small mb-0">
                   <input class="bg-fa" id="globalSearch" type="text" placeholder="Введите запрос" />
                 </div>
-                <a href="cabinet-bfp-employee-create-region.html" class="button border-1-main d-flex justify-content-center gap-2">
+                <a
+                  href="cabinet-bfp-employee-create-school.html"
+                  class="button border-1-main d-flex justify-content-center gap-2"
+                >
                   <i class="bi bi-plus fs-20 color-white"></i><span>Создать</span>
                 </a>
               </div>
             </div>
 
-            <div id="regions-table" class="ag-theme-quartz" style="height: 500px; width: 100%"></div>
+            <div
+              id="schools-table"
+              class="ag-theme-quartz"
+              style="height: 500px; width: 100%"
+            ></div>
           </section>
         </div>
       </main>
       @@include('./components/_cabinet-footer.html')
     </div>
-    <div class="modal fade" id="deleteRegion" tabindex="-1" aria-labelledby="deleteRegionLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="deleteSchool"
+      tabindex="-1"
+      aria-labelledby="deleteSchoolLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title" id="deleteRegionLabel">Удалить регион</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h1 class="modal-title" id="deleteSchoolLabel">Удалить регион</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
             <p class="color-dark-gray mb-4">Вы действительно хотите удалить регион</p>
             <div class="d-flex justify-content-evenly gap-5">
-              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">Удалить</button>
-              <button type="button" class="button--secondary px-4" data-bs-dismiss="modal" aria-label="Close">Отмена</button>
+              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">
+                Удалить
+              </button>
+              <button
+                type="button"
+                class="button--secondary px-4"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                Отмена
+              </button>
             </div>
           </div>
         </div>
@@ -66,6 +101,6 @@
     </div>
     @@include('./components/_cabinet-script.html')
     <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
-    <script src="./js/employee-regions-table.js"></script>
+    <script src="./js/employee-schools-table.js"></script>
   </body>
 </html>

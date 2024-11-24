@@ -36,8 +36,8 @@ const gridOptions = {
 
   columnDefs: [
     { field: "id", headerName: "№" },
-    { field: "region", headerName: "Область" },
-    { field: "city", headerName: "Регион" },
+    { field: "region", headerName: "Регион" },
+    { field: "city", headerName: "Город" },
     { field: "createdAt", headerName: "Дата создания" },
     {
       field: "edit",
@@ -75,7 +75,10 @@ const gridOptions = {
   onSortChanged: onSortChanged,
   onGridReady: onGridReady,
   isExternalFilterPresent: () => {
-    return document.getElementById("region").value !== "all" || document.getElementById("city").value !== "all";
+    return (
+      document.getElementById("region").value !== "all" ||
+      document.getElementById("city").value !== "all"
+    );
   },
   doesExternalFilterPass: (node) => {
     const regionFilterValue = document.getElementById("region").value;

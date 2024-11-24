@@ -23,6 +23,7 @@ let path = {
       source_folder + "/js/employee-payments-table.js",
       source_folder + "/js/employee-regions-table.js",
       source_folder + "/js/employee-schools-table.js",
+      source_folder + "/js/employee-reports-table.js",
     ],
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.ttf",
@@ -73,7 +74,10 @@ function browserSync(done) {
 }
 
 function html() {
-  return src(path.src.html).pipe(fileinclude()).pipe(dest(path.build.html)).pipe(browsersync.stream());
+  return src(path.src.html)
+    .pipe(fileinclude())
+    .pipe(dest(path.build.html))
+    .pipe(browsersync.stream());
 }
 
 function css() {
