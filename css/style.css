@@ -1168,6 +1168,10 @@
   #accordionCookie .accordion-body {
     background-color: var(--white);
   }
+  .popover {
+    max-width: 385px !important;
+    border-radius: 0;
+  }
   .header {
     display: -webkit-box;
     display: -ms-flexbox;

@@ -199,7 +199,7 @@
       </a>
     </li>
     <li class="cabinet__aside-menu-item">
-      <a href="cabinet-bfp-member-pay-methods.html">
+      <a href="cabinet-bfp-employee-regions.html">
         <svg
           width="28"
           height="28"
@@ -233,7 +233,7 @@
       </a>
     </li>
     <li class="cabinet__aside-menu-item">
-      <a href="cabinet-bfp-member-pay-methods.html">
+      <a href="cabinet-bfp-employee-schools.html">
         <svg
           width="32"
           height="32"
@@ -253,7 +253,7 @@
       </a>
     </li>
     <li class="cabinet__aside-menu-item">
-      <a href="cabinet-bfp-member-pay-methods.html">
+      <a href="cabinet-bfp-employee-reports.html">
         <svg
           width="20"
           height="20"
@@ -472,19 +472,8 @@
               </div>
 
               <div class="d-flex justify-content-between gap-5 mb-3">
-                <a
-                  href="cabinet-bfp-employee-regions.html"
-                  class="button--secondary-no-stretch px-4"
-                  >Назад</a
-                >
-                <button
-                  type="button"
-                  class="button px-4"
-                  data-bs-target="#approveApplication"
-                  data-bs-toggle="modal"
-                >
-                  Создать
-                </button>
+                <a href="cabinet-bfp-employee-regions.html" class="button--secondary-no-stretch px-4">Назад</a>
+                <button type="button" class="button px-4" data-bs-target="#createRegion" data-bs-toggle="modal">Создать</button>
               </div>
             </form>
           </section>
@@ -540,87 +529,16 @@
 <script src="js/cabinet-script.js"></script>
 
     </div>
-    <div
-      class="modal fade"
-      id="approveApplication"
-      tabindex="-1"
-      aria-labelledby="approveApplicationLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="createRegion" tabindex="-1" aria-labelledby="createRegionLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="approveApplicationLabel">Одобрить заявку</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <h1 class="modal-title fs-5" id="createRegionLabel">Создание региона</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p class="color-dark-gray mb-4">
-              Для одобрения заявки присвойте члену ОО «БФП» номер билета
-            </p>
-            <div class="form__input--small mb-4">
-              <input class="bg-fa" id="member-number" type="text" required />
-            </div>
-            <div class="d-flex justify-content-between gap-5">
-              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">
-                Одобрить
-              </button>
-              <button
-                type="submit"
-                class="button--secondary px-4"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                Отмена
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade"
-      id="rejectApplication"
-      tabindex="-1"
-      aria-labelledby="rejectApplicationLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="rejectApplicationLabel">Отклонить заявку</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p class="color-dark-gray mb-2">Вы действительно хотите отклонить заявку?</p>
-            <p class="color-dark-gray mb-4">
-              Вы можете оставить комментарий с причиной отклонения.
-            </p>
-            <div class="form__input--small mb-4">
-              <textarea class="border-1-gray" id="comment" name="comment" rows="5"> </textarea>
-            </div>
-            <div class="d-flex justify-content-between gap-5">
-              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">
-                Отклонить
-              </button>
-              <button
-                type="submit"
-                class="button--secondary px-4"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                Отмена
-              </button>
-            </div>
+            <img src="./img/icons/thumbs-up-trust.svg" alt="Thumbs-up icon" />
+            <p class="mt-4">Регион успешно создан</p>
           </div>
         </div>
       </div>

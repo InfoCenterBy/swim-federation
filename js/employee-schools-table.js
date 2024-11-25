@@ -4,38 +4,56 @@ const gridOptions = {
   rowData: [
     {
       id: 1,
+      school: "ООО «Клуб плавания «Аквастарс»",
       region: "Брестская область",
       city: "Брест",
+      email: "aqua.brest@gmail.com",
+      zipCode: "224007",
       createdAt: "21.11.2019",
     },
     {
       id: 2,
+      school: "ООО «Клуб плавания «Аквастарс»",
       region: "Брестская область",
       city: "Брест",
+      email: "aqua.brest@gmail.com",
+      zipCode: "224007",
       createdAt: "14.11.2019",
     },
     {
       id: 3,
       region: "Гомельская область",
       city: "Гомель",
+      school: "ООО «Клуб плавания «Аквастарс»",
+      email: "aqua.brest@gmail.com",
+      zipCode: "224007",
       createdAt: "25.11.2019",
     },
     {
       id: 4,
       region: "Брестская область",
       city: "Брест",
+      school: "ООО «Клуб плавания «Аквастарс»",
+      email: "aqua.brest@gmail.com",
+      zipCode: "224007",
       createdAt: "05.11.2019",
     },
     {
       id: 5,
       region: "Гомельская область",
       city: "Гомель",
+      school: "ООО «Клуб плавания «Аквастарс»",
+      email: "aqua.brest@gmail.com",
+      zipCode: "224007",
       createdAt: "02.11.2019",
     },
   ],
 
   columnDefs: [
     { field: "id", headerName: "№" },
+    { field: "school", headerName: "Название" },
+    { field: "email", headerName: "email" },
+    { field: "zipCode", headerName: "Индекс" },
     { field: "region", headerName: "Регион" },
     { field: "city", headerName: "Город" },
     { field: "createdAt", headerName: "Дата создания" },
@@ -43,14 +61,14 @@ const gridOptions = {
       field: "edit",
       headerName: "",
       cellRenderer: (params) => {
-        return `<a href="cabinet-bfp-employee-edit-region.html"><i class="color-dark-gray hover-main fs-18 bi bi-pencil-square"></i></a>`;
+        return `<a href="cabinet-bfp-employee-edit-school.html"><i class="color-dark-gray hover-main fs-18 bi bi-pencil-square"></i></a>`;
       },
     },
     {
       field: "delete",
       headerName: "",
       cellRenderer: (params) => {
-        return `<button class="bg-transparent" data-bs-target="#deleteRegion" data-bs-toggle="modal"><i class="color-dark-gray hover-main fs-18 bi bi-trash3"></i></button>`;
+        return `<button class="bg-transparent" data-bs-target="#deleteSchool" data-bs-toggle="modal"><i class="color-dark-gray hover-main fs-18 bi bi-trash3"></i></button>`;
       },
     },
   ],
@@ -59,10 +77,10 @@ const gridOptions = {
     wrapText: true,
     autoHeight: true,
   },
-  autoSizeStrategy: {
-    type: "fitGridWidth",
-    defaultMinWidth: 100,
-  },
+  // autoSizeStrategy: {
+  //   type: "fitGridWidth",
+  //   defaultMinWidth: 100,
+  // },
 
   pagination: true,
 
@@ -77,17 +95,20 @@ const gridOptions = {
   isExternalFilterPresent: () => {
     return (
       document.getElementById("region").value !== "all" ||
-      document.getElementById("city").value !== "all"
+      document.getElementById("city").value !== "all" ||
+      document.getElementById("school").value !== "all"
     );
   },
   doesExternalFilterPass: (node) => {
     const regionFilterValue = document.getElementById("region").value;
     const cityFilterValue = document.getElementById("city").value;
+    const schoolFilterValue = document.getElementById("school").value;
 
     const regionMatch = regionFilterValue === "all" || node.data.region === regionFilterValue;
     const cityMatch = cityFilterValue === "all" || node.data.city === cityFilterValue;
+    const schoolMatch = schoolFilterValue === "all" || node.data.city === schoolFilterValue;
 
-    return regionMatch && cityMatch;
+    return regionMatch && cityMatch && schoolMatch;
   },
 };
 
@@ -140,7 +161,7 @@ function onGridReady(params) {
   }
 }
 
-const ediv = document.querySelector("#regions-table");
+const ediv = document.querySelector("#schools-table");
 const globalSearchInput = document.getElementById("globalSearch");
 
 function onFilterTextBoxChanged() {

@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Регионы</title>
+  <title>Редактировать школу</title>
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
@@ -446,51 +446,95 @@
   </ul>
 </aside>
 
-          <section class="cabinet__content">
-            <h2 class="h2-title">Регионы</h2>
-            <div class="d-flex gap-4 flex-wrap mb-5 w-50">
-              <div class="d-flex w-100 flex-wrap flex-lg-nowrap gap-4">
+          <section class="cabinet__content pt-0">
+            <nav>
+              <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                  <a href="cabinet-bfp-employee-schools.html">Школы</a>
+                </li>
+                <li class="breadcrumbs__item active">Редактировать школу</li>
+              </ul>
+            </nav>
+            <h2 class="h2-title">Редактировать школу</h2>
+            <form class="cabinet__form d-flex flex-column gap-4 mt-0" action="">
+              <div class="mb-3 d-flex flex-column gap-4">
                 <div class="form__input--small mb-0">
-                  <label class="fs-16" for="region">Регион</label>
-                  <div class="d-flex gap-3">
-                    <select id="region" class="form-select bg-fa fs-16" aria-label="region">
-                      <option selected disabled value="all">Выберите регион</option>
-                      <option selected value="all">Все</option>
-                    </select>
-                  </div>
+                  <label class="fs-16" for="schoolName"> Название </label>
+                  <input
+                    class="bg-fa"
+                    id="schoolName"
+                    type="text"
+                    value="ГСУСУ «Брестский областной ЦОР по водным видам спорта»"
+                  />
                 </div>
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="city">Город</label>
-                  <div class="d-flex gap-3">
-                    <select id="city" class="form-select bg-fa fs-16" aria-label="paymentStatus">
-                      <option selected disabled value="all">Выберите город</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex justify-content-end align-items-center w-100 flex-wrap mb-4">
-              <div class="d-flex gap-4 flex-wrap flex-lg-nowrap">
-                <div class="form__input--small mb-0">
-                  <input class="bg-fa" id="globalSearch" type="text" placeholder="Введите запрос" />
-                </div>
-                <a
-                  href="cabinet-bfp-employee-create-region.html"
-                  class="button border-1-main d-flex justify-content-center gap-2"
-                >
-                  <i class="bi bi-plus fs-20 color-white"></i><span>Создать</span>
-                </a>
-              </div>
-            </div>
 
-            <div
-              id="regions-table"
-              class="ag-theme-quartz"
-              style="height: 500px; width: 100%"
-            ></div>
+                <div class="form__input--small mb-0">
+                  <label class="fs-16" for="schoolEmail"> Email </label>
+                  <input class="bg-fa" id="schoolEmail" type="email" value="ivanov1995@mail.ru" />
+                </div>
+
+                <div class="form__input--small mb-0 w-100">
+                  <label class="fs-16" for="region">Регион</label>
+                  <select id="region" class="form-select bg-fa">
+                    <option selected>Выберите регион</option>
+                  </select>
+                </div>
+
+                <div class="form__input--small mb-0 w-100">
+                  <label class="fs-16" for="city">Город</label>
+                  <select id="city" class="form-select bg-fa">
+                    <option selected>Выберите город</option>
+                  </select>
+                </div>
+
+                <div class="mb-0 w-100">
+                  <p class="mb-2 fs-16">Адрес</p>
+                  <textarea
+                    class="border-1-gray w-100 p-2"
+                    name="schoolAddress"
+                    id="schoolAddress"
+                    rows="5"
+                  >
+Брест, ул. Московская 147</textarea
+                  >
+                </div>
+
+                <div class="form__input--small mb-0">
+                  <label class="fs-16" for="schoolPostalIndex"> Индекс </label>
+                  <input class="bg-fa" id="schoolPostalIndex" type="text" value="224023" />
+                </div>
+
+                <div class="mb-4 w-100">
+                  <p class="mb-2 fs-16">Комментарий</p>
+                  <textarea
+                    class="border-1-gray w-100 p-2"
+                    name="comment"
+                    id="comment"
+                    rows="8"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between gap-5 mb-3">
+                <a
+                  href="cabinet-bfp-employee-regions.html"
+                  class="button--secondary-no-stretch px-4"
+                  >Назад</a
+                >
+                <button
+                  type="button"
+                  class="button px-4"
+                  data-bs-target="#editSchool"
+                  data-bs-toggle="modal"
+                >
+                  Сохранить
+                </button>
+              </div>
+            </form>
           </section>
         </div>
       </main>
+
       <footer class="cabinet__footer">
   <div class="bg-main py-5 py-lg-3">
     <div class="d-flex justify-content-between align-items-center gap-4 flex-wrap">
@@ -532,19 +576,25 @@
     </div>
   </div>
 </footer>
+ <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="js/cabinet-script.js"></script>
 
     </div>
     <div
       class="modal fade"
-      id="deleteRegion"
+      id="editSchool"
       tabindex="-1"
-      aria-labelledby="deleteRegionLabel"
+      aria-labelledby="editSchoolLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title" id="deleteRegionLabel">Удалить регион</h1>
+            <h1 class="modal-title fs-5" id="editSchoolLabel">Редактирование школы</h1>
             <button
               type="button"
               class="btn-close"
@@ -553,32 +603,11 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p class="color-dark-gray mb-4">Вы действительно хотите удалить регион</p>
-            <div class="d-flex justify-content-evenly gap-5">
-              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">
-                Удалить
-              </button>
-              <button
-                type="button"
-                class="button--secondary px-4"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                Отмена
-              </button>
-            </div>
+            <img src="./img/icons/thumbs-up-trust.svg" alt="Thumbs-up icon" />
+            <p class="mt-4">Школа успешно изменена</p>
           </div>
         </div>
       </div>
     </div>
-    <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-  crossorigin="anonymous"></script>
-<script src="https://unpkg.com/imask"></script>
-<script src="js/cabinet-script.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
-    <script src="./js/employee-regions-table.js"></script>
   </body>
 </html>
