@@ -154,3 +154,34 @@
   gap: 24px;
   display: flex;
 }
+
+.stats-block {
+  display: flex;
+  background: #e6f0ff;
+  padding: 20px;
+}
+
+.period-selector {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.period-selector label {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.stats {
+  font-size: 14px;
+}
+
+.stats p,
+.stats ul {
+  margin: 0;
+}
+
+.stats ul {
+  list-style: none;
+  padding: 0;
+}
