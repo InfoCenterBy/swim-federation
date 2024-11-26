@@ -1,7 +1,7 @@
 .button {
   background-color: var(--main);
   color: var(--white);
-  padding: 10px 24px;
+  padding: 11px 24px;
   display: inline-block;
   font-size: 16px;
   transition: $transition-2;
@@ -121,7 +121,7 @@
   font-size: 16px;
   line-height: 21px;
 
-  padding: 10px 24px;
+  padding: 11px 24px;
   transition: $transition-2;
 
   @include hover(background-color, var(--main-hover));
@@ -170,5 +170,48 @@
   .button--light-blue {
     text-align: center;
     width: 100%;
+  }
+}
+
+.period-button {
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 16px;
+  line-height: 21px;
+  width: 120px;
+  height: 45px;
+
+  padding: 10px 24px;
+  transition: $transition-2;
+
+  @include hover(background-color, var(--main-hover));
+  @include hover(color, var(--white));
+
+  &.active {
+    background-color: var(--main);
+    color: var(--white);
+  }
+}
+
+.period-button--small {
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 16px;
+  line-height: 21px;
+  width: 100px;
+  height: 45px;
+  border: 1px solid var(--gray);
+  display: flex;
+  justify-content: center;
+
+  padding: 10px 24px;
+  transition: $transition-2;
+
+  @include hover(background-color, var(--main-hover));
+  @include hover(color, var(--white));
+
+  &.active {
+    background-color: var(--main);
+    color: var(--white);
   }
 }

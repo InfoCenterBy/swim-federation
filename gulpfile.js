@@ -24,6 +24,7 @@ let path = {
       source_folder + "/js/employee-regions-table.js",
       source_folder + "/js/employee-schools-table.js",
       source_folder + "/js/employee-reports-table.js",
+      source_folder + "/js/picker.js",
     ],
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.ttf",

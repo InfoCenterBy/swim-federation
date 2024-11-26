@@ -155,33 +155,45 @@
   display: flex;
 }
 
-.stats-block {
+.cabinet__reports-overview {
+  max-width: 768px;
   display: flex;
-  background: #e6f0ff;
+  background: var(--light-main);
   padding: 20px;
+  margin-bottom: 32px;
 }
 
-.period-selector {
-  display: flex;
-  flex-direction: column;
-  margin-right: 20px;
+.cabinet__reports-stats {
+  min-width: 236px;
 }
 
-.period-selector label {
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-.stats {
-  font-size: 14px;
-}
-
-.stats p,
-.stats ul {
-  margin: 0;
-}
-
-.stats ul {
+.cabinet__reports-stats ul {
   list-style: none;
   padding: 0;
+}
+
+.cabinet__reports-datepicker {
+  min-width: 256px;
+  position: relative;
+
+  & input {
+    width: 100%;
+    height: 43px;
+    padding-inline: 10px;
+    color: var(--black);
+
+    &::placeholder {
+      color: var(--black);
+    }
+  }
+
+  & img {
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/icons/calendar-week.svg");
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+  }
 }
