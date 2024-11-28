@@ -2131,6 +2131,56 @@
     display: -ms-flexbox;
     display: flex;
   }
+  .cabinet__reports-overview {
+    max-width: 768px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: var(--light-main);
+    padding: 20px;
+    margin-bottom: 32px;
+  }
+  .cabinet__reports-stats {
+    min-width: 236px;
+  }
+  .cabinet__reports-stats ul {
+    list-style: none;
+    padding: 0;
+  }
+  .cabinet__reports-datepicker {
+    min-width: 256px;
+    position: relative;
+  }
+  .cabinet__reports-datepicker input {
+    width: 100%;
+    height: 43px;
+    padding-inline: 10px;
+    color: var(--black);
+  }
+  .cabinet__reports-datepicker input::-webkit-input-placeholder {
+    color: var(--black);
+  }
+  .cabinet__reports-datepicker input::-moz-placeholder {
+    color: var(--black);
+  }
+  .cabinet__reports-datepicker input:-ms-input-placeholder {
+    color: var(--black);
+  }
+  .cabinet__reports-datepicker input::-ms-input-placeholder {
+    color: var(--black);
+  }
+  .cabinet__reports-datepicker input::placeholder {
+    color: var(--black);
+  }
+  .cabinet__reports-datepicker img {
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/icons/calendar-week.svg");
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+  }
   .link:hover {
     color: var(--main);
   }
@@ -2366,7 +2416,7 @@
   .button {
     background-color: var(--main);
     color: var(--white);
-    padding: 10px 24px;
+    padding: 11px 24px;
     display: inline-block;
     font-size: 16px;
     -webkit-transition: all ease-out 0.2s;
@@ -2552,7 +2602,7 @@
     border: 1px solid var(--main);
     font-size: 16px;
     line-height: 21px;
-    padding: 10px 24px;
+    padding: 11px 24px;
     -webkit-transition: all ease-out 0.2s;
     transition: all ease-out 0.2s;
   }
@@ -2677,6 +2727,83 @@
       text-align: center;
       width: 100%;
     }
+  }
+  .period-button {
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 21px;
+    width: 120px;
+    height: 45px;
+    padding: 10px 24px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .period-button:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .period-button:active {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .period-button:hover {
+      color: var(--white);
+    }
+  }
+  @media (hover: none) {
+    .period-button:active {
+      color: var(--white);
+    }
+  }
+  .period-button.active {
+    background-color: var(--main);
+    color: var(--white);
+  }
+  .period-button--small {
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 21px;
+    width: 100px;
+    height: 45px;
+    border: 1px solid var(--gray);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px 24px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .period-button--small:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .period-button--small:active {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .period-button--small:hover {
+      color: var(--white);
+    }
+  }
+  @media (hover: none) {
+    .period-button--small:active {
+      color: var(--white);
+    }
+  }
+  .period-button--small.active {
+    background-color: var(--main);
+    color: var(--white);
   }
   .documents__cards {
     display: grid;

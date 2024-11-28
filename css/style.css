@@ -4093,7 +4093,7 @@
   .button {
     background-color: var(--main);
     color: var(--white);
-    padding: 10px 24px;
+    padding: 11px 24px;
     display: inline-block;
     font-size: 16px;
     -webkit-transition: all ease-out 0.2s;
@@ -4279,7 +4279,7 @@
     border: 1px solid var(--main);
     font-size: 16px;
     line-height: 21px;
-    padding: 10px 24px;
+    padding: 11px 24px;
     -webkit-transition: all ease-out 0.2s;
     transition: all ease-out 0.2s;
   }
@@ -4404,6 +4404,83 @@
       text-align: center;
       width: 100%;
     }
+  }
+  .period-button {
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 21px;
+    width: 120px;
+    height: 45px;
+    padding: 10px 24px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .period-button:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .period-button:active {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .period-button:hover {
+      color: var(--white);
+    }
+  }
+  @media (hover: none) {
+    .period-button:active {
+      color: var(--white);
+    }
+  }
+  .period-button.active {
+    background-color: var(--main);
+    color: var(--white);
+  }
+  .period-button--small {
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 21px;
+    width: 100px;
+    height: 45px;
+    border: 1px solid var(--gray);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px 24px;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .period-button--small:hover {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: none) {
+    .period-button--small:active {
+      background-color: var(--main-hover);
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .period-button--small:hover {
+      color: var(--white);
+    }
+  }
+  @media (hover: none) {
+    .period-button--small:active {
+      color: var(--white);
+    }
+  }
+  .period-button--small.active {
+    background-color: var(--main);
+    color: var(--white);
   }
   .photo-albums {
     height: 450px;
