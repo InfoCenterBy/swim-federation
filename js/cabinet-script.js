@@ -51,30 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
 asideButton.addEventListener("click", toggleMenu);
 
 document.addEventListener("DOMContentLoaded", function () {
-  const yearSelect = document.querySelectorAll("#year-select");
-  const startYear = 1940;
-  const currentYear = new Date().getFullYear();
-
-  yearSelect.forEach((select) => {
-    for (let year = currentYear; year >= startYear; year--) {
-      const option = document.createElement("option");
-      option.value = year;
-      option.textContent = year;
-      select.appendChild(option);
-    }
-  });
-
-  const daySelect = document.querySelectorAll("#day-select");
-
-  daySelect.forEach((select) => {
-    for (let day = 1; day <= 31; day++) {
-      const option = document.createElement("option");
-      option.value = day;
-      option.textContent = day;
-      select.appendChild(option);
-    }
-  });
-
   const data1 = {
     "Брестская область": {
       Брест: ["Школа 1", "Школа 2"],
@@ -225,7 +201,6 @@ if (benefitCheckbox) {
     fileInput.click();
   });
 
-  // Отображение выбранного файла и предпросмотра
   fileInput.addEventListener("change", function (event) {
     const file = event.target.files[0];
 
@@ -235,7 +210,6 @@ if (benefitCheckbox) {
       cancelButton.classList.remove("hidden");
       fileUploadBody.classList.add("hidden");
 
-      // Если это изображение, показываем превью
       if (file.type.startsWith("image/")) {
         const reader = new FileReader();
         reader.onload = function (e) {
@@ -265,40 +239,6 @@ if (benefitCheckbox) {
     fileUploadBody.classList.remove("hidden");
   }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("cabinet__form");
-  const modal = document.getElementById("modal-window");
-  const closeButton = document.querySelectorAll(".modal-close-btn");
-  const body = document.body;
-
-  if (modal && form && closeButton) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      modal.classList.add("open");
-      body.classList.add("no-scroll");
-    });
-
-    closeButton.forEach((btn) => {
-      btn.addEventListener("click", function () {
-        modal.classList.remove("open");
-        body.classList.remove("no-scroll");
-      });
-    });
-
-    window.addEventListener("click", function (event) {
-      if (event.target === modal) {
-        modal.classList.remove("open");
-        body.classList.remove("no-scroll");
-      }
-    });
-  }
-});
-
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-const popoverList = [...popoverTriggerList].map(
-  (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
-);
 
 document.addEventListener("DOMContentLoaded", function () {
   let steps = document.querySelectorAll(".cabinet__form-step");
