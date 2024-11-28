@@ -666,3 +666,8 @@ const AG_GRID_LOCALE_RU = {
   footerTotal: "Total",
 };
 
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+const popoverList = [...popoverTriggerList].map(
+  (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+);
+
