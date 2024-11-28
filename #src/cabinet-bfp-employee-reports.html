@@ -32,8 +32,7 @@
                   <li>- отчет по факту оплаты (оплаченные/неоплаченные)</li>
                   <li>- отчет по способу оплаты (ЕРИП/безнал).</li>
                 </ul>
-              </div>"
-              >
+              </div>">
                 <i class="bi bi-question-circle color-green-success"></i>Как пользоваться
               </a>
             </div>
@@ -62,20 +61,12 @@
                 </div>
               </div>
               <div class="cabinet__reports-stats">
-                <p class="fs-18 mb-4 fw-medium">
-                  Зарегистрировано: <span class="color-main" id="registered">1808</span>
-                </p>
+                <p class="fs-18 mb-4 fw-medium">Зарегистрировано: <span class="color-main" id="registered">1808</span></p>
                 <p class="fs-14 mb-2">В том числе:</p>
 
-                <p class="fs-16 fw-medium mb-2">
-                  Оплачены полностью: <span class="color-main" id="paid-full">488</span>
-                </p>
-                <p class="fs-16 fw-medium mb-2">
-                  Оплачены частично: <span class="color-main" id="paid-partial">379</span>
-                </p>
-                <p class="fs-16 fw-medium mb-2">
-                  Не оплачены: <span class="color-main" id="unpaid">941</span>
-                </p>
+                <p class="fs-16 fw-medium mb-2">Оплачены полностью: <span class="color-main" id="paid-full">488</span></p>
+                <p class="fs-16 fw-medium mb-2">Оплачены частично: <span class="color-main" id="paid-partial">379</span></p>
+                <p class="fs-16 fw-medium mb-2">Не оплачены: <span class="color-main" id="unpaid">941</span></p>
               </div>
             </div>
 
@@ -96,11 +87,7 @@
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="contriputionTypeFilter">Тип взноса</label>
                   <div class="d-flex gap-3">
-                    <select
-                      id="contriputionType"
-                      class="form-select bg-fa fs-16"
-                      aria-label="contriputionType"
-                    >
+                    <select id="contriputionType" class="form-select bg-fa fs-16" aria-label="contriputionType">
                       <option selected value="member">Членский</option>
                       <option selected value="entrance">Вступительный</option>
                     </select>
@@ -130,11 +117,7 @@
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="paymentMethodFilter">Группа</label>
                   <div class="d-flex gap-3">
-                    <select
-                      id="paymentMethodFilter"
-                      class="form-select bg-fa fs-16"
-                      aria-label="paymentMethod"
-                    >
+                    <select id="paymentMethodFilter" class="form-select bg-fa fs-16" aria-label="paymentMethod">
                       <option selected value="all">Все</option>
                       <option value="erip">ЕРИП</option>
                       <option value="cashless">Безналичная оплата</option>
@@ -172,9 +155,7 @@
               </div>
             </div>
 
-            <div
-              class="d-flex justify-content-between align-items-center w-100 flex-wrap mb-4 position-relative"
-            >
+            <div class="d-flex justify-content-between align-items-center w-100 flex-wrap mb-4 position-relative">
               <p class="h3-title color-black">Общий отчет</p>
 
               <div class="d-flex gap-4 flex-wrap flex-lg-nowrap">
@@ -203,9 +184,7 @@
                   <tr>
                     <td>2</td>
                     <td>Даниленко Елена Борисовна</td>
-                    <td>
-                      заместитель главного бухгалтера учреждения «РЦОП по водным видам спорта»
-                    </td>
+                    <td>заместитель главного бухгалтера учреждения «РЦОП по водным видам спорта»</td>
                   </tr>
                   <tr>
                     <td>3</td>
@@ -220,38 +199,18 @@
       </main>
       @@include('./components/_cabinet-footer.html')
     </div>
-    <div
-      class="modal fade"
-      id="deleteMember"
-      tabindex="-1"
-      aria-labelledby="deleteMemberLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="deleteMember" tabindex="-1" aria-labelledby="deleteMemberLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title" id="deleteMemberLabel">Удалить члена ОО «БФП»</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <p class="color-dark-gray mb-4">Вы действительно хотите удалить члена ОО «БФП» ?</p>
             <div class="d-flex justify-content-evenly gap-5">
-              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">
-                Удалить
-              </button>
-              <button
-                type="button"
-                class="button--secondary px-4"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                Отмена
-              </button>
+              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">Удалить</button>
+              <button type="button" class="button--secondary px-4" data-bs-dismiss="modal" aria-label="Close">Отмена</button>
             </div>
           </div>
         </div>
