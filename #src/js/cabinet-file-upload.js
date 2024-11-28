@@ -22,7 +22,6 @@ if (benefitCheckbox) {
     fileInput.click();
   });
 
-  // Отображение выбранного файла и предпросмотра
   fileInput.addEventListener("change", function (event) {
     const file = event.target.files[0];
 
@@ -32,7 +31,6 @@ if (benefitCheckbox) {
       cancelButton.classList.remove("hidden");
       fileUploadBody.classList.add("hidden");
 
-      // Если это изображение, показываем превью
       if (file.type.startsWith("image/")) {
         const reader = new FileReader();
         reader.onload = function (e) {

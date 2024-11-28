@@ -163,23 +163,23 @@ const gridOptions = {
 function onColumnMoved(params) {
   const columnState = params.api.getColumnState();
 
-  localStorage.setItem("agColumnState", JSON.stringify(columnState));
+  localStorage.setItem("applicationsState", JSON.stringify(columnState));
 }
 
 function onColumnResized(params) {
   const columnState = params.api.getColumnState();
 
-  localStorage.setItem("agColumnState", JSON.stringify(columnState));
+  localStorage.setItem("applicationsState", JSON.stringify(columnState));
 }
 
 function onSortChanged(params) {
   const columnState = params.api.getColumnState();
 
-  localStorage.setItem("agColumnState", JSON.stringify(columnState));
+  localStorage.setItem("applicationsState", JSON.stringify(columnState));
 }
 
 function onGridReady(params) {
-  const columnState = JSON.parse(localStorage.getItem("agColumnState"));
+  const columnState = JSON.parse(localStorage.getItem("applicationsState"));
 
   if (columnState) {
     params.api.applyColumnState({ state: columnState, applyOrder: true });

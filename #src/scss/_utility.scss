@@ -562,4 +562,27 @@ body.no-scroll {
 .popover {
   max-width: 385px !important;
   border-radius: 0;
+  z-index: 1;
+  background-color: var(--white);
+  border: 1px solid var(--gray);
+}
+
+.popover-button {
+  color: var(--green-success);
+
+  &:hover {
+    color: var(--black);
+  }
+
+  &:hover i {
+    color: var(--black);
+  }
+
+  & i {
+    color: var(--green-success);
+
+    &:hover {
+      color: var(--black);
+    }
+  }
 }

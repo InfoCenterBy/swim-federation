@@ -7,21 +7,18 @@ const statsData = {
   custom: { registered: 0, paidFull: 0, paidPartial: 0, unpaid: 0 },
 };
 
-// Инициализация Datepicker
 const datepicker = flatpickr("#custom-period", {
-  mode: "range", // Режим выбора диапазона
-  dateFormat: "d.m.Y", // Формат даты (например, 25.11.2024)
-  locale: "ru", // Локализация на русский язык
+  mode: "range",
+  dateFormat: "d.m.Y",
+  locale: "ru",
   onClose: (selectedDates) => {
     if (selectedDates.length === 2) {
-      // Пример: Обновляем данные по выбранному периоду
       console.log(`Выбран период: с ${selectedDates[0]} по ${selectedDates[1]}`);
-      updateStats("custom"); // Здесь можно обновить статистику по данным выбранного периода
+      updateStats("custom");
     }
   },
 });
 
-// Обновление статистики
 function updateStats(period) {
   const { registered, paidFull, paidPartial, unpaid } = statsData[period];
 
@@ -31,7 +28,6 @@ function updateStats(period) {
   document.getElementById("unpaid").textContent = unpaid;
 }
 
-// Обработка выбора периода
 document.querySelectorAll("input[name='period']").forEach((radio) => {
   radio.addEventListener("change", (event) => {
     const period = event.target.value;
@@ -43,10 +39,4 @@ document.querySelectorAll("input[name='period']").forEach((radio) => {
       updateStats(period);
     }
   });
-});
-
-// Инициализация с текущим выбранным значением
-document.addEventListener("DOMContentLoaded", () => {
-  const selectedPeriod = document.querySelector("input[name='period']:checked").value;
-  updateStats(selectedPeriod);
 });

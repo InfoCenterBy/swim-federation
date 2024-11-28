@@ -376,7 +376,7 @@ function createColumnSelection() {
       gridApi.setColumnsVisible([colDef.field], checkbox.checked);
 
       const columnState = gridApi.getColumnState();
-      localStorage.setItem("agColumnState", JSON.stringify(columnState));
+      localStorage.setItem("membersState", JSON.stringify(columnState));
     });
   });
 }
@@ -401,25 +401,25 @@ if (toggleCheckboxesBtn && checkboxesBody) {
 function onColumnMoved(params) {
   const columnState = params.api.getColumnState();
 
-  localStorage.setItem("agColumnState", JSON.stringify(columnState));
+  localStorage.setItem("membersState", JSON.stringify(columnState));
 }
 
 function onColumnResized(params) {
   const columnState = params.api.getColumnState();
 
-  localStorage.setItem("agColumnState", JSON.stringify(columnState));
+  localStorage.setItem("membersState", JSON.stringify(columnState));
 }
 
 function onSortChanged(params) {
   const columnState = params.api.getColumnState();
 
-  localStorage.setItem("agColumnState", JSON.stringify(columnState));
+  localStorage.setItem("membersState", JSON.stringify(columnState));
 }
 
 function onGridReady(params) {
   gridApi = params.api;
 
-  const columnState = JSON.parse(localStorage.getItem("agColumnState"));
+  const columnState = JSON.parse(localStorage.getItem("membersState"));
 
   if (columnState) {
     params.api.applyColumnState({ state: columnState, applyOrder: true });
