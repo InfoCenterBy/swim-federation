@@ -77,10 +77,6 @@ const gridOptions = {
     wrapText: true,
     autoHeight: true,
   },
-  // autoSizeStrategy: {
-  //   type: "fitGridWidth",
-  //   defaultMinWidth: 100,
-  // },
 
   pagination: true,
 
