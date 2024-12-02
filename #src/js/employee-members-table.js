@@ -4,7 +4,7 @@ const gridOptions = {
   rowData: [
     {
       id: 1,
-      photo: "member-avatar.png",
+      photo: "male-no-avatar.png",
       membershipNumber: "123123123",
       fio: "Альхимович Евгений Иванович",
       email: "aroitq@mail.ru",
@@ -27,7 +27,7 @@ const gridOptions = {
     },
     {
       id: 5,
-      photo: "member-avatar.png",
+      photo: "female-no-avatar.png",
       membershipNumber: "123123123",
       fio: "Альхимович Евгений Иванович",
       email: "aroitq@mail.ru",
@@ -108,12 +108,11 @@ const gridOptions = {
       headerName: "Фото",
       cellClass: "ag-cell-center",
       maxWidth: 100,
-      flex: 1,
       cellRenderer: (params) => {
         return customAvatarComponent(params);
       },
     },
-    { field: "membershipNumber", headerName: "Номер билета", unSortIcon: true },
+    { field: "membershipNumber", headerName: "Номер билета", unSortIcon: true, width: 150, minWidth: 110, maxWidth: 180 },
     {
       field: "fio",
       headerName: "ФИО",
@@ -237,6 +236,9 @@ const gridOptions = {
       field: "edit",
       headerName: "",
       cellClass: "ag-cell-center",
+      width: 60,
+      minWidth: 60,
+      maxWidth: 60,
       cellRenderer: (params) => {
         return `<a href="cabinet-bfp-employee-edit-member.html"><i class="color-dark-gray hover-main fs-18 bi bi-pencil-square"></i></a>`;
       },
@@ -245,6 +247,9 @@ const gridOptions = {
       field: "delete",
       headerName: "",
       cellClass: "ag-cell-center",
+      width: 60,
+      minWidth: 60,
+      maxWidth: 60,
       cellRenderer: (params) => {
         return `<button class="bg-transparent" data-bs-target="#deleteMember" data-bs-toggle="modal"><i class="color-dark-gray hover-main fs-18 bi bi-trash3"></i></button>`;
       },

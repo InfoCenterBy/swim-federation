@@ -589,8 +589,17 @@
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .member-card__status {
+    margin-left: 0 !important;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .cabinet__member-card {
     padding: 16px;
+  }
+  .member-card__status {
+    margin-left: 0 !important;
   }
 }

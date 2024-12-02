@@ -35,13 +35,16 @@ const gridOptions = {
   ],
 
   columnDefs: [
-    { field: "id", headerName: "№" },
-    { field: "region", headerName: "Регион" },
-    { field: "city", headerName: "Город" },
-    { field: "createdAt", headerName: "Дата создания" },
+    { field: "id", headerName: "№", width: 80, minWidth: 80, maxWidth: 80 },
+    { field: "region", headerName: "Регион", flex: 1, unSortIcon: true },
+    { field: "city", headerName: "Город", flex: 1, unSortIcon: true },
+    { field: "createdAt", headerName: "Дата создания", flex: 1, unSortIcon: true },
     {
       field: "edit",
       headerName: "",
+      width: 60,
+      minWidth: 60,
+      maxWidth: 60,
       cellRenderer: (params) => {
         return `<a href="cabinet-bfp-employee-edit-region.html"><i class="color-dark-gray hover-main fs-18 bi bi-pencil-square"></i></a>`;
       },
@@ -49,6 +52,9 @@ const gridOptions = {
     {
       field: "delete",
       headerName: "",
+      width: 60,
+      minWidth: 60,
+      maxWidth: 60,
       cellRenderer: (params) => {
         return `<button class="bg-transparent" data-bs-target="#deleteRegion" data-bs-toggle="modal"><i class="color-dark-gray hover-main fs-18 bi bi-trash3"></i></button>`;
       },
@@ -58,10 +64,6 @@ const gridOptions = {
     flex: 1,
     wrapText: true,
     autoHeight: true,
-  },
-  autoSizeStrategy: {
-    type: "fitGridWidth",
-    defaultMinWidth: 100,
   },
 
   pagination: true,
@@ -75,10 +77,7 @@ const gridOptions = {
   onSortChanged: onSortChanged,
   onGridReady: onGridReady,
   isExternalFilterPresent: () => {
-    return (
-      document.getElementById("region").value !== "all" ||
-      document.getElementById("city").value !== "all"
-    );
+    return document.getElementById("region").value !== "all" || document.getElementById("city").value !== "all";
   },
   doesExternalFilterPass: (node) => {
     const regionFilterValue = document.getElementById("region").value;

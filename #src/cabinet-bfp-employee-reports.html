@@ -20,7 +20,7 @@
                 data-bs-sanitize="false"
                 data-bs-toggle="popover"
                 data-bs-placement="bottom"
-                data-bs-content="<div class='p-3 custom-popover'><p class='mb-2'>На этой странице можно сформировать отчеты в интерактивном режиме. Просто выберите подходящие фильтры и нажмите на кнопку «Применить», после чего отчет сформируется автоматически.</p>
+                data-bs-content="<div class='p-3 custom-popover ff-inter'><p class='mb-2'>На этой странице можно сформировать отчеты в интерактивном режиме. Просто выберите подходящие фильтры и нажмите на кнопку «Применить», после чего отчет сформируется автоматически.</p>
 
                 <p class='fw-semibold mb-2'>Вы можете сформировать следующие типы отчетов:</p>
                 
@@ -33,13 +33,12 @@
                   <li>- отчет по факту оплаты (оплаченные/неоплаченные)</li>
                   <li>- отчет по способу оплаты (ЕРИП/безнал).</li>
                 </ul>
-              </div>"
-              >
+              </div>">
                 <i class="bi bi-question-circle"></i>Как пользоваться
               </a>
             </div>
 
-            <div class="cabinet__reports-overview">
+            <div class="cabinet__reports-overview flex-wrap flex-lg-nowrap">
               <div class="cabinet__reports-period-selector">
                 <div class="d-flex flex-wrap gap-3">
                   <button class="period-button">Вчера</button>
@@ -62,26 +61,18 @@
                   </div>
                 </div>
               </div>
-              <div class="cabinet__reports-stats">
-                <p class="fs-18 mb-4 fw-medium">
-                  Зарегистрировано: <span class="color-main" id="registered">1808</span>
-                </p>
+              <div class="cabinet__reports-stats mt-3 mt-lg-0">
+                <p class="fs-18 mb-4 fw-medium">Зарегистрировано: <span class="color-main" id="registered">1808</span></p>
                 <p class="fs-14 mb-2">В том числе:</p>
 
-                <p class="fs-16 fw-medium mb-2">
-                  Оплачены полностью: <span class="color-main" id="paid-full">488</span>
-                </p>
-                <p class="fs-16 fw-medium mb-2">
-                  Оплачены частично: <span class="color-main" id="paid-partial">379</span>
-                </p>
-                <p class="fs-16 fw-medium mb-2">
-                  Не оплачены: <span class="color-main" id="unpaid">941</span>
-                </p>
+                <p class="fs-16 fw-medium mb-2">Оплачены полностью: <span class="color-main" id="paid-full">488</span></p>
+                <p class="fs-16 fw-medium mb-2">Оплачены частично: <span class="color-main" id="paid-partial">379</span></p>
+                <p class="fs-16 fw-medium mb-2">Не оплачены: <span class="color-main" id="unpaid">941</span></p>
               </div>
             </div>
 
             <div class="d-flex gap-4 flex-wrap mb-5">
-              <div class="d-flex gap-4 w-100 flex-wrap flex-lg-nowrap">
+              <div class="d-flex gap-4 w-100 flex-wrap flex-xl-nowrap">
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="reportsFilter">Разряд</label>
                   <div class="d-flex gap-3">
@@ -97,11 +88,7 @@
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="contriputionTypeFilter">Тип взноса</label>
                   <div class="d-flex gap-3">
-                    <select
-                      id="contriputionType"
-                      class="form-select bg-fa fs-16"
-                      aria-label="contriputionType"
-                    >
+                    <select id="contriputionType" class="form-select bg-fa fs-16" aria-label="contriputionType">
                       <option selected value="member">Членский</option>
                       <option selected value="entrance">Вступительный</option>
                     </select>
@@ -127,23 +114,19 @@
                   </div>
                 </div>
               </div>
-              <div class="d-flex gap-4 w-100 flex-wrap flex-lg-nowrap">
+              <div class="d-flex gap-4 w-100 flex-wrap flex-xl-nowrap">
                 <div class="form__input--small mb-0">
                   <label class="fs-16" for="paymentMethodFilter">Группа</label>
                   <div class="d-flex gap-3">
-                    <select
-                      id="paymentMethodFilter"
-                      class="form-select bg-fa fs-16"
-                      aria-label="paymentMethod"
-                    >
+                    <select id="paymentMethodFilter" class="form-select bg-fa fs-16" aria-label="paymentMethod">
                       <option selected value="all">Все</option>
                       <option value="erip">ЕРИП</option>
                       <option value="cashless">Безналичная оплата</option>
                     </select>
                   </div>
                 </div>
-                <div class="d-flex justify-content-between gap-3">
-                  <div class="d-flex gap-3 align-items-end">
+                <div class="d-flex justify-content-between gap-3 flex-wrap flex-xl-nowrap">
+                  <div class="d-flex gap-3 align-items-end flex-wrap flex-xl-nowrap">
                     <button class="period-button--small">Вчера</button>
                     <button class="period-button--small">Сегодня</button>
                     <button class="period-button--small">Неделя</button>
@@ -173,9 +156,7 @@
               </div>
             </div>
 
-            <div
-              class="d-flex justify-content-between align-items-center w-100 flex-wrap mb-4 position-relative"
-            >
+            <div class="d-flex justify-content-between align-items-center w-100 flex-wrap mb-4 position-relative">
               <p class="h3-title color-black">Общий отчет</p>
 
               <div class="d-flex gap-4 flex-wrap flex-lg-nowrap">
@@ -204,9 +185,7 @@
                   <tr>
                     <td>2</td>
                     <td>Даниленко Елена Борисовна</td>
-                    <td>
-                      заместитель главного бухгалтера учреждения «РЦОП по водным видам спорта»
-                    </td>
+                    <td>заместитель главного бухгалтера учреждения «РЦОП по водным видам спорта»</td>
                   </tr>
                   <tr>
                     <td>3</td>
@@ -221,38 +200,18 @@
       </main>
       @@include('./components/_cabinet-footer.html')
     </div>
-    <div
-      class="modal fade"
-      id="deleteMember"
-      tabindex="-1"
-      aria-labelledby="deleteMemberLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="deleteMember" tabindex="-1" aria-labelledby="deleteMemberLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title" id="deleteMemberLabel">Удалить члена ОО «БФП»</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <p class="color-dark-gray mb-4">Вы действительно хотите удалить члена ОО «БФП» ?</p>
             <div class="d-flex justify-content-evenly gap-5">
-              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">
-                Удалить
-              </button>
-              <button
-                type="button"
-                class="button--secondary px-4"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                Отмена
-              </button>
+              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">Удалить</button>
+              <button type="button" class="button--secondary px-4" data-bs-dismiss="modal" aria-label="Close">Отмена</button>
             </div>
           </div>
         </div>

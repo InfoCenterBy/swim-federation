@@ -31,7 +31,7 @@
 
               <div class="cabinet__member-card">
                 <div class="member-card__header">
-                  <img  src="./img/icons/logo.png" alt="Лого" />
+                  <img src="./img/icons/logo.png" alt="Лого" />
                   <div>
                     <p class="member-card__title text-uppercase">БЕЛОРУССКАЯ ФЕДЕРАЦИЯ ПЛАВАНИЯ</p>
                     <p class="member-card__subtitle text-uppercase">ЧЛЕНСКИЙ БИЛЕТ</p>
@@ -57,7 +57,7 @@
                           <p class="fs-14 color-black mb-2">Имя</p>
                           <p class="fs-20 color-main ff-raleway fw-semibold">Иван</p>
                         </div>
-                        <div class=w-40">
+                        <div class="w-40">
                           <p class="fs-14 color-black mb-2">Пол</p>
                           <p class="fs-20 color-main ff-raleway fw-semibold">М</p>
                         </div>
@@ -70,43 +70,35 @@
                       <p class="fs-14 color-black mb-2">Личный номер</p>
                       <p class="fs-20 color-main ff-raleway fw-semibold no-wrap">201 01 0001</p>
                     </div>
-                    <div class="w-100">
+                    <div class="w-100 member-card__status">
                       <p class="fs-14 color-black mb-2">Статус</p>
                       <p class="fs-20 color-main ff-raleway fw-semibold">Исполнительный директор</p>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="last-name">
-                  Фамилия<span class="color-red">*</span>
-                </label>
-                <input class="bg-fa" id="last-name" type="text" required value="Иванов"/>
-                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
-              </div>
-              
-              <div class="form__input--small mb-0">
-                <label class="fs-16" for="first-name">
-                  Имя<span class="color-red">*</span>
-                </label>
-                <input class="bg-fa" id="first-name" type="text" required value="Иван"/>
-                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
-              </div>
-              
-              <div class="form__input--small mb-0">
-                <label class="fs-16" for="surname">
-                  Отчество<span class="color-red">*</span>
-                </label>
-                <input class="bg-fa" id="surname" type="text" required value="Иванович"/>
+                <label class="fs-16" for="last-name"> Фамилия<span class="color-red">*</span> </label>
+                <input class="bg-fa" id="last-name" type="text" required value="Иванов" />
                 <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
               </div>
 
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="email">
-                  Email<span class="color-red">*</span>
-                </label>
-                <input class="bg-fa" id="email" type="text" value="email@example.com" required/>
+                <label class="fs-16" for="first-name"> Имя<span class="color-red">*</span> </label>
+                <input class="bg-fa" id="first-name" type="text" required value="Иван" />
+                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+              </div>
+
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="surname"> Отчество<span class="color-red">*</span> </label>
+                <input class="bg-fa" id="surname" type="text" required value="Иванович" />
+                <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
+              </div>
+
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="email"> Email<span class="color-red">*</span> </label>
+                <input class="bg-fa" id="email" type="text" value="email@example.com" required />
                 <span class="input-error-message fs-14 color-red">Это поле обязательно для заполнения</span>
               </div>
 
@@ -117,9 +109,7 @@
               </div>
 
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="group">
-                  Группа<span class="color-red">*</span>
-                </label>
+                <label class="fs-16" for="group"> Группа<span class="color-red">*</span> </label>
                 <div class="d-flex gap-3">
                   <select id="group" class="form-select bg-fa fs-16" aria-label="group" disabled required>
                     <option selected disabled value="">сотрудник ОО «БФП» областного уровня</option>
@@ -128,22 +118,19 @@
               </div>
 
               <div class="form__input--small mb-0">
-                <label class="fs-16" for="group">
-                  Регион<span class="color-red">*</span>
-                </label>
+                <label class="fs-16" for="group"> Регион<span class="color-red">*</span> </label>
                 <div class="d-flex gap-3">
                   <select id="group" class="form-select bg-fa fs-16" aria-label="group" disabled required>
                     <option selected disabled value="">Могилевская область</option>
                   </select>
                 </div>
-              </div>            
+              </div>
 
               <button type="button" class="cabinet__content-button px-4" data-bs-toggle="modal" data-bs-target="#saveChanges">
                 Сохранить изменения
               </button>
             </form>
           </section>
-          
         </div>
       </main>
 
