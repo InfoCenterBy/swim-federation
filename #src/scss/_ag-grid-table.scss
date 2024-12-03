@@ -12,6 +12,10 @@
   align-items: center;
   padding-block: 8px;
 }
+.ag-center-cols-viewport,
+.ag-paging-panel {
+  background-color: var(--white);
+}
 
 .ag-theme-quartz .ag-header {
   --ag-header-background-color: var(--light-gray);
@@ -60,6 +64,7 @@
 .ag-cell {
   user-select: text !important;
   -webkit-user-select: text !important;
+  background-color: var(--white);
 }
 .columns-select__body {
   background-color: var(--white);

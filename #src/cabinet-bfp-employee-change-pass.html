@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('./components/_cabinet-head.html', {title: "Изменить пароль"})
+  <body>
+    <div class="wrapper">
+      @@include('./components/_cabinet-header-bfp-employee.html')
+
+      <main class="main">
+        <div class="cabinet__container">
+          @@include('./elements/cabinet-employee-sidebar.html')
+          <section class="cabinet__content">
+            <h2 class="h2-title">Изменить пароль</h2>
+            <form class="cabinet__form d-flex flex-column gap-3 mt-2" action="">
+              <div class="form__input--small mb-2">
+                <label for="old-pass">
+                  Введите старый пароль
+                  <span class="color-red">*</span>
+                </label>
+                <input
+                  class="password-input bg-fa"
+                  id="old-pass"
+                  type="password"
+                  placeholder="Введите старый пароль"
+                  required
+                />
+                <i id="toggle-password" class="password-icon bi bi-eye-slash"></i>
+                <span class="password-error-message fs-14 color-red"
+                  >Пароль не соответствует требованиям</span
+                >
+                <span class="input-error-message fs-14 color-red"
+                  >Это поле обязательно для заполнения</span
+                >
+              </div>
+
+              <div class="form__input--small mb-0">
+                <label for="new-pass">
+                  Введите новый пароль
+                  <span class="color-red">*</span>
+                </label>
+                <input
+                  class="password-input bg-fa mb-1"
+                  id="new-pass"
+                  type="password"
+                  placeholder="Введите новый пароль"
+                  required
+                />
+                <i id="toggle-password" class="password-icon bi bi-eye-slash"></i>
+                <span class="password-error-message fs-14 color-red"
+                  >Пароль не соответствует требованиям</span
+                >
+                <span class="input-error-message fs-14 color-red"
+                  >Это поле обязательно для заполнения</span
+                >
+                <p class="password-info-message fs-14 color-dark-gray mb-4 lh-110">
+                  Пароль должен быть не менее 8 символов длиной, содержать латинские символы
+                  верхнего регистра (A-Z), содержать латинские символы нижнего регистра (a-z),
+                  содержать цифры (0-9).
+                </p>
+              </div>
+
+              <button
+                type="button"
+                class="cabinet__content-button change-password-submit px-4"
+                disabled
+                data-bs-toggle="modal"
+                data-bs-target="#changePassword"
+              >
+                Изменить пароль
+              </button>
+            </form>
+          </section>
+        </div>
+      </main>
+
+      @@include('./components/_cabinet-footer.html') @@include('./components/_cabinet-script.html')
+    </div>
+    <div
+      class="modal fade"
+      id="changePassword"
+      tabindex="-1"
+      aria-labelledby="changePasswordLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="changePasswordLabel">Пароль изменен</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="./img/icons/thumbs-up-trust.svg" alt="Thumbs-up icon" />
+            <p class="mt-4">Ваш пароль обновлен</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

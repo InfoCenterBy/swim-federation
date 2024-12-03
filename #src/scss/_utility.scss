@@ -586,3 +586,14 @@ body.no-scroll {
     }
   }
 }
+
+.custom-width-input {
+  max-width: 416px;
+  min-width: 200px;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    min-width: none;
+    max-width: none;
+  }
+}

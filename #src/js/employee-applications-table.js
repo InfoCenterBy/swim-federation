@@ -80,6 +80,8 @@ const gridOptions = {
     {
       field: "approve",
       headerName: "",
+      width: 140,
+      minWidth: 140,
       maxWidth: 140,
       cellRenderer: (params) => {
         if (params.data.status === "Новая") {
@@ -94,7 +96,9 @@ const gridOptions = {
     {
       field: "reject",
       headerName: "",
-      maxWidth: 145,
+      width: 150,
+      minWidth: 150,
+      maxWidth: 150,
       cellRenderer: (params) => {
         if (params.data.status === "Новая") {
           let rejectButton = `<button class="button--secondary-small" data-bs-target="#rejectApplication" data-bs-toggle="modal">Отклонить</button>`;
@@ -111,7 +115,7 @@ const gridOptions = {
       maxWidth: 50,
       cellRenderer: (params) => {
         if (params.data.status === "Новая") {
-          let link = `<a href="cabinet-bfp-employee-applications-detail.html"><i class="color-main hover-main-hover fs-18 bi bi-eye"></i></a>`;
+          let link = `<a href="cabinet-bfp-employee-applications-detail.html"><i class="color-dark-gray hover-main fs-18 bi bi-eye"></i></a>`;
 
           return link;
         } else {
@@ -153,9 +157,11 @@ const gridOptions = {
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
-    const requestNumberMatch = !requestNumberFilterValue || node.data.requestNumber === parseInt(requestNumberFilterValue);
+    const requestNumberMatch =
+      !requestNumberFilterValue || node.data.requestNumber === parseInt(requestNumberFilterValue);
 
-    const emailMatch = !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
+    const emailMatch =
+      !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
 
     const statusMatch = statusFilterValue === "Все" || node.data.status === statusFilterValue;
 
