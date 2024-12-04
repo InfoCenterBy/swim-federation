@@ -1171,6 +1171,35 @@
   .popover {
     max-width: 385px !important;
     border-radius: 0;
+    z-index: 1;
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+  }
+  .popover-button {
+    color: var(--green-success);
+  }
+  .popover-button:hover {
+    color: var(--black);
+  }
+  .popover-button:hover i {
+    color: var(--black);
+  }
+  .popover-button i {
+    color: var(--green-success);
+  }
+  .popover-button i:hover {
+    color: var(--black);
+  }
+  .custom-width-input {
+    max-width: 416px;
+    min-width: 200px;
+  }
+  @media screen and (max-width: 1200px) {
+    .custom-width-input {
+      width: 100%;
+      min-width: none;
+      max-width: none;
+    }
   }
   .header {
     display: -webkit-box;

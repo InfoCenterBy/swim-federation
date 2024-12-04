@@ -8,6 +8,7 @@ const gridOptions = {
       region: "Брестская область",
       city: "Брест",
       email: "aqua.brest@gmail.com",
+      address: "Брест, ул. Московская, 348/3",
       zipCode: "224007",
       createdAt: "21.11.2019",
     },
@@ -17,6 +18,7 @@ const gridOptions = {
       region: "Брестская область",
       city: "Брест",
       email: "aqua.brest@gmail.com",
+      address: "Брест, ул. Московская, 348/3",
       zipCode: "224007",
       createdAt: "14.11.2019",
     },
@@ -25,6 +27,7 @@ const gridOptions = {
       region: "Гомельская область",
       city: "Гомель",
       school: "ООО «Клуб плавания «Аквастарс»",
+      address: "Брест, ул. Московская, 348/3",
       email: "aqua.brest@gmail.com",
       zipCode: "224007",
       createdAt: "25.11.2019",
@@ -34,6 +37,7 @@ const gridOptions = {
       region: "Брестская область",
       city: "Брест",
       school: "ООО «Клуб плавания «Аквастарс»",
+      address: "Брест, ул. Московская, 348/3",
       email: "aqua.brest@gmail.com",
       zipCode: "224007",
       createdAt: "05.11.2019",
@@ -43,6 +47,7 @@ const gridOptions = {
       region: "Гомельская область",
       city: "Гомель",
       school: "ООО «Клуб плавания «Аквастарс»",
+      address: "Брест, ул. Московская, 348/3",
       email: "aqua.brest@gmail.com",
       zipCode: "224007",
       createdAt: "02.11.2019",
@@ -50,16 +55,20 @@ const gridOptions = {
   ],
 
   columnDefs: [
-    { field: "id", headerName: "№" },
-    { field: "school", headerName: "Название" },
-    { field: "email", headerName: "email" },
-    { field: "zipCode", headerName: "Индекс" },
-    { field: "region", headerName: "Регион" },
-    { field: "city", headerName: "Город" },
-    { field: "createdAt", headerName: "Дата создания" },
+    { field: "id", headerName: "№", width: 80, minWidth: 80, maxWidth: 80 },
+    { field: "school", headerName: "Название", unSortIcon: true, flex: 1, minWidth: 200 },
+    { field: "email", headerName: "email", unSortIcon: true, flex: 1, minWidth: 200 },
+    { field: "address", headerName: "Адрес", unSortIcon: true, flex: 1, minWidth: 200 },
+    { field: "zipCode", headerName: "Индекс", unSortIcon: true, flex: 1, minWidth: 200 },
+    { field: "region", headerName: "Регион", unSortIcon: true, flex: 1, minWidth: 200 },
+    { field: "city", headerName: "Город", unSortIcon: true, flex: 1, minWidth: 200 },
+    { field: "createdAt", headerName: "Дата создания", unSortIcon: true, minWidth: 200 },
     {
       field: "edit",
       headerName: "",
+      width: 60,
+      minWidth: 60,
+      maxWidth: 60,
       cellRenderer: (params) => {
         return `<a href="cabinet-bfp-employee-edit-school.html"><i class="color-dark-gray hover-main fs-18 bi bi-pencil-square"></i></a>`;
       },
@@ -67,6 +76,9 @@ const gridOptions = {
     {
       field: "delete",
       headerName: "",
+      width: 60,
+      minWidth: 60,
+      maxWidth: 60,
       cellRenderer: (params) => {
         return `<button class="bg-transparent" data-bs-target="#deleteSchool" data-bs-toggle="modal"><i class="color-dark-gray hover-main fs-18 bi bi-trash3"></i></button>`;
       },
@@ -77,10 +89,6 @@ const gridOptions = {
     wrapText: true,
     autoHeight: true,
   },
-  // autoSizeStrategy: {
-  //   type: "fitGridWidth",
-  //   defaultMinWidth: 100,
-  // },
 
   pagination: true,
 

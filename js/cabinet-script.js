@@ -608,6 +608,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const customFileButton = document.getElementById("custom-upload-button");
   const deleteButton = document.getElementById("custom-delete-button");
   const memberCardImg = document.querySelector(".member-card__avatar");
+  const memberStatus = document.querySelector(".member-card__status");
+  memberStatus.style.marginLeft = "62px";
 
   if (customFileButton) {
     customFileButton.addEventListener("click", () => {
@@ -627,6 +629,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (memberCardImg) {
             memberCardImg.src = e.target.result;
             memberCardImg.classList.remove("hidden");
+            memberStatus.style.marginLeft = 0;
           }
 
           profileImgContainer.classList.remove("icon");
@@ -647,6 +650,7 @@ document.addEventListener("DOMContentLoaded", function () {
       deleteButton.classList.add("hidden");
       if (memberCardImg) {
         memberCardImg.classList.add("hidden");
+        memberStatus.style.marginLeft = "62px";
       }
     });
   }

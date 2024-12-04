@@ -55,17 +55,19 @@ const gridOptions = {
   ],
 
   columnDefs: [
-    { field: "requestNumber", headerName: "№" },
-    { field: "fio", headerName: "ФИО" },
-    { field: "email", headerName: "Email" },
+    { field: "requestNumber", headerName: "№", maxWidth: 80 },
+    { field: "fio", headerName: "ФИО", unSortIcon: true },
+    { field: "email", headerName: "Email", unSortIcon: true },
     {
       field: "requestType",
       headerName: "Тип заявки",
+      unSortIcon: true,
     },
-    { field: "submissionDate", headerName: "Дата подачи" },
+    { field: "submissionDate", headerName: "Дата подачи", unSortIcon: true },
     {
       field: "status",
       headerName: "Статус",
+      unSortIcon: true,
       cellRenderer: (params) => {
         return params.value;
       },
@@ -78,9 +80,12 @@ const gridOptions = {
     {
       field: "approve",
       headerName: "",
+      width: 140,
+      minWidth: 140,
+      maxWidth: 140,
       cellRenderer: (params) => {
         if (params.data.status === "Новая") {
-          let acceptButton = `<button class="button--small" data-bs-target="#approveApplication" data-bs-toggle="modal">Принять</button>`;
+          let acceptButton = `<button class="button--small" data-bs-target="#approveApplication" data-bs-toggle="modal">Одобрить</button>`;
 
           return acceptButton;
         } else {
@@ -91,6 +96,9 @@ const gridOptions = {
     {
       field: "reject",
       headerName: "",
+      width: 150,
+      minWidth: 150,
+      maxWidth: 150,
       cellRenderer: (params) => {
         if (params.data.status === "Новая") {
           let rejectButton = `<button class="button--secondary-small" data-bs-target="#rejectApplication" data-bs-toggle="modal">Отклонить</button>`;
@@ -104,9 +112,10 @@ const gridOptions = {
     {
       field: "view",
       headerName: "",
+      maxWidth: 50,
       cellRenderer: (params) => {
         if (params.data.status === "Новая") {
-          let link = `<a href="cabinet-bfp-employee-applications-detail.html"><i class="color-main hover-main-hover fs-18 bi bi-eye"></i></a>`;
+          let link = `<a href="cabinet-bfp-employee-applications-detail.html"><i class="color-dark-gray hover-main fs-18 bi bi-eye"></i></a>`;
 
           return link;
         } else {
@@ -116,7 +125,7 @@ const gridOptions = {
     },
   ],
   defaultColDef: {
-    // flex: 1,
+    flex: 1,
     wrapText: true,
     autoHeight: true,
   },

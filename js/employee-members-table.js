@@ -4,7 +4,7 @@ const gridOptions = {
   rowData: [
     {
       id: 1,
-      photo: "member-avatar.png",
+      photo: "male-no-avatar.png",
       membershipNumber: "123123123",
       fio: "Альхимович Евгений Иванович",
       email: "aroitq@mail.ru",
@@ -27,7 +27,7 @@ const gridOptions = {
     },
     {
       id: 5,
-      photo: "member-avatar.png",
+      photo: "female-no-avatar.png",
       membershipNumber: "123123123",
       fio: "Альхимович Евгений Иванович",
       email: "aroitq@mail.ru",
@@ -102,23 +102,35 @@ const gridOptions = {
   },
 
   columnDefs: [
-    { field: "id", headerName: "№" },
+    { field: "id", headerName: "№", width: 80, minWidth: 80, maxWidth: 80 },
     {
       field: "photo",
       headerName: "Фото",
+      cellClass: "ag-cell-center",
+      maxWidth: 100,
       cellRenderer: (params) => {
         return customAvatarComponent(params);
       },
     },
-    { field: "membershipNumber", headerName: "Номер билета" },
+    {
+      field: "membershipNumber",
+      headerName: "Номер билета",
+      unSortIcon: true,
+      width: 150,
+      minWidth: 110,
+      maxWidth: 180,
+    },
     {
       field: "fio",
       headerName: "ФИО",
+      unSortIcon: true,
     },
-    { field: "email", headerName: "Email" },
+
+    { field: "email", headerName: "Email", unSortIcon: true },
     {
       field: "group",
       headerName: "Группа",
+      unSortIcon: true,
       cellClassRules: {
         "ag-badge blue": (params) =>
           params.value === "Исполнительный директор" ||
@@ -144,6 +156,11 @@ const gridOptions = {
     {
       field: "benefit",
       headerName: "Льгота",
+      unSortIcon: true,
+      cellClass: "ag-cell-center",
+      width: 105,
+      minWidth: 90,
+      maxWidth: 120,
       cellRenderer: (params) => {
         if (params.value === true) {
           let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
@@ -158,6 +175,11 @@ const gridOptions = {
     {
       field: "entranceFeePayment",
       headerName: "Оплата ВВ*",
+      unSortIcon: true,
+      width: 135,
+      minWidth: 110,
+      maxWidth: 140,
+      cellClass: "ag-cell-center",
       cellRenderer: (params) => {
         if (params.value === true) {
           let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
@@ -172,6 +194,11 @@ const gridOptions = {
     {
       field: "memberFeePayment",
       headerName: "Оплата ЧВ*",
+      unSortIcon: true,
+      width: 135,
+      minWidth: 110,
+      maxWidth: 140,
+      cellClass: "ag-cell-center",
       cellRenderer: (params) => {
         if (params.value === true) {
           let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
@@ -186,6 +213,10 @@ const gridOptions = {
     {
       field: "sportsDegree",
       headerName: "Разряд",
+      width: 135,
+      minWidth: 110,
+      maxWidth: 140,
+      unSortIcon: true,
       cellRenderer: (params) => {
         return params.value.toUpperCase();
       },
@@ -193,6 +224,9 @@ const gridOptions = {
     {
       field: "gender",
       headerName: "Пол",
+      width: 75,
+      minWidth: 60,
+      maxWidth: 90,
       cellRenderer: (params) => {
         return params.value.toUpperCase();
       },
@@ -201,14 +235,18 @@ const gridOptions = {
         "ag-badge red": (params) => params.value.toLowerCase() === "ж",
       },
     },
-    { field: "birthdayDate", headerName: "Дата рождения" },
-    { field: "region", headerName: "Регион" },
-    { field: "city", headerName: "Город" },
-    { field: "school", headerName: "Школа" },
-    { field: "createdAt", headerName: "Дата создания" },
+    { field: "birthdayDate", headerName: "Дата рождения", unSortIcon: true },
+    { field: "region", headerName: "Регион", unSortIcon: true },
+    { field: "city", headerName: "Город", unSortIcon: true },
+    { field: "school", headerName: "Школа", unSortIcon: true },
+    { field: "createdAt", headerName: "Дата создания", unSortIcon: true },
     {
       field: "edit",
       headerName: "",
+      cellClass: "ag-cell-center",
+      width: 60,
+      minWidth: 60,
+      maxWidth: 60,
       cellRenderer: (params) => {
         return `<a href="cabinet-bfp-employee-edit-member.html"><i class="color-dark-gray hover-main fs-18 bi bi-pencil-square"></i></a>`;
       },
@@ -216,13 +254,17 @@ const gridOptions = {
     {
       field: "delete",
       headerName: "",
+      cellClass: "ag-cell-center",
+      width: 60,
+      minWidth: 60,
+      maxWidth: 60,
       cellRenderer: (params) => {
         return `<button class="bg-transparent" data-bs-target="#deleteMember" data-bs-toggle="modal"><i class="color-dark-gray hover-main fs-18 bi bi-trash3"></i></button>`;
       },
     },
   ],
   defaultColDef: {
-    // flex: 1,
+    flex: 1,
     wrapText: true,
     autoHeight: true,
   },

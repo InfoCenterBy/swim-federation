@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Редактировать регион</title>
+  <title>Изменить пароль</title>
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
@@ -143,6 +143,7 @@
     </section>
   </div>
 </header>
+
 
       <main class="main">
         <div class="cabinet__container">
@@ -362,35 +363,65 @@
   </ul>
 </aside>
 
-          <section class="cabinet__content pt-0">
-            <nav>
-              <ul class="breadcrumbs">
-                <li class="breadcrumbs__item">
-                  <a href="cabinet-bfp-employee-regions.html">Регионы</a>
-                </li>
-                <li class="breadcrumbs__item active">Редактировать регион</li>
-              </ul>
-            </nav>
-            <h2 class="h2-title">Редактировать регион</h2>
-            <form class="cabinet__form d-flex flex-column gap-4 mt-0" action="">
-              <div class="mb-3 d-flex flex-column gap-3">
-                <div class="form__input--small mb-0 w-100">
-                  <label class="fs-16" for="region">Область</label>
-                  <select id="region" class="form-select bg-fa">
-                    <option selected>Брестская область</option>
-                  </select>
-                </div>
-
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="updatedCity">Регион</label>
-                  <input class="bg-fa" id="updatedCity" type="text" value="Брест" />
-                </div>
+          <section class="cabinet__content">
+            <h2 class="h2-title">Изменить пароль</h2>
+            <form class="cabinet__form d-flex flex-column gap-3 mt-2" action="">
+              <div class="form__input--small mb-2">
+                <label for="old-pass">
+                  Введите старый пароль
+                  <span class="color-red">*</span>
+                </label>
+                <input
+                  class="password-input bg-fa"
+                  id="old-pass"
+                  type="password"
+                  placeholder="Введите старый пароль"
+                  required
+                />
+                <i id="toggle-password" class="password-icon bi bi-eye-slash"></i>
+                <span class="password-error-message fs-14 color-red"
+                  >Пароль не соответствует требованиям</span
+                >
+                <span class="input-error-message fs-14 color-red"
+                  >Это поле обязательно для заполнения</span
+                >
               </div>
 
-              <div class="d-flex justify-content-between gap-5 mb-3">
-                <a href="cabinet-bfp-employee-regions.html" class="button--secondary-no-stretch px-4">Назад</a>
-                <button type="button" class="button px-4" data-bs-target="#editRegion" data-bs-toggle="modal">Изменить</button>
+              <div class="form__input--small mb-0">
+                <label for="new-pass">
+                  Введите новый пароль
+                  <span class="color-red">*</span>
+                </label>
+                <input
+                  class="password-input bg-fa mb-1"
+                  id="new-pass"
+                  type="password"
+                  placeholder="Введите новый пароль"
+                  required
+                />
+                <i id="toggle-password" class="password-icon bi bi-eye-slash"></i>
+                <span class="password-error-message fs-14 color-red"
+                  >Пароль не соответствует требованиям</span
+                >
+                <span class="input-error-message fs-14 color-red"
+                  >Это поле обязательно для заполнения</span
+                >
+                <p class="password-info-message fs-14 color-dark-gray mb-4 lh-110">
+                  Пароль должен быть не менее 8 символов длиной, содержать латинские символы
+                  верхнего регистра (A-Z), содержать латинские символы нижнего регистра (a-z),
+                  содержать цифры (0-9).
+                </p>
               </div>
+
+              <button
+                type="button"
+                class="cabinet__content-button change-password-submit px-4"
+                disabled
+                data-bs-toggle="modal"
+                data-bs-target="#changePassword"
+              >
+                Изменить пароль
+              </button>
             </form>
           </section>
         </div>
@@ -445,16 +476,27 @@
 <script src="js/cabinet-script.js"></script>
 
     </div>
-    <div class="modal fade" id="editRegion" tabindex="-1" aria-labelledby="editRegionLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="changePassword"
+      tabindex="-1"
+      aria-labelledby="changePasswordLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="editRegionLabel">Редактирование региона</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h1 class="modal-title fs-5" id="changePasswordLabel">Пароль изменен</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
             <img src="./img/icons/thumbs-up-trust.svg" alt="Thumbs-up icon" />
-            <p class="mt-4">Регион успешно изменен</p>
+            <p class="mt-4">Ваш пароль обновлен</p>
           </div>
         </div>
       </div>
