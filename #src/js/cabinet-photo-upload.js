@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const deleteButton = document.getElementById("custom-delete-button");
   const memberCardImg = document.querySelector(".member-card__avatar");
   const memberStatus = document.querySelector(".member-card__status");
-  memberStatus.style.marginLeft = "62px";
+  if (memberStatus) {
+    memberStatus.style.marginLeft = "62px";
+  }
 
   if (customFileButton) {
     customFileButton.addEventListener("click", () => {
