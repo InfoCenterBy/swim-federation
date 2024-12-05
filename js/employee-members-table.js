@@ -241,7 +241,7 @@ const gridOptions = {
     { field: "birthdayDate", headerName: "Дата рождения", unSortIcon: true, minWidth: 120 },
     { field: "region", headerName: "Регион", unSortIcon: true, minWidth: 150 },
     { field: "city", headerName: "Город", unSortIcon: true, minWidth: 150 },
-    { field: "school", headerName: "Школа", unSortIcon: true, minWidth: 150 },
+    { field: "school", headerName: "Школа", unSortIcon: true, minWidth: 300 },
     { field: "createdAt", headerName: "Дата создания", unSortIcon: true, minWidth: 120 },
     {
       field: "edit",
