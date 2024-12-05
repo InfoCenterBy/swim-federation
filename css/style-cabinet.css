@@ -1408,10 +1408,6 @@
     font-weight: 500;
     gap: 8px;
   }
-  .cabinet__aside-menu-item svg path {
-    fill: var(--white);
-    stroke: var(--white);
-  }
   @media (hover: hover) {
     .cabinet__aside-menu-item:hover {
       background-color: var(--light-blue);
@@ -2463,6 +2459,20 @@
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
+  }
+  @media screen and (max-width: 768px) {
+    #ag-32-label {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .ag-paging-row-summary-panel,
+    #ag-30-start-page {
+      display: none;
+    }
+    .ag-paging-page-summary-panel {
+      margin-inline: 4px !important;
+    }
   }
   .button {
     background-color: var(--main);

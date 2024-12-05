@@ -56,7 +56,7 @@ const gridOptions = {
       minWidth: 60,
       maxWidth: 60,
       cellRenderer: (params) => {
-        return `<button class="bg-transparent" data-bs-target="#deleteRegion" data-bs-toggle="modal"><i class="color-dark-gray hover-main fs-18 bi bi-trash3"></i></button>`;
+        return `<button class="bg-transparent" data-bs-target="#deleteRegion" data-bs-toggle="modal" data-id=${params.data.id}><i class="color-dark-gray hover-main fs-18 bi bi-trash3"></i></button>`;
       },
     },
   ],
@@ -151,4 +151,38 @@ if (globalSearchInput) {
 }
 if (agGrid) {
   agGrid.createGrid(ediv, gridOptions);
+}
+
+const deleteModal = document.getElementById("deleteRegion");
+
+deleteModal.addEventListener("show.bs.modal", function (event) {
+  const button = event.relatedTarget;
+  const id = button.getAttribute("data-id");
+  deleteModal.setAttribute("data-id", id);
+
+  const modalBodyText = deleteModal.querySelector(".modal-body p");
+  modalBodyText.textContent = `Вы действительно хотите удалить регион с ID ${id}?`;
+});
+
+const confirmDeleteButton = deleteModal.querySelector(".modal-body .button.px-4");
+confirmDeleteButton.addEventListener("click", function () {
+  const idToDelete = deleteModal.getAttribute("data-id");
+  deleteItem(idToDelete);
+});
+
+function deleteItem(id) {
+  fetch(`/delete-region/${id}`, {
+    method: "DELETE",
+  })
+    .then((response) => {
+      if (response.ok) {
+        gridOptions.api.applyTransaction({ remove: [{ id: parseInt(id) }] });
+      } else {
+        alert("Ошибка при удалении региона.");
+      }
+    })
+    .catch((error) => {
+      console.error("Ошибка:", error);
+      alert("Ошибка при удалении региона.");
+    });
 }
