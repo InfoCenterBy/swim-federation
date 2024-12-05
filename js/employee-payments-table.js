@@ -95,33 +95,43 @@ const gridOptions = {
     {
       field: "photo",
       headerName: "Фото",
+      minWidth: 80,
+      maxWidth: 100,
       cellRenderer: (params) => {
         return customAvatarComponent(params);
       },
     },
-    { field: "membershipNumber", headerName: "Номер билета", unSortIcon: true, width: 150, minWidth: 110, maxWidth: 180 },
+    {
+      field: "membershipNumber",
+      headerName: "Номер билета",
+      unSortIcon: true,
+      width: 150,
+      minWidth: 110,
+      maxWidth: 180,
+    },
     {
       field: "fio",
       headerName: "ФИО",
       unSortIcon: true,
-      maxWidth: 100,
+      minWidth: 150,
     },
-    { field: "email", headerName: "Email", unSortIcon: true },
+    { field: "email", headerName: "Email", unSortIcon: true, minWidth: 120 },
     {
       field: "paymentStatus",
       headerName: "Статус",
       unSortIcon: true,
+      minWidth: 145,
       cellClassRules: {
         "ag-badge green": (params) => params.value === "Оплачен",
         "ag-badge red": (params) => params.value === "Не оплачен",
       },
     },
-    { field: "phone", headerName: "Телефон" },
+    { field: "phone", headerName: "Телефон", minWidth: 170 },
     {
       field: "erip",
       headerName: "ЕРИП",
-      width: 70,
-      minWidth: 70,
+      width: 80,
+      minWidth: 80,
       maxWidth: 90,
       cellClass: "ag-cell-center",
       cellRenderer: (params) => {
@@ -157,14 +167,15 @@ const gridOptions = {
       field: "contributionType",
       headerName: "Тип взноса",
       unSortIcon: true,
+      minWidth: 175,
       cellClassRules: {
         "ag-badge blue": (params) => params.value === "Членский взнос",
         "ag-badge red": (params) => params.value === "Вступительный взнос",
       },
     },
-    { field: "sum", headerName: "Сумма" },
-    { field: "issueDate", headerName: "Дата выставления", unSortIcon: true },
-    { field: "paymentDate", headerName: "Дата оплаты", unSortIcon: true },
+    { field: "sum", headerName: "Сумма", minWidth: 100 },
+    { field: "issueDate", headerName: "Дата выставления", unSortIcon: true, minWidth: 130 },
+    { field: "paymentDate", headerName: "Дата оплаты", unSortIcon: true, minWidth: 130 },
   ],
   defaultColDef: {
     flex: 1,
@@ -203,16 +214,21 @@ const gridOptions = {
     const paymentTypeFilterValue = document.getElementById("paymentTypeFilter").value;
 
     const membershipNumberMatch =
-      !membershipNumberFilterValue || node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
+      !membershipNumberFilterValue ||
+      node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
-    const emailMatch = !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
+    const emailMatch =
+      !emailFilterValue || node.data.email.toLowerCase().includes(emailFilterValue);
 
-    const paymentStatusMatch = paymentStatusFilterValue === "all" || String(node.data.paymentStatus) === paymentStatusFilterValue;
+    const paymentStatusMatch =
+      paymentStatusFilterValue === "all" ||
+      String(node.data.paymentStatus) === paymentStatusFilterValue;
 
     const contributionTypeMatch =
-      contributionTypeFilterValue === "all" || String(node.data.contributionType) === contributionTypeFilterValue;
+      contributionTypeFilterValue === "all" ||
+      String(node.data.contributionType) === contributionTypeFilterValue;
 
     let paymentTypeMatch = false;
     if (paymentTypeFilterValue === "all") {
@@ -223,7 +239,14 @@ const gridOptions = {
       paymentTypeMatch = node.data.erip === false && node.data.cashless === true;
     }
 
-    return membershipNumberMatch && fioMatch && emailMatch && paymentStatusMatch && contributionTypeMatch && paymentTypeMatch;
+    return (
+      membershipNumberMatch &&
+      fioMatch &&
+      emailMatch &&
+      paymentStatusMatch &&
+      contributionTypeMatch &&
+      paymentTypeMatch
+    );
   },
 };
 
@@ -288,7 +311,8 @@ if (toggleCheckboxesBtn && checkboxesBody) {
   });
 
   document.addEventListener("click", (event) => {
-    const isClickInside = checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
+    const isClickInside =
+      checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
     if (!isClickInside) {
       checkboxesBody.classList.add("hidden");
     }

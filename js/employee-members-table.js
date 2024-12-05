@@ -107,6 +107,7 @@ const gridOptions = {
       field: "photo",
       headerName: "Фото",
       cellClass: "ag-cell-center",
+      minWidth: 80,
       maxWidth: 100,
       cellRenderer: (params) => {
         return customAvatarComponent(params);
@@ -124,13 +125,15 @@ const gridOptions = {
       field: "fio",
       headerName: "ФИО",
       unSortIcon: true,
+      minWidth: 150,
     },
 
-    { field: "email", headerName: "Email", unSortIcon: true },
+    { field: "email", headerName: "Email", unSortIcon: true, minWidth: 120 },
     {
       field: "group",
       headerName: "Группа",
       unSortIcon: true,
+      minWidth: 155,
       cellClassRules: {
         "ag-badge blue": (params) =>
           params.value === "Исполнительный директор" ||
@@ -152,14 +155,14 @@ const gridOptions = {
         "ag-badge gray": (params) => params.value === "Без группы",
       },
     },
-    { field: "phone", headerName: "Телефон" },
+    { field: "phone", headerName: "Телефон", minWidth: 180 },
     {
       field: "benefit",
       headerName: "Льгота",
       unSortIcon: true,
       cellClass: "ag-cell-center",
       width: 105,
-      minWidth: 90,
+      minWidth: 105,
       maxWidth: 120,
       cellRenderer: (params) => {
         if (params.value === true) {
@@ -177,7 +180,7 @@ const gridOptions = {
       headerName: "Оплата ВВ*",
       unSortIcon: true,
       width: 135,
-      minWidth: 110,
+      minWidth: 135,
       maxWidth: 140,
       cellClass: "ag-cell-center",
       cellRenderer: (params) => {
@@ -195,8 +198,8 @@ const gridOptions = {
       field: "memberFeePayment",
       headerName: "Оплата ЧВ*",
       unSortIcon: true,
-      width: 135,
-      minWidth: 110,
+      width: 138,
+      minWidth: 138,
       maxWidth: 140,
       cellClass: "ag-cell-center",
       cellRenderer: (params) => {
@@ -235,11 +238,11 @@ const gridOptions = {
         "ag-badge red": (params) => params.value.toLowerCase() === "ж",
       },
     },
-    { field: "birthdayDate", headerName: "Дата рождения", unSortIcon: true },
-    { field: "region", headerName: "Регион", unSortIcon: true },
-    { field: "city", headerName: "Город", unSortIcon: true },
-    { field: "school", headerName: "Школа", unSortIcon: true },
-    { field: "createdAt", headerName: "Дата создания", unSortIcon: true },
+    { field: "birthdayDate", headerName: "Дата рождения", unSortIcon: true, minWidth: 120 },
+    { field: "region", headerName: "Регион", unSortIcon: true, minWidth: 150 },
+    { field: "city", headerName: "Город", unSortIcon: true, minWidth: 150 },
+    { field: "school", headerName: "Школа", unSortIcon: true, minWidth: 150 },
+    { field: "createdAt", headerName: "Дата создания", unSortIcon: true, minWidth: 120 },
     {
       field: "edit",
       headerName: "",
