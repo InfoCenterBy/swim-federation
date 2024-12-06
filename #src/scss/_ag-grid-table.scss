@@ -82,3 +82,19 @@
 .ag-cell-center {
   justify-content: center !important;
 }
+
+@media screen and (max-width: 768px) {
+  #ag-32-label {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .ag-paging-row-summary-panel,
+  #ag-30-start-page {
+    display: none;
+  }
+  .ag-paging-page-summary-panel {
+    margin-inline: 4px !important;
+  }
+}
