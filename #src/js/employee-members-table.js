@@ -124,6 +124,7 @@ const gridOptions = {
       field: "fio",
       headerName: "ФИО",
       unSortIcon: true,
+      minWidth: 150,
     },
 
     { field: "email", headerName: "Email", unSortIcon: true },
@@ -147,9 +148,8 @@ const gridOptions = {
           params.value === "Администратор" ||
           params.value === "Директор" ||
           params.value === "Заместитель директора",
-        "ag-badge yellow": (params) =>
-          params.value === "Тренер" || params.value === "Старший тренер",
-        "ag-badge gray": (params) => params.value === "Без группы",
+        "ag-badge yellow": (params) => params.value === "Тренер" || params.value === "Старший тренер",
+        "ag-badge gray": (params) => params.value === "Без группы" || params.value,
       },
     },
     { field: "phone", headerName: "Телефон" },
@@ -218,7 +218,12 @@ const gridOptions = {
       maxWidth: 140,
       unSortIcon: true,
       cellRenderer: (params) => {
-        return params.value.toUpperCase();
+        return String(params.value).toUpperCase();
+        // if (params.value && typeof params.value === "string") {
+        //   return params.value.toUpperCase();
+        // } else {
+        //   return params.value;
+        // }
       },
     },
     {
@@ -314,19 +319,16 @@ const gridOptions = {
     const paymentFilterValue = document.getElementById("paymentFilter").value;
 
     const membershipNumberMatch =
-      !membershipNumberFilterValue ||
-      node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
+      !membershipNumberFilterValue || node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
     const ageMatch =
-      (isNaN(ageFromFilterValue) || node.data.age >= ageFromFilterValue) &&
-      (isNaN(ageToFilterValue) || node.data.age <= ageToFilterValue);
+      (isNaN(ageFromFilterValue) || node.data.age >= ageFromFilterValue) && (isNaN(ageToFilterValue) || node.data.age <= ageToFilterValue);
 
     const genderMatch = genderFilterValue === "all" || node.data.gender === genderFilterValue;
 
-    const sportsDegreeMatch =
-      sportsDegreeFilterValue === "all" || node.data.sportsDegree === sportsDegreeFilterValue;
+    const sportsDegreeMatch = sportsDegreeFilterValue === "all" || node.data.sportsDegree === sportsDegreeFilterValue;
 
     const regionMatch = regionFilterValue === "all" || node.data.region === regionFilterValue;
 
@@ -336,11 +338,9 @@ const gridOptions = {
 
     const groupMatch = groupFilterValue === "all" || node.data.group === groupFilterValue;
 
-    const privilegeMatch =
-      privilegeFilterValue === "all" || String(node.data.benefit) === privilegeFilterValue;
+    const privilegeMatch = privilegeFilterValue === "all" || String(node.data.benefit) === privilegeFilterValue;
 
-    const activeMemberMatch =
-      activeMemberFilterValue === "all" || String(node.data.active) === activeMemberFilterValue;
+    const activeMemberMatch = activeMemberFilterValue === "all" || String(node.data.active) === activeMemberFilterValue;
 
     let paymentMatch = false;
     if (paymentFilterValue === "all") {
@@ -432,8 +432,7 @@ if (toggleCheckboxesBtn && checkboxesBody) {
   });
 
   document.addEventListener("click", (event) => {
-    const isClickInside =
-      checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
+    const isClickInside = checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
     if (!isClickInside) {
       checkboxesBody.classList.add("hidden");
     }
