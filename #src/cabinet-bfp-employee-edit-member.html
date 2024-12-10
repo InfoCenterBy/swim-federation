@@ -556,5 +556,14 @@
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const saveChangesModal = document.getElementById("saveChanges");
+
+        saveChangesModal.addEventListener("hidden.bs.modal", function () {
+          window.location.href = "/";
+        });
+      });
+    </script>
   </body>
 </html>
