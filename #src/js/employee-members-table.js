@@ -38,7 +38,7 @@ const gridOptions = {
       memberFeePayment: false,
       sportsDegree: "МСМК",
       gender: "М",
-      birthdayDate: "29.05.1989",
+      birthdayDate: "11.02.1989",
       region: "Брестская область",
       city: "Брест2",
       school: "ГСУСУ «Брестский областной ЦОР по водным видам спорта»",
@@ -61,11 +61,11 @@ const gridOptions = {
       memberFeePayment: true,
       sportsDegree: "МС",
       gender: "Ж",
-      birthdayDate: "29.05.1989",
+      birthdayDate: "02.02.1981",
       region: "Гомельская область",
       city: "Гомель",
       school: "Школа 3",
-      createdAt: "25.04.2007",
+      createdAt: "02.04.2007",
       active: true,
       age: 25,
       edit: "",
@@ -84,7 +84,7 @@ const gridOptions = {
       memberFeePayment: true,
       sportsDegree: "КМС",
       gender: "М",
-      birthdayDate: "29.05.1989",
+      birthdayDate: "01.01.1989",
       region: "Витебская область",
       city: "Витебск",
       school: "Школа",
@@ -107,6 +107,7 @@ const gridOptions = {
       field: "photo",
       headerName: "Фото",
       cellClass: "ag-cell-center",
+      minWidth: 80,
       maxWidth: 100,
       cellRenderer: (params) => {
         return customAvatarComponent(params);
@@ -127,11 +128,12 @@ const gridOptions = {
       minWidth: 150,
     },
 
-    { field: "email", headerName: "Email", unSortIcon: true },
+    { field: "email", headerName: "Email", unSortIcon: true, minWidth: 120 },
     {
       field: "group",
       headerName: "Группа",
       unSortIcon: true,
+      minWidth: 155,
       cellClassRules: {
         "ag-badge blue": (params) =>
           params.value === "Исполнительный директор" ||
@@ -152,14 +154,14 @@ const gridOptions = {
         "ag-badge gray": (params) => params.value === "Без группы" || params.value,
       },
     },
-    { field: "phone", headerName: "Телефон" },
+    { field: "phone", headerName: "Телефон", minWidth: 180 },
     {
       field: "benefit",
       headerName: "Льгота",
       unSortIcon: true,
       cellClass: "ag-cell-center",
       width: 105,
-      minWidth: 90,
+      minWidth: 105,
       maxWidth: 120,
       cellRenderer: (params) => {
         if (params.value === true) {
@@ -177,7 +179,7 @@ const gridOptions = {
       headerName: "Оплата ВВ*",
       unSortIcon: true,
       width: 135,
-      minWidth: 110,
+      minWidth: 135,
       maxWidth: 140,
       cellClass: "ag-cell-center",
       cellRenderer: (params) => {
@@ -195,8 +197,8 @@ const gridOptions = {
       field: "memberFeePayment",
       headerName: "Оплата ЧВ*",
       unSortIcon: true,
-      width: 135,
-      minWidth: 110,
+      width: 138,
+      minWidth: 138,
       maxWidth: 140,
       cellClass: "ag-cell-center",
       cellRenderer: (params) => {
@@ -240,11 +242,31 @@ const gridOptions = {
         "ag-badge red": (params) => params.value.toLowerCase() === "ж",
       },
     },
-    { field: "birthdayDate", headerName: "Дата рождения", unSortIcon: true },
-    { field: "region", headerName: "Регион", unSortIcon: true },
-    { field: "city", headerName: "Город", unSortIcon: true },
-    { field: "school", headerName: "Школа", unSortIcon: true },
-    { field: "createdAt", headerName: "Дата создания", unSortIcon: true },
+    {
+      field: "birthdayDate",
+      headerName: "Дата рождения",
+      unSortIcon: true,
+      minWidth: 120,
+      valueGetter: (params) => parseDate(params.data.birthdayDate),
+      comparator: (valueA, valueB) => valueA - valueB,
+      valueFormatter: (params) => {
+        return params.data.birthdayDate;
+      },
+    },
+    { field: "region", headerName: "Регион", unSortIcon: true, minWidth: 150 },
+    { field: "city", headerName: "Город", unSortIcon: true, minWidth: 150 },
+    { field: "school", headerName: "Школа", unSortIcon: true, minWidth: 300 },
+    {
+      field: "createdAt",
+      headerName: "Дата создания",
+      unSortIcon: true,
+      minWidth: 120,
+      valueGetter: (params) => parseDate(params.data.createdAt),
+      comparator: (valueA, valueB) => valueA - valueB,
+      valueFormatter: (params) => {
+        return params.data.createdAt;
+      },
+    },
     {
       field: "edit",
       headerName: "",
@@ -374,6 +396,11 @@ let gridApi;
 function customAvatarComponent(params) {
   const avatar = `<img class="ag-avatar" src="./img/${params.value}" alt="Avatar">`;
   return avatar;
+}
+
+function parseDate(dateStr) {
+  const [day, month, year] = dateStr.split(".");
+  return new Date(year, month - 1, day);
 }
 
 function createColumnSelection() {

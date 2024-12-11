@@ -55,19 +55,21 @@ const gridOptions = {
   ],
 
   columnDefs: [
-    { field: "requestNumber", headerName: "№", maxWidth: 80 },
-    { field: "fio", headerName: "ФИО", unSortIcon: true },
-    { field: "email", headerName: "Email", unSortIcon: true },
+    { field: "requestNumber", headerName: "№", maxWidth: 80, minWidth: 80 },
+    { field: "fio", headerName: "ФИО", unSortIcon: true, minWidth: 250 },
+    { field: "email", headerName: "Email", unSortIcon: true, minWidth: 180 },
     {
       field: "requestType",
       headerName: "Тип заявки",
       unSortIcon: true,
+      minWidth: 200,
     },
-    { field: "submissionDate", headerName: "Дата подачи", unSortIcon: true },
+    { field: "submissionDate", headerName: "Дата подачи", unSortIcon: true, minWidth: 180 },
     {
       field: "status",
       headerName: "Статус",
       unSortIcon: true,
+      minWidth: 150,
       cellRenderer: (params) => {
         return params.value;
       },

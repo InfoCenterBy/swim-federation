@@ -36,9 +36,9 @@ const gridOptions = {
 
   columnDefs: [
     { field: "id", headerName: "№", width: 80, minWidth: 80, maxWidth: 80 },
-    { field: "region", headerName: "Регион", flex: 1, unSortIcon: true },
-    { field: "city", headerName: "Город", flex: 1, unSortIcon: true },
-    { field: "createdAt", headerName: "Дата создания", flex: 1, unSortIcon: true },
+    { field: "region", headerName: "Регион", flex: 1, unSortIcon: true, minWidth: 180 },
+    { field: "city", headerName: "Город", flex: 1, unSortIcon: true, minWidth: 180 },
+    { field: "createdAt", headerName: "Дата создания", flex: 1, unSortIcon: true, minWidth: 180 },
     {
       field: "edit",
       headerName: "",
@@ -77,7 +77,10 @@ const gridOptions = {
   onSortChanged: onSortChanged,
   onGridReady: onGridReady,
   isExternalFilterPresent: () => {
-    return document.getElementById("region").value !== "all" || document.getElementById("city").value !== "all";
+    return (
+      document.getElementById("region").value !== "all" ||
+      document.getElementById("city").value !== "all"
+    );
   },
   doesExternalFilterPass: (node) => {
     const regionFilterValue = document.getElementById("region").value;
