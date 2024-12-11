@@ -88,7 +88,7 @@ const gridOptions = {
       region: "Витебская область",
       city: "Витебск",
       school: "Школа",
-      createdAt: "25.04.2007",
+      createdAt: "04.09.2024 19:26:19",
       active: true,
       age: 33,
       edit: "",
@@ -151,7 +151,7 @@ const gridOptions = {
           params.value === "Директор" ||
           params.value === "Заместитель директора",
         "ag-badge yellow": (params) => params.value === "Тренер" || params.value === "Старший тренер",
-        "ag-badge gray": (params) => params.value === "Без группы" || params.value,
+        "ag-badge gray": (params) => params.value === "Без группы",
       },
     },
     { field: "phone", headerName: "Телефон", minWidth: 180 },
@@ -247,7 +247,7 @@ const gridOptions = {
       headerName: "Дата рождения",
       unSortIcon: true,
       minWidth: 120,
-      valueGetter: (params) => parseDate(params.data.birthdayDate),
+      valueGetter: (params) => parseDateTime(params.data.birthdayDate),
       comparator: (valueA, valueB) => valueA - valueB,
       valueFormatter: (params) => {
         return params.data.birthdayDate;
@@ -261,7 +261,7 @@ const gridOptions = {
       headerName: "Дата создания",
       unSortIcon: true,
       minWidth: 120,
-      valueGetter: (params) => parseDate(params.data.createdAt),
+      valueGetter: (params) => parseDateTime(params.data.createdAt),
       comparator: (valueA, valueB) => valueA - valueB,
       valueFormatter: (params) => {
         return params.data.createdAt;
@@ -398,9 +398,24 @@ function customAvatarComponent(params) {
   return avatar;
 }
 
-function parseDate(dateStr) {
-  const [day, month, year] = dateStr.split(".");
-  return new Date(year, month - 1, day);
+function parseDateTime(dateTimeStr) {
+  const parts = dateTimeStr.split(" ");
+  const datePart = parts[0];
+  const [day, month, year] = datePart.split(".");
+
+  let hour = 0,
+    minute = 0,
+    second = 0;
+
+  if (parts.length > 1) {
+    const timePart = parts[1];
+    const [h, m, s] = timePart.split(":");
+    hour = parseInt(h, 10);
+    minute = parseInt(m, 10);
+    second = parseInt(s, 10);
+  }
+
+  return new Date(year, month - 1, day, hour, minute, second);
 }
 
 function createColumnSelection() {
