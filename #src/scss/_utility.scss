@@ -219,6 +219,11 @@ body.no-scroll {
   font-weight: 500;
 }
 
+.default-table.light-main-head th {
+  background-color: var(--light-main);
+  font-weight: 500;
+}
+
 .default-table--small {
   border-collapse: collapse;
   overflow-x: auto;
@@ -596,4 +601,8 @@ body.no-scroll {
     min-width: none;
     max-width: none;
   }
+}
+
+.row-light-blue {
+  background-color: var(--light-main) !important;
 }

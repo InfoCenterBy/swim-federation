@@ -17,6 +17,7 @@ const gridOptions = {
       sum: "40 BYN",
       paymentDate: "12.01.2023 12:45",
       phone: "+375(17)222-26-71",
+      edit: "",
     },
     {
       id: 2,
@@ -33,6 +34,7 @@ const gridOptions = {
       sum: "40 BYN",
       paymentDate: "12.01.2023 12:45",
       phone: "+375(17)211-26-71",
+      edit: "",
     },
     {
       id: 3,
@@ -50,6 +52,7 @@ const gridOptions = {
       sum: "40 BYN",
       paymentDate: "12.01.2023 12:45",
       phone: "+375(17)243-26-71",
+      edit: "",
     },
     {
       id: 4,
@@ -66,6 +69,7 @@ const gridOptions = {
       sum: "40 BYN",
       paymentDate: "12.01.2023 12:45",
       phone: "+375(17)243-26-71",
+      edit: "",
     },
     {
       id: 5,
@@ -82,13 +86,9 @@ const gridOptions = {
       sum: "40 BYN",
       paymentDate: "12.01.2023 12:45",
       phone: "+375(17)243-24-71",
+      edit: "",
     },
   ],
-  getRowStyle: (params) => {
-    if (params.data.active === false) {
-      return { background: "#EAEAEA", color: "#797979" };
-    }
-  },
 
   columnDefs: [
     { field: "id", headerName: "№", width: 80, minWidth: 80, maxWidth: 80 },
@@ -176,6 +176,17 @@ const gridOptions = {
     { field: "sum", headerName: "Сумма", minWidth: 100 },
     { field: "issueDate", headerName: "Дата выставления", unSortIcon: true, minWidth: 130 },
     { field: "paymentDate", headerName: "Дата оплаты", unSortIcon: true, minWidth: 130 },
+    {
+      field: "edit",
+      headerName: "",
+      cellClass: "ag-cell-center",
+      width: 60,
+      minWidth: 60,
+      maxWidth: 60,
+      cellRenderer: (params) => {
+        return `<a href="cabinet-bfp-employee-edit-payment.html"><i class="color-dark-gray hover-main fs-18 bi bi-pencil-square"></i></a>`;
+      },
+    },
   ],
   defaultColDef: {
     flex: 1,

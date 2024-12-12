@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('./components/_cabinet-head.html', {title: "Редактировать оплату"})
+  <body>
+    <div class="wrapper">
+      @@include('./components/_cabinet-header-bfp-employee.html')
+      <main class="main">
+        <div class="cabinet__container">
+          @@include('./elements/cabinet-employee-sidebar.html')
+          <section class="cabinet__content pt-0">
+            <nav>
+              <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                  <a href="cabinet-bfp-employee-payments.html">Оплаты</a>
+                </li>
+                <li class="breadcrumbs__item active">Редактировать оплату</li>
+              </ul>
+            </nav>
+            <h2 class="h2-title">Редактировать оплату</h2>
+            <form class="cabinet__form d-flex flex-column gap-4 mt-0" action="">
+              <div class="mb-3 d-flex flex-column gap-4">
+                <div class="form__input--small mb-0">
+                  <label class="fs-16" for="fio"> ФИО </label>
+                  <input class="bg-fa" id="fio" type="text" value="Кононович Евгений Иванович" />
+                </div>
+
+                <div class="form__input--small mb-0">
+                  <label class="fs-16" for="email"> Email </label>
+                  <input class="bg-fa" id="email" type="email" value="ivanov1995@mail.ru" />
+                </div>
+
+                <div class="form__input--small mb-0 w-100">
+                  <label class="fs-16" for="issueDate">Дата выставления</label>
+                  <input class="bg-fa" id="issueDate" type="text" value="15.03.2023 14:45" />
+                </div>
+
+                <div class="form__input--small mb-0 w-100">
+                  <label class="fs-16" for="paymentDate">Дата оплаты</label>
+                  <input class="bg-fa" id="paymentDate" type="text" value="18.03.2023 12:45" />
+                </div>
+
+                <div class="form__input--small mb-0 w-100">
+                  <label class="fs-16" for="paymentStatus">Статус оплаты</label>
+                  <select id="paymentStatus" class="form-select bg-fa">
+                    <option selected disabled>Статус оплаты</option>
+                    <option value="paid">Оплачен</option>
+                    <option value="notPaid">Не оплачен</option>
+                  </select>
+                </div>
+
+                <div class="form__input--small mb-0 w-100 payment-type" style="display: none">
+                  <label class="fs-16" for="paymentType">Способ оплаты</label>
+                  <select id="paymentType" class="form-select bg-fa">
+                    <option selected disabled>Способ оплаты</option>
+                    <option value="erip">ЕРИП</option>
+                    <option value="cashless">Базналичная оплата</option>
+                  </select>
+                </div>
+
+                <div class="form__input--small mb-0">
+                  <label class="fs-16" for="phone"> Телефон </label>
+                  <input class="bg-fa color-black" id="phone" type="text" value="+375292224023" />
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between gap-5 mb-3">
+                <a
+                  href="cabinet-bfp-employee-regions.html"
+                  class="button--secondary-no-stretch px-4"
+                  >Назад</a
+                >
+                <button
+                  type="button"
+                  class="button px-4"
+                  data-bs-target="#editPayment"
+                  data-bs-toggle="modal"
+                >
+                  Сохранить
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </main>
+
+      @@include('./components/_cabinet-footer.html') @@include('./components/_cabinet-script.html')
+    </div>
+    <div
+      class="modal fade"
+      id="editPayment"
+      tabindex="-1"
+      aria-labelledby="editPaymentLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editPaymentLabel">Редактирование оплаты</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="./img/icons/thumbs-up-trust.svg" alt="Thumbs-up icon" />
+            <p class="mt-4">Оплата успешно изменена</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const paymentStatus = document.querySelector("#paymentStatus");
+        const paymentType = document.querySelector(".payment-type");
+
+        if (paymentStatus.value === "paid") {
+          paymentType.style.display = "flex";
+        } else {
+          paymentType.style.display = "none";
+        }
+
+        paymentStatus.addEventListener("change", () => {
+          if (paymentStatus.value === "paid") {
+            paymentType.style.display = "flex";
+          } else {
+            paymentType.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
