@@ -38,7 +38,7 @@ const gridOptions = {
       memberFeePayment: false,
       sportsDegree: "МСМК",
       gender: "М",
-      birthdayDate: "29.05.1989",
+      birthdayDate: "11.02.1989",
       region: "Брестская область",
       city: "Брест2",
       school: "ГСУСУ «Брестский областной ЦОР по водным видам спорта»",
@@ -61,11 +61,11 @@ const gridOptions = {
       memberFeePayment: true,
       sportsDegree: "МС",
       gender: "Ж",
-      birthdayDate: "29.05.1989",
+      birthdayDate: "02.02.1981",
       region: "Гомельская область",
       city: "Гомель",
       school: "Школа 3",
-      createdAt: "25.04.2007",
+      createdAt: "02.04.2007",
       active: true,
       age: 25,
       edit: "",
@@ -84,11 +84,11 @@ const gridOptions = {
       memberFeePayment: true,
       sportsDegree: "КМС",
       gender: "М",
-      birthdayDate: "29.05.1989",
+      birthdayDate: "01.01.1989",
       region: "Витебская область",
       city: "Витебск",
       school: "Школа",
-      createdAt: "25.04.2007",
+      createdAt: "04.09.2024 19:26:19",
       active: true,
       age: 33,
       edit: "",
@@ -150,8 +150,7 @@ const gridOptions = {
           params.value === "Администратор" ||
           params.value === "Директор" ||
           params.value === "Заместитель директора",
-        "ag-badge yellow": (params) =>
-          params.value === "Тренер" || params.value === "Старший тренер",
+        "ag-badge yellow": (params) => params.value === "Тренер" || params.value === "Старший тренер",
         "ag-badge gray": (params) => params.value === "Без группы",
       },
     },
@@ -221,7 +220,12 @@ const gridOptions = {
       maxWidth: 140,
       unSortIcon: true,
       cellRenderer: (params) => {
-        return params.value.toUpperCase();
+        return String(params.value).toUpperCase();
+        // if (params.value && typeof params.value === "string") {
+        //   return params.value.toUpperCase();
+        // } else {
+        //   return params.value;
+        // }
       },
     },
     {
@@ -238,11 +242,31 @@ const gridOptions = {
         "ag-badge red": (params) => params.value.toLowerCase() === "ж",
       },
     },
-    { field: "birthdayDate", headerName: "Дата рождения", unSortIcon: true, minWidth: 120 },
+    {
+      field: "birthdayDate",
+      headerName: "Дата рождения",
+      unSortIcon: true,
+      minWidth: 120,
+      valueGetter: (params) => parseDateTime(params.data.birthdayDate),
+      comparator: (valueA, valueB) => valueA - valueB,
+      valueFormatter: (params) => {
+        return params.data.birthdayDate;
+      },
+    },
     { field: "region", headerName: "Регион", unSortIcon: true, minWidth: 150 },
     { field: "city", headerName: "Город", unSortIcon: true, minWidth: 150 },
     { field: "school", headerName: "Школа", unSortIcon: true, minWidth: 300 },
-    { field: "createdAt", headerName: "Дата создания", unSortIcon: true, minWidth: 120 },
+    {
+      field: "createdAt",
+      headerName: "Дата создания",
+      unSortIcon: true,
+      minWidth: 120,
+      valueGetter: (params) => parseDateTime(params.data.createdAt),
+      comparator: (valueA, valueB) => valueA - valueB,
+      valueFormatter: (params) => {
+        return params.data.createdAt;
+      },
+    },
     {
       field: "edit",
       headerName: "",
@@ -317,19 +341,16 @@ const gridOptions = {
     const paymentFilterValue = document.getElementById("paymentFilter").value;
 
     const membershipNumberMatch =
-      !membershipNumberFilterValue ||
-      node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
+      !membershipNumberFilterValue || node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
     const ageMatch =
-      (isNaN(ageFromFilterValue) || node.data.age >= ageFromFilterValue) &&
-      (isNaN(ageToFilterValue) || node.data.age <= ageToFilterValue);
+      (isNaN(ageFromFilterValue) || node.data.age >= ageFromFilterValue) && (isNaN(ageToFilterValue) || node.data.age <= ageToFilterValue);
 
     const genderMatch = genderFilterValue === "all" || node.data.gender === genderFilterValue;
 
-    const sportsDegreeMatch =
-      sportsDegreeFilterValue === "all" || node.data.sportsDegree === sportsDegreeFilterValue;
+    const sportsDegreeMatch = sportsDegreeFilterValue === "all" || node.data.sportsDegree === sportsDegreeFilterValue;
 
     const regionMatch = regionFilterValue === "all" || node.data.region === regionFilterValue;
 
@@ -339,11 +360,9 @@ const gridOptions = {
 
     const groupMatch = groupFilterValue === "all" || node.data.group === groupFilterValue;
 
-    const privilegeMatch =
-      privilegeFilterValue === "all" || String(node.data.benefit) === privilegeFilterValue;
+    const privilegeMatch = privilegeFilterValue === "all" || String(node.data.benefit) === privilegeFilterValue;
 
-    const activeMemberMatch =
-      activeMemberFilterValue === "all" || String(node.data.active) === activeMemberFilterValue;
+    const activeMemberMatch = activeMemberFilterValue === "all" || String(node.data.active) === activeMemberFilterValue;
 
     let paymentMatch = false;
     if (paymentFilterValue === "all") {
@@ -377,6 +396,26 @@ let gridApi;
 function customAvatarComponent(params) {
   const avatar = `<img class="ag-avatar" src="./img/${params.value}" alt="Avatar">`;
   return avatar;
+}
+
+function parseDateTime(dateTimeStr) {
+  const parts = dateTimeStr.split(" ");
+  const datePart = parts[0];
+  const [day, month, year] = datePart.split(".");
+
+  let hour = 0,
+    minute = 0,
+    second = 0;
+
+  if (parts.length > 1) {
+    const timePart = parts[1];
+    const [h, m, s] = timePart.split(":");
+    hour = parseInt(h, 10);
+    minute = parseInt(m, 10);
+    second = parseInt(s, 10);
+  }
+
+  return new Date(year, month - 1, day, hour, minute, second);
 }
 
 function createColumnSelection() {
@@ -435,8 +474,7 @@ if (toggleCheckboxesBtn && checkboxesBody) {
   });
 
   document.addEventListener("click", (event) => {
-    const isClickInside =
-      checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
+    const isClickInside = checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
     if (!isClickInside) {
       checkboxesBody.classList.add("hidden");
     }

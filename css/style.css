@@ -822,6 +822,10 @@
     background-color: var(--light-gray);
     font-weight: 500;
   }
+  .default-table.light-main-head th {
+    background-color: var(--light-main);
+    font-weight: 500;
+  }
   .default-table--small {
     border-collapse: collapse;
     overflow-x: auto;
@@ -1200,6 +1204,9 @@
       min-width: none;
       max-width: none;
     }
+  }
+  .row-light-blue {
+    background-color: var(--light-main) !important;
   }
   .header {
     display: -webkit-box;
