@@ -365,6 +365,7 @@ const gridOptions = {
     const activeMemberMatch = activeMemberFilterValue === "all" || String(node.data.active) === activeMemberFilterValue;
 
     let paymentMatch = false;
+
     if (paymentFilterValue === "all") {
       paymentMatch = true;
     } else if (paymentFilterValue === "onlyMember") {
