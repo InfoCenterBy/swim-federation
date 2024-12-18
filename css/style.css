@@ -1283,7 +1283,6 @@
     height: 100vh;
   }
   .header.sticky {
-    background-color: rgba(255, 255, 255, 0.95);
     -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
@@ -4517,6 +4516,15 @@
   .period-button--small.active {
     background-color: var(--main);
     color: var(--white);
+  }
+  .period-button--small input[type=radio] {
+    display: none;
+  }
+  .period-button--small input[type=radio]:checked + span,
+  .period-button--small.active {
+    background-color: var(--main);
+    color: white;
+    border-color: var(--main);
   }
   .photo-albums {
     height: 450px;

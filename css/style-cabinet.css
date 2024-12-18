@@ -2873,6 +2873,15 @@
     background-color: var(--main);
     color: var(--white);
   }
+  .period-button--small input[type=radio] {
+    display: none;
+  }
+  .period-button--small input[type=radio]:checked + span,
+  .period-button--small.active {
+    background-color: var(--main);
+    color: white;
+    border-color: var(--main);
+  }
   .documents__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
