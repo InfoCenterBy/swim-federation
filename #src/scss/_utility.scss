@@ -202,6 +202,11 @@ body.no-scroll {
   overflow-x: auto;
   width: 100%;
 }
+.default-table {
+  border-collapse: collapse;
+  overflow-x: auto;
+  width: 100%;
+}
 
 .default-table th,
 .default-table td {
@@ -218,8 +223,17 @@ body.no-scroll {
   background-color: var(--light-gray);
   font-weight: 500;
 }
+.default-table.row-gray-5 tbody tr:nth-child(1),
+.default-table.row-gray-5 tbody tr:nth-child(5n) {
+  background-color: var(--light-gray);
+}
 
 .default-table.light-main-head th {
+  background-color: var(--light-main);
+  font-weight: 500;
+}
+
+.default-table--small.light-main-head th {
   background-color: var(--light-main);
   font-weight: 500;
 }
