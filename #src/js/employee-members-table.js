@@ -1,6 +1,7 @@
 const gridOptions = {
   localeText: AG_GRID_LOCALE_RU,
   rowHeight: 50,
+  suppressAnimationFrame: true,
   rowData: [
     {
       id: 1,
@@ -150,7 +151,8 @@ const gridOptions = {
           params.value === "Администратор" ||
           params.value === "Директор" ||
           params.value === "Заместитель директора",
-        "ag-badge yellow": (params) => params.value === "Тренер" || params.value === "Старший тренер",
+        "ag-badge yellow": (params) =>
+          params.value === "Тренер" || params.value === "Старший тренер",
         "ag-badge gray": (params) => params.value === "Без группы",
       },
     },
@@ -341,16 +343,19 @@ const gridOptions = {
     const paymentFilterValue = document.getElementById("paymentFilter").value;
 
     const membershipNumberMatch =
-      !membershipNumberFilterValue || node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
+      !membershipNumberFilterValue ||
+      node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
     const ageMatch =
-      (isNaN(ageFromFilterValue) || node.data.age >= ageFromFilterValue) && (isNaN(ageToFilterValue) || node.data.age <= ageToFilterValue);
+      (isNaN(ageFromFilterValue) || node.data.age >= ageFromFilterValue) &&
+      (isNaN(ageToFilterValue) || node.data.age < ageToFilterValue);
 
     const genderMatch = genderFilterValue === "all" || node.data.gender === genderFilterValue;
 
-    const sportsDegreeMatch = sportsDegreeFilterValue === "all" || node.data.sportsDegree === sportsDegreeFilterValue;
+    const sportsDegreeMatch =
+      sportsDegreeFilterValue === "all" || node.data.sportsDegree === sportsDegreeFilterValue;
 
     const regionMatch = regionFilterValue === "all" || node.data.region === regionFilterValue;
 
@@ -360,9 +365,11 @@ const gridOptions = {
 
     const groupMatch = groupFilterValue === "all" || node.data.group === groupFilterValue;
 
-    const privilegeMatch = privilegeFilterValue === "all" || String(node.data.benefit) === privilegeFilterValue;
+    const privilegeMatch =
+      privilegeFilterValue === "all" || String(node.data.benefit) === privilegeFilterValue;
 
-    const activeMemberMatch = activeMemberFilterValue === "all" || String(node.data.active) === activeMemberFilterValue;
+    const activeMemberMatch =
+      activeMemberFilterValue === "all" || String(node.data.active) === activeMemberFilterValue;
 
     let paymentMatch = false;
 
@@ -475,7 +482,8 @@ if (toggleCheckboxesBtn && checkboxesBody) {
   });
 
   document.addEventListener("click", (event) => {
-    const isClickInside = checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
+    const isClickInside =
+      checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
     if (!isClickInside) {
       checkboxesBody.classList.add("hidden");
     }
