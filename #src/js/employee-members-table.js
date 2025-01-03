@@ -1,295 +1,304 @@
 const gridOptions = {
   localeText: AG_GRID_LOCALE_RU,
   rowHeight: 50,
-  rowData: [
-    {
-      id: 1,
-      photo: "male-no-avatar.png",
-      membershipNumber: "123123123",
-      fio: "Альхимович Евгений Иванович",
-      email: "aroitq@mail.ru",
-      group: "Заместитель директора",
-      phone: "+375(17)243-26-71",
-      benefit: false,
-      entranceFeePayment: true,
-      memberFeePayment: false,
-      sportsDegree: "МСМК",
-      gender: "М",
-      birthdayDate: "29.05.1989",
-      region: "Брестская область",
-      city: "Брест",
-      school: "Школа5",
-      createdAt: "25.04.2007",
-      active: false,
-      age: 18,
-      edit: "",
-      delete: "",
-    },
-    {
-      id: 5,
-      photo: "female-no-avatar.png",
-      membershipNumber: "123123123",
-      fio: "Альхимович Евгений Иванович",
-      email: "aroitq@mail.ru",
-      group: "Судья",
-      phone: "+375(17)243-26-71",
-      benefit: false,
-      entranceFeePayment: true,
-      memberFeePayment: false,
-      sportsDegree: "МСМК",
-      gender: "М",
-      birthdayDate: "11.02.1989",
-      region: "Брестская область",
-      city: "Брест2",
-      school: "ГСУСУ «Брестский областной ЦОР по водным видам спорта»",
-      createdAt: "25.04.2007",
-      active: false,
-      age: 18,
-      edit: "",
-      delete: "",
-    },
-    {
-      id: 2,
-      photo: "member-avatar.png",
-      membershipNumber: "555",
-      fio: "Кабанчик Валерий Евгенич",
-      email: "aroitq@mail.ru",
-      group: "Без группы",
-      phone: "+375(17)243-26-71",
-      benefit: true,
-      entranceFeePayment: true,
-      memberFeePayment: true,
-      sportsDegree: "МС",
-      gender: "Ж",
-      birthdayDate: "02.02.1981",
-      region: "Гомельская область",
-      city: "Гомель",
-      school: "Школа 3",
-      createdAt: "02.04.2007",
-      active: true,
-      age: 25,
-      edit: "",
-      delete: "",
-    },
-    {
-      id: 3,
-      photo: "member-avatar.png",
-      membershipNumber: "9999991",
-      fio: "Попик Валентина Альбертовна",
-      email: "aroitq@mail.ru",
-      group: "Председатель",
-      phone: "+375(17)243-26-71",
-      benefit: false,
-      entranceFeePayment: false,
-      memberFeePayment: true,
-      sportsDegree: "КМС",
-      gender: "М",
-      birthdayDate: "01.01.1989",
-      region: "Витебская область",
-      city: "Витебск",
-      school: "Школа",
-      createdAt: "04.09.2024 19:26:19",
-      active: true,
-      age: 33,
-      edit: "",
-      delete: "",
-    },
-  ],
+  rowData: [],
+  // rowData: [
+  //   {
+  //     // id: 1,
+  //     // photo: "male-no-avatar.png",
+  //     // membershipNumber: "123123123",
+  //     // fio: "Альхимович Евгений Иванович",
+  //     // email: "aroitq@mail.ru",
+  //     // group: "Заместитель директора",
+  //     // phone: "+375(17)243-26-71",
+  //     // benefit: false,
+  //     // entranceFeePayment: true,
+  //     // memberFeePayment: false,
+  //     // sportsDegree: "МСМК",
+  //     // gender: "М",
+  //     // birthdayDate: "29.05.1989",
+  //     region: "Брестская область",
+  //     city: "Брест",
+  //     school: "Школа5",
+  //     createdAt: "25.04.2007",
+  //     active: false,
+  //     age: 18,
+  //     edit: "",
+  //     delete: "",
+  //   },
+  //   {
+  //     id: 10,
+  //     photo: "female-no-avatar.png",
+  //     membershipNumber: "123123123",
+  //     fio: "Альхимович Евгений Иванович",
+  //     email: "aroitq@mail.ru",
+  //     group: "Судья",
+  //     phone: "+375(17)243-26-71",
+  //     benefit: false,
+  //     entranceFeePayment: true,
+  //     memberFeePayment: false,
+  //     sportsDegree: "МСМК",
+  //     gender: "М",
+  //     birthdayDate: "11.02.1989",
+  //     region: "Брестская область",
+  //     city: "Брест2",
+  //     school: "ГСУСУ «Брестский областной ЦОР по водным видам спорта»",
+  //     createdAt: "25.04.2007",
+  //     active: false,
+  //     age: 18,
+  //     edit: "",
+  //     delete: "",
+  //   },
+  //   {
+  //     id: 100,
+  //     photo: "member-avatar.png",
+  //     membershipNumber: "555",
+  //     fio: "Кабанчик Валерий Евгенич",
+  //     email: "aroitq@mail.ru",
+  //     group: "Без группы",
+  //     phone: "+375(17)243-26-71",
+  //     benefit: true,
+  //     entranceFeePayment: true,
+  //     memberFeePayment: true,
+  //     sportsDegree: "МС",
+  //     gender: "Ж",
+  //     birthdayDate: "02.02.1981",
+  //     region: "Гомельская область",
+  //     city: "Гомель",
+  //     school: "Школа 3",
+  //     createdAt: "02.04.2007",
+  //     active: true,
+  //     age: 25,
+  //     edit: "",
+  //     delete: "",
+  //   },
+  //   {
+  //     id: 3,
+  //     photo: "member-avatar.png",
+  //     membershipNumber: "9999991",
+  //     fio: "Попик Валентина Альбертовна",
+  //     email: "aroitq@mail.ru",
+  //     group: "Председатель",
+  //     phone: "+375(17)243-26-71",
+  //     benefit: false,
+  //     entranceFeePayment: false,
+  //     memberFeePayment: true,
+  //     sportsDegree: "КМС",
+  //     gender: "М",
+  //     birthdayDate: "01.01.1989",
+  //     region: "Витебская область",
+  //     city: "Витебск",
+  //     school: "Школа",
+  //     createdAt: "04.09.2024 19:26:19",
+  //     active: true,
+  //     age: 33,
+  //     edit: "",
+  //     delete: "",
+  //   },
+  // ],
   getRowStyle: (params) => {
     if (params.data.active === false) {
       return { background: "#EAEAEA", color: "#797979" };
     }
   },
-
   columnDefs: [
-    { field: "id", headerName: "№", width: 80, minWidth: 80, maxWidth: 80 },
-    {
-      field: "photo",
-      headerName: "Фото",
-      cellClass: "ag-cell-center",
-      minWidth: 80,
-      maxWidth: 100,
-      cellRenderer: (params) => {
-        return customAvatarComponent(params);
-      },
-    },
-    {
-      field: "membershipNumber",
-      headerName: "Номер билета",
-      unSortIcon: true,
-      width: 150,
-      minWidth: 110,
-      maxWidth: 180,
-    },
-    {
-      field: "fio",
-      headerName: "ФИО",
-      unSortIcon: true,
-      minWidth: 150,
-    },
-
-    { field: "email", headerName: "Email", unSortIcon: true, minWidth: 120 },
-    {
-      field: "group",
-      headerName: "Группа",
-      unSortIcon: true,
-      minWidth: 155,
-      cellClassRules: {
-        "ag-badge blue": (params) =>
-          params.value === "Исполнительный директор" ||
-          params.value === "Генеральный секретарь" ||
-          params.value === "Судья" ||
-          params.value === "Пресс-секретарь",
-        "ag-badge green": (params) =>
-          params.value === "Председатель" ||
-          params.value === "Методист" ||
-          params.value === "Заместитель председателя" ||
-          params.value === "Бухгалтер",
-        "ag-badge red": (params) =>
-          params.value === "Спортсмен" ||
-          params.value === "Администратор" ||
-          params.value === "Директор" ||
-          params.value === "Заместитель директора",
-        "ag-badge yellow": (params) => params.value === "Тренер" || params.value === "Старший тренер",
-        "ag-badge gray": (params) => params.value === "Без группы",
-      },
-    },
-    { field: "phone", headerName: "Телефон", minWidth: 180 },
-    {
-      field: "benefit",
-      headerName: "Льгота",
-      unSortIcon: true,
-      cellClass: "ag-cell-center",
-      width: 105,
-      minWidth: 105,
-      maxWidth: 120,
-      cellRenderer: (params) => {
-        if (params.value === true) {
-          let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
-
-          return greenCheckbox;
-        } else {
-          let redCheckbox = `<img src="./img/icons/checkbox-red.png" />`;
-          return redCheckbox;
-        }
-      },
-    },
-    {
-      field: "entranceFeePayment",
-      headerName: "Оплата ВВ*",
-      unSortIcon: true,
-      width: 135,
-      minWidth: 135,
-      maxWidth: 140,
-      cellClass: "ag-cell-center",
-      cellRenderer: (params) => {
-        if (params.value === true) {
-          let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
-
-          return greenCheckbox;
-        } else {
-          let redCheckbox = `<img src="./img/icons/checkbox-red.png" />`;
-          return redCheckbox;
-        }
-      },
-    },
-    {
-      field: "memberFeePayment",
-      headerName: "Оплата ЧВ*",
-      unSortIcon: true,
-      width: 138,
-      minWidth: 138,
-      maxWidth: 140,
-      cellClass: "ag-cell-center",
-      cellRenderer: (params) => {
-        if (params.value === true) {
-          let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
-
-          return greenCheckbox;
-        } else {
-          let redCheckbox = `<img src="./img/icons/checkbox-red.png" />`;
-          return redCheckbox;
-        }
-      },
-    },
-    {
-      field: "sportsDegree",
-      headerName: "Разряд",
-      width: 135,
-      minWidth: 110,
-      maxWidth: 140,
-      unSortIcon: true,
-      cellRenderer: (params) => {
-        return String(params.value).toUpperCase();
-        // if (params.value && typeof params.value === "string") {
-        //   return params.value.toUpperCase();
-        // } else {
-        //   return params.value;
-        // }
-      },
-    },
-    {
-      field: "gender",
-      headerName: "Пол",
-      width: 75,
-      minWidth: 60,
-      maxWidth: 90,
-      cellRenderer: (params) => {
-        return params.value.toUpperCase();
-      },
-      cellClassRules: {
-        "ag-badge blue": (params) => params.value.toLowerCase() === "м",
-        "ag-badge red": (params) => params.value.toLowerCase() === "ж",
-      },
-    },
-    {
-      field: "birthdayDate",
-      headerName: "Дата рождения",
-      unSortIcon: true,
-      minWidth: 120,
-      valueGetter: (params) => parseDateTime(params.data.birthdayDate),
-      comparator: (valueA, valueB) => valueA - valueB,
-      valueFormatter: (params) => {
-        return params.data.birthdayDate;
-      },
-    },
-    { field: "region", headerName: "Регион", unSortIcon: true, minWidth: 150 },
-    { field: "city", headerName: "Город", unSortIcon: true, minWidth: 150 },
-    { field: "school", headerName: "Школа", unSortIcon: true, minWidth: 300 },
-    {
-      field: "createdAt",
-      headerName: "Дата создания",
-      unSortIcon: true,
-      minWidth: 120,
-      valueGetter: (params) => parseDateTime(params.data.createdAt),
-      comparator: (valueA, valueB) => valueA - valueB,
-      valueFormatter: (params) => {
-        return params.data.createdAt;
-      },
-    },
-    {
-      field: "edit",
-      headerName: "",
-      cellClass: "ag-cell-center",
-      width: 60,
-      minWidth: 60,
-      maxWidth: 60,
-      cellRenderer: (params) => {
-        return `<a href="cabinet-bfp-employee-edit-member.html"><i class="color-dark-gray hover-main fs-18 bi bi-pencil-square"></i></a>`;
-      },
-    },
-    {
-      field: "delete",
-      headerName: "",
-      cellClass: "ag-cell-center",
-      width: 60,
-      minWidth: 60,
-      maxWidth: 60,
-      cellRenderer: (params) => {
-        return `<button class="bg-transparent" data-bs-target="#deleteMember" data-bs-toggle="modal"><i class="color-dark-gray hover-main fs-18 bi bi-trash3"></i></button>`;
-      },
-    },
+    { field: "mission" },
+    { field: "company" },
+    { field: "location" },
+    { field: "date" },
+    { field: "price" },
+    { field: "successful" },
+    { field: "rocket" },
   ],
+  // columnDefs: [
+  //   { field: "id", headerName: "№", width: 80, minWidth: 80, maxWidth: 80 },
+  //   {
+  //     field: "photo",
+  //     headerName: "Фото",
+  //     cellClass: "ag-cell-center",
+  //     minWidth: 80,
+  //     maxWidth: 100,
+  //     cellRenderer: (params) => {
+  //       return customAvatarComponent(params);
+  //     },
+  //   },
+  //   {
+  //     field: "membershipNumber",
+  //     headerName: "Номер билета",
+  //     unSortIcon: true,
+  //     width: 150,
+  //     minWidth: 110,
+  //     maxWidth: 180,
+  //   },
+  //   {
+  //     field: "fio",
+  //     headerName: "ФИО",
+  //     unSortIcon: true,
+  //     minWidth: 150,
+  //   },
+
+  //   { field: "email", headerName: "Email", unSortIcon: true, minWidth: 120 },
+  //   {
+  //     field: "group",
+  //     headerName: "Группа",
+  //     unSortIcon: true,
+  //     minWidth: 155,
+  //     cellClassRules: {
+  //       "ag-badge blue": (params) =>
+  //         params.value === "Исполнительный директор" ||
+  //         params.value === "Генеральный секретарь" ||
+  //         params.value === "Судья" ||
+  //         params.value === "Пресс-секретарь",
+  //       "ag-badge green": (params) =>
+  //         params.value === "Председатель" ||
+  //         params.value === "Методист" ||
+  //         params.value === "Заместитель председателя" ||
+  //         params.value === "Бухгалтер",
+  //       "ag-badge red": (params) =>
+  //         params.value === "Спортсмен" ||
+  //         params.value === "Администратор" ||
+  //         params.value === "Директор" ||
+  //         params.value === "Заместитель директора",
+  //       "ag-badge yellow": (params) => params.value === "Тренер" || params.value === "Старший тренер",
+  //       "ag-badge gray": (params) => params.value === "Без группы",
+  //     },
+  //   },
+  //   { field: "phone", headerName: "Телефон", minWidth: 180 },
+  //   {
+  //     field: "benefit",
+  //     headerName: "Льгота",
+  //     unSortIcon: true,
+  //     cellClass: "ag-cell-center",
+  //     width: 105,
+  //     minWidth: 105,
+  //     maxWidth: 120,
+  //     cellRenderer: (params) => {
+  //       if (params.value === true) {
+  //         let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
+
+  //         return greenCheckbox;
+  //       } else {
+  //         let redCheckbox = `<img src="./img/icons/checkbox-red.png" />`;
+  //         return redCheckbox;
+  //       }
+  //     },
+  //   },
+  //   {
+  //     field: "entranceFeePayment",
+  //     headerName: "Оплата ВВ*",
+  //     unSortIcon: true,
+  //     width: 135,
+  //     minWidth: 135,
+  //     maxWidth: 140,
+  //     cellClass: "ag-cell-center",
+  //     cellRenderer: (params) => {
+  //       if (params.value === true) {
+  //         let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
+
+  //         return greenCheckbox;
+  //       } else {
+  //         let redCheckbox = `<img src="./img/icons/checkbox-red.png" />`;
+  //         return redCheckbox;
+  //       }
+  //     },
+  //   },
+  //   {
+  //     field: "memberFeePayment",
+  //     headerName: "Оплата ЧВ*",
+  //     unSortIcon: true,
+  //     width: 138,
+  //     minWidth: 138,
+  //     maxWidth: 140,
+  //     cellClass: "ag-cell-center",
+  //     cellRenderer: (params) => {
+  //       if (params.value === true) {
+  //         let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
+
+  //         return greenCheckbox;
+  //       } else {
+  //         let redCheckbox = `<img src="./img/icons/checkbox-red.png" />`;
+  //         return redCheckbox;
+  //       }
+  //     },
+  //   },
+  //   {
+  //     field: "sportsDegree",
+  //     headerName: "Разряд",
+  //     width: 135,
+  //     minWidth: 110,
+  //     maxWidth: 140,
+  //     unSortIcon: true,
+  //     cellRenderer: (params) => {
+  //       return String(params.value).toUpperCase();
+  //       // if (params.value && typeof params.value === "string") {
+  //       //   return params.value.toUpperCase();
+  //       // } else {
+  //       //   return params.value;
+  //       // }
+  //     },
+  //   },
+  //   {
+  //     field: "gender",
+  //     headerName: "Пол",
+  //     width: 75,
+  //     minWidth: 60,
+  //     maxWidth: 90,
+  //     // cellRenderer: (params) => {
+  //     //   return params.value.toUpperCase();
+  //     // },
+  //     // cellClassRules: {
+  //     //   "ag-badge blue": (params) => params.value.toLowerCase() === "м",
+  //     //   "ag-badge red": (params) => params.value.toLowerCase() === "ж",
+  //     // },
+  //   },
+  //   {
+  //     field: "birthdayDate",
+  //     headerName: "Дата рождения",
+  //     unSortIcon: true,
+  //     minWidth: 120,
+  //     // valueGetter: (params) => parseDateTime(params.data.birthdayDate),
+  //     // comparator: (valueA, valueB) => valueA - valueB,
+  //     // valueFormatter: (params) => {
+  //     //   return params.data.birthdayDate;
+  //     // },
+  //   },
+  //   { field: "region", headerName: "Регион", unSortIcon: true, minWidth: 150 },
+  //   { field: "city", headerName: "Город", unSortIcon: true, minWidth: 150 },
+  //   { field: "school", headerName: "Школа", unSortIcon: true, minWidth: 300 },
+  //   {
+  //     field: "createdAt",
+  //     headerName: "Дата создания",
+  //     unSortIcon: true,
+  //     minWidth: 120,
+  //     valueGetter: (params) => parseDateTime(params.data.createdAt),
+  //     comparator: (valueA, valueB) => valueA - valueB,
+  //     valueFormatter: (params) => {
+  //       return params.data.createdAt;
+  //     },
+  //   },
+  //   {
+  //     field: "edit",
+  //     headerName: "",
+  //     cellClass: "ag-cell-center",
+  //     width: 60,
+  //     minWidth: 60,
+  //     maxWidth: 60,
+  //     cellRenderer: (params) => {
+  //       return `<a href="cabinet-bfp-employee-edit-member.html"><i class="color-dark-gray hover-main fs-18 bi bi-pencil-square"></i></a>`;
+  //     },
+  //   },
+  //   {
+  //     field: "delete",
+  //     headerName: "",
+  //     cellClass: "ag-cell-center",
+  //     width: 60,
+  //     minWidth: 60,
+  //     maxWidth: 60,
+  //     cellRenderer: (params) => {
+  //       return `<button class="bg-transparent" data-bs-target="#deleteMember" data-bs-toggle="modal"><i class="color-dark-gray hover-main fs-18 bi bi-trash3"></i></button>`;
+  //     },
+  //   },
+  // ],
   defaultColDef: {
     flex: 1,
     wrapText: true,
@@ -555,3 +564,7 @@ if (globalSearchInput) {
 if (agGrid) {
   agGrid.createGrid(ediv, gridOptions);
 }
+
+fetch("https://www.ag-grid.com/example-assets/space-mission-data.json")
+  .then((response) => response.json())
+  .then((data) => gridApi.setGridOption("rowData", data));

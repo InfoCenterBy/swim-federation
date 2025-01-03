@@ -18,7 +18,7 @@
 
 .photos-videos__container {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   gap: 24px;
   align-items: stretch;
 }
@@ -151,6 +151,12 @@
 @media screen and (max-width: 1200px) {
   .photos__cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .photos-videos__container {
+    flex-wrap: wrap;
   }
 }
 
