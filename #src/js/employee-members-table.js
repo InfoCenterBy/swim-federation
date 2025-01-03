@@ -101,41 +101,33 @@ const gridOptions = {
       return { background: "#EAEAEA", color: "#797979" };
     }
   },
+
   columnDefs: [
-    { field: "mission" },
-    { field: "company" },
-    { field: "location" },
-    { field: "date" },
-    { field: "price" },
-    { field: "successful" },
-    { field: "rocket" },
-  ],
-  // columnDefs: [
-  //   { field: "id", headerName: "№", width: 80, minWidth: 80, maxWidth: 80 },
-  //   {
-  //     field: "photo",
-  //     headerName: "Фото",
-  //     cellClass: "ag-cell-center",
-  //     minWidth: 80,
-  //     maxWidth: 100,
-  //     cellRenderer: (params) => {
-  //       return customAvatarComponent(params);
-  //     },
-  //   },
-  //   {
-  //     field: "membershipNumber",
-  //     headerName: "Номер билета",
-  //     unSortIcon: true,
-  //     width: 150,
-  //     minWidth: 110,
-  //     maxWidth: 180,
-  //   },
-  //   {
-  //     field: "fio",
-  //     headerName: "ФИО",
-  //     unSortIcon: true,
-  //     minWidth: 150,
-  //   },
+    { field: "id", headerName: "№", width: 80, minWidth: 80, maxWidth: 80 },
+    {
+      field: "photo",
+      headerName: "Фото",
+      cellClass: "ag-cell-center",
+      minWidth: 80,
+      maxWidth: 100,
+      cellRenderer: (params) => {
+        return customAvatarComponent(params);
+      },
+    },
+    {
+      field: "membershipNumber",
+      headerName: "Номер билета",
+      unSortIcon: true,
+      width: 150,
+      minWidth: 110,
+      maxWidth: 180,
+    },
+    {
+      field: "fio",
+      headerName: "ФИО",
+      unSortIcon: true,
+      minWidth: 150,
+    },
 
     { field: "email", headerName: "Email", unSortIcon: true, minWidth: 120 },
     {
@@ -176,129 +168,129 @@ const gridOptions = {
         if (params.value === true) {
           let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
 
-  //         return greenCheckbox;
-  //       } else {
-  //         let redCheckbox = `<img src="./img/icons/checkbox-red.png" />`;
-  //         return redCheckbox;
-  //       }
-  //     },
-  //   },
-  //   {
-  //     field: "entranceFeePayment",
-  //     headerName: "Оплата ВВ*",
-  //     unSortIcon: true,
-  //     width: 135,
-  //     minWidth: 135,
-  //     maxWidth: 140,
-  //     cellClass: "ag-cell-center",
-  //     cellRenderer: (params) => {
-  //       if (params.value === true) {
-  //         let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
+          return greenCheckbox;
+        } else {
+          let redCheckbox = `<img src="./img/icons/checkbox-red.png" />`;
+          return redCheckbox;
+        }
+      },
+    },
+    {
+      field: "entranceFeePayment",
+      headerName: "Оплата ВВ*",
+      unSortIcon: true,
+      width: 135,
+      minWidth: 135,
+      maxWidth: 140,
+      cellClass: "ag-cell-center",
+      cellRenderer: (params) => {
+        if (params.value === true) {
+          let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
 
-  //         return greenCheckbox;
-  //       } else {
-  //         let redCheckbox = `<img src="./img/icons/checkbox-red.png" />`;
-  //         return redCheckbox;
-  //       }
-  //     },
-  //   },
-  //   {
-  //     field: "memberFeePayment",
-  //     headerName: "Оплата ЧВ*",
-  //     unSortIcon: true,
-  //     width: 138,
-  //     minWidth: 138,
-  //     maxWidth: 140,
-  //     cellClass: "ag-cell-center",
-  //     cellRenderer: (params) => {
-  //       if (params.value === true) {
-  //         let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
+          return greenCheckbox;
+        } else {
+          let redCheckbox = `<img src="./img/icons/checkbox-red.png" />`;
+          return redCheckbox;
+        }
+      },
+    },
+    {
+      field: "memberFeePayment",
+      headerName: "Оплата ЧВ*",
+      unSortIcon: true,
+      width: 138,
+      minWidth: 138,
+      maxWidth: 140,
+      cellClass: "ag-cell-center",
+      cellRenderer: (params) => {
+        if (params.value === true) {
+          let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
 
-  //         return greenCheckbox;
-  //       } else {
-  //         let redCheckbox = `<img src="./img/icons/checkbox-red.png" />`;
-  //         return redCheckbox;
-  //       }
-  //     },
-  //   },
-  //   {
-  //     field: "sportsDegree",
-  //     headerName: "Разряд",
-  //     width: 135,
-  //     minWidth: 110,
-  //     maxWidth: 140,
-  //     unSortIcon: true,
-  //     cellRenderer: (params) => {
-  //       return String(params.value).toUpperCase();
-  //       // if (params.value && typeof params.value === "string") {
-  //       //   return params.value.toUpperCase();
-  //       // } else {
-  //       //   return params.value;
-  //       // }
-  //     },
-  //   },
-  //   {
-  //     field: "gender",
-  //     headerName: "Пол",
-  //     width: 75,
-  //     minWidth: 60,
-  //     maxWidth: 90,
-  //     // cellRenderer: (params) => {
-  //     //   return params.value.toUpperCase();
-  //     // },
-  //     // cellClassRules: {
-  //     //   "ag-badge blue": (params) => params.value.toLowerCase() === "м",
-  //     //   "ag-badge red": (params) => params.value.toLowerCase() === "ж",
-  //     // },
-  //   },
-  //   {
-  //     field: "birthdayDate",
-  //     headerName: "Дата рождения",
-  //     unSortIcon: true,
-  //     minWidth: 120,
-  //     // valueGetter: (params) => parseDateTime(params.data.birthdayDate),
-  //     // comparator: (valueA, valueB) => valueA - valueB,
-  //     // valueFormatter: (params) => {
-  //     //   return params.data.birthdayDate;
-  //     // },
-  //   },
-  //   { field: "region", headerName: "Регион", unSortIcon: true, minWidth: 150 },
-  //   { field: "city", headerName: "Город", unSortIcon: true, minWidth: 150 },
-  //   { field: "school", headerName: "Школа", unSortIcon: true, minWidth: 300 },
-  //   {
-  //     field: "createdAt",
-  //     headerName: "Дата создания",
-  //     unSortIcon: true,
-  //     minWidth: 120,
-  //     valueGetter: (params) => parseDateTime(params.data.createdAt),
-  //     comparator: (valueA, valueB) => valueA - valueB,
-  //     valueFormatter: (params) => {
-  //       return params.data.createdAt;
-  //     },
-  //   },
-  //   {
-  //     field: "edit",
-  //     headerName: "",
-  //     cellClass: "ag-cell-center",
-  //     width: 60,
-  //     minWidth: 60,
-  //     maxWidth: 60,
-  //     cellRenderer: (params) => {
-  //       return `<a href="cabinet-bfp-employee-edit-member.html"><i class="color-dark-gray hover-main fs-18 bi bi-pencil-square"></i></a>`;
-  //     },
-  //   },
-  //   {
-  //     field: "delete",
-  //     headerName: "",
-  //     cellClass: "ag-cell-center",
-  //     width: 60,
-  //     minWidth: 60,
-  //     maxWidth: 60,
-  //     cellRenderer: (params) => {
-  //       return `<button class="bg-transparent" data-bs-target="#deleteMember" data-bs-toggle="modal"><i class="color-dark-gray hover-main fs-18 bi bi-trash3"></i></button>`;
-  //     },
-  //   },
-  // ],
+          return greenCheckbox;
+        } else {
+          let redCheckbox = `<img src="./img/icons/checkbox-red.png" />`;
+          return redCheckbox;
+        }
+      },
+    },
+    {
+      field: "sportsDegree",
+      headerName: "Разряд",
+      width: 135,
+      minWidth: 110,
+      maxWidth: 140,
+      unSortIcon: true,
+      cellRenderer: (params) => {
+        return String(params.value).toUpperCase();
+        // if (params.value && typeof params.value === "string") {
+        //   return params.value.toUpperCase();
+        // } else {
+        //   return params.value;
+        // }
+      },
+    },
+    {
+      field: "gender",
+      headerName: "Пол",
+      width: 75,
+      minWidth: 60,
+      maxWidth: 90,
+      cellRenderer: (params) => {
+        return params.value.toUpperCase();
+      },
+      cellClassRules: {
+        "ag-badge blue": (params) => params.value.toLowerCase() === "м",
+        "ag-badge red": (params) => params.value.toLowerCase() === "ж",
+      },
+    },
+    {
+      field: "birthdayDate",
+      headerName: "Дата рождения",
+      unSortIcon: true,
+      minWidth: 120,
+      valueGetter: (params) => parseDateTime(params.data.birthdayDate),
+      comparator: (valueA, valueB) => valueA - valueB,
+      valueFormatter: (params) => {
+        return params.data.birthdayDate;
+      },
+    },
+    { field: "region", headerName: "Регион", unSortIcon: true, minWidth: 150 },
+    { field: "city", headerName: "Город", unSortIcon: true, minWidth: 150 },
+    { field: "school", headerName: "Школа", unSortIcon: true, minWidth: 300 },
+    {
+      field: "createdAt",
+      headerName: "Дата создания",
+      unSortIcon: true,
+      minWidth: 120,
+      valueGetter: (params) => parseDateTime(params.data.createdAt),
+      comparator: (valueA, valueB) => valueA - valueB,
+      valueFormatter: (params) => {
+        return params.data.createdAt;
+      },
+    },
+    {
+      field: "edit",
+      headerName: "",
+      cellClass: "ag-cell-center",
+      width: 60,
+      minWidth: 60,
+      maxWidth: 60,
+      cellRenderer: (params) => {
+        return `<a href="cabinet-bfp-employee-edit-member.html"><i class="color-dark-gray hover-main fs-18 bi bi-pencil-square"></i></a>`;
+      },
+    },
+    {
+      field: "delete",
+      headerName: "",
+      cellClass: "ag-cell-center",
+      width: 60,
+      minWidth: 60,
+      maxWidth: 60,
+      cellRenderer: (params) => {
+        return `<button class="bg-transparent" data-bs-target="#deleteMember" data-bs-toggle="modal"><i class="color-dark-gray hover-main fs-18 bi bi-trash3"></i></button>`;
+      },
+    },
+  ],
   defaultColDef: {
     flex: 1,
     wrapText: true,
@@ -350,19 +342,16 @@ const gridOptions = {
     const paymentFilterValue = document.getElementById("paymentFilter").value;
 
     const membershipNumberMatch =
-      !membershipNumberFilterValue ||
-      node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
+      !membershipNumberFilterValue || node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
     const ageMatch =
-      (isNaN(ageFromFilterValue) || node.data.age >= ageFromFilterValue) &&
-      (isNaN(ageToFilterValue) || node.data.age < ageToFilterValue);
+      (isNaN(ageFromFilterValue) || node.data.age >= ageFromFilterValue) && (isNaN(ageToFilterValue) || node.data.age < ageToFilterValue);
 
     const genderMatch = genderFilterValue === "all" || node.data.gender === genderFilterValue;
 
-    const sportsDegreeMatch =
-      sportsDegreeFilterValue === "all" || node.data.sportsDegree === sportsDegreeFilterValue;
+    const sportsDegreeMatch = sportsDegreeFilterValue === "all" || node.data.sportsDegree === sportsDegreeFilterValue;
 
     const regionMatch = regionFilterValue === "all" || node.data.region === regionFilterValue;
 
@@ -372,11 +361,9 @@ const gridOptions = {
 
     const groupMatch = groupFilterValue === "all" || node.data.group === groupFilterValue;
 
-    const privilegeMatch =
-      privilegeFilterValue === "all" || String(node.data.benefit) === privilegeFilterValue;
+    const privilegeMatch = privilegeFilterValue === "all" || String(node.data.benefit) === privilegeFilterValue;
 
-    const activeMemberMatch =
-      activeMemberFilterValue === "all" || String(node.data.active) === activeMemberFilterValue;
+    const activeMemberMatch = activeMemberFilterValue === "all" || String(node.data.active) === activeMemberFilterValue;
 
     let paymentMatch = false;
 
@@ -489,8 +476,7 @@ if (toggleCheckboxesBtn && checkboxesBody) {
   });
 
   document.addEventListener("click", (event) => {
-    const isClickInside =
-      checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
+    const isClickInside = checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
     if (!isClickInside) {
       checkboxesBody.classList.add("hidden");
     }
@@ -570,7 +556,3 @@ if (globalSearchInput) {
 if (agGrid) {
   agGrid.createGrid(ediv, gridOptions);
 }
-
-fetch("https://www.ag-grid.com/example-assets/space-mission-data.json")
-  .then((response) => response.json())
-  .then((data) => gridApi.setGridOption("rowData", data));
