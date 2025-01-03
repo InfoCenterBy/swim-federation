@@ -1,101 +1,101 @@
 const gridOptions = {
   localeText: AG_GRID_LOCALE_RU,
   rowHeight: 50,
-  rowData: [],
-  // rowData: [
-  //   {
-  //     // id: 1,
-  //     // photo: "male-no-avatar.png",
-  //     // membershipNumber: "123123123",
-  //     // fio: "Альхимович Евгений Иванович",
-  //     // email: "aroitq@mail.ru",
-  //     // group: "Заместитель директора",
-  //     // phone: "+375(17)243-26-71",
-  //     // benefit: false,
-  //     // entranceFeePayment: true,
-  //     // memberFeePayment: false,
-  //     // sportsDegree: "МСМК",
-  //     // gender: "М",
-  //     // birthdayDate: "29.05.1989",
-  //     region: "Брестская область",
-  //     city: "Брест",
-  //     school: "Школа5",
-  //     createdAt: "25.04.2007",
-  //     active: false,
-  //     age: 18,
-  //     edit: "",
-  //     delete: "",
-  //   },
-  //   {
-  //     id: 10,
-  //     photo: "female-no-avatar.png",
-  //     membershipNumber: "123123123",
-  //     fio: "Альхимович Евгений Иванович",
-  //     email: "aroitq@mail.ru",
-  //     group: "Судья",
-  //     phone: "+375(17)243-26-71",
-  //     benefit: false,
-  //     entranceFeePayment: true,
-  //     memberFeePayment: false,
-  //     sportsDegree: "МСМК",
-  //     gender: "М",
-  //     birthdayDate: "11.02.1989",
-  //     region: "Брестская область",
-  //     city: "Брест2",
-  //     school: "ГСУСУ «Брестский областной ЦОР по водным видам спорта»",
-  //     createdAt: "25.04.2007",
-  //     active: false,
-  //     age: 18,
-  //     edit: "",
-  //     delete: "",
-  //   },
-  //   {
-  //     id: 100,
-  //     photo: "member-avatar.png",
-  //     membershipNumber: "555",
-  //     fio: "Кабанчик Валерий Евгенич",
-  //     email: "aroitq@mail.ru",
-  //     group: "Без группы",
-  //     phone: "+375(17)243-26-71",
-  //     benefit: true,
-  //     entranceFeePayment: true,
-  //     memberFeePayment: true,
-  //     sportsDegree: "МС",
-  //     gender: "Ж",
-  //     birthdayDate: "02.02.1981",
-  //     region: "Гомельская область",
-  //     city: "Гомель",
-  //     school: "Школа 3",
-  //     createdAt: "02.04.2007",
-  //     active: true,
-  //     age: 25,
-  //     edit: "",
-  //     delete: "",
-  //   },
-  //   {
-  //     id: 3,
-  //     photo: "member-avatar.png",
-  //     membershipNumber: "9999991",
-  //     fio: "Попик Валентина Альбертовна",
-  //     email: "aroitq@mail.ru",
-  //     group: "Председатель",
-  //     phone: "+375(17)243-26-71",
-  //     benefit: false,
-  //     entranceFeePayment: false,
-  //     memberFeePayment: true,
-  //     sportsDegree: "КМС",
-  //     gender: "М",
-  //     birthdayDate: "01.01.1989",
-  //     region: "Витебская область",
-  //     city: "Витебск",
-  //     school: "Школа",
-  //     createdAt: "04.09.2024 19:26:19",
-  //     active: true,
-  //     age: 33,
-  //     edit: "",
-  //     delete: "",
-  //   },
-  // ],
+  suppressAnimationFrame: true,
+  rowData: [
+    {
+      id: 1,
+      photo: "male-no-avatar.png",
+      membershipNumber: "123123123",
+      fio: "Альхимович Евгений Иванович",
+      email: "aroitq@mail.ru",
+      group: "Заместитель директора",
+      phone: "+375(17)243-26-71",
+      benefit: false,
+      entranceFeePayment: true,
+      memberFeePayment: false,
+      sportsDegree: "МСМК",
+      gender: "М",
+      birthdayDate: "29.05.1989",
+      region: "Брестская область",
+      city: "Брест",
+      school: "Школа5",
+      createdAt: "25.04.2007",
+      active: false,
+      age: 18,
+      edit: "",
+      delete: "",
+    },
+    {
+      id: 5,
+      photo: "female-no-avatar.png",
+      membershipNumber: "123123123",
+      fio: "Альхимович Евгений Иванович",
+      email: "aroitq@mail.ru",
+      group: "Судья",
+      phone: "+375(17)243-26-71",
+      benefit: false,
+      entranceFeePayment: true,
+      memberFeePayment: false,
+      sportsDegree: "МСМК",
+      gender: "М",
+      birthdayDate: "11.02.1989",
+      region: "Брестская область",
+      city: "Брест2",
+      school: "ГСУСУ «Брестский областной ЦОР по водным видам спорта»",
+      createdAt: "25.04.2007",
+      active: false,
+      age: 18,
+      edit: "",
+      delete: "",
+    },
+    {
+      id: 2,
+      photo: "member-avatar.png",
+      membershipNumber: "555",
+      fio: "Кабанчик Валерий Евгенич",
+      email: "aroitq@mail.ru",
+      group: "Без группы",
+      phone: "+375(17)243-26-71",
+      benefit: true,
+      entranceFeePayment: true,
+      memberFeePayment: true,
+      sportsDegree: "МС",
+      gender: "Ж",
+      birthdayDate: "02.02.1981",
+      region: "Гомельская область",
+      city: "Гомель",
+      school: "Школа 3",
+      createdAt: "02.04.2007",
+      active: true,
+      age: 25,
+      edit: "",
+      delete: "",
+    },
+    {
+      id: 3,
+      photo: "member-avatar.png",
+      membershipNumber: "9999991",
+      fio: "Попик Валентина Альбертовна",
+      email: "aroitq@mail.ru",
+      group: "Председатель",
+      phone: "+375(17)243-26-71",
+      benefit: false,
+      entranceFeePayment: false,
+      memberFeePayment: true,
+      sportsDegree: "КМС",
+      gender: "М",
+      birthdayDate: "01.01.1989",
+      region: "Витебская область",
+      city: "Витебск",
+      school: "Школа",
+      createdAt: "04.09.2024 19:26:19",
+      active: true,
+      age: 33,
+      edit: "",
+      delete: "",
+    },
+  ],
   getRowStyle: (params) => {
     if (params.data.active === false) {
       return { background: "#EAEAEA", color: "#797979" };
@@ -137,44 +137,44 @@ const gridOptions = {
   //     minWidth: 150,
   //   },
 
-  //   { field: "email", headerName: "Email", unSortIcon: true, minWidth: 120 },
-  //   {
-  //     field: "group",
-  //     headerName: "Группа",
-  //     unSortIcon: true,
-  //     minWidth: 155,
-  //     cellClassRules: {
-  //       "ag-badge blue": (params) =>
-  //         params.value === "Исполнительный директор" ||
-  //         params.value === "Генеральный секретарь" ||
-  //         params.value === "Судья" ||
-  //         params.value === "Пресс-секретарь",
-  //       "ag-badge green": (params) =>
-  //         params.value === "Председатель" ||
-  //         params.value === "Методист" ||
-  //         params.value === "Заместитель председателя" ||
-  //         params.value === "Бухгалтер",
-  //       "ag-badge red": (params) =>
-  //         params.value === "Спортсмен" ||
-  //         params.value === "Администратор" ||
-  //         params.value === "Директор" ||
-  //         params.value === "Заместитель директора",
-  //       "ag-badge yellow": (params) => params.value === "Тренер" || params.value === "Старший тренер",
-  //       "ag-badge gray": (params) => params.value === "Без группы",
-  //     },
-  //   },
-  //   { field: "phone", headerName: "Телефон", minWidth: 180 },
-  //   {
-  //     field: "benefit",
-  //     headerName: "Льгота",
-  //     unSortIcon: true,
-  //     cellClass: "ag-cell-center",
-  //     width: 105,
-  //     minWidth: 105,
-  //     maxWidth: 120,
-  //     cellRenderer: (params) => {
-  //       if (params.value === true) {
-  //         let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
+    { field: "email", headerName: "Email", unSortIcon: true, minWidth: 120 },
+    {
+      field: "group",
+      headerName: "Группа",
+      unSortIcon: true,
+      minWidth: 155,
+      cellClassRules: {
+        "ag-badge blue": (params) =>
+          params.value === "Исполнительный директор" ||
+          params.value === "Генеральный секретарь" ||
+          params.value === "Судья" ||
+          params.value === "Пресс-секретарь",
+        "ag-badge green": (params) =>
+          params.value === "Председатель" ||
+          params.value === "Методист" ||
+          params.value === "Заместитель председателя" ||
+          params.value === "Бухгалтер",
+        "ag-badge red": (params) =>
+          params.value === "Спортсмен" ||
+          params.value === "Администратор" ||
+          params.value === "Директор" ||
+          params.value === "Заместитель директора",
+        "ag-badge yellow": (params) => params.value === "Тренер" || params.value === "Старший тренер",
+        "ag-badge gray": (params) => params.value === "Без группы",
+      },
+    },
+    { field: "phone", headerName: "Телефон", minWidth: 180 },
+    {
+      field: "benefit",
+      headerName: "Льгота",
+      unSortIcon: true,
+      cellClass: "ag-cell-center",
+      width: 105,
+      minWidth: 105,
+      maxWidth: 120,
+      cellRenderer: (params) => {
+        if (params.value === true) {
+          let greenCheckbox = `<img src="./img/icons/checkbox-green.png" />`;
 
   //         return greenCheckbox;
   //       } else {
@@ -350,16 +350,19 @@ const gridOptions = {
     const paymentFilterValue = document.getElementById("paymentFilter").value;
 
     const membershipNumberMatch =
-      !membershipNumberFilterValue || node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
+      !membershipNumberFilterValue ||
+      node.data.membershipNumber.toString().includes(membershipNumberFilterValue);
 
     const fioMatch = !fioFilterValue || node.data.fio.toLowerCase().includes(fioFilterValue);
 
     const ageMatch =
-      (isNaN(ageFromFilterValue) || node.data.age >= ageFromFilterValue) && (isNaN(ageToFilterValue) || node.data.age <= ageToFilterValue);
+      (isNaN(ageFromFilterValue) || node.data.age >= ageFromFilterValue) &&
+      (isNaN(ageToFilterValue) || node.data.age < ageToFilterValue);
 
     const genderMatch = genderFilterValue === "all" || node.data.gender === genderFilterValue;
 
-    const sportsDegreeMatch = sportsDegreeFilterValue === "all" || node.data.sportsDegree === sportsDegreeFilterValue;
+    const sportsDegreeMatch =
+      sportsDegreeFilterValue === "all" || node.data.sportsDegree === sportsDegreeFilterValue;
 
     const regionMatch = regionFilterValue === "all" || node.data.region === regionFilterValue;
 
@@ -369,9 +372,11 @@ const gridOptions = {
 
     const groupMatch = groupFilterValue === "all" || node.data.group === groupFilterValue;
 
-    const privilegeMatch = privilegeFilterValue === "all" || String(node.data.benefit) === privilegeFilterValue;
+    const privilegeMatch =
+      privilegeFilterValue === "all" || String(node.data.benefit) === privilegeFilterValue;
 
-    const activeMemberMatch = activeMemberFilterValue === "all" || String(node.data.active) === activeMemberFilterValue;
+    const activeMemberMatch =
+      activeMemberFilterValue === "all" || String(node.data.active) === activeMemberFilterValue;
 
     let paymentMatch = false;
 
@@ -484,7 +489,8 @@ if (toggleCheckboxesBtn && checkboxesBody) {
   });
 
   document.addEventListener("click", (event) => {
-    const isClickInside = checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
+    const isClickInside =
+      checkboxesBody.contains(event.target) || toggleCheckboxesBtn.contains(event.target);
     if (!isClickInside) {
       checkboxesBody.classList.add("hidden");
     }
