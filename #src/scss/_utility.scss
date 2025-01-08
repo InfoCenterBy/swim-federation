@@ -408,22 +408,26 @@ body.no-scroll {
   }
 
   &__img {
-    width: 80px;
-    height: 80px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    vertical-align: middle;
     margin-right: 16px;
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
     margin-bottom: 10px;
   }
 
   & span {
     text-align: center;
+    display: block;
   }
 }
 
 @media screen and (max-width: 576px) {
   .cast-table__img {
-    margin-right: 0;
+    width: 80px;
+    height: 80px;
     text-align: center;
   }
 }
