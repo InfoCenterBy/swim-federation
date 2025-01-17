@@ -307,6 +307,13 @@ const gridOptions = {
   onColumnResized: onColumnResized,
   onSortChanged: onSortChanged,
   onGridReady: onGridReady,
+  onFilterChanged: () => {
+    clearTimeout(filterChangeTimeout);
+    filterChangeTimeout = setTimeout(() => {
+      const filteredIds = getFilteredUserIds();
+      console.log("Отфильтрованные ID:", filteredIds);
+    }, 100);
+  },
   isExternalFilterPresent: () => {
     return (
       document.getElementById("membershipNumberFilter").value !== "" ||
@@ -394,6 +401,7 @@ const gridOptions = {
   },
 };
 
+let filterChangeTimeout;
 let gridApi;
 function customAvatarComponent(params) {
   const avatar = `<img class="ag-avatar" src="./img/${params.value}" alt="Avatar">`;
@@ -418,6 +426,35 @@ function parseDateTime(dateTimeStr) {
   }
 
   return new Date(year, month - 1, day, hour, minute, second);
+}
+
+function getFilteredUserIds() {
+  const allFilteredNodes = [];
+  gridApi.forEachNodeAfterFilter((node) => {
+    allFilteredNodes.push(node);
+  });
+
+  return allFilteredNodes.map((node) => node.data.id);
+}
+
+function sendFilteredIds() {
+  const filteredIds = getFilteredUserIds();
+  console.log(filteredIds);
+
+  fetch("/api/filtered-users", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ ids: filteredIds }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Сервер ответил:", data);
+    })
+    .catch((error) => {
+      console.error("Ошибка отправки данных:", error);
+    });
 }
 
 function createColumnSelection() {

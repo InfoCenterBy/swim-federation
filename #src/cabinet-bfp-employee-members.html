@@ -1,247 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('./components/_cabinet-head.html', {title: "Члены ОО «БФП»"})
-  <body>
-    <div class="wrapper">
-      @@include('./components/_cabinet-header-bfp-employee.html')
-      <main class="main">
-        <div class="cabinet__container">
-          @@include('./elements/cabinet-employee-sidebar.html')
-          <section class="cabinet__content">
-            <h2 class="h2-title">Члены ОО «БФП»</h2>
-            <div class="d-flex gap-4 flex-wrap mb-5">
-              <div class="d-flex gap-4 w-100 flex-wrap flex-lg-nowrap">
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="membershipNumberFilter">Номер членского билета</label>
-                  <input class="bg-fa" id="membershipNumberFilter" type="text" />
-                </div>
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="fioFilter">ФИО</label>
-                  <input class="bg-fa" id="fioFilter" type="text" />
-                </div>
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="age">Возраст</label>
-                  <div class="d-flex align-items-center gap-3">
-                    <span>от</span>
-                    <input class="bg-fa w-50" id="ageFromFilter" type="text" />
-                    <span>до</span>
-                    <input class="bg-fa w-50" id="ageToFilter" type="text" />
-                  </div>
-                </div>
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="genderFilter">Пол</label>
-                  <div class="d-flex gap-3">
-                    <select id="genderFilter" class="form-select bg-fa fs-16" aria-label="gender">
-                      <option selected value="all">Все</option>
-                      <option value="М">М</option>
-                      <option value="Ж">Ж</option>
-                    </select>
-                  </div>
+@@include('./components/_cabinet-head.html', {title: "Члены ОО «БФП»"})
+
+<body>
+  <div class="wrapper">
+    @@include('./components/_cabinet-header-bfp-employee.html')
+    <main class="main">
+      <div class="cabinet__container">
+        @@include('./elements/cabinet-employee-sidebar.html')
+        <section class="cabinet__content">
+          <h2 class="h2-title">Члены ОО «БФП»</h2>
+          <div class="d-flex gap-4 flex-wrap mb-5">
+            <div class="d-flex gap-4 w-100 flex-wrap flex-lg-nowrap">
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="membershipNumberFilter">Номер членского билета</label>
+                <input class="bg-fa" id="membershipNumberFilter" type="text" />
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="fioFilter">ФИО</label>
+                <input class="bg-fa" id="fioFilter" type="text" />
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="age">Возраст</label>
+                <div class="d-flex align-items-center gap-3">
+                  <span>от</span>
+                  <input class="bg-fa w-50" id="ageFromFilter" type="text" />
+                  <span>до</span>
+                  <input class="bg-fa w-50" id="ageToFilter" type="text" />
                 </div>
               </div>
-              <div class="d-flex gap-4 w-100 flex-wrap flex-lg-nowrap">
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="sportsDegreeFilter">Разряд</label>
-                  <div class="d-flex gap-3">
-                    <select
-                      id="sportsDegreeFilter"
-                      class="form-select bg-fa fs-16"
-                      aria-label="sportsDegree"
-                    >
-                      <option selected value="all">Выберите разряд</option>
-                      <option value="МСМК">МСМК</option>
-                      <option value="МС">МС</option>
-                      <option value="КМС">КМС</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="regionFilter">Регион</label>
-                  <div class="d-flex gap-3">
-                    <select id="region" class="form-select bg-fa fs-16" aria-label="region">
-                      <option selected value="all">Выберите регион</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="cityFilter">Город</label>
-                  <div class="d-flex gap-3">
-                    <select id="city" class="form-select bg-fa fs-16" aria-label="city">
-                      <option selected value="all">Выберите регион</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="schoolFilter">Школа</label>
-                  <div class="d-flex gap-3">
-                    <select id="school" class="form-select bg-fa fs-16" aria-label="school">
-                      <option selected value="all" disabled>Выберите город</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex gap-4 w-100 flex-wrap flex-lg-nowrap">
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="groupFilter">Группа</label>
-                  <div class="d-flex gap-3">
-                    <select id="groupFilter" class="form-select bg-fa fs-16" aria-label="group">
-                      <option selected value="all">Все</option>
-                      <option value="Спортсмен">Спортсмен</option>
-                      <option value="Тренер">Тренер</option>
-                      <option value="Председатель">Председатель</option>
-                      <option value="Администратор">Администратор</option>
-                      <option value="Методист">Методист</option>
-                      <option value="Заместитель председателя">Заместитель председателя</option>
-                      <option value="Старший тренер">Старший тренер</option>
-                      <option value="Бухгалтер">Бухгалтер</option>
-                      <option value="Исполнительный директор">Исполнительный директор</option>
-                      <option value="Директор">Директор</option>
-                      <option value="Заместитель директор">Заместитель директор</option>
-                      <option value="Судья">Судья</option>
-                      <option value="Пресс-секретарь">Пресс-секретарь</option>
-                      <option value="Без группы">Без группы</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="privilegeFilter">Наличие льгот</label>
-                  <div class="d-flex gap-3">
-                    <select
-                      id="privilegeFilter"
-                      class="form-select bg-fa fs-16"
-                      aria-label="privilege"
-                    >
-                      <option selected value="all">Все</option>
-                      <option value="true">Есть льгота</option>
-                      <option value="false">Нет льготы</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="activeMemberFilter">Активность члена</label>
-                  <div class="d-flex gap-3">
-                    <select
-                      id="activeMemberFilter"
-                      class="form-select bg-fa fs-16"
-                      aria-label="activeMember"
-                    >
-                      <option selected value="all">Все</option>
-                      <option value="true">Активный</option>
-                      <option value="false">Неактивный</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form__input--small mb-0">
-                  <label class="fs-16" for="paymentFilter">Оплата взносов</label>
-                  <div class="d-flex gap-3">
-                    <select id="paymentFilter" class="form-select bg-fa fs-16" aria-label="payment">
-                      <option selected value="all">Все</option>
-                      <option value="onlyMember">Оплата только членского</option>
-                      <option value="onlyEntrance">Оплата только вступительного</option>
-                      <option value="notPaid">Неоплаченные</option>
-                    </select>
-                  </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="genderFilter">Пол</label>
+                <div class="d-flex gap-3">
+                  <select id="genderFilter" class="form-select bg-fa fs-16" aria-label="gender">
+                    <option selected value="all">Все</option>
+                    <option value="М">М</option>
+                    <option value="Ж">Ж</option>
+                  </select>
                 </div>
               </div>
             </div>
-
-            <div
-              class="d-flex justify-content-between align-items-center w-100 flex-wrap mb-4 position-relative"
-            >
-              <p class="color-dark-gray mb-3">*ВВ-вступительный взнос, ЧВ-членский взнос</p>
-
-              <div class="d-flex gap-4 flex-wrap flex-lg-nowrap">
-                <div class="form__input--small mb-0">
-                  <input class="bg-fa" id="globalSearch" type="text" placeholder="Введите запрос" />
+            <div class="d-flex gap-4 w-100 flex-wrap flex-lg-nowrap">
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="sportsDegreeFilter">Разряд</label>
+                <div class="d-flex gap-3">
+                  <select id="sportsDegreeFilter" class="form-select bg-fa fs-16" aria-label="sportsDegree">
+                    <option selected value="all">Выберите разряд</option>
+                    <option value="МСМК">МСМК</option>
+                    <option value="МС">МС</option>
+                    <option value="КМС">КМС</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
                 </div>
-                <button type="button" class="button border-1-main d-flex justify-content-center">
-                  <i class="mr-3 bi bi-upload"></i><span>Загрузить</span>
-                </button>
-                <button type="button" class="button--secondary d-flex justify-content-center">
-                  <i class="mr-3 bi bi-download"></i><span>Скачать</span>
-                </button>
-                <button
-                  type="button"
-                  class="columns-select__toggle-button button"
-                  id="columnToggleButton"
-                >
-                  <svg
-                    width="20"
-                    height="21"
-                    viewBox="0 0 20 21"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_4533_24237)">
-                      <path
-                        d="M0 3C0 2.33696 0.263392 1.70107 0.732233 1.23223C1.20107 0.763392 1.83696 0.5 2.5 0.5L17.5 0.5C18.163 0.5 18.7989 0.763392 19.2678 1.23223C19.7366 1.70107 20 2.33696 20 3V18C20 18.663 19.7366 19.2989 19.2678 19.7678C18.7989 20.2366 18.163 20.5 17.5 20.5H2.5C1.83696 20.5 1.20107 20.2366 0.732233 19.7678C0.263392 19.2989 0 18.663 0 18V3ZM18.75 5.5H13.75V9.25H18.75V5.5ZM18.75 10.5H13.75V14.25H18.75V10.5ZM18.75 15.5H13.75V19.25H17.5C17.8315 19.25 18.1495 19.1183 18.3839 18.8839C18.6183 18.6495 18.75 18.3315 18.75 18V15.5ZM12.5 19.25V15.5H7.5V19.25H12.5ZM6.25 19.25V15.5H1.25V18C1.25 18.3315 1.3817 18.6495 1.61612 18.8839C1.85054 19.1183 2.16848 19.25 2.5 19.25H6.25ZM1.25 14.25H6.25V10.5H1.25V14.25ZM1.25 9.25H6.25V5.5H1.25V9.25ZM7.5 5.5V9.25H12.5V5.5H7.5ZM12.5 10.5H7.5V14.25H12.5V10.5Z"
-                        fill="#FAFAFA"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_4533_24237">
-                        <rect width="20" height="20" fill="white" transform="translate(0 0.5)" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
               </div>
-
-              <div id="columnSelector" class="columns-select__body hidden"></div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="regionFilter">Регион</label>
+                <div class="d-flex gap-3">
+                  <select id="region" class="form-select bg-fa fs-16" aria-label="region">
+                    <option selected value="all">Выберите регион</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="cityFilter">Город</label>
+                <div class="d-flex gap-3">
+                  <select id="city" class="form-select bg-fa fs-16" aria-label="city">
+                    <option selected value="all">Выберите регион</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="schoolFilter">Школа</label>
+                <div class="d-flex gap-3">
+                  <select id="school" class="form-select bg-fa fs-16" aria-label="school">
+                    <option selected value="all" disabled>Выберите город</option>
+                  </select>
+                </div>
+              </div>
             </div>
-            <div id="loader" class="loader"></div>
-            <div
-              id="members-table"
-              class="ag-theme-quartz"
-              style="height: 500px; width: 100%"
-            ></div>
-          </section>
-        </div>
-      </main>
-      @@include('./components/_cabinet-footer.html')
-    </div>
-    <div
-      class="modal fade"
-      id="deleteMember"
-      tabindex="-1"
-      aria-labelledby="deleteMemberLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title" id="deleteMemberLabel">Удалить члена ОО «БФП»</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <div class="d-flex gap-4 w-100 flex-wrap flex-lg-nowrap">
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="groupFilter">Группа</label>
+                <div class="d-flex gap-3">
+                  <select id="groupFilter" class="form-select bg-fa fs-16" aria-label="group">
+                    <option selected value="all">Все</option>
+                    <option value="Спортсмен">Спортсмен</option>
+                    <option value="Тренер">Тренер</option>
+                    <option value="Председатель">Председатель</option>
+                    <option value="Администратор">Администратор</option>
+                    <option value="Методист">Методист</option>
+                    <option value="Заместитель председателя">Заместитель председателя</option>
+                    <option value="Старший тренер">Старший тренер</option>
+                    <option value="Бухгалтер">Бухгалтер</option>
+                    <option value="Исполнительный директор">Исполнительный директор</option>
+                    <option value="Директор">Директор</option>
+                    <option value="Заместитель директор">Заместитель директор</option>
+                    <option value="Судья">Судья</option>
+                    <option value="Пресс-секретарь">Пресс-секретарь</option>
+                    <option value="Без группы">Без группы</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="privilegeFilter">Наличие льгот</label>
+                <div class="d-flex gap-3">
+                  <select id="privilegeFilter" class="form-select bg-fa fs-16" aria-label="privilege">
+                    <option selected value="all">Все</option>
+                    <option value="true">Есть льгота</option>
+                    <option value="false">Нет льготы</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="activeMemberFilter">Активность члена</label>
+                <div class="d-flex gap-3">
+                  <select id="activeMemberFilter" class="form-select bg-fa fs-16" aria-label="activeMember">
+                    <option selected value="all">Все</option>
+                    <option value="true">Активный</option>
+                    <option value="false">Неактивный</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__input--small mb-0">
+                <label class="fs-16" for="paymentFilter">Оплата взносов</label>
+                <div class="d-flex gap-3">
+                  <select id="paymentFilter" class="form-select bg-fa fs-16" aria-label="payment">
+                    <option selected value="all">Все</option>
+                    <option value="onlyMember">Оплата только членского</option>
+                    <option value="onlyEntrance">Оплата только вступительного</option>
+                    <option value="notPaid">Неоплаченные</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">
-            <p class="color-dark-gray mb-4">Вы действительно хотите удалить члена ОО «БФП» ?</p>
-            <div class="d-flex justify-content-evenly gap-5">
-              <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">
-                Удалить
+
+          <div class="d-flex justify-content-between align-items-center w-100 flex-wrap mb-4 position-relative">
+            <p class="color-dark-gray mb-3">*ВВ-вступительный взнос, ЧВ-членский взнос</p>
+
+            <div class="d-flex gap-4 flex-wrap flex-lg-nowrap">
+              <button onclick="sendFilteredIds()" id="sendInvoice" type="button"
+                class="button border-1-main d-flex justify-content-center">
+                Выставить
               </button>
-              <button
-                type="button"
-                class="button--secondary px-4"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                Отмена
+              <div class="form__input--small mb-0">
+                <input class="bg-fa" id="globalSearch" type="text" placeholder="Введите запрос" />
+              </div>
+              <button type="button" class="button border-1-main d-flex justify-content-center">
+                <i class="mr-3 bi bi-upload"></i><span>Загрузить</span>
+              </button>
+              <button type="button" class="button--secondary d-flex justify-content-center">
+                <i class="mr-3 bi bi-download"></i><span>Скачать</span>
+              </button>
+              <button type="button" class="columns-select__toggle-button button" id="columnToggleButton">
+                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_4533_24237)">
+                    <path
+                      d="M0 3C0 2.33696 0.263392 1.70107 0.732233 1.23223C1.20107 0.763392 1.83696 0.5 2.5 0.5L17.5 0.5C18.163 0.5 18.7989 0.763392 19.2678 1.23223C19.7366 1.70107 20 2.33696 20 3V18C20 18.663 19.7366 19.2989 19.2678 19.7678C18.7989 20.2366 18.163 20.5 17.5 20.5H2.5C1.83696 20.5 1.20107 20.2366 0.732233 19.7678C0.263392 19.2989 0 18.663 0 18V3ZM18.75 5.5H13.75V9.25H18.75V5.5ZM18.75 10.5H13.75V14.25H18.75V10.5ZM18.75 15.5H13.75V19.25H17.5C17.8315 19.25 18.1495 19.1183 18.3839 18.8839C18.6183 18.6495 18.75 18.3315 18.75 18V15.5ZM12.5 19.25V15.5H7.5V19.25H12.5ZM6.25 19.25V15.5H1.25V18C1.25 18.3315 1.3817 18.6495 1.61612 18.8839C1.85054 19.1183 2.16848 19.25 2.5 19.25H6.25ZM1.25 14.25H6.25V10.5H1.25V14.25ZM1.25 9.25H6.25V5.5H1.25V9.25ZM7.5 5.5V9.25H12.5V5.5H7.5ZM12.5 10.5H7.5V14.25H12.5V10.5Z"
+                      fill="#FAFAFA" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_4533_24237">
+                      <rect width="20" height="20" fill="white" transform="translate(0 0.5)" />
+                    </clipPath>
+                  </defs>
+                </svg>
               </button>
             </div>
+
+            <div id="columnSelector" class="columns-select__body hidden"></div>
+          </div>
+          <div id="loader" class="loader"></div>
+          <div id="members-table" class="ag-theme-quartz" style="height: 500px; width: 100%"></div>
+        </section>
+      </div>
+    </main>
+    @@include('./components/_cabinet-footer.html')
+  </div>
+  <div class="modal fade" id="deleteMember" tabindex="-1" aria-labelledby="deleteMemberLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="deleteMemberLabel">Удалить члена ОО «БФП»</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="color-dark-gray mb-4">Вы действительно хотите удалить члена ОО «БФП» ?</p>
+          <div class="d-flex justify-content-evenly gap-5">
+            <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close">
+              Удалить
+            </button>
+            <button type="button" class="button--secondary px-4" data-bs-dismiss="modal" aria-label="Close">
+              Отмена
+            </button>
           </div>
         </div>
       </div>
     </div>
-    @@include('./components/_cabinet-script.html')
-    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
-    <script src="./js/employee-members-table.js"></script>
-  </body>
+  </div>
+  @@include('./components/_cabinet-script.html')
+  <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+  <script src="./js/employee-members-table.js"></script>
+</body>
+
 </html>
