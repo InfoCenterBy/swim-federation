@@ -1,22 +1,12 @@
-const slider = new Swiper(".slider", {
-  breakpoints: {
-    330: {
-      slidesPerView: 1,
-      spaceBetween: 20,
+const buildSwiperSlider = (sliderElm) => {
+  return new Swiper(`#${sliderElm.id}`, {
+    navigation: {
+      nextEl: `.swiper-button-next-${sliderElm.id}`,
+      prevEl: `.swiper-button-prev-${sliderElm.id}`,
     },
+  });
+};
 
-    480: {
-      slidesPerView: 1,
-      spaceBetween: 30,
-    },
+const allSliders = document.querySelectorAll(".swiper");
 
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 70,
-    },
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+allSliders.forEach((slider) => buildSwiperSlider(slider));

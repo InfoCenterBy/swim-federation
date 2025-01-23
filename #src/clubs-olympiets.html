@@ -1,90 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('./components/_head.html', {title: "Олимпиец"})
-  <body>
-    <div class="wrapper">
-      @@include('./components/_header.html')
-      <main>
-        <div class="container-fluid clubs clubs-olympiets">
-          <div class="container">
-            <nav>
-              <ul class="breadcrumbs">
-                <li class="breadcrumbs__item--light"><a href="index.html">Главная</a></li>
-                <li class="breadcrumbs__item--light"><a href="clubs.html">Клубы</a></li>
-                <li class="breadcrumbs__item--light active">Олимпиец</li>
-              </ul>
-            </nav>
-          </div>
-          <div class="container">
-            <h1 class="h1-title">Олимпиец</h1>
-          </div>
-        </div>
+@@include('./components/_head.html', {title: "Олимпиец"})
 
+<body>
+  <div class="wrapper">
+    @@include('./components/_header.html')
+    <main>
+      <div class="container-fluid clubs clubs-olympiets">
         <div class="container">
-          <section class="page-wrapper">
-            <div class="page-content">
-              <p>
-                Клуб плавания «Олимпиец» (далее — клуб «Олимпиец») открыт с 2015 года при участии ОО «Белорусская федерация плавания». Он
-                является пионером и флагманом среди существующих сейчас частных клубов. Основной идеей при его создании была концепция
-                поиска, развития и воспитания спортсменов путем тщательного отбора талантливых детей. Наша стратегия состоит в правильном
-                начальном обучении плаванию как можно большего количества детей с последующим разделением их на группы, соответствующие их
-                навыкам и способностям.
-              </p>
-              <div class="slider-container">
-                <div class="swiper slider">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide default-slide">
-                      <img src="./img/clubs/olympiets-slide.png" alt="" />
-                    </div>
-                    <div class="swiper-slide default-slide">
-                      <img src="./img/clubs/olympiets-slide.png" alt="" />
-                    </div>
-                    <div class="swiper-slide default-slide">Slide 3</div>
+          <nav>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item--light"><a href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item--light"><a href="clubs.html">Клубы</a></li>
+              <li class="breadcrumbs__item--light active">Олимпиец</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="container">
+          <h1 class="h1-title">Олимпиец</h1>
+        </div>
+      </div>
+
+      <div class="container">
+        <section class="page-wrapper">
+          <div class="page-content">
+            <p>
+              Клуб плавания «Олимпиец» (далее — клуб «Олимпиец») открыт с 2015 года при участии ОО
+              «Белорусская федерация плавания». Он
+              является пионером и флагманом среди существующих сейчас частных клубов. Основной идеей при его
+              создании была концепция
+              поиска, развития и воспитания спортсменов путем тщательного отбора талантливых детей. Наша
+              стратегия состоит в правильном
+              начальном обучении плаванию как можно большего количества детей с последующим разделением их на
+              группы, соответствующие их
+              навыкам и способностям.
+            </p>
+            <div class="slider-container">
+              <div class="swiper slider" id="slider1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide default-slide">
+                    <img src="./img/clubs/olympiets-slide.png" alt="" />
                   </div>
+                  <div class="swiper-slide default-slide">
+                    <img src="./img/clubs/olympiets-slide.png" alt="" />
+                  </div>
+                  <div class="swiper-slide default-slide">Slide 3</div>
                 </div>
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
               </div>
 
-              <div>
-                <p class="mb-2">
-                  В дальнейшем лучшие из них, имеющие желание и упорство развиваться в плавании, переводятся в сборную клуба, которая дает
-                  им возможность совершенствовать свое мастерство, совершая регулярные выезды на сборы и соревнования, тем самым добиваясь
-                  новых целей и закаляя характер. За четыре года работы клуба нам уже есть чем гордиться — наши спортсмены, участвуя в
-                  большом количестве соревнований в РБ и за ее пределами, показывают блестящие результаты среди своих сверстников!
-                </p>
-                <p class="mb-2">
-                  Сейчас в клубе тренируются 930 детей с 5 до 12 лет. В сборной состоят 130 человек. Совместно с клубом плавания «АкваСтарс»
-                  с 2016 года проводится турнир «Детская лига плавания». На сегодняшний день он состоит из четырех этапов и в нем участвуют
-                  спортсмены из пяти стран.
-                </p>
-
-                <p>
-                  Также представители клуба участвуют в соревнованиях в категории «Мастерс». Всего выступают десять человек, среди которых
-                  стоит отметить Андрея Ванина, Юлию Твердую, Екатерину Смолякову и Андрея Альшевича. Они уже являются победителями и
-                  призерами как республиканских состязаний, так и международных.
-                </p>
-              </div>
-              <div>
-                <p class="mb-2">
-                  <span class="fw-semibold">Соучредитель и директор клуба:</span>
-                  — Андрей Владимирович Альшевич.
-                </p>
-                <p>
-                  <span class="fw-semibold">Подробная информация:</span>
-                  <a class="link-main--no-underline" href="https://vk.com/club158719602"> https://vk.com/club158719602 </a>
-                </p>
-              </div>
+              <div class="swiper-button-prev swiper-button-prev-slider1"></div>
+              <div class="swiper-button-next swiper-button-next-slider1"></div>
             </div>
 
-            <aside class="sidebar__menu page-sidebar">
-              <nav>@@include('./elements/schools-sidebar.html')</nav>
-            </aside>
-          </section>
-        </div>
-      </main>
-      @@include('./components/_footer.html') @@include('./components/_script.html')
-    </div>
-  </body>
+            <div class="slider-container">
+              <div class="swiper slider" id="slider2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide default-slide">
+                    <img src="./img/clubs/olympiets-slide.png" alt="" />
+                  </div>
+                  <div class="swiper-slide default-slide">
+                    <img src="./img/clubs/olympiets-slide.png" alt="" />
+                  </div>
+                  <div class="swiper-slide default-slide">Slide 3</div>
+                </div>
+              </div>
+
+              <div class="swiper-button-prev swiper-button-prev-slider2"></div>
+              <div class="swiper-button-next swiper-button-next-slider2"></div>
+            </div>
+
+            <div>
+              <p class="mb-2">
+                В дальнейшем лучшие из них, имеющие желание и упорство развиваться в плавании, переводятся в
+                сборную клуба, которая дает
+                им возможность совершенствовать свое мастерство, совершая регулярные выезды на сборы и
+                соревнования, тем самым добиваясь
+                новых целей и закаляя характер. За четыре года работы клуба нам уже есть чем гордиться — наши
+                спортсмены, участвуя в
+                большом количестве соревнований в РБ и за ее пределами, показывают блестящие результаты среди
+                своих сверстников!
+              </p>
+              <p class="mb-2">
+                Сейчас в клубе тренируются 930 детей с 5 до 12 лет. В сборной состоят 130 человек. Совместно с
+                клубом плавания «АкваСтарс»
+                с 2016 года проводится турнир «Детская лига плавания». На сегодняшний день он состоит из
+                четырех этапов и в нем участвуют
+                спортсмены из пяти стран.
+              </p>
+
+              <p>
+                Также представители клуба участвуют в соревнованиях в категории «Мастерс». Всего выступают
+                десять человек, среди которых
+                стоит отметить Андрея Ванина, Юлию Твердую, Екатерину Смолякову и Андрея Альшевича. Они уже
+                являются победителями и
+                призерами как республиканских состязаний, так и международных.
+              </p>
+            </div>
+            <div>
+              <p class="mb-2">
+                <span class="fw-semibold">Соучредитель и директор клуба:</span>
+                — Андрей Владимирович Альшевич.
+              </p>
+              <p>
+                <span class="fw-semibold">Подробная информация:</span>
+                <a class="link-main--no-underline" href="https://vk.com/club158719602">
+                  https://vk.com/club158719602 </a>
+              </p>
+            </div>
+          </div>
+
+          <aside class="sidebar__menu page-sidebar">
+            <nav>@@include('./elements/schools-sidebar.html')</nav>
+          </aside>
+        </section>
+      </div>
+    </main>
+    @@include('./components/_footer.html') @@include('./components/_script.html')
+  </div>
+</body>
+
 </html>
