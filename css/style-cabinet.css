@@ -904,6 +904,11 @@
     overflow-x: auto;
     width: 100%;
   }
+  .default-table {
+    border-collapse: collapse;
+    overflow-x: auto;
+    width: 100%;
+  }
   .default-table th,
   .default-table td {
     padding: 16px;
@@ -917,7 +922,15 @@
     background-color: var(--light-gray);
     font-weight: 500;
   }
+  .default-table.row-gray-5 tbody tr:nth-child(1),
+  .default-table.row-gray-5 tbody tr:nth-child(5n) {
+    background-color: var(--light-gray);
+  }
   .default-table.light-main-head th {
+    background-color: var(--light-main);
+    font-weight: 500;
+  }
+  .default-table--small.light-main-head th {
     background-color: var(--light-main);
     font-weight: 500;
   }
@@ -1114,19 +1127,23 @@
     vertical-align: middle;
   }
   .cast-table__img {
-    width: 80px;
-    height: 80px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    vertical-align: middle;
     margin-right: 16px;
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
     margin-bottom: 10px;
   }
   .cast-table span {
     text-align: center;
+    display: block;
   }
   @media screen and (max-width: 576px) {
     .cast-table__img {
-      margin-right: 0;
+      width: 80px;
+      height: 80px;
       text-align: center;
     }
   }
@@ -1302,6 +1319,48 @@
   }
   .row-light-blue {
     background-color: var(--light-main) !important;
+  }
+  .loader {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  .loader:after {
+    content: " ";
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid var(--main);
+    border-color: var(--main) transparent var(--main) transparent;
+    -webkit-animation: loader 1.2s linear infinite;
+            animation: loader 1.2s linear infinite;
+  }
+  @-webkit-keyframes loader {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes loader {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
   }
   .cabinet__container {
     display: -webkit-box;
@@ -2913,6 +2972,7 @@
   }
   .video__card {
     height: 388px;
+    width: 100%;
   }
   .video__card iframe {
     width: 100%;
@@ -2936,6 +2996,101 @@
     .video__card {
       height: 200px;
     }
+  }
+  lite-youtube {
+    background-color: #000;
+    position: relative;
+    display: block;
+    contain: content;
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+    max-width: 720px;
+  }
+  /* gradient */
+  lite-youtube::before {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    top: 0;
+    /* Pixel-perfect port of YT's gradient PNG, using https://github.com/bluesmoon/pngtocss plus optimizations */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.67)), color-stop(14%, rgba(0, 0, 0, 0.54)), color-stop(54%, rgba(0, 0, 0, 0.15)), color-stop(72%, rgba(0, 0, 0, 0.05)), color-stop(94%, rgba(0, 0, 0, 0)));
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.54) 14%, rgba(0, 0, 0, 0.15) 54%, rgba(0, 0, 0, 0.05) 72%, rgba(0, 0, 0, 0) 94%);
+    height: 99px;
+    width: 100%;
+    font-family: "YouTube Noto", Roboto, Arial, Helvetica, sans-serif;
+    color: hsl(0, 0%, 93.33%);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    padding: 25px 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  lite-youtube:hover::before {
+    color: white;
+  }
+  /* responsive iframe with a 16:9 aspect ratio
+    thanks https://css-tricks.com/responsive-iframes/
+  */
+  lite-youtube::after {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%;
+  }
+  lite-youtube > iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+  }
+  /* play button */
+  lite-youtube > .lyt-playbtn {
+    display: block;
+    /* Make the button element cover the whole area for a large hover/click target… */
+    width: 100%;
+    height: 100%;
+    /* …but visually it's still the same size */
+    background: no-repeat center/68px 48px;
+    /* YT's actual play button svg */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="red"/><path d="M45 24 27 14v20" fill="white"/></svg>');
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    -webkit-transition: -webkit-filter 0.1s cubic-bezier(0, 0, 0.2, 1);
+    transition: -webkit-filter 0.1s cubic-bezier(0, 0, 0.2, 1);
+    transition: filter 0.1s cubic-bezier(0, 0, 0.2, 1);
+    transition: filter 0.1s cubic-bezier(0, 0, 0.2, 1), -webkit-filter 0.1s cubic-bezier(0, 0, 0.2, 1);
+    border: 0;
+  }
+  lite-youtube:hover > .lyt-playbtn,
+  lite-youtube .lyt-playbtn:focus {
+    -webkit-filter: none;
+            filter: none;
+  }
+  /* Post-click styles */
+  lite-youtube.lyt-activated {
+    cursor: unset;
+  }
+  lite-youtube.lyt-activated::before,
+  lite-youtube.lyt-activated > .lyt-playbtn {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .lyt-visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
   }
   .stepper {
     display: -webkit-box;
@@ -3734,6 +3889,38 @@
   }
   .border-color-main {
     border-color: #273c8d !important;
+  }
+  .bg-light-main {
+    background-color: #ced7f9;
+  }
+  .color-light-main {
+    color: #ced7f9;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hover-light-main:hover {
+      color: #ced7f9;
+    }
+  }
+  @media (hover: none) {
+    .hover-light-main:active {
+      color: #ced7f9;
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hover-bg-light-main:hover {
+      background-color: #ced7f9;
+    }
+  }
+  @media (hover: none) {
+    .hover-bg-light-main:active {
+      background-color: #ced7f9;
+    }
+  }
+  .border-1-light-main {
+    border: 1px solid #ced7f9;
+  }
+  .border-color-light-main {
+    border-color: #ced7f9 !important;
   }
   .bg-main-hover {
     background-color: #5b6eb5;

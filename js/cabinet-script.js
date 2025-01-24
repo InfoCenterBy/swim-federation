@@ -670,6 +670,7 @@ const AG_GRID_LOCALE_RU = {
   previousPage: "Previous Page",
   pageSizeSelectorLabel: "Количество элементов на странице",
   footerTotal: "Total",
+  noRowsToShow: "Нет данных для отображения",
 };
 
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
