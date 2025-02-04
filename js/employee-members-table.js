@@ -578,6 +578,20 @@ function onGridReady(params) {
   }
 }
 
+const exportToExcel = (gridOptions) => {
+  if (!gridApi) return;
+
+  const worksheet = XLSX.utils.json_to_sheet(gridOptions.rowData);
+
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, "Данные");
+
+  const excelBuffer = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
+  const data = new Blob([excelBuffer], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8" });
+
+  saveAs(data, "table_export.xlsx");
+};
+
 const ediv = document.querySelector("#members-table");
 
 const globalSearchInput = document.getElementById("globalSearch");

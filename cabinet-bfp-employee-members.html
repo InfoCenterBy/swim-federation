@@ -716,8 +716,8 @@
             <p class="color-dark-gray mb-3">*ВВ-вступительный взнос, ЧВ-членский взнос</p>
 
             <div class="d-flex gap-4 flex-wrap flex-lg-nowrap">
-              <button onclick="sendFilteredIds()" id="sendInvoice" type="button"
-                class="button border-1-main d-flex justify-content-center">
+              <button id="sendInvoice" type="button" class="button border-1-main d-flex justify-content-center"
+                data-bs-target="#sendInvoices" data-bs-toggle="modal">
                 Выставить
               </button>
               <div class="form__input--small mb-0">
@@ -726,7 +726,8 @@
               <button type="button" class="button border-1-main d-flex justify-content-center">
                 <i class="mr-3 bi bi-upload"></i><span>Загрузить</span>
               </button>
-              <button type="button" class="button--secondary d-flex justify-content-center">
+              <button type="button" class="button--secondary d-flex justify-content-center"
+                onClick="exportToExcel(gridOptions)">
                 <i class="mr-3 bi bi-download"></i><span>Скачать</span>
               </button>
               <button type="button" class="columns-select__toggle-button button" id="columnToggleButton">
@@ -795,6 +796,28 @@
 </footer>
 
   </div>
+  <div class="modal fade" id="sendInvoices" tabindex="-1" aria-labelledby="sendInvoicesLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="sendInvoicesLabel">Выставить счет выбранным членам?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="color-dark-gray mb-4">Вы действительно хотите выставить счет выбранным членам?</p>
+          <div class="d-flex justify-content-evenly gap-5">
+            <button type="button" class="button px-4" data-bs-dismiss="modal" aria-label="Close"
+              onclick="sendFilteredIds()">
+              Выставить
+            </button>
+            <button type="button" class="button--secondary px-4" data-bs-dismiss="modal" aria-label="Close">
+              Отмена
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="modal fade" id="deleteMember" tabindex="-1" aria-labelledby="deleteMemberLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -824,6 +847,9 @@
 <script src="js/cabinet-script.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+  <!-- use version 0.20.3 -->
+  <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
   <script src="./js/employee-members-table.js"></script>
 </body>
 
