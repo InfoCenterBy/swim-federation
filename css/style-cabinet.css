@@ -2763,6 +2763,15 @@
       border-color: var(--main-hover);
     }
   }
+  .button--secondary:disabled {
+    background-color: var(--gray);
+    color: var(--dark-gray);
+    border: 1px solid var(--gray);
+    font-size: 16px;
+    line-height: 21px;
+    cursor: not-allowed;
+    padding: 11px 24px;
+  }
   .button--secondary-small {
     background-color: var(--white);
     color: var(--main);
